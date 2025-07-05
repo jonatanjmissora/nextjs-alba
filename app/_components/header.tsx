@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { Heart, Search } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
+import {User} from 'lucide-react';
 
 export default function Header() {
   return (
@@ -8,7 +11,10 @@ export default function Header() {
       </a>
     
       <nav className="flex items-center gap-8 header-nav">
-        <input type="search" name="search" id="search" placeholder="🔍" className="bg-transparent rounded-2xl p-2 text-right" />
+        <div className="relative">
+          <input type="search" name="search" id="search" placeholder="" className="bg-transparent rounded-2xl p-2 text-right w-[10ch]" />
+          <Search size={20} className="absolute right-2 top-1/2 -translate-y-1/2" />
+        </div>
         <a href="#services">Servicios</a>
         <a href="#shop">Tienda</a>
         <a href="#faqs">Preguntas</a>
@@ -16,9 +22,9 @@ export default function Header() {
       </nav>
 
       <nav className="flex gap-8">
-        <Link href="/favorites">❤</Link>
-        <Link href="/cart">🛒</Link>
-        <Link href="/profile">👤</Link>
+        <Link href="/favorites"><Heart size={24} /></Link>
+        <Link href="/cart"><ShoppingCart size={24} /></Link>
+        <Link href="/profile"><User size={24} /></Link>
       </nav>
     </header>
   )

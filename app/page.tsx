@@ -10,7 +10,7 @@ export default function Page() {
         <Header />
       </div>
       
-      <section id="home" className="w-full min-h-[95dvh] 2xl:min-h-[80dvh] flex justify-center items-center relative">
+      <section id="home" className="w-full min-h-[100dvh] 2xl:min-h-[80dvh] flex justify-center items-center relative">
         <Home />
       </section>
 

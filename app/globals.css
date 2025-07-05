@@ -40,13 +40,6 @@ body {
   text-shadow: 3px 3px 2px var(--primary-green);
 }
 
-
-.img-mask {
-  mask-image: url(#myMask);
-  width: 600px;
-  height: 600px;
-}
-
 .cta-button {
   background-color:var(--primary-green);
   color: #eee;
