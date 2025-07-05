@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Heart, Search } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
-import {User} from 'lucide-react';
 
 export default function Header() {
   return (
@@ -24,7 +23,6 @@ export default function Header() {
       <nav className="flex gap-8">
         <Link href="/favorites"><Heart size={24} /></Link>
         <Link href="/cart"><ShoppingCart size={24} /></Link>
-        <Link href="/profile"><User size={24} /></Link>
       </nav>
     </header>
   )
