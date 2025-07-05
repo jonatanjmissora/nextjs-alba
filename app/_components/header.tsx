@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="w-full h-full flex justify-between items-center">
-      <a href="#" className="text-2xl font-semibold text-[var(--primary-green)]">
+      <a href="#home" className="text-2xl font-semibold text-[var(--primary-green)]">
         ALBA
       </a>
     

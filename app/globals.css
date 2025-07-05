@@ -8,6 +8,7 @@
   --background-three: #ffdae1;
   --background-green: #8ab8a8;
   --blob-color: #f2eae1;
+  --primary-pink: #ffc7d5;
   --foreground-green: #385347;
   --primary-green: #537d6a;
   --secondary-green: #8ab8a8;
@@ -44,5 +45,22 @@ body {
   mask-image: url(#myMask);
   width: 600px;
   height: 600px;
- 
+}
+
+.cta-button {
+  background-color:var(--primary-green);
+  color: #eee;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 1rem 0;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-green);
+  transform: translate(-5px, -5px);
 }
