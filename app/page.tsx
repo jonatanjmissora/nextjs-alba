@@ -23,7 +23,7 @@ export default function Page() {
 
 			<section
 				id="services"
-				className="w-full min-h-screen 2xl:min-h-[120dvh] bg-[var(--primary-pink)] relative"
+				className="w-full min-h-[100dvh] 2xl:min-h-[120dvh] bg-[var(--primary-pink)] relative"
 			>
 				<WaveContainer>
 					<Services />

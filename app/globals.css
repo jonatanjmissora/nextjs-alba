@@ -64,7 +64,6 @@ body {
 }
 
 .service-description {
-	min-height: 1rem;
 	height: max-content;
 	display: grid;
 	grid-template-rows: 0fr;
@@ -77,3 +76,14 @@ body {
 .service-card:hover .service-description {
 	grid-template-rows: 1fr;
 }
+
+.icon:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(2px 2px 1px var(--primary-green));
+}
+
+.search-input {
+	outline: none;
+	box-shadow: 2px 2px 3px var(--primary-green);
+}
+
