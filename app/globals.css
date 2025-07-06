@@ -63,17 +63,17 @@ body {
 	transform: translate(-5px, -5px);
 }
 
-.service-description {
+.service-description, .product-description {
 	height: max-content;
 	display: grid;
 	grid-template-rows: 0fr;
 	transition: grid-template-rows 0.8s ease-in-out;
 }
 
-.service-description > div {
+.service-description > div, .product-description > div {
 	overflow: hidden;
 }
-.service-card:hover .service-description {
+.service-card:hover .service-description, .product-card:hover .product-description {
 	grid-template-rows: 1fr;
 }
 

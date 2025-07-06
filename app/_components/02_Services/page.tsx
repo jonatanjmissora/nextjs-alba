@@ -1,11 +1,11 @@
 export default function page() {
 	return (
-		<div className="w-full border">
+		<div className="w-full">
 			<h2 className="w-full text-center text-2xl 2xl:text-4xl font-semibold py-16 2xl:py-30">
 				Nuestros Servicios en el Centro de Belleza
 			</h2>
 
-			<div className="w-full h-[90dvh] flex justify-between pb-32">
+			<div className="w-full h-[80dvh] flex justify-between pb-32">
 				<ServicesCard />
 			</div>
 		</div>

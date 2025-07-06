@@ -23,7 +23,7 @@ export default function Page() {
 
 			<section
 				id="services"
-				className="w-full min-h-[100dvh] 2xl:min-h-[120dvh] bg-[var(--primary-pink)] relative"
+				className="w-full bg-[var(--primary-pink)] relative"
 			>
 				<WaveContainer>
 					<Services />
@@ -32,14 +32,14 @@ export default function Page() {
 
 			<section
 				id="shop"
-				className="w-full min-h-screen px-32 mt-[20dvh] relative"
+				className="w-full px-32 my-[20dvh] relative"
 			>
 				<Shop />
 			</section>
 
 			<section
 				id="testimonials"
-				className="w-full min-h-screen bg-[var(--primary-pink)] relative"
+				className="w-full bg-[var(--primary-pink)] relative"
 			>
 				<WaveContainer>
 					<Testimonials />
