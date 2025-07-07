@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="w-full px-32">
                 <div className="flex justify-between gap-2">
                     <div className="flex flex-col gap-2">
-                        <h3 className="font-semibold text-[#222]">Tienda</h3>
+                        <h3 className="font-semibold text-[var(--primary-green)]">Tienda</h3>
                         <nav className="flex flex-col gap-2 text-[#333] text-sm px-2">
                             <Link href="/category01">Categoria 1</Link>
                             <Link href="/category02">Categoria 2</Link>
@@ -17,7 +17,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <h3 className="font-semibold text-[#222]">Servicios</h3>
+                        <h3 className="font-semibold text-[var(--primary-green)]">Servicios</h3>
                         <nav className="flex flex-col gap-2 text-[#333] text-sm px-2">
                             <Link href="/service01">Servicio 1</Link>
                             <Link href="/service02">Servicio 2</Link>
@@ -27,7 +27,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <h3 className="font-semibold text-[#222]">Preguntas</h3>
+                        <h3 className="font-semibold text-[var(--primary-green)]">Preguntas</h3>
                         <nav className="flex flex-col gap-2 text-[#333] text-sm px-2">
                             <Link href="/faq01">Pregunta 1</Link>
                             <Link href="/faq02">Pregunta 2</Link>
@@ -38,20 +38,20 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-2 w-1/2">
-                        <h3 className="font-semibold text-[#222]">Suscripción</h3>
+                        <h3 className="font-semibold text-[var(--primary-green)]">Suscripción</h3>
                         <div className="flex flex-col gap-3 text-[#333] text-sm px-2">
                             <p>Recibe las últimas novedades. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, reprehenderit.</p>
                             <div className="flex items-center gap-20">
                                 <div className="flex gap-1">
                                     <input type="email" placeholder="Correo electrónico" className="p-2 px-6 bg-[var(--background-one)] rounded-lg w-64"/>
-                                    <button className="p-2 px-6 bg-[var(--primary-green)] rounded-lg">Enviar</button>
+                                    <button className="p-2 px-6 bg-[var(--primary-green)] rounded-lg text-[#eee]">Enviar</button>
                                 </div>
                             </div>
                             <nav className="flex gap-6">
-                                <Link href="/social01"><WhatsApp /></Link>
-                                <Link href="/social02"><Instagram /></Link>
-                                <Link href="/social03"><Facebook /></Link>
-                                <Link href="/social04"><Mail /></Link>
+                                <Link href="/social01" className="text-[var(--primary-green)]"><WhatsApp /></Link>
+                                <Link href="/social02" className="text-[var(--primary-green)]"><Instagram /></Link>
+                                <Link href="/social03" className="text-[var(--primary-green)]"><Facebook /></Link>
+                                <Link href="/social04" className="text-[var(--primary-green)]"><Mail /></Link>
                             </nav>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full border-t border-[#333] mt-12">
-                    <p className="py-2 text-sm">© 2025 ALBA</p>
+                    <p className="py-2 text-sm text-[var(--primary-green)]">© 2025 ALBA</p>
                 </div>
             </div>
         </footer>
