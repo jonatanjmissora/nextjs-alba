@@ -1,4 +1,4 @@
-export default function page() {
+export default function About() {
 	return (
 		<div className="w-full">
 			<h2 className="w-full text-center text-2xl 2xl:text-4xl font-semibold py-16 2xl:py-30">

@@ -17,7 +17,7 @@ export default function Header() {
 				<HeaderSerch />
 				<a href="#services">Servicios</a>
 				<a href="#shop">Tienda</a>
-				<a href="#faqs">Preguntas</a>
+				<a href="#about">Acerca de</a>
 				<a href="#contact">Contacto</a>
 			</nav>
 

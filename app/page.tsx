@@ -3,9 +3,9 @@ import Header from "./_components/header"
 import Home from "./_components/01_Home/page"
 import Services from "./_components/02_Services/page"
 import Shop from "./_components/03_Shop/page"
-import Testimonials from "./_components/04_Testimonials/page"
 import Faqs from "./_components/05_Faqs/page"
 import WaveContainer from "./_components/wave-container"
+import About from "./_components/04_About/page"
 
 export default function Page() {
 	return (
@@ -34,12 +34,9 @@ export default function Page() {
 				<Shop />
 			</section>
 
-			<section
-				id="testimonials"
-				className="w-full bg-[var(--primary-pink)] relative"
-			>
+			<section id="about" className="w-full bg-[var(--primary-pink)] relative">
 				<WaveContainer>
-					<Testimonials />
+					<About />
 				</WaveContainer>
 			</section>
 
