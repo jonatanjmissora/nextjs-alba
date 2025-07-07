@@ -5,7 +5,7 @@ export default function page() {
 				Nuestros Productos en el Centro de Belleza
 			</h2>
 
-			<div className="w-full h-[90dvh] flex justify-between pb-32">
+			<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex justify-between pb-32">
 				<ProductsCard />
 			</div>
 		</div>
@@ -98,4 +98,3 @@ const ProductsCard = () => {
 		</ul>
 	)
 }
-

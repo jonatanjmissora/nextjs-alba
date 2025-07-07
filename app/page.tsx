@@ -16,7 +16,7 @@ export default function Page() {
 
 			<section
 				id="home"
-				className="w-full min-h-screen 2xl:min-h-[96dvh] flex justify-center items-center relative"
+				className="w-full min-h-screen 2xl:min-h-[90dvh] flex justify-center items-center relative"
 			>
 				<Home />
 			</section>
@@ -30,10 +30,7 @@ export default function Page() {
 				</WaveContainer>
 			</section>
 
-			<section
-				id="shop"
-				className="w-full px-32 my-[20dvh] relative"
-			>
+			<section id="shop" className="w-full px-32 my-[20dvh] relative">
 				<Shop />
 			</section>
 

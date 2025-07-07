@@ -1,11 +1,29 @@
 export default function page() {
 	return (
-		<div className="w-full">
-			<h2 className="w-full text-center text-2xl 2xl:text-4xl font-semibold py-16 2xl:py-30">
-				Nuestros Servicios en el Centro de Belleza
-			</h2>
+		<div className="w-full my-20 2xl:my-30 py-10 2xl:py-15 relative">
+			<LeafImgs />
+			<div className="flex items-end gap-3 header-border pb-10 mb-20 mt-20 relative">
+				<img
+					src="./leaf/round-leaf.svg"
+					alt=""
+					className="absolute top-[0%] -right-[1%] size-[10rem] rotate-0"
+				/>
+				<div className="flex flex-col gap-3">
+					<h3 className="w-full text-xl 2xl:text-2xl font-semibold text-[var(--primary-green)]">
+						Servicios
+					</h3>
+					<h2 className="w-full text-3xl 2xl:text-5xl font-bold text-balance">
+						Nuestros servicios en gabinete
+					</h2>
+				</div>
+				<p className="2xl:text-xl text-balance">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+					dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
+					amet consectetur adipisicing elit.
+				</p>
+			</div>
 
-			<div className="w-full h-[80dvh] flex justify-between pb-32">
+			<div className="w-full h-[80dvh] 2xl:h-[70dvh] flex justify-between">
 				<ServicesCard />
 			</div>
 		</div>
@@ -96,5 +114,29 @@ const ServicesCard = () => {
 				</li>
 			))}
 		</ul>
+	)
+}
+
+const LeafImgs = () => {
+	return (
+		<>
+			<img
+				src="./leaf/branch-leaf.svg"
+				alt=""
+				className="absolute -bottom-32 -left-40 size-[25rem] rotate-90"
+			/>
+
+			<img
+				src="./leaf/leaf1.svg"
+				alt=""
+				className="absolute bottom-[15%] left-[45%] size-[10rem]"
+			/>
+
+			<img
+				src="./leaf/leaf2.svg"
+				alt=""
+				className="absolute bottom-[0%] right-[0%] size-[15rem]"
+			/>
+		</>
 	)
 }
