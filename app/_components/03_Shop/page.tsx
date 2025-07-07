@@ -124,7 +124,7 @@ const LeafImgs = () => {
 			<img
 				src="./leaf/leaf1.svg"
 				alt=""
-				className="absolute bottom-[15%] left-[45%] size-[10rem]"
+				className="absolute bottom-[10%] left-[45%] size-[10rem]"
 			/>
 
 			<img
