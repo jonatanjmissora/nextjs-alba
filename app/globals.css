@@ -12,6 +12,7 @@
 	--foreground-green: #385347;
 	--primary-green: #537d6a;
 	--secondary-green: #8ab8a8;
+	--leaf-color: green;
 }
 
 @theme inline {

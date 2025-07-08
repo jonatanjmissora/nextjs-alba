@@ -1,3 +1,5 @@
+import { BranchLeaf } from "@/public/leaf/branch-leaf"
+
 export default function About() {
 	return (
 		<div className="w-full my-20 2xl:my-30 py-10 2xl:py-15 relative">
@@ -113,11 +115,7 @@ const ImageElement = ({
 const LeafImgs = () => {
 	return (
 		<>
-			<img
-				src="./leaf/branch-leaf.svg"
-				alt=""
-				className="absolute -bottom-32 -left-40 size-[25rem] rotate-90"
-			/>
+			<BranchLeaf className="absolute -bottom-32 -left-40 size-[25rem] rotate-90 text-red-500" />
 
 			<img
 				src="./leaf/leaf1.svg"

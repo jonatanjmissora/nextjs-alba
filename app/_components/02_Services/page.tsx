@@ -1,3 +1,4 @@
+import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Heart, ShoppingCart } from "lucide-react"
 
 export default function page() {
@@ -109,11 +110,7 @@ const ServicesCard = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<img
-				src="./leaf/branch-leaf.svg"
-				alt=""
-				className="absolute -bottom-32 -left-40 size-[25rem] rotate-90"
-			/>
+			<BranchLeaf className="absolute -bottom-32 -left-40 size-[25rem] rotate-90 text-red-500"/>
 
 			<img
 				src="./leaf/leaf1.svg"

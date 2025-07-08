@@ -1,29 +1,10 @@
+import { BranchLeaf } from "@/public/leaf/branch-leaf";
+import { Leaf1 } from "@/public/leaf/leaf1";
+
 export default function Home() {
 	return (
 		<>
-			<img
-				src="./leaf/branch-leaf.svg"
-				alt=""
-				className="absolute top-0 right-[15%] size-[30rem] rotate-x-180"
-			/>
-
-			<img
-				src="./leaf/round-leaf.svg"
-				alt=""
-				className="absolute bottom-[28%] -left-[5%] size-[18rem] rotate-180"
-			/>
-
-			<img
-				src="./leaf/leaf1.svg"
-				alt=""
-				className="absolute bottom-[45%] left-[50%] size-[10rem] rotate-180"
-			/>
-
-			<img
-				src="./leaf/leaf2.svg"
-				alt=""
-				className="absolute bottom-[0%] right-[30%] size-[15rem] rotate-180"
-			/>
+			<LeafImgs />
 
 			<div className="absolute top-0 left-0 -z-10 bg-[var(--primary-pink)] pt-24 pl-32 2xl:pr-40 pr-12 rounded-br-[45%] overflow-hidden">
 				{/** biome-ignore lint/performance/noImgElement: <explanation> */}
@@ -58,3 +39,26 @@ export default function Home() {
 		</>
 	)
 }
+
+const LeafImgs = () => {
+	return (
+		<>
+			<BranchLeaf className="absolute top-0 right-[15%] size-[20rem] 2xl:size-[30rem] rotate-x-180 text-[var(--leaf-color)]" />
+			<Leaf1 className="absolute z-50 2xl:top-[50%] 2xl:left-[50%] left-[53%] bottom-[50%] size-[5rem] 2xl:size-[10rem] rotate-180" />
+			<LeafImg src="./leaf/round-leaf.svg" alt="" className="absolute bottom-[28%] -left-[5%] size-[12rem] 2xl:size-[18rem] rotate-180" />
+			{/* <LeafImg src="./leaf/leaf1.svg" alt="" className="absolute 2xl:top-[50%] 2xl:left-[50%] left-[53%] bottom-[50%] size-[5rem] 2xl:size-[10rem] rotate-180" /> */}
+			<LeafImg src="./leaf/leaf2.svg" alt="" className="absolute bottom-[0%] right-[30%] size-[10rem] 2xl:size-[15rem] rotate-180" />
+		</>
+	)
+}
+
+const LeafImg = ({ src, alt, className }: { src: string; alt: string; className: string }) => {
+	return (
+		<img
+			src={src}
+			alt={alt}
+			className={`absolute ${className}`}
+		/>
+	)
+}
+
