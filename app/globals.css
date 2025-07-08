@@ -11,8 +11,18 @@
 	--primary-pink: #ffceda;
 	--foreground-green: #385347;
 	--primary-green: #537d6a;
-	--secondary-green: #8ab8a8;
+	--secondary-green: #789e91;
 	--leaf-color: green;
+
+	/* layout */
+	--sm-layout-padding: 10rem;
+	--2xl-layout-padding: 15rem;
+	--2xl-title-size: 3rem;
+	--sm-title-size: 3rem;
+	--2xl-subtitle-size: 2rem;
+	--sm-subtitle-size: 2rem;
+	--2xl-text-size: 1.1rem;
+	--sm-text-size: 1rem;
 }
 
 @theme inline {
@@ -42,6 +52,33 @@ body {
 	/* font-family: Arial, Helvetica, sans-serif; */
 }
 
+.title {
+	font-size: var(--sm-title-size);
+	font-weight: semibold;
+}
+
+.subtitle {
+	font-size: var(--sm-subtitle-size);
+	font-weight: semibold;
+}
+
+.text {
+	font-size: var(--sm-text-size);
+	font-weight: normal;
+}
+
+@media screen and (min-width: 1440px) {
+	.title {
+		font-size: var(--2xl-title-size);
+	}
+	.subtitle {
+		font-size: var(--2xl-subtitle-size);
+	}
+	.text {
+		font-size: var(--2xl-text-size);
+	}
+}
+
 .header-nav a:hover {
 	text-shadow: 3px 3px 2px var(--primary-green);
 }
@@ -64,7 +101,6 @@ body {
 
 .service-description,
 .product-description {
-	height: max-content;
 	display: grid;
 	grid-template-rows: 0fr;
 	transition: grid-template-rows 0.8s ease-in-out;

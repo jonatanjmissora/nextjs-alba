@@ -8,17 +8,18 @@ export default function Header() {
 		<header className="w-full h-full flex justify-between items-center">
 			<a
 				href="#home"
-				className="text-2xl font-semibold text-[var(--primary-green)]"
+				className="2xl:text-2xl text-xl font-semibold text-[var(--primary-green)]"
 			>
 				ALBA GARCIA
 			</a>
 
-			<nav className="flex items-center gap-8 header-nav">
+			<nav className="flex items-center gap-8 header-nav text">
 				<HeaderSerch />
 				<a href="#services">Servicios</a>
 				<a href="#shop">Tienda</a>
 				<a href="#about">Acerca de</a>
 				<a href="#contact">Contacto</a>
+				<a href="#faqs">Tips</a>
 			</nav>
 
 			<nav className="flex gap-8">

@@ -10,7 +10,7 @@ import About from "./_components/04_About/page"
 export default function Page() {
 	return (
 		<main className="w-full relative">
-			<div className="w-full absolute z-10 top-0 left-0 right-0 p-6 px-32 2xl:pb-8 2xl:pt-12 2xl:px-40 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]">
+			<div className="w-full absolute z-10 top-0 left-0 right-0 p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]">
 				<Header />
 			</div>
 
@@ -30,7 +30,10 @@ export default function Page() {
 				</WaveContainer>
 			</section>
 
-			<section id="shop" className="w-full px-32 my-[20dvh] relative">
+			<section
+				id="shop"
+				className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative"
+			>
 				<Shop />
 			</section>
 
@@ -42,7 +45,7 @@ export default function Page() {
 
 			<section
 				id="faqs"
-				className="w-full min-h-screen px-32 mt-[20dvh] relative"
+				className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] mt-[20dvh] relative"
 			>
 				<Faqs />
 			</section>

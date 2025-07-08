@@ -1,15 +1,14 @@
 import { BranchLeaf } from "@/public/leaf/branch-leaf"
+import { Leaf1 } from "@/public/leaf/leaf1"
+import Leaf2 from "@/public/leaf/leaf2"
+import RoundLeaf from "@/public/leaf/round-leaf"
 
 export default function About() {
 	return (
 		<div className="w-full my-20 2xl:my-30 py-10 2xl:py-15 relative">
 			<LeafImgs />
 			<div className="flex gap-40 items-end header-border pb-10 mb-20 mt-20 relative min-h-44">
-				<img
-					src="./leaf/round-leaf.svg"
-					alt=""
-					className="absolute top-[0%] -right-[1%] size-[10rem] rotate-0"
-				/>
+				<RoundLeaf className="absolute top-[0%] -right-[1%] size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 				<div className="flex flex-col gap-3">
 					<h3 className="w-full text-xl 2xl:text-2xl font-semibold text-[var(--primary-green)]">
 						Acerca de
@@ -19,7 +18,10 @@ export default function About() {
 				<p className="2xl:text-xl text-balance">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
 					dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-					amet consectetur adipisicing elit.
+					amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+					consectetur, adipisicing elit. Quidem, molestias! Sequi vel sed
+					quaerat qui nihil molestias corporis laborum velit, temporibus, fugiat
+					cumque, quos veritatis ea eos soluta beatae placeat.
 				</p>
 			</div>
 
@@ -115,19 +117,9 @@ const ImageElement = ({
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-32 -left-40 size-[25rem] rotate-90 text-red-500" />
-
-			<img
-				src="./leaf/leaf1.svg"
-				alt=""
-				className="absolute bottom-[15%] left-[45%] size-[10rem]"
-			/>
-
-			<img
-				src="./leaf/leaf2.svg"
-				alt=""
-				className="absolute bottom-[0%] right-[0%] size-[15rem]"
-			/>
+			<BranchLeaf className="absolute -bottom-[15%] -left-40 size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf1 className="absolute bottom-[10%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
+			<Leaf2 className="absolute -bottom-[10%] -right-[5%] size-[15rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

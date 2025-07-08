@@ -4,7 +4,7 @@ export default function WaveContainer({
 	children: React.ReactNode
 }) {
 	return (
-		<div className="relative w-full px-32 2xl:px-40">
+		<div className="relative w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
 			<WaveSVG className="absolute -top-[60%] left-0 -z-10" />
 
 			{children}
