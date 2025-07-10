@@ -1,15 +1,16 @@
 import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
-import { Heart, ShoppingCart } from "lucide-react"
 import { SectionHeader } from "../section-header"
-
-const IMG_WIDTH = ["100px", "120px", "300px"]
-const IMG_HEIGHT = ["200px", "300px", "500px"]
+import { servicesData } from "@/app/_lib/services"
+import ServiceCard from "./service-card"
 
 export default function page() {
 	return (
-		<div id="services" className="w-full min-h-[100dvh] 2xl:min-h-[90dvh] my-32 relative">
+		<div
+			id="services"
+			className="w-full min-h-[100dvh] 2xl:min-h-[90dvh] my-32 relative border border-transparent"
+		>
 			<LeafImgs />
 			<SectionHeader
 				title="Nuestros servicios en gabinete"
@@ -25,78 +26,12 @@ export default function page() {
 }
 
 const ServicesCard = () => {
-	const services = [
-		{
-			id: 1,
-			title: "Titulo del servicio",
-			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			image: "./servicio1.jpg",
-		},
-		{
-			id: 2,
-			title: "Titulo del servicio",
-			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			image: "./servicio2.jpg",
-		},
-		{
-			id: 3,
-			title: "Titulo del servicio",
-			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			image: "./servicio3.jpg",
-		},
-		{
-			id: 4,
-			title: "Titulo del servicio",
-			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-			image: "./servicio4.jpg",
-		},
-	]
+	const services = servicesData
 
 	return (
 		<ul className="w-full flex justify-between items-start">
 			{services.map(service => (
-				<li
-					key={service.id}
-					className={`service-card flex flex-col gap-3 p-5 bg-[var(--background-two)] rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group`}
-				>
-					<div
-						className={`relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tl-4xl rounded-br-4xl w-[180px] 2xl:w-[${IMG_WIDTH[2]}] h-[${IMG_HEIGHT[1]}] 2xl:h-[${IMG_HEIGHT[2]}]`}
-					>
-						<img
-							src={service.image}
-							alt=""
-							className={`w-full h-full group-hover:scale-120 transition-all duration-800 object-cover`}
-						/>
-					</div>
-					{/* <div className="relative z-50 flex justify-between items-center my-2">
-						<h3 className="font-semibold text-[var(--primary-green)] text-lg 2xl:text-xl">
-							{service.title}
-						</h3>
-						<div className="flex gap-4">
-							<Heart size={24} color="var(--primary-green)" className="icon" />
-							<ShoppingCart
-								size={24}
-								color="var(--primary-green)"
-								className="icon"
-							/>
-						</div>
-					</div> */}
-					{/* <div className="w-full"> */}
-					{/* <div className="flex flex-col gap-2 w-full border"> */}
-					{/* <p
-						className={`text-balance text-base 2xl:text-lg w-[${IMG_WITH[1]}] 2xl:w-[${IMG_WITH[2]}]`}
-					>
-						{service.description}
-					</p> */}
-
-					{/* <button className="cta-button px-4 m-3 ml-auto">+Leer</button> */}
-					{/* </div> */}
-					{/* </div> */}
-				</li>
+				<ServiceCard key={service.id} service={service} />
 			))}
 		</ul>
 	)
@@ -105,9 +40,9 @@ const ServicesCard = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-32 -left-40 size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
-			<Leaf1 className="absolute bottom-[10%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute -bottom-[5%] -right-[5%] size-[15rem] text-[var(--leaf-color)]" />
+			<BranchLeaf className="absolute -bottom-32 2xl:-bottom-[30%] 2xl:-left-[18%] -left-40 size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf1 className="absolute bottom-[10%] 2xl:-bottom-[5%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
+			<Leaf2 className="absolute -bottom-[5%] 2xl:-bottom-[20%] 2xl:-right-[10%] -right-[5%] size-[15rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

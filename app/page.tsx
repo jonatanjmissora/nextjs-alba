@@ -14,45 +14,31 @@ export default function Page() {
 				<Header />
 			</div>
 
-			<section
-				id="home"
-				className="w-full min-h-[90dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative border mb-[12rem]"
-			>
+			<section id="home" className="w-full min-h-[90dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]">
 				<Home />
 			</section>
 
-			<section
-				className="w-full bg-[var(--primary-pink)] relative"
-			>
+			<section className="w-full bg-[var(--primary-pink)] relative">
 				<WaveContainer>
 					<Services />
 				</WaveContainer>
 			</section>
 
-			<section
-				id="shop"
-				className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative"
-			>
+			<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative">
 				<Shop />
 			</section>
 
-			<section id="about" className="w-full bg-[var(--primary-pink)] relative">
+			<section className="w-full bg-[var(--primary-pink)] relative">
 				<WaveContainer>
 					<About />
 				</WaveContainer>
 			</section>
 
-			<section
-				id="faqs"
-				className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] mt-[20dvh] relative"
-			>
+			<section className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] mt-[20dvh] relative">
 				<Faqs />
 			</section>
 
-			<div
-				id="contact"
-				className="w-full bg-[var(--primary-pink)] relative pb-6"
-			>
+			<div className="w-full bg-[var(--primary-pink)] relative pb-6">
 				<Footer />
 			</div>
 		</main>

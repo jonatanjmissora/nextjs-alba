@@ -2,7 +2,7 @@ import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
 import RoundLeaf from "@/public/leaf/round-leaf"
-import Image from 'next/image'
+import Image from "next/image"
 
 export default function Home() {
 	return (
@@ -24,7 +24,7 @@ export default function Home() {
 				</button>
 			</div>
 
-			<div className="absolute -bottom-[3dvh] -right-[5dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12 2xl:right-[0dvw]">
+			<div className="absolute -bottom-[3dvh] -right-[5dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12 2xl:right-[0dvw] 2xl:bottom-[8dvh]">
 				<HomeImg2 />
 			</div>
 		</>
@@ -33,23 +33,23 @@ export default function Home() {
 
 const HomeImg1 = () => {
 	return (
-			<img
-				src="./avatar-alba.png"
-				alt=""
-				className="w-[200px] h-[300px] 2xl:w-[250px] 2xl:h-[400px] 2xl:translate-x-24"
-			/>
+		<img
+			src="./avatar-alba.png"
+			alt=""
+			className="w-[200px] h-[300px] 2xl:w-[250px] 2xl:h-[400px] 2xl:translate-x-24"
+		/>
 	)
 }
 
 const HomeImg2 = () => {
 	return (
-			<Image
-				src="/alba-alpha.png"
-				alt="Alba Alpha Logo"
-				width={500}
-				height={700}
-				className="w-[400px] h-[500px] 2xl:w-[500px] 2xl:h-[700px]"
-			/>
+		<Image
+			src="/alba-alpha.png"
+			alt="Alba Alpha Logo"
+			width={500}
+			height={700}
+			className="w-[400px] h-[500px] 2xl:w-[500px] 2xl:h-[700px]"
+		/>
 	)
 }
 
@@ -58,8 +58,8 @@ const LeafImgs = () => {
 		<>
 			<BranchLeaf className="absolute top-0 right-[15%] size-[18rem] 2xl:size-[25rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
 			<Leaf1 className="absolute top-[43%] 2xl:top-[45%] left-[55%] size-[6rem] 2xl:size-[7rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute bottom-[5%] 2xl:bottom-[0%] right-[30%] size-[8rem] 2xl:size-[15rem] rotate-180 text-[var(--leaf-color)]" />
-			<RoundLeaf className="absolute bottom-[28%] -left-[5%] size-[10rem] 2xl:size-[18rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2 className="absolute bottom-[5%] 2xl:bottom-[3%] right-[30%] size-[8rem] 2xl:size-[15rem] rotate-180 text-[var(--leaf-color)]" />
+			<RoundLeaf className="absolute bottom-[28%] 2xl:bottom-[32%] -left-[5%] size-[10rem] 2xl:size-[15rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
 		</>
 	)
 }

@@ -24,6 +24,9 @@
 	--2xl-subtitle-size: 2rem;
 	--sm-subtitle-size: 1.5rem;
 
+	--2xl-header-size: 1.5rem;
+	--sm-header-size: 1.25rem;
+
 	--2xl-text-size: 1.1rem;
 	--sm-text-size: 0.9rem;
 }
@@ -65,6 +68,11 @@ body {
 	font-weight: semibold;
 }
 
+.header {
+	font-size: var(--sm-header-size);
+	font-weight: medium;
+}
+
 .text {
 	font-size: var(--sm-text-size);
 	font-weight: normal;
@@ -76,6 +84,9 @@ body {
 	}
 	.subtitle {
 		font-size: var(--2xl-subtitle-size);
+	}
+	.header {
+		font-size: var(--2xl-header-size);
 	}
 	.text {
 		font-size: var(--2xl-text-size);
@@ -129,7 +140,7 @@ body {
 }
 
 .header-border {
-	border-bottom: 3px solid var(--primary-green);
-	border-right: 3px solid var(--primary-green);
+	border-bottom: 3px solid var(--secondary-green);
+	border-right: 3px solid var(--secondary-green);
 	border-bottom-right-radius: 2rem;
 }
