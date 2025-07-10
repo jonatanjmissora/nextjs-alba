@@ -16,13 +16,12 @@ export default function Page() {
 
 			<section
 				id="home"
-				className="w-full min-h-screen 2xl:min-h-[90dvh] flex justify-center items-center relative"
+				className="w-full min-h-[90dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative border mb-[12rem]"
 			>
 				<Home />
 			</section>
 
 			<section
-				id="services"
 				className="w-full bg-[var(--primary-pink)] relative"
 			>
 				<WaveContainer>

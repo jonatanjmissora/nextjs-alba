@@ -17,12 +17,15 @@
 	/* layout */
 	--sm-layout-padding: 10rem;
 	--2xl-layout-padding: 15rem;
+
 	--2xl-title-size: 3rem;
-	--sm-title-size: 3rem;
+	--sm-title-size: 2.35rem;
+
 	--2xl-subtitle-size: 2rem;
-	--sm-subtitle-size: 2rem;
+	--sm-subtitle-size: 1.5rem;
+
 	--2xl-text-size: 1.1rem;
-	--sm-text-size: 1rem;
+	--sm-text-size: 0.9rem;
 }
 
 @theme inline {

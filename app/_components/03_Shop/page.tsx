@@ -1,27 +1,18 @@
 import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
-import RoundLeaf from "@/public/leaf/round-leaf"
 import { Heart, ShoppingCart } from "lucide-react"
+import { SectionHeader } from "../section-header"
 
 export default function page() {
 	return (
 		<div className="w-full my-20 2xl:my-30 py-10 2xl:py-15 relative">
 			<LeafImgs />
-			<div className="flex items-end gap-3 header-border pb-10 mb-20 mt-20 relative">
-				<RoundLeaf className="absolute top-[0%] -right-[1%] size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
-				<div className="flex flex-col gap-3">
-					<h3 className="w-full text text-[var(--primary-green)]">Productos</h3>
-					<h2 className="w-full title font-bold text-balance">
-						Nuestros productos en gabinete
-					</h2>
-				</div>
-				<p className="2xl:text-xl text-balance">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-					dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-					amet consectetur adipisicing elit.
-				</p>
-			</div>
+			<SectionHeader
+				title="Nuestros productos en gabinete"
+				subtitle="Productos"
+				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+			/>
 
 			<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex flex-col justify-between items-center mb-60">
 				<ProductsCard />

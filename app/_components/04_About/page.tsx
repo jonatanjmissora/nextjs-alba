@@ -1,29 +1,17 @@
 import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
-import RoundLeaf from "@/public/leaf/round-leaf"
+import { SectionHeader } from "../section-header"
 
 export default function About() {
 	return (
 		<div className="w-full my-20 2xl:my-30 py-10 2xl:py-15 relative">
 			<LeafImgs />
-			<div className="flex gap-40 items-end header-border pb-10 mb-20 mt-20 relative min-h-44">
-				<RoundLeaf className="absolute top-[0%] -right-[1%] size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
-				<div className="flex flex-col gap-3">
-					<h3 className="w-full text-xl 2xl:text-2xl font-semibold text-[var(--primary-green)]">
-						Acerca de
-					</h3>
-					<h2 className="w-max text-3xl 2xl:text-5xl font-bold">Mi historia</h2>
-				</div>
-				<p className="2xl:text-xl text-balance">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-					dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
-					amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-					consectetur, adipisicing elit. Quidem, molestias! Sequi vel sed
-					quaerat qui nihil molestias corporis laborum velit, temporibus, fugiat
-					cumque, quos veritatis ea eos soluta beatae placeat.
-				</p>
-			</div>
+			<SectionHeader
+				title="Mi historia"
+				subtitle="Acerca de"
+				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+			/>
 
 			<div className="w-full h-[80dvh] relative pb-32">
 				<ImageElement
