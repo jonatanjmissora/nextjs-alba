@@ -7,7 +7,7 @@ import Certificates from "./certificates"
 
 export default function About() {
 	return (
-		<div id="about" className="w-full relative">
+		<div id="about" className="w-full my-32 relative border border-transparent">
 			<LeafImgs />
 			<SectionHeader
 				title="Mi historia"
@@ -24,9 +24,9 @@ export default function About() {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-[5%] 2xl:-bottom-[20%] 2xl:-left-[18%] -left-40 size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
-			<Leaf1 className="absolute bottom-[10%] 2xl:-bottom-[0%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute -bottom-[10%] 2xl:-bottom-[15%] -right-[5%] size-[15rem] text-[var(--leaf-color)]" />
+			<BranchLeaf className="absolute -bottom-[35%] 2xl:-bottom-[20%] 2xl:-left-[18%] -left-40 size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf1 className="absolute -bottom-[15%] 2xl:-bottom-[0%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
+			<Leaf2 className="absolute -bottom-[30%] 2xl:-bottom-[15%] -right-[5%] size-[10rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

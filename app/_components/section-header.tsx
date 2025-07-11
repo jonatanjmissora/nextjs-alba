@@ -20,7 +20,7 @@ export const SectionHeader = ({
 					{title}
 				</h2>
 			</div>
-			<p className="2xl:text-xl text-balance">{description}</p>
+			<p className="text text-balance">{description}</p>
 		</div>
 	)
 }

@@ -15,7 +15,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <li
             key={product.id}
-            className="product-card flex flex-col gap-3 p-4 pb-6 2xl:p-6 2xl:pb-8 bg-[var(--primary-pink)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group"
+            className="product-card flex flex-col gap-3 p-4 2xl:p-6 bg-[var(--primary-pink)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group"
         >
             <div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl">
                 <img
@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 </div>
             </div>
             <div className="flex flex-col gap-2 ">
-                <span className="2xl:text-xl w-[180px] 2xl:w-[${IMG_WIDTH[2]}]">
+                <span className="text w-[180px] 2xl:w-[${IMG_WIDTH[2]}]">
                     {product.description}
                 </span>
                 <button onClick={handleProduct} className="mr-2 ml-auto cursor-pointer">

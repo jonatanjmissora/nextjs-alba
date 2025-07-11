@@ -9,7 +9,7 @@ export default function page() {
 	return (
 		<div
 			id="services"
-			className="w-full min-h-[100dvh] 2xl:min-h-[90dvh] my-32 relative border border-transparent"
+			className="w-full min-h-screen 2xl:min-h-[90dvh] my-32 relative border border-transparent"
 		>
 			<LeafImgs />
 			<SectionHeader
@@ -18,7 +18,7 @@ export default function page() {
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 			/>
 
-			<div className="w-full h-[80dvh] 2xl:h-[70dvh] flex justify-between">
+			<div className="w-full h-[85dvh] flex justify-between">
 				<ServicesCard />
 			</div>
 		</div>
@@ -40,9 +40,9 @@ const ServicesCard = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-32 2xl:-bottom-[30%] 2xl:-left-[18%] -left-40 size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
-			<Leaf1 className="absolute bottom-[10%] 2xl:-bottom-[5%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute -bottom-[5%] 2xl:-bottom-[20%] 2xl:-right-[10%] -right-[5%] size-[15rem] text-[var(--leaf-color)]" />
+			<BranchLeaf className="absolute -bottom-[40%] 2xl:-bottom-[30%] 2xl:-left-[18%] -left-[18%] size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf1 className="absolute -bottom-[10%] 2xl:-bottom-[5%] left-[47%] size-[5rem] text-[var(--leaf-color)]" />
+			<Leaf2 className="absolute -bottom-[25%] 2xl:-bottom-[20%] 2xl:-right-[10%] -right-[5%] size-[10rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

@@ -8,7 +8,7 @@ import ProductCard from "./product-card"
 export default function page() {
 	return (
 		<>
-			<div className="w-full h-[10dvh] bg-green-500"></div>
+			<div className="w-full h-[20dvh] bg-transparent"></div>
 			<div id="shop" className="w-full my-32 relative border border-transparent">
 				<LeafImgs />
 				<SectionHeader
@@ -20,14 +20,14 @@ export default function page() {
 				<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex flex-col justify-between items-center mb-60">
 					<ProductsCard />
 
-					<div className="w-full border-t-3 border-[var(--primary-green)] text-right">
-						<button className="text-xl font-semibold text-[var(--primary-green)] py-2 cursor-pointer icon">
+					<div className="w-full border-t-3 border-[var(--secondary-green)] text-right">
+						<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
 							ver mas +
 						</button>
 					</div>
 				</div>
 			</div>
-			<div className="w-full h-[10dvh] bg-green-500"></div>
+			<div className="w-full h-[10dvh] bg-transparent"></div>
 		</>
 	)
 }
@@ -50,7 +50,7 @@ const LeafImgs = () => {
 		<>
 			<BranchLeaf className="absolute -bottom-[13%] -left-[18%] size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
 			<Leaf1 className="absolute bottom-[10%] left-[47%] size-[7rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute -bottom-[10%] -right-[5%] size-[15rem] text-[var(--leaf-color)]" />
+			<Leaf2 className="absolute -bottom-[10%] -right-[5%] size-[10rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

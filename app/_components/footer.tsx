@@ -1,22 +1,12 @@
+import RoundLeaf from "@/public/leaf/round-leaf"
 import Link from "next/link"
 
 export default function Footer() {
 	return (
-		<footer className="w-full flex flex-col">
+		<footer id="contact" className="w-full flex flex-col">
 			<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
-			<div className="w-full px-32">
+			<div className="w-full px-32 relaive overflow-x-hidden">
 				<div className="flex justify-between gap-2 min-h-[30dvh]">
-					<div className="flex flex-col gap-2">
-						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
-							Tienda
-						</h3>
-						<nav className="flex flex-col gap-2 text-[#333] text-sm 2xl:text-base px-2">
-							<Link href="/category01">Categoria 1</Link>
-							<Link href="/category02">Categoria 2</Link>
-							<Link href="/category03">Categoria 3</Link>
-							<Link href="/category04">Categoria 4</Link>
-						</nav>
-					</div>
 
 					<div className="flex flex-col gap-2">
 						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
@@ -27,6 +17,18 @@ export default function Footer() {
 							<Link href="/service02">Servicio 2</Link>
 							<Link href="/service03">Servicio 3</Link>
 							<Link href="/service04">Servicio 4</Link>
+						</nav>
+					</div>
+
+					<div className="flex flex-col gap-2">
+						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
+							Tienda
+						</h3>
+						<nav className="flex flex-col gap-2 text-[#333] text-sm 2xl:text-base px-2">
+							<Link href="/category01">Categoria 1</Link>
+							<Link href="/category02">Categoria 2</Link>
+							<Link href="/category03">Categoria 3</Link>
+							<Link href="/category04">Categoria 4</Link>
 						</nav>
 					</div>
 
@@ -84,6 +86,8 @@ export default function Footer() {
 						© 2025 ALBA
 					</p>
 				</div>
+
+				<RoundLeaf className="absolute -bottom-[0%] -right-[2%] size-[12rem] 2xl:size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 			</div>
 		</footer>
 	)

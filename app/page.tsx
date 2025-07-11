@@ -14,7 +14,7 @@ export default function Page() {
 				<Header />
 			</div>
 
-			<section id="home" className="w-full min-h-[90dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]">
+			<section id="home" className="w-full min-h-[85dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]">
 				<Home />
 			</section>
 
@@ -34,7 +34,7 @@ export default function Page() {
 				</WaveContainer>
 			</section>
 
-			<section className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] mt-[20dvh] relative">
+			<section className="w-full min-h-[275dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] mb-[10dvh] relative">
 				<Faqs />
 			</section>
 
