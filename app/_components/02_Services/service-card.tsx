@@ -51,9 +51,9 @@ export default function ServiceCard({service}: {service: Service}) {
                             />
                         </div>
 
-                        <button onClick={handleService} className="mr-4 cursor-pointer">
+                        <a href={`/service/${service.id}`} className="mr-4 cursor-pointer">
                             <MoveRight size={30} color="var(--primary-green)" className="icon"/>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
