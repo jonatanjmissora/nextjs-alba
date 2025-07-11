@@ -21,7 +21,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 <img
                     src={product.image}
                     alt=""
-                    className={`group-hover:scale-120 transition-all duration-800 object-cover w-[180px] 2xl:w-[${IMG_WIDTH[2]}] h-[${IMG_HEIGHT[1]}] 2xl:h-[${IMG_HEIGHT[2]}]`}
+                    className={`group-hover:scale-120 transition-all duration-800 object-cover w-[180px] 2xl:w-[250px] h-[300px] 2xl:h-[500px]`}
                 />
             </div>
             <h3 className="font-semibold text-[var(--primary-green)] 2xl:text-2xl pt-2">
@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 </div>
             </div>
             <div className="flex flex-col gap-2 ">
-                <span className="text w-[180px] 2xl:w-[${IMG_WIDTH[2]}]">
+                <span className="text w-[180px] 2xl:w-[250px]">
                     {product.description}
                 </span>
                 <button onClick={handleProduct} className="mr-2 ml-auto cursor-pointer">

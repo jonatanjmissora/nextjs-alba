@@ -30,7 +30,7 @@ export default function page() {
 					/>
 					<div className="w-full flex justify-between items-center pb-6">
 						<div className="w-1/2 p-12 pl-0 flex flex-col gap-20">
-							<div className="flex flex-col gap-3 tip-border pr-8 pb-8">
+							<div className="flex flex-col gap-3 tip-border-up pl-8 pt-8">
 								<h3 className="w-full header font-semibold text-[var(--primary-green)]">
 									{tips[0].title}
 								</h3>
@@ -42,7 +42,7 @@ export default function page() {
 					</div>
 					<div className="w-1/2 p-12 pr-0 flex flex-col gap-20">
 						<img src={tips[1].img} alt="" className="w-full h-[70dvh] object-cover rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)] relative z-50"/>
-						<div className="flex flex-col gap-3 tip-border pr-8 pb-8">
+						<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">
 							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
 								{tips[1].title}
 							</h3>
@@ -52,7 +52,7 @@ export default function page() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full border-t-3 border-[var(--secondary-green)] text-right">
+				<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
 					<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
 						ver mas +
 					</button>

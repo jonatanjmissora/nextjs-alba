@@ -146,7 +146,13 @@ body {
 	border-bottom-right-radius: 2rem;
 }
 
-.tip-border {
+.tip-border-up {
+	border-top: 1px solid var(--secondary-green);
+	border-left: 1px solid var(--secondary-green);
+	border-top-left-radius: 2rem;
+}
+
+.tip-border-down {
 	border-bottom: 1px solid var(--secondary-green);
 	border-right: 1px solid var(--secondary-green);
 	border-bottom-right-radius: 2rem;

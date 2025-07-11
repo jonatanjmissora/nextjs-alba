@@ -34,7 +34,7 @@ export default function Page() {
 				</WaveContainer>
 			</section>
 
-			<section className="w-full min-h-[275dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] mb-[10dvh] relative">
+			<section className="w-full min-h-[250dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] mb-[10dvh] relative">
 				<Faqs />
 			</section>
 

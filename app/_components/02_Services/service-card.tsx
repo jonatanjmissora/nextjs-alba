@@ -18,7 +18,7 @@ export default function ServiceCard({service}: {service: Service}) {
             className={`service-card relative z-50 flex flex-col gap-3 p-5 bg-[var(--background-two)] rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group`}
         >
             <div
-                className={`relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tl-4xl rounded-br-4xl w-[180px] 2xl:w-[${IMG_WIDTH[2]}] h-[${IMG_HEIGHT[1]}] 2xl:h-[${IMG_HEIGHT[2]}]`}
+                className={`relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tl-4xl rounded-br-4xl w-[180px] 2xl:w-[250px] h-[300px] 2xl:h-[500px]`}
             >
                 <img
                     src={service.image}
@@ -32,7 +32,7 @@ export default function ServiceCard({service}: {service: Service}) {
             <div className="">
                 <div className="flex flex-col gap-2">
                     <p
-                        className={`w-[180px] 2xl:w-[${IMG_WIDTH[2]}] text text-balnce`}
+                        className={`w-[180px] 2xl:w-[250px] text text-balnce`}
                     >
                         {service.subtitle}
                     </p>

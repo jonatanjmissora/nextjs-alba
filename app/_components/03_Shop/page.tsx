@@ -20,7 +20,7 @@ export default function page() {
 				<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex flex-col justify-between items-center mb-60">
 					<ProductsCard />
 
-					<div className="w-full border-t-3 border-[var(--secondary-green)] text-right">
+					<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
 						<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
 							ver mas +
 						</button>
