@@ -81,7 +81,7 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="w-full border-t border-[#333] mt-12">
+				<div className="w-full border-t border-[var(--primary-green)] mt-12">
 					<p className="py-2 text-sm text-[var(--primary-green)]">
 						© 2025 ALBA
 					</p>

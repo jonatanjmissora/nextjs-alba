@@ -2,15 +2,9 @@
 
 import { Service } from "@/app/_lib/services";
 import { Heart, MoveRight, ShoppingCart } from "lucide-react";
-
-const IMG_WIDTH = ["100px", "120px", "250px"]
-const IMG_HEIGHT = ["200px", "300px", "500px"]
+import Image from "next/image";
 
 export default function ServiceCard({service}: {service: Service}) {
-
-    const handleService = () => {
-		console.log("handleService")
-	}
 
 	return (
     <li
@@ -20,9 +14,11 @@ export default function ServiceCard({service}: {service: Service}) {
             <div
                 className={`relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tl-4xl rounded-br-4xl w-[180px] 2xl:w-[250px] h-[300px] 2xl:h-[500px]`}
             >
-                <img
+                <Image
                     src={service.image}
-                    alt=""
+                    alt={service.title}
+                    width={400}
+                    height={600}
                     className={`w-full h-full group-hover:scale-120 transition-all duration-800 object-cover`}
                 />
             </div>

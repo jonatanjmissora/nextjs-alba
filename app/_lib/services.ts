@@ -13,7 +13,7 @@ export const servicesData: Service[] = [
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "./servicio1.jpg",
+		image: "/servicio1.jpg",
 	},
 	{
 		id: 2,
@@ -21,7 +21,7 @@ export const servicesData: Service[] = [
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "./servicio2.jpg",
+		image: "/servicio2.jpg",
 	},
 	{
 		id: 3,
@@ -29,7 +29,7 @@ export const servicesData: Service[] = [
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "./servicio3.jpg",
+		image: "/servicio3.jpg",
 	},
 	{
 		id: 4,
@@ -37,6 +37,6 @@ export const servicesData: Service[] = [
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "./servicio4.jpg",
+		image: "/servicio4.jpg",
 	},
 ]
