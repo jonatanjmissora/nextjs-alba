@@ -1,19 +1,20 @@
-import { servicesData } from "@/app/_lib/services"
+import { Service, servicesData } from "@/app/_lib/services"
+import { ArrowLeft, Heart, MinusCircle, PlusCircle, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 
 export default function ServicePage({params}: {params: {id: string}}) {
 
 	const service = servicesData.find(service => service.id === Number(params.id))
 
-	if(!service) return <div>Service not found</div>
-
 	return (
 
-		<div className="w-full h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] border">
+		<div className="w-full h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col">
 			<ProductHeader />
-			<div className="w-full h-[50dvh] flex justify-center items-center bg-green-500">
-				<Image src={service?.image} alt={service?.title} width={1900} height={2800}  className="w-full h-full object-cover" />
-			</div>
+			{service ? (
+				<ProductBody service={service}/>
+			) : (
+				<span>Service not found</span>
+			)}
 			<ProductFooter />
 		</div>
 	)
@@ -22,18 +23,84 @@ export default function ServicePage({params}: {params: {id: string}}) {
 
 const ProductHeader = () => {
 	return (
-		<div className="w-full h-[15dvh] border-b-2 border-[var(--secondary-green)] flex flex-col justify-end">
-			<h1 className="header py-1 px-16">Product Header</h1>
+		<div className="w-full h-[10dvh] border-b-2 border-[var(--secondary-green)] flex flex-col justify-end group">
+			<div className="py-4 flex items-center gap-6">
+				<ArrowLeft size={24} color="var(--primary-green)" className="icon"/>
+				<span className="header text-[var(--primary-green)]">Volver</span>
+			</div>
+		</div>
+	)
+}
+
+const ProductBody = ({service}: {service: Service}) => {
+	return (
+		<div className="w-full flex-1 flex gap-12 justify-center items-center py-20">
+			<div className="w-1/2 h-full flex flex-col gap-2">
+				<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)]">
+					<Image src={service.image} alt={service.title} quality={100} layout="fill" objectFit="cover" className="" />
+				</div>
+				<div className="flex gap-2">
+					<Carrousel service={service}/>
+				</div>
+			</div>
+			<div className="w-1/2 flex flex-col gap-6">
+				<div className="flex justify-between items-center">
+					<span className="header text-[var(--primary-green)]">Categoria</span>
+					<Heart
+						size={30}
+						color="var(--primary-green)"
+						className="icon"
+					/>
+                            
+				</div>
+				<h1 className="title font-bold">Product Header</h1>
+				<p className="text">{service.description}</p>
+				<p className="subtitle font-semibold">${service.price}</p>
+				<div className="flex items-center gap-4">
+					<div className="flex gap-4">
+						<button><PlusCircle size={30} color="var(--primary-green)" className="icon"/></button>
+						<span className="header">1</span>
+						<button><MinusCircle size={30} color="var(--primary-green)" className="icon"/></button>
+					</div>
+					<button className="ml-12 cta-button flex items-center gap-4 py-2 px-6">
+						<ShoppingCart
+							size={30}
+							className="icon"
+							/>
+						<span>Agregar al carrito</span>
+					</button>
+				</div>
+
+			</div>
 		</div>
 	)
 }
 
 const ProductFooter = () => {
 	return (
-		<div className="w-full h-[10dvh] border-t-2 border-[var(--primary-green)] mt-12">
+		<div className="w-full border-t-2 border-[var(--primary-green)]">
 			<p className="py-2 text-sm text-[var(--primary-green)]">
 				© 2025 ALBA
 			</p>
+		</div>
+	)
+}
+
+const Carrousel = ({service}: {service: Service}) => {
+	return (
+		<div className="flex gap-2">
+			<div className="w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)]">
+				<Image src={service.image} alt={service.title} quality={100} layout="fill" objectFit="cover" className="" />
+			</div>
+			<div className="w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)]">
+				<Image src={service.image} alt={service.title} quality={100} layout="fill" objectFit="cover" className="" />
+			</div>
+			<div className="w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)]">
+				<Image src={service.image} alt={service.title} quality={100} layout="fill" objectFit="cover" className="" />
+			</div>
+			<div className="w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)]">
+				<Image src={service.image} alt={service.title} quality={100} layout="fill" objectFit="cover" className="" />
+			</div>
 		</div>
 	)
 }
