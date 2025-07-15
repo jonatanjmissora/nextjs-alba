@@ -2,18 +2,19 @@ import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
 import { SectionHeader } from "../section-header"
+import Image from "next/image"
 
 export default function page() {
 
 	const tips = [
 		{
 			title: "Titulo del tip",
-			img: "./tip1.jpg",
+			img: "/tip1.jpg",
 			description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
 		},
 		{
 			title: "Titulo del tip",
-			img: "./tip2.jpg",
+			img: "/tip2.jpg",
 			description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
 		}
 	]
@@ -38,10 +39,14 @@ export default function page() {
 								{tips[0].description}
 							</span>
 						</div>
-						<img src={tips[0].img} alt="" className="w-full h-[70dvh] object-cover rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)] relative z-50"/>
+						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+							<Image src={tips[0].img} alt={tips[0].title} quality={100} layout="fill" objectFit="cover"/>
+						</div>
 					</div>
 					<div className="w-1/2 p-12 pr-0 flex flex-col gap-20">
-						<img src={tips[1].img} alt="" className="w-full h-[70dvh] object-cover rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)] relative z-50"/>
+						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+							<Image src={tips[1].img} alt={tips[1].title} quality={100} layout="fill" objectFit="cover"/>
+						</div>
 						<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">
 							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
 								{tips[1].title}

@@ -1,8 +1,7 @@
-"use client"
-
 import { Service } from "@/app/_lib/services";
 import { Heart, MoveRight, ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServiceCard({service}: {service: Service}) {
 
@@ -17,9 +16,10 @@ export default function ServiceCard({service}: {service: Service}) {
                 <Image
                     src={service.image}
                     alt={service.title}
-                    width={400}
-                    height={600}
-                    className={`w-full h-full group-hover:scale-120 transition-all duration-800 object-cover`}
+                    quality={100}
+                    layout="fill"
+                    objectFit="cover"
+                    className={`w-full h-full group-hover:scale-120 transition-all duration-800`}
                 />
             </div>
             <h3 className="header text-[var(--primary-green)] my-">
@@ -47,9 +47,9 @@ export default function ServiceCard({service}: {service: Service}) {
                             />
                         </div>
 
-                        <a href={`/service/${service.id}`} className="mr-4 cursor-pointer">
+                        <Link href={`/service/${service.id}`} className="mr-4 cursor-pointer">
                             <MoveRight size={30} color="var(--primary-green)" className="icon"/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

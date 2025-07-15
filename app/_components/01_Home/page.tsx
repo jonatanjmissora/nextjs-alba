@@ -33,23 +33,29 @@ export default function Home() {
 
 const HomeImg1 = () => {
 	return (
-		<img
-			src="./avatar-alba.png"
-			alt=""
-			className="w-[200px] h-[300px] 2xl:w-[250px] 2xl:h-[400px] 2xl:translate-x-24"
-		/>
+		<div className="w-[200px] h-[300px] 2xl:w-[250px] 2xl:h-[400px] 2xl:translate-x-24 relative">
+			<Image
+				src="/avatar-alba.png"
+				alt="Avatar Alba"
+				quality={100} 
+				layout="fill" 
+				objectFit="cover"
+			/>
+		</div>
 	)
 }
 
 const HomeImg2 = () => {
 	return (
-		<Image
-			src="/alba-alpha.png"
-			alt="Alba Alpha Logo"
-			width={500}
-			height={700}
-			className="w-[350px] h-[450px] 2xl:w-[500px] 2xl:h-[700px]"
-		/>
+		<div className="w-[350px] h-[450px] 2xl:w-[500px] 2xl:h-[700px] relative">
+			<Image
+				src="/alba-alpha.png"
+				alt="Alba Alpha Logo"
+				quality={100} 
+				layout="fill" 
+				objectFit="cover"
+			/>
+		</div>
 	)
 }
 
