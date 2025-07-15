@@ -9,7 +9,10 @@ export default function page() {
 	return (
 		<>
 			<div className="w-full h-[20dvh] bg-transparent"></div>
-			<div id="shop" className="w-full my-32 relative border border-transparent">
+			<div
+				id="shop"
+				className="w-full my-32 relative border border-transparent"
+			>
 				<LeafImgs />
 				<SectionHeader
 					title="Nuestros productos en gabinete"
@@ -17,7 +20,7 @@ export default function page() {
 					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 				/>
 
-				<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex flex-col justify-between items-center mb-60">
+				<div className="w-full h-[90dvh] 2xl:h-[80dvh] flex flex-col justify-between items-center mb-60">
 					<ProductsCard />
 
 					<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
@@ -33,7 +36,6 @@ export default function page() {
 }
 
 const ProductsCard = () => {
-
 	const products = productsData
 
 	return (

@@ -9,7 +9,7 @@ export default function page() {
 	return (
 		<div
 			id="services"
-			className="w-full min-h-screen 2xl:min-h-[90dvh] my-32 relative border border-transparent"
+			className="w-full min-h-screen 2xl:min-h-[50dvh] my-32 relative border border-transparent"
 		>
 			<LeafImgs />
 			<SectionHeader
@@ -18,8 +18,14 @@ export default function page() {
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 			/>
 
-			<div className="w-full h-[85dvh] flex justify-between">
+			<div className="w-full h-[85dvh] 2xl:h-[75dvh] flex justify-between">
 				<ServicesCard />
+			</div>
+
+			<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
+				<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
+					ver mas +
+				</button>
 			</div>
 		</div>
 	)

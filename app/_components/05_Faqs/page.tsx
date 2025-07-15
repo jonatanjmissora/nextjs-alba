@@ -5,47 +5,63 @@ import { SectionHeader } from "../section-header"
 import Image from "next/image"
 
 export default function page() {
-
 	const tips = [
 		{
 			title: "Titulo del tip",
 			img: "/tip1.jpg",
-			description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+			description:
+				"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
 		},
 		{
 			title: "Titulo del tip",
 			img: "/tip2.jpg",
-			description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
-		}
+			description:
+				"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+		},
 	]
 
 	return (
 		<>
 			<div className="w-full h-[20dvh] bg-transparent"></div>
-				<div id="faqs" className="w-full my-32 relative border border-transparent">
-					<LeafImgs />
-					<SectionHeader
-						title="Nuestros tips del centro de belleza"
-						subtitle="Tips"
-						description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
-					/>
-					<div className="w-full flex justify-between items-center pb-6">
-						<div className="w-1/2 p-12 pl-0 flex flex-col gap-20">
-							<div className="flex flex-col gap-3 tip-border-up pl-8 pt-8">
-								<h3 className="w-full header font-semibold text-[var(--primary-green)]">
-									{tips[0].title}
-								</h3>
+			<div
+				id="faqs"
+				className="w-full my-32 relative border border-transparent"
+			>
+				<LeafImgs />
+				<SectionHeader
+					title="Nuestros tips del centro de belleza"
+					subtitle="Tips"
+					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				/>
+				<div className="w-full flex justify-between items-center pb-6">
+					<div className="w-1/2 p-12 pl-0 flex flex-col gap-20">
+						<div className="flex flex-col gap-3 tip-border-up pl-8 pt-8">
+							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
+								{tips[0].title}
+							</h3>
 							<span className="w-full text text-balance">
 								{tips[0].description}
 							</span>
 						</div>
 						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
-							<Image src={tips[0].img} alt={tips[0].title} quality={100} layout="fill" objectFit="cover"/>
+							<Image
+								src={tips[0].img}
+								alt={tips[0].title}
+								quality={100}
+								layout="fill"
+								objectFit="cover"
+							/>
 						</div>
 					</div>
 					<div className="w-1/2 p-12 pr-0 flex flex-col gap-20">
 						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
-							<Image src={tips[1].img} alt={tips[1].title} quality={100} layout="fill" objectFit="cover"/>
+							<Image
+								src={tips[1].img}
+								alt={tips[1].title}
+								quality={100}
+								layout="fill"
+								objectFit="cover"
+							/>
 						</div>
 						<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">
 							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
@@ -59,7 +75,7 @@ export default function page() {
 				</div>
 				<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
 					<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
-						ver mas +
+						leer mas +
 					</button>
 				</div>
 			</div>
