@@ -1,5 +1,5 @@
 export type Product = {
-	id: number
+	id: string
 	title: string
 	subtitle: string
 	description: string
@@ -10,7 +10,7 @@ export type Product = {
 
 export const productsData = [
 	{
-		id: 1,
+		id: "product-titulo-del-producto-1",
 		title: "Titulo del producto",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
@@ -25,7 +25,7 @@ export const productsData = [
 		price: "100.99",
 	},
 	{
-		id: 2,
+		id: "product-titulo-del-producto-2",
 		title: "Titulo del producto",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
@@ -40,7 +40,7 @@ export const productsData = [
 		price: "100.99",
 	},
 	{
-		id: 3,
+		id: "product-titulo-del-producto-3",
 		title: "Titulo del producto",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
@@ -55,7 +55,7 @@ export const productsData = [
 		price: "100.99",
 	},
 	{
-		id: 4,
+		id: "product-titulo-del-producto-4",
 		title: "Titulo del producto",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:

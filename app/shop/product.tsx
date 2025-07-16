@@ -8,8 +8,9 @@ import { ProductCountAndCart } from "./product-count"
 import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import RoundLeaf from "@/public/leaf/round-leaf"
+import { loadFavorites, setToFavorites } from "../_lib/localstorage"
 
 export default function ProductPage({ product }: { product: Product }) {
 	return (
@@ -43,17 +44,26 @@ const ProductHeader = () => {
 
 const ProductBody = ({ product }: { product: Product }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
+	const [isFavorite, setIsFavorite] = useState(false)
+
+	useEffect(() => {
+		const favorites = loadFavorites()
+		if (favorites.includes(product.id)) {
+			setIsFavorite(true)
+		}
+	}, [product.id])
+
+	const handleClick = () => {
+		setIsFavorite(!isFavorite)
+		setToFavorites(product.id)
+	}
 
 	return (
 		<div className="w-full flex-1 flex justify-between items-center py-20">
 			<div className="w-1/2 h-full flex flex-col gap-4">
 				<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
 					<Image
-						src={
-							product.carousel[
-								actualImageIndex === 0 ? product.id - 1 : actualImageIndex
-							]
-						}
+						src={product.carousel[actualImageIndex]}
 						alt={product.title}
 						quality={100}
 						layout="fill"
@@ -73,7 +83,15 @@ const ProductBody = ({ product }: { product: Product }) => {
 			<div className="w-1/2 flex flex-col gap-6 justify-center pl-40">
 				<div className="flex justify-between items-center">
 					<span className="header text-[var(--primary-green)]">Categoria</span>
-					<Heart size={30} color="var(--primary-green)" className="icon" />
+					<button type="button" onClick={handleClick}>
+						<Heart
+							size={30}
+							color="var(--primary-green)"
+							className={
+								isFavorite ? "icon fill-[var(--primary-green)]" : "icon"
+							}
+						/>
+					</button>
 				</div>
 				<h1 className="title font-bold">Product Header</h1>
 				<p className="text mb-20">{product.description}</p>
@@ -105,7 +123,7 @@ const Carrousel = ({
 		<div className="flex gap-2">
 			{product.carousel.map((image, index) => (
 				<div
-					key={index}
+					key={image}
 					className={`w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] cursor-pointer ${index === actualImageIndex && "shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]"}`}
 				>
 					<Image

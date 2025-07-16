@@ -1,5 +1,5 @@
 export type Service = {
-	id: number
+	id: string
 	title: string
 	subtitle: string
 	description: string
@@ -10,7 +10,7 @@ export type Service = {
 
 export const servicesData: Service[] = [
 	{
-		id: 1,
+		id: "service-titulo-del-servicio-1",
 		title: "Titulo del servicio",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
@@ -25,7 +25,7 @@ export const servicesData: Service[] = [
 		price: "100.99",
 	},
 	{
-		id: 2,
+		id: "service-titulo-del-servicio-2",
 		title: "Titulo del servicio",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
@@ -40,7 +40,7 @@ export const servicesData: Service[] = [
 		price: "100.99",
 	},
 	{
-		id: 3,
+		id: "service-titulo-del-servicio-3",
 		title: "Titulo del servicio",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:
@@ -55,7 +55,7 @@ export const servicesData: Service[] = [
 		price: "100.99",
 	},
 	{
-		id: 4,
+		id: "service-titulo-del-servicio-4",
 		title: "Titulo del servicio",
 		subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		description:

@@ -9,7 +9,8 @@ import { BranchLeaf } from "@/public/leaf/branch-leaf"
 import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
 import RoundLeaf from "@/public/leaf/round-leaf"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { loadFavorites, setToFavorites } from "@/app/_lib/localstorage"
 
 export default function ServicePage({ service }: { service: Service }) {
 	return (
@@ -43,6 +44,19 @@ const ServiceHeader = () => {
 
 const ServiceBody = ({ service }: { service: Service }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
+	const [isFavorite, setIsFavorite] = useState(false)
+
+	useEffect(() => {
+		const favorites = loadFavorites()
+		if (favorites.includes(service.id)) {
+			setIsFavorite(true)
+		}
+	}, [service.id])
+
+	const handleClick = () => {
+		setIsFavorite(!isFavorite)
+		setToFavorites(service.id)
+	}
 
 	return (
 		<div className="w-full flex-1 flex justify-between items-center py-20">
@@ -69,7 +83,19 @@ const ServiceBody = ({ service }: { service: Service }) => {
 			<div className="w-1/2 flex flex-col gap-6 justify-center pl-40">
 				<div className="flex justify-between items-center">
 					<span className="header text-[var(--primary-green)]">Categoria</span>
-					<Heart size={30} color="var(--primary-green)" className="icon" />
+					<button
+						type="button"
+						onClick={handleClick}
+						className="cursor-pointer"
+					>
+						<Heart
+							size={30}
+							color="var(--primary-green)"
+							className={
+								isFavorite ? "icon fill-[var(--primary-green)]" : "icon"
+							}
+						/>
+					</button>
 				</div>
 				<h1 className="title font-bold">Service Header</h1>
 				<p className="text mb-20">{service.description}</p>
@@ -101,7 +127,7 @@ const Carrousel = ({
 		<div className="flex gap-2">
 			{service.carousel.map((image, index) => (
 				<div
-					key={index}
+					key={image}
 					className={`w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] cursor-pointer ${index === actualImageIndex && "shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]"}`}
 				>
 					<Image

@@ -1,5 +1,5 @@
 import Footer from "./_components/footer"
-import Header from "./_components/header"
+import Header from "./_components/header/header"
 import Home from "./_components/01_Home/page"
 import Services from "./_components/02_Services/page"
 import Shop from "./_components/03_Shop/page"
@@ -14,7 +14,10 @@ export default function Page() {
 				<Header />
 			</div>
 
-			<section id="home" className="w-full min-h-[85dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]">
+			<section
+				id="home"
+				className="w-full min-h-[85dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]"
+			>
 				<Home />
 			</section>
 

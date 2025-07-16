@@ -29,19 +29,19 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 					${(Number(service.price) * count).toFixed(2)}
 				</p>
 				<div className="flex gap-4">
-					<button onClick={handleMinus}>
+					<button onClick={handleMinus} type="button">
 						<MinusCircle
 							size={30}
 							color="var(--primary-green)"
-							className="icon"
+							className="icon cursor-pointer"
 						/>
 					</button>
 					<span className="header">{count}</span>
-					<button onClick={handlePlus}>
+					<button onClick={handlePlus} type="button">
 						<PlusCircle
 							size={30}
 							color="var(--primary-green)"
-							className="icon"
+							className="icon cursor-pointer"
 						/>
 					</button>
 				</div>
@@ -49,12 +49,12 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 
 			<div className="flex gap-4">
 				<button className="cta-button flex justify-center items-center gap-4 py-2 px-6 w-1/2">
-					<ShoppingCart size={30} className="icon" />
+					<ShoppingCart size={30} className="icon cursor-pointer" />
 					<span>Agregar {count > 1 ? `(x${count})` : ""}</span>
 				</button>
 
 				<button className="cta-button-inv flex justify-center items-center gap-4 py-2 px-6 w-1/2">
-					<CircleDollarSign size={30} className="icon" />
+					<CircleDollarSign size={30} className="icon cursor-pointer" />
 					<span>Comprar {count > 1 ? `(x${count})` : ""}</span>
 				</button>
 			</div>

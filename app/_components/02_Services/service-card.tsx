@@ -1,9 +1,27 @@
+"use client"
+
 import { Service } from "@/app/_lib/services"
 import { Heart, MoveRight, ShoppingCart } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useState, useEffect } from "react"
+import { loadFavorites, setToFavorites } from "@/app/_lib/localstorage"
 
 export default function ServiceCard({ service }: { service: Service }) {
+	const [isFavorite, setIsFavorite] = useState(false)
+
+	useEffect(() => {
+		const favorites = loadFavorites()
+		if (favorites.includes(service.id)) {
+			setIsFavorite(true)
+		}
+	}, [service.id])
+
+	const handleClick = () => {
+		setIsFavorite(!isFavorite)
+		setToFavorites(service.id)
+	}
+
 	return (
 		<li
 			key={service.id}
@@ -32,7 +50,15 @@ export default function ServiceCard({ service }: { service: Service }) {
 
 					<div className="flex justify-between items-center mt-5">
 						<div className="flex gap-4">
-							<Heart size={24} color="var(--primary-green)" className="icon" />
+							<button type="button" onClick={handleClick}>
+								<Heart
+									size={24}
+									color="var(--primary-green)"
+									className={
+										isFavorite ? "icon fill-[var(--primary-green)]" : "icon"
+									}
+								/>
+							</button>
 							<ShoppingCart
 								size={24}
 								color="var(--primary-green)"

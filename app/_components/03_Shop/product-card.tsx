@@ -1,11 +1,27 @@
 "use client"
 
+import { loadFavorites, setToFavorites } from "@/app/_lib/localstorage"
 import { Product } from "@/app/_lib/products"
 import { Heart, ShoppingCart, MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function ProductCard({ product }: { product: Product }) {
+	const [isFavorite, setIsFavorite] = useState(false)
+
+	useEffect(() => {
+		const favorites = loadFavorites()
+		if (favorites.includes(product.id)) {
+			setIsFavorite(true)
+		}
+	}, [product.id])
+
+	const handleClick = () => {
+		setIsFavorite(!isFavorite)
+		setToFavorites(product.id)
+	}
+
 	return (
 		<li
 			key={product.id}
@@ -31,7 +47,15 @@ export default function ProductCard({ product }: { product: Product }) {
 				</span>
 
 				<div className="flex gap-4">
-					<Heart size={20} color="var(--primary-green)" className="icon" />
+					<button type="button" onClick={handleClick}>
+						<Heart
+							size={20}
+							color="var(--primary-green)"
+							className={
+								isFavorite ? "icon fill-[var(--primary-green)]" : "icon"
+							}
+						/>
+					</button>
 					<ShoppingCart
 						size={20}
 						color="var(--primary-green)"
