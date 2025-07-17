@@ -1,21 +1,24 @@
 import { productsData } from "@/app/_lib/products"
 import ProductPage from "./product"
 
-export default function ServerProductPage({
-    params,
-    searchParams,
+type Params = Promise<{ id: string }>
+type SearchParams = Promise<{ from: string | undefined }>
+
+export default async function ServerProductPage({
+	params,
+	searchParams,
 }: {
-    params: { id: string }
-    searchParams: { [key: string]: string | undefined }
+	params: Params
+	searchParams: SearchParams
 }) {
-    const id = params.id
-    const from = searchParams.from ?? "products"
+	const { id } = await params
+	const { from = "shop" } = await searchParams
 
-    const product = productsData.find(product => product.id === id)
+	const product = productsData.find(product => product.id === id)
 
-    if (!product) {
-        return <span>Product not found</span>
-    }
+	if (!product) {
+		return <span>Product not found</span>
+	}
 
-    return <ProductPage product={product} from={from} />
+	return <ProductPage product={product} from={from} />
 }

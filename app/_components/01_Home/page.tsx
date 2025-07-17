@@ -24,7 +24,7 @@ export default function Home() {
 				</button>
 			</div>
 
-			<div className="absolute top-[17dvh] right-[0dvw] 2xl:-bottom-[8dvh] 2xl:-right-[0dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12">
+			<div className="absolute right-[0dvw] 2xl:bottom-[5dvh] 2xl:-right-[0dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12">
 				<HomeImg2 />
 			</div>
 		</>
@@ -37,8 +37,8 @@ const HomeImg1 = () => {
 			<Image
 				src="/avatar-alba.png"
 				alt="Avatar Alba"
-				quality={100} 
-				layout="fill" 
+				quality={100}
+				layout="fill"
 				objectFit="cover"
 			/>
 		</div>
@@ -51,8 +51,8 @@ const HomeImg2 = () => {
 			<Image
 				src="/alba-alpha.png"
 				alt="Alba Alpha Logo"
-				quality={100} 
-				layout="fill" 
+				quality={100}
+				layout="fill"
 				objectFit="cover"
 			/>
 		</div>
@@ -62,10 +62,10 @@ const HomeImg2 = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute top-0 right-[15%] size-[18rem] 2xl:size-[25rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
-			<Leaf1 className="absolute top-[43%] 2xl:top-[45%] left-[55%] size-[6rem] 2xl:size-[7rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute -bottom-[5%] 2xl:bottom-[3%] right-[30%] size-[8rem] 2xl:size-[15rem] rotate-180 text-[var(--leaf-color)]" />
-			<RoundLeaf className="absolute bottom-[15%] 2xl:bottom-[32%] -left-[5%] size-[10rem] 2xl:size-[15rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<BranchLeaf className="absolute top-0 right-[19%] size-[18rem] 2xl:size-[20rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
+			<Leaf1 className="absolute top-[43%] 2xl:top-[45%] left-[55%] size-[4rem] 2xl:size-[5rem] text-[var(--leaf-color)]" />
+			<Leaf2 className="absolute -bottom-[5%] 2xl:bottom-[3%] right-[30%] size-[8rem] 2xl:size-[10rem] rotate-180 text-[var(--leaf-color)]" />
+			<RoundLeaf className="absolute bottom-[15%] 2xl:bottom-[32%] -left-[2%] size-[7rem] 2xl:size-[10rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
 		</>
 	)
 }

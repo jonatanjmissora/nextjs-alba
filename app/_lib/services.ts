@@ -5,7 +5,7 @@ export type Service = {
 	description: string
 	image: string
 	carousel: string[]
-	price: string
+	price: number
 }
 
 export const servicesData: Service[] = [
@@ -22,7 +22,7 @@ export const servicesData: Service[] = [
 			"/servicio3.jpg",
 			"/servicio4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 	{
 		id: "service-titulo-del-servicio-2",
@@ -37,7 +37,7 @@ export const servicesData: Service[] = [
 			"/servicio3.jpg",
 			"/servicio4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 	{
 		id: "service-titulo-del-servicio-3",
@@ -52,7 +52,7 @@ export const servicesData: Service[] = [
 			"/servicio3.jpg",
 			"/servicio4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 	{
 		id: "service-titulo-del-servicio-4",
@@ -67,6 +67,6 @@ export const servicesData: Service[] = [
 			"/servicio3.jpg",
 			"/servicio4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 ]

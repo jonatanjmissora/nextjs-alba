@@ -19,7 +19,7 @@ export default function FavoritesPage() {
 
 	return (
 		<div className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
-			<SinglePageHeader href="/#services" />
+			<SinglePageHeader text="Favoritos" href="services" />
 			{favorites ? (
 				<FavoritesBody favorites={favorites} />
 			) : (
@@ -44,8 +44,8 @@ const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
 	)
 
 	return (
-		<div className="w-full flex-1 2xl:h-[75dvh] flex justify-between items-center">
-			<ul className="w-full flex justify-between items-start flex-wrap py-20 gap-y-12">
+		<div className="w-full flex-1 2xl:h-[50dvh] flex justify-between items-center">
+			<ul className="w-full flex justify-start items-start gap-14 2xl:gap-18 flex-wrap py-10">
 				{servicesFavorites.map(service => (
 					<Card
 						key={service.id}

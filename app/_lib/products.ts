@@ -5,7 +5,7 @@ export type Product = {
 	description: string
 	image: string
 	carousel: string[]
-	price: string
+	price: number
 }
 
 export const productsData = [
@@ -22,7 +22,7 @@ export const productsData = [
 			"/producto3.jpg",
 			"/producto4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 	{
 		id: "product-titulo-del-producto-2",
@@ -37,7 +37,7 @@ export const productsData = [
 			"/producto3.jpg",
 			"/producto4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 	{
 		id: "product-titulo-del-producto-3",
@@ -52,7 +52,7 @@ export const productsData = [
 			"/producto3.jpg",
 			"/producto4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 	{
 		id: "product-titulo-del-producto-4",
@@ -67,6 +67,6 @@ export const productsData = [
 			"/producto3.jpg",
 			"/producto4.jpg",
 		],
-		price: "100.99",
+		price: 100.99,
 	},
 ]

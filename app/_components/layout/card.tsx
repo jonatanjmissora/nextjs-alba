@@ -13,14 +13,14 @@ export default function Card({
 	element,
 	from,
 }: {
-	type: "shop" | "service"
+	type: "shop" | "service" | "favorites" | "cart"
 	element: Product | Service
-	from: string
+	from: "shop" | "services" | "favorites" | "cart"
 }) {
 	return (
 		<li
 			key={element.id}
-			className={`w-[250px] 2xl:w-[300px] flex flex-col gap-5 p-4 2xl:p-6 ${type === "shop" ? "bg-[var(--primary-pink)]" : "bg-[var(--background-one)]"} rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group`}
+			className={`w-[250px] 2xl:w-[300px] flex flex-col gap-5 p-4 2xl:p-6 ${type === "shop" ? "bg-[var(--primary-pink)]" : "bg-[var(--background-one)]"} rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
 		>
 			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full h-[300px] 2xl:h-[500px]">
 				<Image

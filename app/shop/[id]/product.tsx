@@ -15,11 +15,11 @@ export default function ProductPage({
 	from,
 }: {
 	product: Product
-	from: string
+	from: "services" | "shop" | "favorites" | "cart"
 }) {
 	return (
 		<div className="w-full h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
-			<SinglePageHeader href={from === "shop" ? "/#shop" : "/favorites"} />
+			<SinglePageHeader text="Producto" href={from} />
 			{product ? (
 				<ProductBody product={product} />
 			) : (

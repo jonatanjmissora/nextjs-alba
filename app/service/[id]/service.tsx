@@ -15,18 +15,17 @@ export default function ServicePage({
 	from,
 }: {
 	service: Service
-	from: string
+	from: "services" | "shop" | "favorites" | "cart"
 }) {
 	return (
 		<div className="w-full h-screen border px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
-			<SinglePageHeader
-				href={from === "services" ? "/#services" : "/favorites"}
-			/>
+			<SinglePageHeader text="Servicio" href={from} />
 			{service ? (
 				<ServiceBody service={service} />
 			) : (
 				<span>Service not found</span>
 			)}
+			<span>{from}</span>
 			<SinglePageFooter />
 
 			<SinglePageLeaf />
@@ -48,6 +47,7 @@ const ServiceBody = ({ service }: { service: Service }) => {
 						layout="fill"
 						objectFit="cover"
 						className=""
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 					/>
 				</div>
 				<div className="flex gap-2">

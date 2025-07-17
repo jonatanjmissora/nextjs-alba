@@ -21,7 +21,7 @@ export default function ServiceSection() {
 
 			<ServicesCard />
 
-			<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
+			<div className="w-full border-t-2 border-[var(--secondary-green)] text-right mt-12">
 				<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
 					ver mas +
 				</button>
@@ -34,8 +34,8 @@ const ServicesCard = () => {
 	const services = servicesData
 
 	return (
-		<div className="w-full h-[85dvh] 2xl:h-[75dvh] flex justify-between">
-			<ul className="w-full flex justify-between items-start">
+		<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex justify-between">
+			<ul className="w-full flex justify-start items-start gap-14 2xl:gap-18 flex-wrap gap-y-12">
 				{services.map(service => (
 					<Card
 						key={service.id}
