@@ -3,31 +3,30 @@ import { Leaf1 } from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
 import { SectionHeader } from "../section-header"
 import { servicesData } from "@/app/_lib/services"
-import ServiceCard from "./service-card"
+import Card from "../layout/card"
 
-export default function page() {
+export default function ServiceSection() {
 	return (
-		<div
+		<section
 			id="services"
 			className="w-full min-h-screen 2xl:min-h-[50dvh] my-32 relative border border-transparent"
 		>
 			<LeafImgs />
+
 			<SectionHeader
 				title="Nuestros servicios en gabinete"
 				subtitle="Servicios"
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 			/>
 
-			<div className="w-full h-[85dvh] 2xl:h-[75dvh] flex justify-between">
-				<ServicesCard />
-			</div>
+			<ServicesCard />
 
 			<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
 				<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
 					ver mas +
 				</button>
 			</div>
-		</div>
+		</section>
 	)
 }
 
@@ -35,11 +34,18 @@ const ServicesCard = () => {
 	const services = servicesData
 
 	return (
-		<ul className="w-full flex justify-between items-start">
-			{services.map(service => (
-				<ServiceCard key={service.id} service={service} />
-			))}
-		</ul>
+		<div className="w-full h-[85dvh] 2xl:h-[75dvh] flex justify-between">
+			<ul className="w-full flex justify-between items-start">
+				{services.map(service => (
+					<Card
+						key={service.id}
+						type="service"
+						element={service}
+						from="services"
+					/>
+				))}
+			</ul>
+		</div>
 	)
 }
 

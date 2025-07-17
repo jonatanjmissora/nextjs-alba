@@ -4,16 +4,22 @@ import { Product } from "@/app/_lib/products"
 import Image from "next/image"
 import { ProductCountAndCart } from "./product-count"
 import { useState } from "react"
-import SinglePageHeader from "../_components/layout/single-page-header"
-import SinglePageFooter from "../_components/layout/single-page-footer"
-import SinglePageLeaf from "../_components/layout/single-page-leaf"
-import SinglePageCarrousel from "../_components/layout/single-page-carrousel"
-import HeartIconContainer from "../_components/layout/heart-icon-container"
+import SinglePageHeader from "../../_components/layout/single-page-header"
+import SinglePageFooter from "../../_components/layout/single-page-footer"
+import SinglePageLeaf from "../../_components/layout/single-page-leaf"
+import SinglePageCarrousel from "../../_components/layout/single-page-carrousel"
+import HeartIconContainer from "../../_components/layout/heart-icon-container"
 
-export default function ProductPage({ product }: { product: Product }) {
+export default function ProductPage({
+	product,
+	from,
+}: {
+	product: Product
+	from: string
+}) {
 	return (
 		<div className="w-full h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
-			<SinglePageHeader href="/#shop" />
+			<SinglePageHeader href={from === "shop" ? "/#shop" : "/favorites"} />
 			{product ? (
 				<ProductBody product={product} />
 			) : (
@@ -54,9 +60,8 @@ const ProductBody = ({ product }: { product: Product }) => {
 			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
 				<div className="flex justify-between items-center">
 					<span className="header text-[var(--primary-green)]">Categoria</span>
-					
-					<HeartIconContainer id={product.id}/>
 
+					<HeartIconContainer id={product.id} />
 				</div>
 				<h1 className="title font-bold">Product Header</h1>
 				<p className="text mb-10 2xl:mb-20">{product.description}</p>
@@ -66,4 +71,3 @@ const ProductBody = ({ product }: { product: Product }) => {
 		</div>
 	)
 }
-

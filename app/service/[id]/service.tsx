@@ -10,10 +10,18 @@ import SinglePageLeaf from "@/app/_components/layout/single-page-leaf"
 import SinglePageCarrousel from "@/app/_components/layout/single-page-carrousel"
 import HeartIconContainer from "@/app/_components/layout/heart-icon-container"
 
-export default function ServicePage({ service }: { service: Service }) {
+export default function ServicePage({
+	service,
+	from,
+}: {
+	service: Service
+	from: string
+}) {
 	return (
 		<div className="w-full h-screen border px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
-			<SinglePageHeader href="/#services" />
+			<SinglePageHeader
+				href={from === "services" ? "/#services" : "/favorites"}
+			/>
 			{service ? (
 				<ServiceBody service={service} />
 			) : (
@@ -55,8 +63,7 @@ const ServiceBody = ({ service }: { service: Service }) => {
 				<div className="flex justify-between items-center">
 					<span className="header text-[var(--primary-green)]">Categoria</span>
 
-					<HeartIconContainer id={service.id}/>
-
+					<HeartIconContainer id={service.id} />
 				</div>
 				<h1 className="title font-bold">Service Header</h1>
 				<p className="text mb-10 2xl:mb-20">{service.description}</p>
