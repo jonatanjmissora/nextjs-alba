@@ -3,7 +3,7 @@
 import { Search, X } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
-export default function HeaderSerch() {
+export default function HeaderSearch() {
 	const [showInput, setShowInput] = useState(false)
 	const [searchValue, setSearchValue] = useState("")
 	const inputRef = useRef<HTMLInputElement>(null)

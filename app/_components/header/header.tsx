@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ShoppingCart } from "lucide-react"
-import HeaderSerch from "./header-search"
-import HeaderHeart from "./header.heart"
+import HeaderSearch from "./header-search"
+import HeaderHeartContainer from "./header-heart-container"
 
 export default function Header() {
 	return (
@@ -14,7 +14,7 @@ export default function Header() {
 			</a>
 
 			<nav className="flex items-center gap-8 header-nav text">
-				<HeaderSerch />
+				<HeaderSearch />
 				<a href="#services">Servicios</a>
 				<a href="#shop">Tienda</a>
 				<a href="#about">Acerca de</a>
@@ -23,7 +23,7 @@ export default function Header() {
 			</nav>
 
 			<nav className="flex gap-8">
-				<HeaderHeart />
+				<HeaderHeartContainer />
 				<Link href="/cart">
 					<ShoppingCart
 						size={20}

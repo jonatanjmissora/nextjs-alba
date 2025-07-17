@@ -3,13 +3,12 @@
 import { Service } from "@/app/_lib/services"
 import Image from "next/image"
 import { ServiceCountAndCart } from "./service-count"
-import { useState, useEffect } from "react"
-import { loadFavorites, setToFavorites } from "@/app/_lib/localstorage"
+import { useState } from "react"
 import SinglePageHeader from "@/app/_components/layout/single-page-header"
-import { Heart } from "lucide-react"
 import SinglePageFooter from "@/app/_components/layout/single-page-footer"
 import SinglePageLeaf from "@/app/_components/layout/single-page-leaf"
 import SinglePageCarrousel from "@/app/_components/layout/single-page-carrousel"
+import HeartIconContainer from "@/app/_components/layout/heart-icon-container"
 
 export default function ServicePage({ service }: { service: Service }) {
 	return (
@@ -29,19 +28,6 @@ export default function ServicePage({ service }: { service: Service }) {
 
 const ServiceBody = ({ service }: { service: Service }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
-	const [isFavorite, setIsFavorite] = useState(false)
-
-	useEffect(() => {
-		const favorites = loadFavorites()
-		if (favorites.includes(service.id)) {
-			setIsFavorite(true)
-		}
-	}, [service.id])
-
-	const handleClick = () => {
-		setIsFavorite(!isFavorite)
-		setToFavorites(service.id)
-	}
 
 	return (
 		<div className="w-full flex-1 flex justify-between items-center py-10 2xl:py-20">
@@ -68,16 +54,9 @@ const ServiceBody = ({ service }: { service: Service }) => {
 			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
 				<div className="flex justify-between items-center">
 					<span className="header text-[var(--primary-green)]">Categoria</span>
-					<button
-						type="button"
-						onClick={handleClick}
-						className="cursor-pointer"
-					>
-						<Heart
-							color="var(--primary-green)"
-							className={`icon size-6 2xl:size-8 ${isFavorite && "fill-[var(--primary-green)]"}`}
-						/>
-					</button>
+
+					<HeartIconContainer id={service.id}/>
+
 				</div>
 				<h1 className="title font-bold">Service Header</h1>
 				<p className="text mb-10 2xl:mb-20">{service.description}</p>
