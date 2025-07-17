@@ -1,13 +1,13 @@
 "use client"
 
 import { Service } from "@/app/_lib/services"
-import { MoveRight, ShoppingCart } from "lucide-react"
+import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import HeartIconContainer from "../layout/heart-icon-container"
+import CartIconContainer from "../layout/cart-icon-container"
 
 export default function ServiceCard({ service }: { service: Service }) {
-
 	return (
 		<li
 			key={service.id}
@@ -36,12 +36,8 @@ export default function ServiceCard({ service }: { service: Service }) {
 
 					<div className="flex justify-between items-center mt-5">
 						<div className="flex gap-4">
-							<HeartIconContainer id={service.id}/>
-							<ShoppingCart
-								size={24}
-								color="var(--primary-green)"
-								className="icon"
-							/>
+							<HeartIconContainer id={service.id} />
+							<CartIconContainer id={service.id} />
 						</div>
 
 						<Link

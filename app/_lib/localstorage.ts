@@ -1,3 +1,7 @@
+//======================================================
+// FAVORITES
+//======================================================
+
 export type Favorites = string[]
 
 export function loadFavorites(): Favorites {
@@ -35,4 +39,47 @@ export function setToFavorites(id: string): void {
 	}
 
 	localStorage.setItem("favorites", JSON.stringify(favorites))
+}
+
+//======================================================
+// 						CART
+//======================================================
+
+export type Cart = string[]
+
+export function loadCart(): Cart {
+	if (typeof window === "undefined") return []
+
+	const savedLocalCart = localStorage.getItem("cart")
+	if (savedLocalCart) {
+		try {
+			return JSON.parse(savedLocalCart)
+		} catch (error) {
+			console.error("Failed to load data from localStorage", error)
+			return []
+		}
+	}
+
+	return []
+}
+
+export function saveCart(cart: Cart): void {
+	if (typeof window === "undefined") return
+
+	localStorage.setItem("cart", JSON.stringify(cart))
+}
+
+export function setToCart(id: string): void {
+	if (typeof window === "undefined") return
+
+	const cart = loadCart()
+
+	if (cart.length === 0) cart.push(id)
+	else if (cart.includes(id)) {
+		cart.splice(cart.indexOf(id), 1)
+	} else {
+		cart.push(id)
+	}
+
+	localStorage.setItem("cart", JSON.stringify(cart))
 }

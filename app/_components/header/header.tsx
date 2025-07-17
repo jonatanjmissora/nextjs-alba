@@ -1,7 +1,6 @@
-import Link from "next/link"
-import { ShoppingCart } from "lucide-react"
 import HeaderSearch from "./header-search"
 import HeaderHeartContainer from "./header-heart-container"
+import HeaderCartContainer from "./header-cart-container"
 
 export default function Header() {
 	return (
@@ -24,13 +23,7 @@ export default function Header() {
 
 			<nav className="flex gap-8">
 				<HeaderHeartContainer />
-				<Link href="/cart">
-					<ShoppingCart
-						size={20}
-						color="var(--primary-green)"
-						className="icon"
-					/>
-				</Link>
+				<HeaderCartContainer />
 			</nav>
 		</header>
 	)

@@ -1,13 +1,13 @@
 "use client"
 
 import { Product } from "@/app/_lib/products"
-import { ShoppingCart, MoveRight } from "lucide-react"
+import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import HeartIconContainer from "../layout/heart-icon-container"
+import CartIconContainer from "../layout/cart-icon-container"
 
 export default function ProductCard({ product }: { product: Product }) {
-
 	return (
 		<li
 			key={product.id}
@@ -33,12 +33,8 @@ export default function ProductCard({ product }: { product: Product }) {
 				</span>
 
 				<div className="flex gap-4">
-					<HeartIconContainer id={product.id}/>
-					<ShoppingCart
-						size={20}
-						color="var(--primary-green)"
-						className="icon"
-					/>
+					<HeartIconContainer id={product.id} />
+					<CartIconContainer id={product.id} />
 				</div>
 			</div>
 			<div className="flex flex-col gap-2">

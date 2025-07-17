@@ -14,7 +14,7 @@ export default function HeaderHeart() {
 				className={`icon size-5 2xl:size-7 ${savedFavorites.length > 0 && "fill-[var(--primary-green)]"}`}
 			/>
 			{savedFavorites.length > 0 && (
-				<span className="absolute top-[-5px] right-[-8px] w-4 h-4 rounded-full text-[var(--primary-green)] font-semibold">
+				<span className="absolute top-[-5px] right-[-8px] 2xl:right-[-12px] w-4 h-4 rounded-full text-[var(--primary-green)] font-semibold">
 					{savedFavorites.length}
 				</span>
 			)}
