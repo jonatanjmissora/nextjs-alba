@@ -7,6 +7,7 @@ import { servicesData } from "../_lib/services"
 import Card from "../_components/layout/card"
 import { productsData } from "../_lib/products"
 import { useStore } from "../_lib/store"
+import NoCard from "../_components/layout/no-card"
 
 export default function FavoritesPage() {
 	const { favoritesStore } = useStore()
@@ -39,24 +40,28 @@ const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
 
 	return (
 		<div className="w-full flex-1 flex justify-between items-center">
-			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap py-5 2xl:py-10">
-				{servicesFavorites.map(service => (
-					<Card
-						key={service.id}
-						type={"service"}
-						element={service}
-						from="favorites"
-					/>
-				))}
-				{productsFavorites.map(product => (
-					<Card
-						key={product.id}
-						type={"shop"}
-						element={product}
-						from="favorites"
-					/>
-				))}
-			</ul>
+			{favorites.length === 0 ? (
+				<NoCard text="a favoritos" />
+			) : (
+				<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap py-5 2xl:py-10">
+					{servicesFavorites.map(service => (
+						<Card
+							key={service.id}
+							type={"service"}
+							element={service}
+							from="favorites"
+						/>
+					))}
+					{productsFavorites.map(product => (
+						<Card
+							key={product.id}
+							type={"shop"}
+							element={product}
+							from="favorites"
+						/>
+					))}
+				</ul>
+			)}
 		</div>
 	)
 }

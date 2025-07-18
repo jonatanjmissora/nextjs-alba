@@ -1,10 +1,11 @@
 import HeaderSearch from "./header-search"
 import HeaderHeartContainer from "./header-heart-container"
 import HeaderCartContainer from "./header-cart-container"
+import HeaderFixed from "./header-fixed"
 
 export default function Header() {
 	return (
-		<header className="w-full h-full flex justify-between items-center">
+		<header className="w-full h-full flex justify-center items-center">
 			<a
 				href="#home"
 				className="2xl:text-2xl text-xl font-semibold text-[var(--primary-green)]"
@@ -25,6 +26,7 @@ export default function Header() {
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</nav>
+			<HeaderFixed />
 		</header>
 	)
 }

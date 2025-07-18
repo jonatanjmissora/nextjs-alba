@@ -7,6 +7,8 @@ import { useStore } from "../_lib/store"
 import { servicesData } from "../_lib/services"
 import { productsData } from "../_lib/products"
 import CartCard from "./cart-card"
+import CartCheckout from "./cart-checkout"
+import NoCard from "../_components/layout/no-card"
 
 export default function CartPage() {
 	const { cartStore } = useStore()
@@ -26,59 +28,42 @@ export default function CartPage() {
 	)
 }
 
-const CartBody = ({ cart }: { cart: string[] }) => {
+const CartBody = ({ cart }: { cart: { id: string; quantity: number }[] }) => {
 	const services = servicesData
 	const products = productsData
 
-	const servicesCart = services.filter(service => cart.includes(service.id))
-	const productsCart = products.filter(product => cart.includes(product.id))
-
-	const total = cart.reduce(
-		(total, id) =>
-			total +
-			(services.find(service => service.id === id)?.price ||
-				products.find(product => product.id === id)?.price ||
-				0),
-		0
+	const servicesCart = services.filter(service =>
+		cart.find(cart => cart.id === service.id)
+	)
+	const productsCart = products.filter(product =>
+		cart.find(cart => cart.id === product.id)
 	)
 
 	return (
-		<div className="w-full min-h-[84dvh] 2xl:h-[75dvh] flex gap-3 2xl:gap-4">
-			<ul className="w-[70%] flex flex-col justify-start gap-3 2xl:gap-4 flex-wrap py-10 2xl:py-20">
-				{servicesCart.map(service => (
-					<CartCard
-						key={service.id}
-						element={service}
-						type="service"
-						from="cart"
-					/>
-				))}
-				{productsCart.map(product => (
-					<CartCard
-						key={product.id}
-						element={product}
-						type="shop"
-						from="cart"
-					/>
-				))}
-			</ul>
-			<div className="flex-1 max-h-[80dvh] 2xl:max-h-[75dvh] flex flex-col justify-center items-center gap-12 flex-wrap p-4 2xl:p-6 my-10 2xl:my-20 border rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] bg-[var(--background-three)] border-[#d685922a]">
-				<h2 className="subtitle font-semibold text-[var(--primary-green)] text-center w-full">
-					Resumen de compra
-				</h2>
-				<p className="text-center w-full header font-semibold">
-					{cart.length} item(s)
-				</p>
-				<div className="flex justify-center gap-4 items-center">
-					<span className="subtitle font-semibold">Total</span>
-					<span className="subtitle font-bold text-black">
-						${total.toFixed(2)}
-					</span>
-				</div>
-				<button className="w-full cta-button header font-semibold py-3">
-					Confirmar
-				</button>
-			</div>
+		<div className="w-full min-h-[84dvh] 2xl:min-h-[75dvh] flex gap-3 2xl:gap-4">
+			{cart.length === 0 ? (
+				<NoCard text="al carrito" />
+			) : (
+				<ul className="w-[70%] flex flex-col justify-start gap-3 2xl:gap-4 flex-wrap py-10 2xl:py-20">
+					{servicesCart.map(service => (
+						<CartCard
+							key={service.id}
+							element={service}
+							type="service"
+							from="cart"
+						/>
+					))}
+					{productsCart.map(product => (
+						<CartCard
+							key={product.id}
+							element={product}
+							type="shop"
+							from="cart"
+						/>
+					))}
+				</ul>
+			)}
+			<CartCheckout />
 		</div>
 	)
 }

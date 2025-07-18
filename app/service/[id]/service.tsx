@@ -59,13 +59,13 @@ const ServiceBody = ({ service }: { service: Service }) => {
 			</div>
 
 			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
-				<div className="flex justify-between items-center">
-					<span className="header text-[var(--primary-green)]">Categoria</span>
+				<span className="header text-[var(--primary-green)]">Categoria</span>
 
-					<HeartIconContainer id={service.id} />
-				</div>
 				<h1 className="title font-bold">Service Header</h1>
+
 				<p className="text mb-10 2xl:mb-20">{service.description}</p>
+
+				<HeartIconContainer id={service.id} />
 
 				<ServiceCountAndCart service={service} />
 			</div>

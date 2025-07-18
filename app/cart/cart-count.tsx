@@ -4,27 +4,40 @@ import { Service } from "@/app/_lib/services"
 import { useState } from "react"
 import { Product } from "@/app/_lib/products"
 import { MinusCircle, PlusCircle } from "lucide-react"
+import { useStore } from "../_lib/store"
 
-export const CartCount = ({
-	element,
-	total,
-	setTotal,
-}: {
-	element: Service | Product
-	total: number
-	setTotal: (total: number) => void
-}) => {
-	const [count, setCount] = useState<number>(1)
+const elementQuantityFn = (
+	element: Service | Product,
+	cartStore: { id: string; quantity: number }[]
+) => {
+	return cartStore.find(cart => cart.id === element.id)?.quantity || 1
+}
+
+export const CartCount = ({ element }: { element: Service | Product }) => {
+	const { cartStore, setCartStore } = useStore()
+	const [count, setCount] = useState<number>(
+		elementQuantityFn(element, cartStore)
+	)
 
 	const handlePlus = () => {
 		setCount(count + 1)
-		setTotal(total + Number(element.price))
+		setCartStore(
+			cartStore.map(cart =>
+				cart.id === element.id ? { ...cart, quantity: cart.quantity + 1 } : cart
+			)
+		)
 	}
 
 	const handleMinus = () => {
 		if (count > 1) {
 			setCount(count - 1)
-			setTotal(total - Number(element.price))
+			setCartStore(
+				cartStore.map(cart =>
+					cart.id === element.id
+						? { ...cart, quantity: cart.quantity - 1 }
+						: cart
+				)
+			)
 		}
 	}
 

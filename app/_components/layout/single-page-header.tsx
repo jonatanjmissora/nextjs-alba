@@ -1,5 +1,6 @@
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import HeaderFixed from "../header/header-fixed"
 
 export default function SinglePageHeader({
 	text,
@@ -17,6 +18,7 @@ export default function SinglePageHeader({
 				<ArrowLeft size={24} color="var(--primary-green)" className="icon" />
 				<span className="header text-[var(--primary-green)]">{text}</span>
 			</Link>
+			<HeaderFixed />
 		</div>
 	)
 }

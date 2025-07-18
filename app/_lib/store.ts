@@ -4,8 +4,8 @@ import { persist, createJSONStorage } from "zustand/middleware"
 type Store = {
 	favoritesStore: string[]
 	setFavoritesStore: (favorites: string[]) => void
-	cartStore: string[]
-	setCartStore: (cart: string[]) => void
+	cartStore: { id: string; quantity: number }[]
+	setCartStore: (cart: { id: string; quantity: number }[]) => void
 }
 
 export const useStore = create<Store>()(
@@ -15,7 +15,8 @@ export const useStore = create<Store>()(
 			setFavoritesStore: (favorites: string[]) =>
 				set({ favoritesStore: favorites }),
 			cartStore: [],
-			setCartStore: (cart: string[]) => set({ cartStore: cart }),
+			setCartStore: (cart: { id: string; quantity: number }[]) =>
+				set({ cartStore: cart }),
 		}),
 		{
 			name: "store",

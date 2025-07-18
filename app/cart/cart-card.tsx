@@ -5,7 +5,6 @@ import Link from "next/link"
 import { CartCount } from "./cart-count"
 import HeartIconContainer from "../_components/layout/heart-icon-container"
 import { Trash2Icon } from "lucide-react"
-import { useState } from "react"
 import { Service } from "@/app/_lib/services"
 import { Product } from "@/app/_lib/products"
 import { useStore } from "../_lib/store"
@@ -19,11 +18,13 @@ export default function CartCard({
 	type: "shop" | "service" | "favorites" | "cart"
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
-	const [total, setTotal] = useState<number>(element.price)
 	const { cartStore, setCartStore } = useStore()
 
+	const cartItem = cartStore.find(cart => cart.id === element.id)
+	const subTotal = element.price * (cartItem?.quantity || 1)
+
 	const handleClick = () => {
-		setCartStore(cartStore.filter(cart => cart !== element.id))
+		setCartStore(cartStore.filter(cart => cart.id !== element.id))
 	}
 
 	return (
@@ -61,7 +62,7 @@ export default function CartCard({
 					<span className="header">
 						{element.id[0] === "s" ? "servicio" : "producto"}
 					</span>
-					<CartCount element={element} total={total} setTotal={setTotal} />
+					<CartCount element={element} />
 				</div>
 
 				<div className="flex justify-between items-end mt-auto">
@@ -81,7 +82,7 @@ export default function CartCard({
 					<div className="flex justify-center items-end gap-6">
 						<span className="text-xl 2xl:text-2xl font-semibold">subtotal</span>
 						<span className="text-xl 2xl:text-2xl font-bold text-black">
-							${total.toFixed(2)}
+							${subTotal.toFixed(2)}
 						</span>
 					</div>
 				</div>

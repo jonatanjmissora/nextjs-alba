@@ -4,15 +4,23 @@ import { ShoppingCart } from "lucide-react"
 import { useState } from "react"
 import { useStore } from "@/app/_lib/store"
 
+const isInCartFn = (
+	cartStore: { id: string; quantity: number }[],
+	id: string
+) => {
+	const index = cartStore.findIndex(cart => cart.id === id)
+	return index !== -1
+}
+
 export default function CartIcon({ id }: { id: string }) {
 	const { cartStore, setCartStore } = useStore()
-	const [isInCart, setIsInCart] = useState(cartStore.includes(id))
+	const [isInCart, setIsInCart] = useState(isInCartFn(cartStore, id))
 
 	const handleClick = () => {
 		if (isInCart) {
-			setCartStore(cartStore.filter(cart => cart !== id))
+			setCartStore(cartStore.filter(cart => cart.id !== id))
 		} else {
-			setCartStore([...cartStore, id])
+			setCartStore([...cartStore, { id, quantity: 1 }])
 		}
 		setIsInCart(!isInCart)
 	}
