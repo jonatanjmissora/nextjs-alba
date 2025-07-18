@@ -90,7 +90,7 @@ const ImageElement = ({
 				alt={alt}
 				quality={100}
 				layout="fill"
-				objectFit="contain"
+				objectFit="cover"
 			/>
 		</div>
 	)

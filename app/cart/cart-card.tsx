@@ -8,6 +8,7 @@ import { Trash2Icon } from "lucide-react"
 import { useState } from "react"
 import { Service } from "@/app/_lib/services"
 import { Product } from "@/app/_lib/products"
+import { setToCart } from "../_lib/localstorage"
 
 export default function CartCard({
 	element,
@@ -20,14 +21,16 @@ export default function CartCard({
 }) {
 	const [total, setTotal] = useState<number>(element.price)
 
-	const handleClick = () => {}
+	const handleClick = () => {
+		setToCart(element.id)
+	}
 
 	return (
 		<li
 			key={element.id}
-			className={`w-[250px] 2xl:w-[80%] flex gap-5 p-4 2xl:p-6 ${type === "shop" ? "bg-[var(--primary-pink)]" : "bg-[var(--background-one)]"} rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
+			className={`w-full flex gap-5 p-4 2xl:p-6 bg-[var(--background-two)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
 		>
-			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-[200px] h-[300px] 2xl:h-[150px]">
+			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-[150px] 2xl:w-[200px] h-[100px] 2xl:h-[150px]">
 				<Image
 					src={element.image}
 					alt={element.title}
@@ -70,7 +73,7 @@ export default function CartCard({
 						>
 							<Trash2Icon
 								color="var(--primary-green)"
-								className={`icon size-4 2xl:size-6`}
+								className={`icon size-6`}
 							/>
 						</button>
 					</div>

@@ -44,8 +44,8 @@ const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
 	)
 
 	return (
-		<div className="w-full flex-1 2xl:h-[50dvh] flex justify-between items-center">
-			<ul className="w-full flex justify-start items-start gap-14 2xl:gap-18 flex-wrap py-10">
+		<div className="w-full flex-1 flex justify-between items-center">
+			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap py-5 2xl:py-10">
 				{servicesFavorites.map(service => (
 					<Card
 						key={service.id}

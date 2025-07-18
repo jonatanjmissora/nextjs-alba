@@ -25,7 +25,6 @@ export default function ServicePage({
 			) : (
 				<span>Service not found</span>
 			)}
-			<span>{from}</span>
 			<SinglePageFooter />
 
 			<SinglePageLeaf />
