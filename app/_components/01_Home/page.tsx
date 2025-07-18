@@ -65,7 +65,7 @@ const LeafImgs = () => {
 			<BranchLeaf className="absolute top-0 right-[19%] size-[16rem] 2xl:size-[20rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
 			<Leaf1 className="absolute top-[43%] 2xl:top-[45%] left-[55%] size-[4rem] 2xl:size-[5rem] text-[var(--leaf-color)]" />
 			<Leaf2 className="absolute -bottom-[0%] 2xl:bottom-[3%] right-[30%] size-[6rem] 2xl:size-[10rem] rotate-180 text-[var(--leaf-color)]" />
-			<RoundLeaf className="absolute bottom-[22%] 2xl:bottom-[32%] -left-[2%] size-[7rem] 2xl:size-[10rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<RoundLeaf className="absolute bottom-[22%] 2xl:bottom-[32%] -left-[2%] size-[9rem] 2xl:size-[14rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
 		</>
 	)
 }
