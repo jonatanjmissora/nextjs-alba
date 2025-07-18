@@ -1,15 +1,19 @@
 "use client"
 
-import { loadCart, setToCart } from "@/app/_lib/localstorage"
 import { ShoppingCart } from "lucide-react"
 import { useState } from "react"
+import { useStore } from "@/app/_lib/store"
 
 export default function CartIcon({ id }: { id: string }) {
-	const savedCart = loadCart()
-	const [isInCart, setIsInCart] = useState(savedCart.includes(id))
+	const { cartStore, setCartStore } = useStore()
+	const [isInCart, setIsInCart] = useState(cartStore.includes(id))
 
 	const handleClick = () => {
-		setToCart(id)
+		if (isInCart) {
+			setCartStore(cartStore.filter(cart => cart !== id))
+		} else {
+			setCartStore([...cartStore, id])
+		}
 		setIsInCart(!isInCart)
 	}
 

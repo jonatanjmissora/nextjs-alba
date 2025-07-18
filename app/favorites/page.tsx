@@ -1,27 +1,21 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import SinglePageFooter from "../_components/layout/single-page-footer"
 import SinglePageHeader from "../_components/layout/single-page-header"
 import SinglePageLeaf from "../_components/layout/single-page-leaf"
-import { loadFavorites } from "../_lib/localstorage"
 import { servicesData } from "../_lib/services"
 import Card from "../_components/layout/card"
 import { productsData } from "../_lib/products"
+import { useStore } from "../_lib/store"
 
 export default function FavoritesPage() {
-	const [favorites, setFavorites] = useState<string[]>([])
-
-	useEffect(() => {
-		const savedFavorites = loadFavorites()
-		setFavorites(savedFavorites)
-	}, [])
+	const { favoritesStore } = useStore()
 
 	return (
 		<div className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Favoritos" href="services" />
-			{favorites ? (
-				<FavoritesBody favorites={favorites} />
+			{favoritesStore ? (
+				<FavoritesBody favorites={favoritesStore} />
 			) : (
 				<span>add some favorites</span>
 			)}

@@ -8,7 +8,7 @@ import { Trash2Icon } from "lucide-react"
 import { useState } from "react"
 import { Service } from "@/app/_lib/services"
 import { Product } from "@/app/_lib/products"
-import { setToCart } from "../_lib/localstorage"
+import { useStore } from "../_lib/store"
 
 export default function CartCard({
 	element,
@@ -20,9 +20,10 @@ export default function CartCard({
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
 	const [total, setTotal] = useState<number>(element.price)
+	const { cartStore, setCartStore } = useStore()
 
 	const handleClick = () => {
-		setToCart(element.id)
+		setCartStore(cartStore.filter(cart => cart !== element.id))
 	}
 
 	return (

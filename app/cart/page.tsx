@@ -1,26 +1,24 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import SinglePageFooter from "../_components/layout/single-page-footer"
 import SinglePageHeader from "../_components/layout/single-page-header"
 import SinglePageLeaf from "../_components/layout/single-page-leaf"
-import { loadCart } from "../_lib/localstorage"
+import { useStore } from "../_lib/store"
 import { servicesData } from "../_lib/services"
 import { productsData } from "../_lib/products"
 import CartCard from "./cart-card"
 
 export default function CartPage() {
-	const [cart, setCart] = useState<string[]>([])
-
-	useEffect(() => {
-		const savedCart = loadCart()
-		setCart(savedCart)
-	}, [])
+	const { cartStore } = useStore()
 
 	return (
 		<div className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Carrito de compras" href="services" />
-			{cart ? <CartBody cart={cart} /> : <span>add some products to cart</span>}
+			{cartStore ? (
+				<CartBody cart={cartStore} />
+			) : (
+				<span>add some products to cart</span>
+			)}
 			<SinglePageFooter />
 
 			<SinglePageLeaf />

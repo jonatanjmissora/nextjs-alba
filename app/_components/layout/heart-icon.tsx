@@ -1,23 +1,29 @@
 "use client"
 
-import { loadFavorites, setToFavorites } from "@/app/_lib/localstorage"
+import { useStore } from "@/app/_lib/store"
 import { Heart } from "lucide-react"
 import { useState } from "react"
 
 export default function HeartIcon({ id }: { id: string }) {
-	const savedFavorites = loadFavorites()
-	const [isFavorite, setIsFavorite] = useState(savedFavorites.includes(id))
+	const { favoritesStore, setFavoritesStore } = useStore()
+	const [isInFavorites, setIsInFavorites] = useState(
+		favoritesStore.includes(id)
+	)
 
 	const handleClick = () => {
-		setToFavorites(id)
-		setIsFavorite(!isFavorite)
+		if (isInFavorites) {
+			setFavoritesStore(favoritesStore.filter(favorite => favorite !== id))
+		} else {
+			setFavoritesStore([...favoritesStore, id])
+		}
+		setIsInFavorites(!isInFavorites)
 	}
 
 	return (
 		<button type="button" onClick={handleClick} className="cursor-pointer">
 			<Heart
 				color="var(--primary-green)"
-				className={`icon size-6 ${isFavorite && "fill-[var(--primary-green)]"}`}
+				className={`icon size-6 ${isInFavorites && "fill-[var(--primary-green)]"}`}
 			/>
 		</button>
 	)
