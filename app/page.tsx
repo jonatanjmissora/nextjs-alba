@@ -10,7 +10,7 @@ import About from "./_components/04_About/page"
 export default function Page() {
 	return (
 		<main className="w-full relative">
-			<div className="w-full absolute z-10 top-0 left-0 right-0 p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]">
+			<div className="w-full p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]">
 				<Header />
 			</div>
 
