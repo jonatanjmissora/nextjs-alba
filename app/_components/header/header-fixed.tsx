@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import HeaderCartContainer from "./header-cart-container"
 import HeaderHeartContainer from "./header-heart-container"
 
-export default function HeaderFixed() {
+export default function HeaderFixed({ layout }: { layout: "single-page" | "home" }) {
 	const [scrolled, setScrolled] = useState<boolean>(false)
 
 	useEffect(() => {
@@ -22,21 +22,28 @@ export default function HeaderFixed() {
 		return () => window.removeEventListener("scroll", handleScrolled)
 	}, [])
 
-	return (
-		<>
-			<a
-				href="/#home"
-				className={`${scrolled ? "top-[4.25%]" : "-top-[4.25%]"} 2xl:text-2xl text-xl font-semibold text-[var(--primary-green)] fixed left-[3%]`}
-			>
-				{scrolled ? "true" : "false"}
-				ALBA
-			</a>
-			<div
-				className={`${scrolled ? "top-[4.25%]" : "-top-[4.25%]"} fixed right-[3%] flex gap-8`}
-			>
+	if (layout === "single-page") {
+		return (
+			<div className="top-[4.25%] fixed right-[3%] flex gap-8">
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</div>
-		</>
-	)
+		)
+	} else {
+		return (
+			<>
+				<a
+					href="/#home"
+					className={`${scrolled ? "top-[4.25%]" : "-top-[4.25%]"} 2xl:text-2xl text-xl font-semibold text-[var(--primary-green)] fixed left-[4%]`}
+				>
+					ALBA
+				</a>
+				<div className={`${scrolled ? "top-[4.25%]" : "-top-[4.25%]"} fixed right-[3%] flex gap-8`}>
+					<HeaderHeartContainer />
+					<HeaderCartContainer />
+				</div>
+			</>
+		)
+	}
+
 }

@@ -2,7 +2,7 @@ import { servicesData } from "@/app/_lib/services"
 import ServicePage from "./service"
 
 type Params = Promise<{ id: string }>
-type SearchParams = Promise<{ from: string | undefined }>
+type SearchParams = Promise<{ from: "services" | "shop" | "favorites" | "cart" }>
 
 export default async function ServerServicePage({
 	params,

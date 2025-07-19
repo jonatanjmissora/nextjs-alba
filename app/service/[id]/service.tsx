@@ -20,11 +20,9 @@ export default function ServicePage({
 	return (
 		<div className="w-full h-screen border px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Servicio" href={from} />
-			{service ? (
-				<ServiceBody service={service} />
-			) : (
-				<span>Service not found</span>
-			)}
+
+			<ServiceBody service={service} />
+
 			<SinglePageFooter />
 
 			<SinglePageLeaf />
@@ -59,13 +57,16 @@ const ServiceBody = ({ service }: { service: Service }) => {
 			</div>
 
 			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
-				<span className="header text-[var(--primary-green)]">Categoria</span>
 
-				<h1 className="title font-bold">Service Header</h1>
+				<div className="flex items-center gap-3">
+					<HeartIconContainer id={service.id} />
+					<span className="header text-[var(--primary-green)]">Categoria</span>
+				</div>
+
+				<span className="title font-bold">Service Header</span>
 
 				<p className="text mb-10 2xl:mb-20">{service.description}</p>
 
-				<HeartIconContainer id={service.id} />
 
 				<ServiceCountAndCart service={service} />
 			</div>

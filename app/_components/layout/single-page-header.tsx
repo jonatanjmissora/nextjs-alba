@@ -18,7 +18,7 @@ export default function SinglePageHeader({
 				<ArrowLeft size={24} color="var(--primary-green)" className="icon" />
 				<span className="header text-[var(--primary-green)]">{text}</span>
 			</Link>
-			<HeaderFixed />
+			<HeaderFixed layout="single-page"/>
 		</div>
 	)
 }

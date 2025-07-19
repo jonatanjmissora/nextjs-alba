@@ -58,12 +58,13 @@ const ProductBody = ({ product }: { product: Product }) => {
 			</div>
 
 			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
-				<div className="flex justify-between items-center">
-					<span className="header text-[var(--primary-green)]">Categoria</span>
-
+				<div className="flex items-center gap-3">
 					<HeartIconContainer id={product.id} />
+					<span className="header text-[var(--primary-green)]">Categoria</span>
 				</div>
+
 				<h1 className="title font-bold">Product Header</h1>
+				
 				<p className="text mb-10 2xl:mb-20">{product.description}</p>
 
 				<ProductCountAndCart product={product} />

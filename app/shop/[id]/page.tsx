@@ -2,7 +2,7 @@ import { productsData } from "@/app/_lib/products"
 import ProductPage from "./product"
 
 type Params = Promise<{ id: string }>
-type SearchParams = Promise<{ from: string | undefined }>
+type SearchParams = Promise<{ from: "services" | "shop" | "favorites" | "cart" }>
 
 export default async function ServerProductPage({
 	params,
