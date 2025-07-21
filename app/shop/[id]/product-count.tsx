@@ -1,6 +1,7 @@
 "use client"
 
 import { Product } from "@/app/_lib/products"
+import { useStore } from "@/app/_lib/store"
 import {
 	CircleDollarSign,
 	MinusCircle,
@@ -10,7 +11,9 @@ import {
 import { useState } from "react"
 
 export const ProductCountAndCart = ({ product }: { product: Product }) => {
-	const [count, setCount] = useState<number>(1)
+	
+	const { cartStore, setCartStore } = useStore()
+	const [count, setCount] = useState<number>(cartStore.find(cart => cart.id === product.id)?.quantity || 1)
 
 	const handlePlus = () => {
 		setCount(count + 1)
@@ -21,6 +24,16 @@ export const ProductCountAndCart = ({ product }: { product: Product }) => {
 			setCount(count - 1)
 		}
 	}
+
+	const handleAddToCart = () => {
+		const cartItemIndex = cartStore.findIndex(cart => cart.id === product.id)
+		if(cartItemIndex !== -1) {
+			setCartStore(cartStore.map((cart, index) => index === cartItemIndex ? { ...cart, quantity: count } : cart))
+		} else {
+			setCartStore([...cartStore, { id: product.id, quantity: count }])
+		}
+	}
+
 	return (
 		<>
 			<div className="flex justify-between items-center">
@@ -45,7 +58,7 @@ export const ProductCountAndCart = ({ product }: { product: Product }) => {
 			</div>
 
 			<div className="flex gap-4">
-				<button className="cta-button flex justify-center items-center gap-4 py-2 px-6 w-1/2">
+				<button className="cta-button flex justify-center items-center gap-4 py-2 px-6 w-1/2" onClick={handleAddToCart}>
 					<ShoppingCart className="size-4 2xl:size-8 icon cursor-pointer" />
 					<span className="text 2xl:text-normal">Agregar {count > 1 ? `(x${count})` : ""}</span>
 				</button>

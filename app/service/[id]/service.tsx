@@ -9,6 +9,7 @@ import SinglePageFooter from "@/app/_components/layout/single-page-footer"
 import SinglePageLeaf from "@/app/_components/layout/single-page-leaf"
 import SinglePageCarrousel from "@/app/_components/layout/single-page-carrousel"
 import HeartIconContainer from "@/app/_components/layout/heart-icon-container"
+import CartIconContainer from "@/app/_components/layout/cart-icon-container"
 
 export default function ServicePage({
 	service,
@@ -31,44 +32,54 @@ export default function ServicePage({
 }
 
 const ServiceBody = ({ service }: { service: Service }) => {
-	const [actualImageIndex, setActualImageIndex] = useState(0)
-
+	
 	return (
 		<div className="w-full flex-1 flex justify-between items-center py-10 2xl:py-20">
-			<div className="w-1/2 h-full flex flex-col gap-4">
-				<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
-					<Image
-						src={service.carousel[actualImageIndex]}
-						alt={service.title}
-						quality={100}
-						layout="fill"
-						objectFit="cover"
-						className=""
-						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-					/>
-				</div>
-				<div className="flex gap-2">
-					<SinglePageCarrousel
-						element={service}
-						actualImageIndex={actualImageIndex}
-						setActualImageIndex={setActualImageIndex}
-					/>
-				</div>
-			</div>
+
+			<ServiceImage service={service} />
 
 			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
 
+				<span className="header text-[var(--primary-green)]">Categoria</span>
+
 				<div className="flex items-center gap-3">
 					<HeartIconContainer id={service.id} />
-					<span className="header text-[var(--primary-green)]">Categoria</span>
+					<CartIconContainer id={service.id} />
 				</div>
 
 				<span className="title font-bold">Service Header</span>
 
 				<p className="text mb-10 2xl:mb-20">{service.description}</p>
 
-
 				<ServiceCountAndCart service={service} />
+			</div>
+		</div>
+	)
+}
+
+const ServiceImage = ({service}: {service: Service}) => {
+
+	const [actualImageIndex, setActualImageIndex] = useState(0)
+
+	return (
+		<div className="w-1/2 h-full flex flex-col gap-4">
+			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
+				<Image
+					src={service.carousel[actualImageIndex]}
+					alt={service.title}
+					quality={100}
+					layout="fill"
+					objectFit="cover"
+					className=""
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+				/>
+			</div>
+			<div className="flex gap-2">
+				<SinglePageCarrousel
+					element={service}
+					actualImageIndex={actualImageIndex}
+					setActualImageIndex={setActualImageIndex}
+				/>
 			</div>
 		</div>
 	)

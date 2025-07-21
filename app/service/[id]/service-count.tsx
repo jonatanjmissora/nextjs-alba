@@ -8,9 +8,11 @@ import {
 	ShoppingCart,
 } from "lucide-react"
 import { useState } from "react"
+import { useStore } from "@/app/_lib/store"
 
 export const ServiceCountAndCart = ({ service }: { service: Service }) => {
-	const [count, setCount] = useState<number>(1)
+	const { cartStore, setCartStore } = useStore()
+	const [count, setCount] = useState<number>(cartStore.find(cart => cart.id === service.id)?.quantity || 1)
 
 	const handlePlus = () => {
 		setCount(count + 1)
@@ -19,6 +21,15 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 	const handleMinus = () => {
 		if (count > 1) {
 			setCount(count - 1)
+		}
+	}
+
+	const handleAddToCart = () => {
+		const cartItemIndex = cartStore.findIndex(cart => cart.id === service.id)
+		if(cartItemIndex !== -1) {
+			setCartStore(cartStore.map((cart, index) => index === cartItemIndex ? { ...cart, quantity: count } : cart))
+		} else {
+			setCartStore([...cartStore, { id: service.id, quantity: count }])
 		}
 	}
 
@@ -35,7 +46,9 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 							className="size-6 2xl:size-8 icon cursor-pointer"
 						/>
 					</button>
+
 					<span className="header">{count}</span>
+
 					<button onClick={handlePlus} type="button">
 						<PlusCircle
 							color="var(--primary-green)"
@@ -46,7 +59,7 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 			</div>
 
 			<div className="flex gap-4">
-				<button className="cta-button flex justify-center items-center gap-4 py-2 px-6 w-1/2">
+				<button className="cta-button flex justify-center items-center gap-4 py-2 px-6 w-1/2" onClick={handleAddToCart}>
 					<ShoppingCart className="size-4 2xl:size-8 icon cursor-pointer" />
 					<span className="text 2xl:text-normal">Agregar {count > 1 ? `(x${count})` : ""}</span>
 				</button>
