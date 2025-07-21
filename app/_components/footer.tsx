@@ -182,7 +182,7 @@ const WaveSVG = ({ className }: { className: string }) => {
 			height="100%"
 			id="svg"
 			viewBox="0 0 1440 390"
-			className={`${className} icon`}
+			className={className}
 		>
 			<title>services-waves</title>
 			<path
