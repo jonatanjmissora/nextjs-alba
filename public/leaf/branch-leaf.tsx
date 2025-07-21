@@ -1,5 +1,6 @@
 export const BranchLeaf = ({ className }: { className: string }) => {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="207.644"
@@ -7,7 +8,6 @@ export const BranchLeaf = ({ className }: { className: string }) => {
 			viewBox="0 0 207.644 253.738"
 			className={className}
 		>
-			<title>branch leaf</title>
 			<defs>
 				<clipPath id="clip-path-branch-leaf">
 					<path

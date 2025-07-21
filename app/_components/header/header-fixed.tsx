@@ -12,19 +12,16 @@ export default function HeaderFixed({
 	const [scrolled, setScrolled] = useState<boolean>(false)
 
 	useEffect(() => {
-
 		if (window.scrollY) setScrolled(true)
 
 		const handleScrolled = () => {
-		if (window.scrollY > 100) {
-			setScrolled(true)
-			}
-		else setScrolled(false)
+			if (window.scrollY > 100) {
+				setScrolled(true)
+			} else setScrolled(false)
 		}
 
 		window.addEventListener("scroll", handleScrolled)
 		return () => window.removeEventListener("scroll", handleScrolled)
-
 	}, [])
 
 	if (layout === "single-page") {
@@ -37,34 +34,34 @@ export default function HeaderFixed({
 	} else {
 		return (
 			<>
-			<Logo scrolled={scrolled}/>
+				<Logo scrolled={scrolled} />
 
-			<div className={`fixed 2xl:top-[4.5%] top-[3.5%] right-[12%] z-50 ${scrolled && "translate-x-30"} duration-500 flex gap-4`}>
-				<HeaderHeartContainer />
-				<HeaderCartContainer />
-			</div>
+				<div
+					className={`fixed 2xl:top-[4%] top-[3.5%] right-[12%] z-50 ${scrolled && "translate-x-30"} duration-500 flex gap-4`}
+				>
+					<HeaderHeartContainer />
+					<HeaderCartContainer />
+				</div>
 			</>
 		)
-	}	
+	}
 }
 
-
-const Logo = ({scrolled}: {scrolled: boolean}) => {
+const Logo = ({ scrolled }: { scrolled: boolean }) => {
 	return (
 		<>
 			<a
 				href="#home"
-				className={`fixed 2xl:top-[4.5%] top-[3.3%] left-[12%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-25"} duration-500`}
-				>
+				className={`fixed 2xl:top-[3.5%] top-[3.3%] left-[12%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-25"} duration-500`}
+			>
 				ALBA
 			</a>
 			<a
 				href="#home"
-				className={`absolute top-0 left-[5%] z-100 header font-semibold text-[var(--primary-green)]`}
-					>
+				className={`absolute top-[0%] 2xl:-top-[30%] left-[5%] 2xl:left-[4%] z-100 header font-semibold text-[var(--primary-green)]`}
+			>
 				GARCIA
 			</a>
 		</>
-
 	)
 }

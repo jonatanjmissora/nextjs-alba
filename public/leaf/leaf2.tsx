@@ -1,5 +1,6 @@
 export default function Leaf2({ className }: { className?: string }) {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="323"
@@ -7,7 +8,6 @@ export default function Leaf2({ className }: { className?: string }) {
 			viewBox="0 0 323 206"
 			className={className}
 		>
-			<title>leaf2</title>
 			<defs>
 				<clipPath id="clip-path-leaf2">
 					<rect

@@ -9,6 +9,7 @@ import { productsData } from "../_lib/products"
 import CartCard from "./cart-card"
 import CartCheckout from "./cart-checkout"
 import NoCard from "../_components/layout/no-card"
+import Link from "next/link"
 
 export default function CartPage() {
 	const { cartStore } = useStore()
@@ -61,6 +62,12 @@ const CartBody = ({ cart }: { cart: { id: string; quantity: number }[] }) => {
 							from="cart"
 						/>
 					))}
+					<Link
+						href="/#services"
+						className="text text-[var(--primary-green)] cursor-pointer ml-auto"
+					>
+						agregar mas +
+					</Link>
 				</ul>
 			)}
 			<CartCheckout />

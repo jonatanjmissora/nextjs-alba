@@ -7,7 +7,6 @@ export default function Footer() {
 			<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
 			<div className="w-full px-32 relaive overflow-x-hidden">
 				<div className="flex justify-between gap-2 min-h-[30dvh]">
-
 					<div className="flex flex-col gap-2">
 						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
 							Servicios
@@ -95,6 +94,7 @@ export default function Footer() {
 
 const WhatsApp = ({ className }: { className: string }) => {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			viewBox="0 0 24 24"
 			fill="none"
@@ -104,7 +104,6 @@ const WhatsApp = ({ className }: { className: string }) => {
 			strokeLinejoin="round"
 			className={`${className} icon`}
 		>
-			<title>whatsapp</title>
 			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 			<path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
 			<path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
@@ -114,6 +113,7 @@ const WhatsApp = ({ className }: { className: string }) => {
 
 const Instagram = ({ className }: { className: string }) => {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			width={24}
 			height={24}
@@ -125,7 +125,6 @@ const Instagram = ({ className }: { className: string }) => {
 			strokeLinejoin="round"
 			className={`${className} icon`}
 		>
-			<title>instagram</title>
 			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 			<path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
 			<path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
@@ -136,6 +135,7 @@ const Instagram = ({ className }: { className: string }) => {
 
 const Facebook = ({ className }: { className: string }) => {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			width={24}
 			height={24}
@@ -147,7 +147,6 @@ const Facebook = ({ className }: { className: string }) => {
 			strokeLinejoin="round"
 			className={`${className} icon`}
 		>
-			<title>facebook</title>
 			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 			<path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
 		</svg>
@@ -156,6 +155,7 @@ const Facebook = ({ className }: { className: string }) => {
 
 const Mail = ({ className }: { className: string }) => {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			width={24}
 			height={24}
@@ -167,7 +167,6 @@ const Mail = ({ className }: { className: string }) => {
 			strokeLinejoin="round"
 			className={`${className} icon`}
 		>
-			<title>mail</title>
 			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 			<path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
 			<path d="M3 7l9 6l9 -6" />
@@ -177,6 +176,7 @@ const Mail = ({ className }: { className: string }) => {
 
 const WaveSVG = ({ className }: { className: string }) => {
 	return (
+		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg
 			width="100%"
 			height="100%"
@@ -184,7 +184,6 @@ const WaveSVG = ({ className }: { className: string }) => {
 			viewBox="0 0 1440 390"
 			className={className}
 		>
-			<title>services-waves</title>
 			<path
 				d="M 0,400 L 0,150 C 127.67857142857142,180.07142857142856 255.35714285714283,210.14285714285714 368,224 C 480.64285714285717,237.85714285714286 578.2500000000001,235.49999999999997 707,215 C 835.7499999999999,194.50000000000003 995.6428571428571,155.85714285714286 1123,142 C 1250.357142857143,128.14285714285714 1345.1785714285716,139.07142857142856 1440,150 L 1440,400 L 0,400 Z"
 				stroke="none"
