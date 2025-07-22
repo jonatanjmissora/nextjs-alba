@@ -59,9 +59,9 @@ export const ProductCountAndCart = ({ product }: { product: Product }) => {
 				</div>
 			</div>
 
-			<div className="flex justify-end gap-4">
+			<div className="flex w-full justify-end gap-4">
 				<button
-					className="cta-button flex justify-center items-center gap-4 py-2 px-6 w-1/2"
+					className="cta-button flex justify-center items-center gap-4 py-3 px-6 w-full sm:w-1/2"
 					onClick={handleAddToCart}
 				>
 					<ShoppingCart className="size-4 2xl:size-8 icon cursor-pointer" />

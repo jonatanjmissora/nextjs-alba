@@ -1,4 +1,4 @@
-export const Leaf1 = ({ className }: { className: string }) => {
+export default function Leaf1({ className }: { className: string }) {
 	return (
 		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg

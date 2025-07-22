@@ -1,3 +1,4 @@
+import RoundLeaf from "@/public/leaf/round-leaf"
 import Link from "next/link"
 
 export default function MovilFooter() {
@@ -61,6 +62,7 @@ export default function MovilFooter() {
 						© {new Date().getFullYear()} ALBA
 					</p>
 				</div>
+				<RoundLeaf className="absolute -bottom-[0%] -right-[2%] size-[12rem] 2xl:size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 			</footer>
 		</>
 	)

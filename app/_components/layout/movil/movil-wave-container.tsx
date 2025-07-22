@@ -9,11 +9,11 @@ export default function MovilWaveContainer({
 }) {
 	return (
 		<div className="relative w-full my-20">
-			<WaveSVG className={`absolute ${top} left-0 z-10`} />
+			<WaveSVG className={`absolute ${top} left-0 -z-10`} />
 
 			{children}
 
-			<WaveSVG className={`absolute ${bottom} left-0 rotate-180 z-10`} />
+			<WaveSVG className={`absolute ${bottom} left-0 rotate-180 -z-10`} />
 		</div>
 	)
 }

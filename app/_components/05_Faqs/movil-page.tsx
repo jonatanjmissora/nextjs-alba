@@ -1,13 +1,16 @@
 import Image from "next/image"
 import { tipsData } from "@/app/_lib/tips"
-import { MovilSectionHeader } from "../layout/movil/movil-section-header"
+import { SectionHeader } from "../section-header"
+import BranchLeaf from "@/public/leaf/branch-leaf"
+import Leaf2 from "@/public/leaf/leaf2"
 
 export default function MovilFaqs() {
 	const tips = tipsData
 
 	return (
 		<div id="faqs" className="w-full relative pt-12">
-			<MovilSectionHeader
+			<LeafImgs />
+			<SectionHeader
 				title="Nuestros tips del centro de belleza"
 				subtitle="Tips"
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
@@ -58,5 +61,14 @@ export default function MovilFaqs() {
 				</button>
 			</div>
 		</div>
+	)
+}
+
+const LeafImgs = () => {
+	return (
+		<>
+			<BranchLeaf className="absolute -bottom-[7.5%] -left-[10%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2 className="absolute -bottom-[6%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
+		</>
 	)
 }

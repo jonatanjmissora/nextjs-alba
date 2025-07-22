@@ -19,7 +19,7 @@ export default function ServicePage({
 	from: "services" | "shop" | "favorites" | "cart"
 }) {
 	return (
-		<div className="w-full h-screen border px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
+		<div className="w-full min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Servicio" href={from} />
 
 			<ServiceBody service={service} />
@@ -32,19 +32,18 @@ export default function ServicePage({
 }
 
 const ServiceBody = ({ service }: { service: Service }) => {
-	
 	return (
-		<div className="w-full flex-1 flex justify-between items-center py-10 2xl:py-20">
-
+		<div className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-10 2xl:py-20">
 			<ServiceImage service={service} />
 
-			<div className="w-1/2 h-full flex flex-col gap-6 justify-center pl-20 2xl:pl-40">
+			<div className="w-full sm:w-1/2 h-max sm:h-full flex flex-col gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
+				<div className="flex flex-row sm:flex-col gap-4 justify-between items-start pt-8 sm:pt-0">
+					<span className="header text-[var(--primary-green)] ">Categoria</span>
 
-				<span className="header text-[var(--primary-green)]">Categoria</span>
-
-				<div className="flex items-center gap-3">
-					<HeartIconContainer id={service.id} />
-					<CartIconContainer id={service.id} />
+					<div className="flex items-center gap-3">
+						<HeartIconContainer id={service.id} />
+						<CartIconContainer id={service.id} />
+					</div>
 				</div>
 
 				<span className="title font-bold">Service Header</span>
@@ -57,12 +56,11 @@ const ServiceBody = ({ service }: { service: Service }) => {
 	)
 }
 
-const ServiceImage = ({service}: {service: Service}) => {
-
+const ServiceImage = ({ service }: { service: Service }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
 
 	return (
-		<div className="w-1/2 h-full flex flex-col gap-4">
+		<div className="w-full sm:w-[45%] h-[70dvh] flex flex-col gap-4">
 			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
 				<Image
 					src={service.carousel[actualImageIndex]}

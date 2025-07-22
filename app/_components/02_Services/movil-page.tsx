@@ -1,12 +1,15 @@
+import BranchLeaf from "@/public/leaf/branch-leaf"
 import { MovilServicesCard } from "../layout/movil/movil-service-card"
-import { MovilSectionHeader } from "../layout/movil/movil-section-header"
+import { SectionHeader } from "../section-header"
+import Leaf2 from "@/public/leaf/leaf2"
 
 export default function MovilServices() {
 	return (
 		<>
+			<LeafImgs />
 			<div className="absolute -z-10 -top-[21dvh] left-0 w-full h-[15dvh] bg-[var(--primary-pink)]"></div>
 			<section id="services" className="w-full relative px-6 pt-12">
-				<MovilSectionHeader
+				<SectionHeader
 					title="Nuestros servicios en gabinete"
 					subtitle="Servicios"
 					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
@@ -21,6 +24,15 @@ export default function MovilServices() {
 				</div>
 			</section>
 			<div className="absolute -z-10 -bottom-[21dvh] left-0 w-full h-[15dvh] bg-[var(--primary-pink)]"></div>
+		</>
+	)
+}
+
+const LeafImgs = () => {
+	return (
+		<>
+			<BranchLeaf className="absolute -bottom-[9%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2 className="absolute -bottom-[8%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

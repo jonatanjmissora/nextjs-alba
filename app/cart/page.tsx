@@ -15,13 +15,11 @@ export default function CartPage() {
 	const { cartStore } = useStore()
 
 	return (
-		<div className="w-full min-h-screen px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
+		<div className="w-full min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Carrito de compras" href="services" />
-			{cartStore ? (
-				<CartBody cart={cartStore} />
-			) : (
-				<span>add some products to cart</span>
-			)}
+
+			<CartBody cart={cartStore} />
+
 			<SinglePageFooter />
 
 			<SinglePageLeaf />
@@ -41,11 +39,11 @@ const CartBody = ({ cart }: { cart: { id: string; quantity: number }[] }) => {
 	)
 
 	return (
-		<div className="w-full min-h-[84dvh] 2xl:min-h-[75dvh] flex gap-3 2xl:gap-4">
+		<div className="w-full min-h-screen sm:min-h-[84dvh] 2xl:min-h-[75dvh] flex flex-col sm:flex-row gap-3 2xl:gap-4">
 			{cart.length === 0 ? (
 				<NoCard text="al carrito" />
 			) : (
-				<ul className="w-[70%] flex flex-col justify-start gap-3 2xl:gap-4 flex-wrap py-10 2xl:py-20">
+				<ul className="w-full sm:w-[70%] flex flex-col justify-start gap-3 2xl:gap-4 flex-wrap py-10 2xl:py-20">
 					{servicesCart.map(service => (
 						<CartCard
 							key={service.id}

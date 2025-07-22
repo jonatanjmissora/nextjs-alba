@@ -33,11 +33,11 @@ export default function Card({
 				/>
 			</div>
 
-			<h3 className="font-semibold text-[var(--primary-green)] 2xl:text-2xl pt-2">
+			<h3 className="font-semibold text-[var(--primary-green)] subtitle pt-2">
 				{element.title}
 			</h3>
 			<div className="flex justify-between items-center">
-				<span className="text-balance 2xl:text-xl font-bold text-black">
+				<span className="text-balance text-xl sm:text-lg 2xl:text-xl font-bold text-black">
 					${element.price}
 				</span>
 

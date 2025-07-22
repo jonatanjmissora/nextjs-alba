@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Footer() {
 	return (
-		<footer id="contact" className="w-full flex flex-col">
+		<footer id="contact" className="w-full flex flex-col relative">
 			<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
 			<div className="w-full px-32 relaive overflow-x-hidden">
 				<div className="flex justify-between gap-2 min-h-[30dvh]">
@@ -85,9 +85,8 @@ export default function Footer() {
 						© {new Date().getFullYear()} ALBA
 					</p>
 				</div>
-
-				<RoundLeaf className="absolute -bottom-[0%] -right-[2%] size-[12rem] 2xl:size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 			</div>
+			<RoundLeaf className="absolute bottom-[30%] -right-[2%] size-[8rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 		</footer>
 	)
 }

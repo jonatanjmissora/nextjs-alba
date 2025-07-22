@@ -1,5 +1,5 @@
-import { BranchLeaf } from "@/public/leaf/branch-leaf"
-import { Leaf1 } from "@/public/leaf/leaf1"
+import BranchLeaf from "@/public/leaf/branch-leaf"
+import Leaf1 from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
 import { SectionHeader } from "../section-header"
 import Testimonials from "./testimonials"

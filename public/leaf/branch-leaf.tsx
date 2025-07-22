@@ -1,4 +1,4 @@
-export const BranchLeaf = ({ className }: { className: string }) => {
+export default function BranchLeaf({ className }: { className: string }) {
 	return (
 		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
 		<svg

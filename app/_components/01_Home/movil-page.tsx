@@ -1,8 +1,12 @@
+import BranchLeaf from "@/public/leaf/branch-leaf"
+import Leaf1 from "@/public/leaf/leaf1"
+import RoundLeaf from "@/public/leaf/round-leaf"
 import Image from "next/image"
 
 export default function MovilHome() {
 	return (
 		<>
+			<LeafImgs />
 			<div
 				id="home"
 				className="w-full h-[115dvh] flex flex-col gap-3 pt-[25dvh]"
@@ -34,5 +38,15 @@ const HomeImg2 = () => {
 				objectFit="cover"
 			/>
 		</div>
+	)
+}
+
+const LeafImgs = () => {
+	return (
+		<>
+			<BranchLeaf className="absolute top-0 right-[19%] size-[13rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
+			<Leaf1 className="absolute top-[30%] left-[65%] size-[3rem] text-[var(--leaf-color)]" />
+			<RoundLeaf className="absolute bottom-[22%] -left-[2%] size-[6rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+		</>
 	)
 }
