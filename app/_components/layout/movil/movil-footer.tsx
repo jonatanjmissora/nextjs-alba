@@ -62,7 +62,7 @@ export default function MovilFooter() {
 						© {new Date().getFullYear()} ALBA
 					</p>
 				</div>
-				<RoundLeaf className="absolute -bottom-[0%] -right-[2%] size-[12rem] 2xl:size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
+				<RoundLeaf className="absolute bottom-[50%] -right-[2%] size-[8rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 			</footer>
 		</>
 	)

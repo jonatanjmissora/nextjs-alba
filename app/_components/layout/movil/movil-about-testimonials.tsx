@@ -4,31 +4,24 @@ export default function MovilTestimonials() {
 	return (
 		<div className="w-full h-screen relative flex items-center">
 			<ImageElement
-				src="/testimonials/testimonial-photo1.jpg"
-				alt="testimonial-photo1"
+				src="/testimonials/testimonial-photo2.jpg"
+				alt="testimonial-photo2"
 				className="w-full h-[400px] rotate-10 rounded"
 			/>
 			<ImageElement
-				src="/testimonials/testimonial01.png"
-				alt="testimonial01"
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
 				className="w-[250px] h-[70px] top-0 left-0 absolute"
 			/>
 			<ImageElement
-				src="/testimonials/testimonial02.png"
-				alt="testimonial02"
+				src="/testimonials/testimonial05.png"
+				alt="testimonial05"
 				className="w-[250px] h-[80px] top-[12%] right-0 absolute"
 			/>
-
 			<ImageElement
-				src="/testimonials/testimonial03.png"
-				alt="testimonial03"
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
 				className="w-[270px] h-[70px] top-[25%] left-0 absolute"
-			/>
-
-			<ImageElement
-				src="/testimonials/testimonial03.png"
-				alt="testimonial03"
-				className="w-[310px] h-[80px] bottom-[24%] right-0 absolute"
 			/>
 			<ImageElement
 				src="/testimonials/testimonial04.png"
@@ -39,6 +32,11 @@ export default function MovilTestimonials() {
 				src="/testimonials/testimonial05.png"
 				alt="testimonial05"
 				className="w-[290px] h-[80px] bottom-0 right-0 absolute"
+			/>
+			<ImageElement
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
+				className="w-[310px] h-[80px] bottom-[24%] right-0 absolute"
 			/>
 		</div>
 	)
