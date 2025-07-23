@@ -33,13 +33,13 @@ export default function Footer() {
 
 					<div className="flex flex-col gap-2">
 						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
-							Preguntas
+							Tips
 						</h3>
 						<nav className="flex flex-col gap-2 text-[#333] text-sm 2xl:text-base px-2">
-							<Link href="/faq01">Pregunta 1</Link>
-							<Link href="/faq02">Pregunta 2</Link>
-							<Link href="/faq03">Pregunta 3</Link>
-							<Link href="/faq04">Pregunta 4</Link>
+							<Link href="/faq01">Tip 1</Link>
+							<Link href="/faq02">Tip 2</Link>
+							<Link href="/faq03">Tip 3</Link>
+							<Link href="/faq04">Tip 4</Link>
 						</nav>
 					</div>
 
@@ -86,7 +86,7 @@ export default function Footer() {
 					</p>
 				</div>
 			</div>
-			<RoundLeaf className="absolute bottom-[30%] -right-[2%] size-[8rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
+			<RoundLeaf className="absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 		</footer>
 	)
 }

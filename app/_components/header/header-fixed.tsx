@@ -26,7 +26,7 @@ export default function HeaderFixed({
 
 	if (layout === "single-page") {
 		return (
-			<div className="top-[55%] sm:top-[4.75%] absolute right-[5%] flex gap-4">
+			<div className="top-[55%] absolute right-[5%] flex gap-4">
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</div>
@@ -37,7 +37,7 @@ export default function HeaderFixed({
 				<Logo scrolled={scrolled} />
 
 				<div
-					className={`absolute 2xl:top-[4%] top-[3.5%] right-[12%] z-50 ${scrolled && "translate-x-30"} duration-500 flex gap-4`}
+					className={`absolute sm:fixed 2xl:top-[4%] top-[3.5%] right-[15%] z-50 ${scrolled && "translate-x-37"} duration-500 flex gap-4`}
 				>
 					<HeaderHeartContainer />
 					<HeaderCartContainer />
@@ -52,13 +52,13 @@ const Logo = ({ scrolled }: { scrolled: boolean }) => {
 		<>
 			<a
 				href="#home"
-				className={`fixed 2xl:top-[3.5%] top-[3.3%] left-[12%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-25"} duration-500`}
+				className={`fixed top-[3.3%] 2xl:top-[3.6%] left-[12.2%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-37"} duration-500`}
 			>
 				ALBA
 			</a>
 			<a
 				href="#home"
-				className={`absolute top-[0%] 2xl:-top-[30%] left-[5%] 2xl:left-[4%] z-100 header font-semibold text-[var(--primary-green)]`}
+				className={`absolute top-[3.3%] 2xl:-top-[22.5%] left-[5%] 2xl:left-[4.75%] z-100 header font-semibold text-[var(--primary-green)]`}
 			>
 				GARCIA
 			</a>
