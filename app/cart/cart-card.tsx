@@ -30,9 +30,9 @@ export default function CartCard({
 	return (
 		<li
 			key={element.id}
-			className={`w-full flex gap-5 p-4 2xl:p-6 bg-[var(--background-two)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
+			className={`w-full flex flex-col sm:flex-row gap-5 p-4 2xl:p-6 bg-[var(--background-three)] sm:bg-[var(--background-two)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
 		>
-			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-[150px] 2xl:w-[200px] h-[100px] 2xl:h-[150px]">
+			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full sm:w-[150px] 2xl:w-[200px] h-[150px] sm:h-[100px] 2xl:h-[150px]">
 				<Image
 					src={element.image}
 					alt={element.title}
@@ -43,15 +43,15 @@ export default function CartCard({
 				/>
 			</div>
 
-			<div className="flex-1 flex flex-col justify-center gap-0 mr-10">
-				<div className="flex justify-between items-center">
+			<div className="flex-1 flex flex-col justify-center gap-0 mr-0 sm:mr-10">
+				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
 					<Link
 						href={`/${type}/${element.id}?from=${from}`}
 						className="subtitle font-semibold text-[var(--primary-green)]"
 					>
 						{element.title}
 					</Link>
-					<div className="flex justify-between items-center">
+					<div className="flex justify-between items-center ">
 						<span className="text-xl 2xl:text-2xl font-semibold">
 							${element.price}
 						</span>
@@ -65,8 +65,8 @@ export default function CartCard({
 					<CartCount element={element} />
 				</div>
 
-				<div className="flex justify-between items-end mt-auto">
-					<div className="flex gap-12 items-center px-6">
+				<div className="flex justify-between items-center sm:items-end mt-auto">
+					<div className="flex gap-4 sm:gap-12 items-center p-3 sm:py-0 sm:px-6">
 						<HeartIconContainer id={element.id} />
 						<button
 							type="button"

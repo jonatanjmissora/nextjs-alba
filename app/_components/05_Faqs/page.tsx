@@ -1,24 +1,12 @@
-import { BranchLeaf } from "@/public/leaf/branch-leaf"
-import { Leaf1 } from "@/public/leaf/leaf1"
+import BranchLeaf from "@/public/leaf/branch-leaf"
+import Leaf1 from "@/public/leaf/leaf1"
 import Leaf2 from "@/public/leaf/leaf2"
 import { SectionHeader } from "../section-header"
 import Image from "next/image"
+import { tipsData } from "@/app/_lib/tips"
 
 export default function page() {
-	const tips = [
-		{
-			title: "Titulo del tip",
-			img: "/tip1.jpg",
-			description:
-				"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-		},
-		{
-			title: "Titulo del tip",
-			img: "/tip2.jpg",
-			description:
-				"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-		},
-	]
+	const tips = tipsData
 
 	return (
 		<>
@@ -88,7 +76,7 @@ const LeafImgs = () => {
 	return (
 		<>
 			<BranchLeaf className="absolute -z-10 -bottom-[25%] 2xl:-bottom-[40%] -left-40 2xl:-left-[18%] size-[20rem] 2xl:size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
-			<Leaf1 className="absolute -z-10 -bottom-[10%] left-[47%] size-[5rem] 2xl:size-[7rem] text-[var(--leaf-color)]" />
+			<Leaf1 className="absolute -z-10 -bottom-[10%] left-[47%] size-[4rem] 2xl:size-[6rem] text-[var(--leaf-color)]" />
 			<Leaf2 className="absolute -z-10 -bottom-[20%] 2xl:-bottom-[30%] -right-[5%] size-[7rem] 2xl:size-[10rem] text-[var(--leaf-color)]" />
 		</>
 	)

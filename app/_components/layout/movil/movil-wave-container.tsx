@@ -1,23 +1,19 @@
-import Link from "next/link"
-
-export default function page() {
+export default function MovilWaveContainer({
+	children,
+	top,
+	bottom,
+}: {
+	children: React.ReactNode
+	top: string
+	bottom: string
+}) {
 	return (
-		<div className="flex-1 flex flex-col justify-center items-center gap-3 relative">
-			<p className="text-[20rem] font-extrabold tracking-widest drop-shadow-[10px_10px_10px_#00000075] text-[var(--primary-green)] leading-none">
-				404
-			</p>
+		<div className="relative w-full my-20">
+			<WaveSVG className={`absolute ${top} left-0 -z-10`} />
 
-			<p className="text-[3rem] font-bold tracking-wide drop-shadow-[5px_5px_5px_#00000075]">
-				Page Not Found
-			</p>
+			{children}
 
-			<Link className="cta-button py-2 px-6" href="/">
-				Back
-			</Link>
-
-			<div className="absolute -bottom-[55%] left-0 right-0 -z-10 overflow-hidden">
-				<WaveSVG className="" />
-			</div>
+			<WaveSVG className={`absolute ${bottom} left-0 rotate-180 -z-10`} />
 		</div>
 	)
 }

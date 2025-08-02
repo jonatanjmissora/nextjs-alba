@@ -46,14 +46,14 @@ export const CartCount = ({ element }: { element: Service | Product }) => {
 			<button onClick={handleMinus} type="button">
 				<MinusCircle
 					color="var(--primary-green)"
-					className="size-4 2xl:size-6 icon cursor-pointer"
+					className="size-5 sm:size-4 2xl:size-6 icon cursor-pointer"
 				/>
 			</button>
-			<span className="text">{count}</span>
+			<span className="header">{count}</span>
 			<button onClick={handlePlus} type="button">
 				<PlusCircle
 					color="var(--primary-green)"
-					className="size-4 2xl:size-6 icon cursor-pointer"
+					className="size-5 sm:size-4 2xl:size-6 icon cursor-pointer"
 				/>
 			</button>
 		</div>

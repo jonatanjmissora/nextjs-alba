@@ -36,7 +36,7 @@ export default function HeaderSearch() {
 			) : (
 				<Search
 					size={20}
-					className="icon z-10 relative"
+					className="icon z-10 relative text-[var(--primary-green)] cursor-pointer"
 					onClick={() => setShowInput(!showInput)}
 				/>
 			)}
