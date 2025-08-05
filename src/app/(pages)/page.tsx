@@ -1,5 +1,6 @@
 import Home from "@/_components/01_header/page"
-import ServiceSection from "@/_components/02_services/page"
+import ServicesSection from "@/_components/02_services/page"
+import ProductsSection from "@/_components/03_products/page"
 import Footer from "@/_components/footer"
 import Header from "@/_components/header/header"
 import WaveContainer from "@/_components/wave-container"
@@ -53,13 +54,13 @@ export default function HomePage() {
 
 				<section className="w-full bg-[var(--primary-pink)] relative">
 					<WaveContainer>
-						<ServiceSection />
+						<ServicesSection />
 					</WaveContainer>
 				</section>
 
-				{/* <section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative">
-					<Shop />
-				</section> */}
+				<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative">
+					<ProductsSection />
+				</section>
 
 				{/* <section className="w-full bg-[var(--primary-pink)] relative">
 					<WaveContainer>

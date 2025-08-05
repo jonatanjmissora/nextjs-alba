@@ -1,6 +1,6 @@
 import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf2 from "../../../public/leaf/leaf2"
-import { MovilServicesCard } from "../layout/movil/movil-service-card"
+import { MovilServicesCard } from "../layout/movil/movil-services-card"
 import { SectionHeader } from "../section-header"
 
 export default function MovilServices() {

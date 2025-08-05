@@ -1,6 +1,6 @@
-import BranchLeaf from "@/public/leaf/branch-leaf"
-import Leaf1 from "@/public/leaf/leaf1"
-import RoundLeaf from "@/public/leaf/round-leaf"
+import BranchLeaf from "../../../public/leaf/branch-leaf"
+import Leaf1 from "../../../public/leaf/leaf1"
+import RoundLeaf from "../../../public/leaf/round-leaf"
 import Image from "next/image"
 
 export default function MovilHome() {
@@ -36,7 +36,7 @@ const HomeImg2 = () => {
 				quality={100}
 				fill
 				style={{
-					objectFit: 'cover'
+					objectFit: "cover",
 				}}
 			/>
 		</div>

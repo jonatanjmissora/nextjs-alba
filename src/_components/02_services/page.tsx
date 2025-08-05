@@ -5,7 +5,7 @@ import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2 from "../../../public/leaf/leaf2"
 
-export default function ServiceSection() {
+export default function ServicesSection() {
 	return (
 		<section
 			id="services"

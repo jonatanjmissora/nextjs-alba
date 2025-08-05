@@ -1,7 +1,7 @@
+import { productsData } from "@/_lib/products"
 import Card from "../card"
-import { productsData } from "@/app/_lib/products"
 
-export const MovilShopCard = () => {
+export const MovilProductsCard = () => {
 	const products = productsData
 
 	return (

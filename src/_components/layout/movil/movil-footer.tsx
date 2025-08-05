@@ -1,5 +1,5 @@
-import RoundLeaf from "@/public/leaf/round-leaf"
 import Link from "next/link"
+import RoundLeaf from "../../../../public/leaf/round-leaf"
 
 export default function MovilFooter() {
 	return (

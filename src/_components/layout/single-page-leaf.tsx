@@ -1,7 +1,7 @@
-import BranchLeaf from "@/public/leaf/branch-leaf"
-import Leaf1 from "@/public/leaf/leaf1"
-import Leaf2 from "@/public/leaf/leaf2"
-import RoundLeaf from "@/public/leaf/round-leaf"
+import BranchLeaf from "../../../public/leaf/branch-leaf"
+import Leaf1 from "../../../public/leaf/leaf1"
+import Leaf2 from "../../../public/leaf/leaf2"
+import RoundLeaf from "../../../public/leaf/round-leaf"
 
 export default function SinglePageLeaf() {
 	return (
