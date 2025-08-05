@@ -13,7 +13,7 @@ export default function FavoritesPage() {
 	const { favoritesStore } = useStore()
 
 	return (
-		<div className="w-full min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
+		<div className="w-full min-h-[100dvh] px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Favoritos" href="services" />
 
 			<FavoritesBody favorites={favoritesStore} />
