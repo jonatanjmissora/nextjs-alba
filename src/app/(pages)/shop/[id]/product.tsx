@@ -37,18 +37,16 @@ const ProductBody = ({ product }: { product: Product }) => {
 			<ProductImage product={product} />
 
 			<div className="w-full sm:w-1/2 h-max sm:h-full flex flex-col gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
-				<div className="flex flex-row sm:flex-col gap-4 justify-between items-start pt-8 sm:pt-0">
-					<span className="header text-[var(--primary-green)] ">Categoria</span>
-
-					<div className="flex items-center gap-3">
-						<HeartIconContainer id={product.id} />
-						<CartIconContainer id={product.id} />
-					</div>
-				</div>
+				<span className="header text-[var(--primary-green)] ">Categoria</span>
 
 				<h1 className="title font-bold">Product Header</h1>
 
-				<p className="text mb-10 2xl:mb-20">{product.description}</p>
+				<p className="text">{product.description}</p>
+
+				<div className="flex justify-end w-full items-center gap-6 mb-10 2xl:mb-20 pr-4">
+					<HeartIconContainer id={product.id} />
+					<CartIconContainer id={product.id} />
+				</div>
 
 				<ProductCountAndCart product={product} />
 			</div>

@@ -37,18 +37,16 @@ const ServiceBody = ({ service }: { service: Service }) => {
 			<ServiceImage service={service} />
 
 			<div className="w-full sm:w-1/2 h-max sm:h-full flex flex-col gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
-				<div className="flex flex-row sm:flex-col gap-4 justify-between items-start pt-8 sm:pt-0">
-					<span className="header text-[var(--primary-green)] ">Categoria</span>
-
-					<div className="flex items-center gap-3">
-						<HeartIconContainer id={service.id} />
-						<CartIconContainer id={service.id} />
-					</div>
-				</div>
+				<span className="header text-[var(--primary-green)] ">Categoria</span>
 
 				<span className="title font-bold">Service Header</span>
 
-				<p className="text mb-10 2xl:mb-20">{service.description}</p>
+				<p className="text ">{service.description}</p>
+
+				<div className="flex justify-end w-full items-center gap-6 mb-10 2xl:mb-20 pr-4">
+					<HeartIconContainer id={service.id} />
+					<CartIconContainer id={service.id} />
+				</div>
 
 				<ServiceCountAndCart service={service} />
 			</div>

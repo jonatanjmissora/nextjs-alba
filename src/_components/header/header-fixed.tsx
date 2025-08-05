@@ -26,7 +26,7 @@ export default function HeaderFixed({
 
 	if (layout === "single-page") {
 		return (
-			<div className="top-[55%] absolute right-[5%] flex gap-4">
+			<div className="top-[55%] absolute right-[1%] flex gap-4">
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</div>
