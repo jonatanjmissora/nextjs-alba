@@ -1,7 +1,8 @@
-import BranchLeaf from "../../../public/leaf/branch-leaf"
-import Leaf1 from "../../../public/leaf/leaf1"
-import RoundLeaf from "../../../public/leaf/round-leaf"
+import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
 import Image from "next/image"
+import Leaf1 from "../../../public/leaf/leaf1"
+import RoundLeafMovil from "../../../public/leaf/round-leaf-movil"
+import Leaf2Movil from "../../../public/leaf/leaf2-movil"
 
 export default function MovilHome() {
 	return (
@@ -32,9 +33,11 @@ const HomeImg2 = () => {
 		<div className="w-[350px] h-[450px] relative">
 			<Image
 				src="/alba-alpha.png"
+				priority
 				alt="Alba Alpha Logo"
 				quality={100}
 				fill
+				sizes="(max-width: 640px) 100vw, 640px"
 				style={{
 					objectFit: "cover",
 				}}
@@ -46,9 +49,10 @@ const HomeImg2 = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute top-0 right-[19%] size-[13rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
+			<BranchLeafMovil className="absolute top-0 right-[19%] size-[13rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
 			<Leaf1 className="absolute top-[30%] left-[65%] size-[3rem] text-[var(--leaf-color)]" />
-			<RoundLeaf className="absolute bottom-[22%] -left-[2%] size-[6rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2Movil className="absolute -bottom-[10%] -right-[15%] size-[8rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<RoundLeafMovil className="absolute -bottom-[5%] -left-[2%] size-[6rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
 		</>
 	)
 }

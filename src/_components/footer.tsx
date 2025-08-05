@@ -86,7 +86,7 @@ export default function Footer() {
 					</p>
 				</div>
 			</div>
-			<RoundLeaf className="absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
+			<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-50" />
 		</footer>
 	)
 }

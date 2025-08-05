@@ -1,6 +1,6 @@
 import { SectionHeader } from "../section-header"
-import BranchLeaf from "../../../public/leaf/branch-leaf"
-import Leaf2 from "../../../public/leaf/leaf2"
+import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
+import Leaf2Movil from "../../../public/leaf/leaf2-movil"
 import { MovilProductsCard } from "../layout/movil/movil-products-card"
 
 export default function MovilProducts() {
@@ -29,8 +29,8 @@ export default function MovilProducts() {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-[4%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
-			<Leaf2 className="absolute -bottom-[3%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
+			<BranchLeafMovil className="absolute -bottom-[4%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2Movil className="absolute -bottom-[3%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

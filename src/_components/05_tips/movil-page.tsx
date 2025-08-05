@@ -1,8 +1,8 @@
 import Image from "next/image"
 import { tipsData } from "@/_lib/tips"
 import { SectionHeader } from "../section-header"
-import BranchLeaf from "../../../public/leaf/branch-leaf"
-import Leaf2 from "../../../public/leaf/leaf2"
+import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
+import Leaf2Movil from "../../../public/leaf/leaf2-movil"
 
 export default function MovilTips() {
 	const tips = tipsData
@@ -67,8 +67,8 @@ export default function MovilTips() {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-[7.5%] -left-[10%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
-			<Leaf2 className="absolute -bottom-[6%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
+			<BranchLeafMovil className="absolute -bottom-[7.5%] -left-[10%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2Movil className="absolute -bottom-[6%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }

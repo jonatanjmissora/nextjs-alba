@@ -50,6 +50,7 @@ const HomeImg2 = () => {
 		<div className="w-[350px] h-[450px] 2xl:w-[500px] 2xl:h-[700px] relative">
 			<Image
 				src="/alba-alpha.png"
+				priority
 				alt="Alba Alpha Logo"
 				quality={100}
 				fill
