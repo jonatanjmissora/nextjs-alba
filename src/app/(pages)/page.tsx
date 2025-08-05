@@ -1,5 +1,8 @@
+import Home from "@/_components/01_header/page"
+import ServiceSection from "@/_components/02_services/page"
 import Footer from "@/_components/footer"
 import Header from "@/_components/header/header"
+import WaveContainer from "@/_components/wave-container"
 
 export default function HomePage() {
 	return (
@@ -45,14 +48,14 @@ export default function HomePage() {
 					id="home"
 					className="w-full min-h-[85dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]"
 				>
-					{/* <Home /> */}Hola
+					<Home />
 				</section>
 
-				{/* <section className="w-full bg-[var(--primary-pink)] relative">
+				<section className="w-full bg-[var(--primary-pink)] relative">
 					<WaveContainer>
-						<Services />
+						<ServiceSection />
 					</WaveContainer>
-				</section> */}
+				</section>
 
 				{/* <section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative">
 					<Shop />
