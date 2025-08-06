@@ -23,7 +23,7 @@ export default function MovilHeader() {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 py-4 px-6 z-50 w-full flex items-center justify-between ${scrolled && "shadow-[0_0_5px_0_rgba(0,0,0,0.05)] bg-[var(--background-one)]"}`}
+			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "shadow-[0_0_5px_0_rgba(0,0,0,0.05)] bg-[var(--background-one)]"}`}
 		>
 			<a
 				href="/#home"

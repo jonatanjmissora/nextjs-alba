@@ -51,8 +51,8 @@ const LeafImgs = () => {
 		<>
 			<BranchLeafMovil className="absolute top-0 right-[19%] size-[13rem] rotate-x-180 text-[var(--leaf-color)] opacity-50" />
 			<Leaf1 className="absolute top-[30%] left-[65%] size-[3rem] text-[var(--leaf-color)]" />
-			<Leaf2Movil className="absolute -bottom-[10%] -right-[15%] size-[8rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
-			<RoundLeafMovil className="absolute -bottom-[5%] -left-[2%] size-[6rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<Leaf2Movil className="absolute -bottom-[15%] -right-[5%] size-[8rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
+			<RoundLeafMovil className="absolute -bottom-[7%] -left-[2%] size-[6rem] rotate-180 text-[var(--leaf-color)] opacity-50" />
 		</>
 	)
 }

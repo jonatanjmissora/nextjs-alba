@@ -7,7 +7,7 @@ type SearchParams = Promise<{
 }>
 
 export async function generateStaticParams() {
-	return productsData.map(product => ({ id: product.id }))
+	return productsData.map(product => ({ id: product.id })).slice(0, 10)
 }
 
 export default async function ServerProductPage({

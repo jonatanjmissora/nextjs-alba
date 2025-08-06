@@ -110,7 +110,9 @@
     --foreground: #ededed;
   }
 } */
-
+html {
+	overflow-x: hidden;
+}
 body {
 	background: linear-gradient(
 		to bottom,

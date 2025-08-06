@@ -1,5 +1,3 @@
-hacer un static params
-
 el search
 
 el checkout
@@ -11,3 +9,5 @@ la adicion al grupo de wsp
 favicon
 
 metadata
+
+menu para movil

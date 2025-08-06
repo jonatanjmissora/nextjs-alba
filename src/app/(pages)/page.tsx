@@ -19,14 +19,14 @@ export default function HomePage() {
 	return (
 		<main className="w-full relative">
 			<div className="block sm:hidden">
-				<div className="absolute top-0 left-0 z-50 w-full p-8">
+				<div className="">
 					<MovilHeader />
 				</div>
 				<section className="w-full flex justify-center items-start relative px-6">
 					<MovilHome />
 				</section>
 				<section className="w-full min-h-[90dvh] bg-[var(--primary-pink)] flex justify-center items-start relative mt-[15dvh]">
-					<MovilWaveContainer top="-top-[58%]" bottom="-bottom-[58%]">
+					<MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]">
 						<MovilServices />
 					</MovilWaveContainer>
 				</section>
@@ -36,7 +36,7 @@ export default function HomePage() {
 				</section>
 
 				<section className="w-full min-h-[90dvh] flex justify-center items-start relative mt-[25dvh]">
-					<MovilWaveContainer top="-top-[58%]" bottom="-bottom-[58%]">
+					<MovilWaveContainer top="-top-[57.7%]" bottom="-bottom-[57.7%]">
 						<MovilAbout />
 					</MovilWaveContainer>
 				</section>

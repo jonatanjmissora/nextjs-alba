@@ -7,7 +7,7 @@ type SearchParams = Promise<{
 }>
 
 export async function generateStaticParams() {
-	return servicesData.map(service => ({ id: service.id }))
+	return servicesData.map(service => ({ id: service.id })).slice(0, 10)
 }
 
 export default async function ServerServicePage({
