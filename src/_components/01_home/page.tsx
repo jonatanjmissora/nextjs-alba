@@ -19,9 +19,9 @@ export default function Home() {
 				</span>
 				<span className="subtitle">in Bahia Blanca</span>
 				<p className="text">Lorem ipsum dolor sit amet consectetur.</p>
-				<button className="cta-button text mt-4 py-4 px-8">
+				<a href="/turno" className="cta-button text text-center mt-4 py-4 px-8">
 					Reserva tu turno
-				</button>
+				</a>
 			</div>
 
 			<div className="absolute right-[0dvw] bottom-[3dvh] 2xl:bottom-[5dvh] 2xl:right-[0dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12">

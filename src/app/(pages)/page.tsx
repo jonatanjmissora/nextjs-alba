@@ -1,5 +1,5 @@
-import MovilHome from "@/_components/01_header/movil-page"
-import Home from "@/_components/01_header/page"
+import MovilHome from "@/_components/01_home/movil-page"
+import Home from "@/_components/01_home/page"
 import MovilServices from "@/_components/02_services/movil-page"
 import ServicesSection from "@/_components/02_services/page"
 import MovilProducts from "@/_components/03_products/movil-page"
