@@ -4,7 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-	--background-one: #f8f0f5;
+	--background: #ffffff;
+	--foreground: #444;
+	--background-one: #fffdfd;
 	--background-two: #ffeaee;
 	--background-three: #ffdae1;
 	--background-green: #8ab8a8;
@@ -31,8 +33,6 @@
 	--2xl-text-size: 1.1rem;
 	--sm-text-size: 0.9rem;
 	--radius: 0.625rem;
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.145 0 0);
 	--popover: oklch(1 0 0);
@@ -112,6 +112,12 @@
 } */
 
 body {
+	background: linear-gradient(
+		to bottom,
+		var(--background-one),
+		var(--background-two),
+		var(--background-three)
+	);
 	background-attachment: fixed;
 	letter-spacing: 1px;
 	overflow-x: hidden;
@@ -254,10 +260,10 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+	* {
+		@apply border-border outline-ring/50;
 	}
-  body {
-    @apply bg-background text-foreground;
+	body {
+		@apply bg-background text-foreground;
 	}
 }

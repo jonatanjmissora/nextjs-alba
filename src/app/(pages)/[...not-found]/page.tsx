@@ -8,11 +8,11 @@ export default function page() {
 			</p>
 
 			<p className="sm:text-[3rem] text-[1rem] font-bold tracking-wide drop-shadow-[5px_5px_5px_#00000075]">
-				Page Not Found
+				Ruta no encontrada o en construcción
 			</p>
 
 			<Link className="cta-button py-2 px-6" href="/">
-				Back
+				Volver
 			</Link>
 
 			<div className="absolute -bottom-[30%] left-0 right-0 -z-10 overflow-hidden">

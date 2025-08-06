@@ -1,7 +1,9 @@
+import Logo from "../../../public/logo"
+
 export default function Loading() {
 	return (
-		<div className="w-full h-[100dvh] flex justify-center items-center text-4xl font-bold">
-			loading
+		<div className="w-full h-[100dvh] flex justify-center items-center text-4xl font-bold bg-[#FADEE2]">
+			<Logo />
 		</div>
 	)
 }
