@@ -266,8 +266,8 @@ const TimeComponent = ({
 const BgIcons = () => {
 	return (
 		<>
-			<CalendarCheck className="absolute -bottom-[10%] -left-[15%] -rotate-15 text-[var(--primary-green)]/5 size-60 sm:size-120" />
-			<Clock className="absolute bottom-[70%] sm:bottom-[-10%] -right-[15%] rotate-15 text-[var(--primary-green)]/5 size-60 sm:size-120" />
+			<CalendarCheck className="absolute -bottom-[10%] -left-[15%] -rotate-15 text-[var(--primary-green)]/8 size-60 sm:size-60 2xl:size-120" />
+			<Clock className="absolute bottom-[70%] sm:bottom-[-10%] -right-[15%] rotate-15 text-[var(--primary-green)]/8 size-60 sm:size-60 2xl:size-120" />
 		</>
 	)
 }

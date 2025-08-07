@@ -38,7 +38,7 @@ const ProductsCard = () => {
 	const products = productsData
 
 	return (
-		<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex justify-between">
+		<div className="w-full 2xl:h-[75dvh] flex justify-between">
 			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap gap-y-12">
 				{products.map(product => (
 					<Card key={product.id} type="shop" element={product} from="shop" />
@@ -51,7 +51,7 @@ const ProductsCard = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-[30%] -left-[18%] size-[20rem] 2xl:size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<BranchLeaf className="absolute -bottom-[30%] -left-[18%] size-[20rem] 2xl:size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 			<Leaf1 className="absolute -bottom-[10%] 2xl:-bottom-[5%] left-[47%] size-[5rem] text-[var(--leaf-color)]" />
 			<Leaf2 className="absolute -bottom-[25%] -right-[5%] size-[7rem] 2xl:size-[10rem] text-[var(--leaf-color)]" />
 		</>

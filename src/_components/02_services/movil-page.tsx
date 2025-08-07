@@ -31,7 +31,7 @@ export default function MovilServices() {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeafMovil className="absolute -bottom-[8%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<BranchLeafMovil className="absolute -bottom-[8%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 			<Leaf2Movil className="absolute -bottom-[7%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
 		</>
 	)

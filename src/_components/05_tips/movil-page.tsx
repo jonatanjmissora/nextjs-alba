@@ -67,7 +67,7 @@ export default function MovilTips() {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeafMovil className="absolute -bottom-[6.5%] -left-[10%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<BranchLeafMovil className="absolute -bottom-[6.5%] -left-[10%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 			<Leaf2Movil className="absolute -bottom-[5%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
 		</>
 	)

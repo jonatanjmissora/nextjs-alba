@@ -34,7 +34,7 @@ const ServicesCard = () => {
 	const services = servicesData
 
 	return (
-		<div className="w-full h-[90dvh] 2xl:h-[75dvh] flex justify-between">
+		<div className="w-full  2xl:h-[75dvh] flex justify-between">
 			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap gap-y-12">
 				{services.map(service => (
 					<Card
@@ -52,7 +52,7 @@ const ServicesCard = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -bottom-[35%] 2xl:-bottom-[30%] 2xl:-left-[18%] -left-[18%] size-[20rem] 2xl:size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-50" />
+			<BranchLeaf className="absolute -bottom-[35%] 2xl:-bottom-[30%] 2xl:-left-[18%] -left-[18%] size-[20rem] 2xl:size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 			<Leaf1 className="absolute -bottom-[10%] 2xl:-bottom-[5%] left-[47%] size-[5rem] 2xl:size-[6rem] text-[var(--leaf-color)]" />
 			<Leaf2 className="absolute -bottom-[25%] 2xl:-bottom-[20%] 2xl:-right-[10%] -right-[5%] size-[7rem] 2xl:size-[10rem] text-[var(--leaf-color)]" />
 		</>
