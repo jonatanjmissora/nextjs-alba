@@ -26,7 +26,7 @@ export default function HeaderFixed({
 
 	if (layout === "single-page") {
 		return (
-			<div className="top-[55%] absolute right-[1%] flex gap-4">
+			<div className="top-[50%] -translate-y-1/2 absolute right-[1%] flex gap-4">
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</div>
@@ -52,7 +52,7 @@ const Logo = ({ scrolled }: { scrolled: boolean }) => {
 		<>
 			<a
 				href="#home"
-				className={`fixed top-[3.3%] 2xl:top-[3.6%] left-[12.2%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-37"} duration-500`}
+				className={`fixed top-[3.3%] sm:top-[4.1%] 2xl:top-[4%] 2xl:left-[12.2%] left-[11.5%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-37"} duration-500`}
 			>
 				ALBA
 			</a>

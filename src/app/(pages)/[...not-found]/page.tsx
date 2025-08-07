@@ -3,11 +3,11 @@ import Link from "next/link"
 export default function page() {
 	return (
 		<div className="flex-1 flex flex-col justify-center items-center gap-3 relative h-[75dvh]">
-			<p className="sm:text-[20rem] text-[10rem] font-extrabold tracking-widest drop-shadow-[10px_10px_10px_#00000075] text-[var(--primary-green)] leading-none">
+			<p className="2xl:text-[20rem] text-[10rem] font-extrabold tracking-widest drop-shadow-[10px_10px_10px_#00000075] text-[var(--primary-green)] leading-none">
 				404
 			</p>
 
-			<p className="sm:text-[3rem] text-[1rem] font-bold tracking-wide drop-shadow-[5px_5px_5px_#00000075]">
+			<p className="sm:text-[1.5rem] 2xl:text-[3rem] text-[1rem] font-bold tracking-wide drop-shadow-[5px_5px_5px_#00000075]">
 				Ruta no encontrada o en construcción
 			</p>
 
@@ -15,8 +15,9 @@ export default function page() {
 				Volver
 			</Link>
 
-			<div className="absolute -bottom-[30%] left-0 right-0 -z-10 overflow-hidden">
+			<div className="absolute -bottom-[33%] left-0 right-0 -z-10 overflow-hidden">
 				<WaveSVG className="" />
+				<div className="sm:hidden w-full h-40 bg-[var(--primary-pink)]"></div>
 			</div>
 		</div>
 	)

@@ -17,9 +17,9 @@ export default function MovilHome() {
 				</span>
 				<span className="subtitle">in Bahia Blanca</span>
 				<p className="text">Lorem ipsum dolor sit amet consectetur.</p>
-				<button className="cta-button text mt-4 py-4 px-8">
+				<a href="/turno" className="cta-button text mt-4 py-4 px-8">
 					Reserva tu turno
-				</button>
+				</a>
 			</div>
 			<div className="absolute right-0 bottom-0 -z-10 bg-[var(--primary-pink)] rounded-tl-[45%]">
 				<HomeImg2 />
