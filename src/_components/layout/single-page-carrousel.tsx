@@ -23,9 +23,8 @@ export default function SinglePageCarrousel({
 						alt={element.title}
 						quality={100}
 						fill
-						style={{
-							objectFit: "cover",
-						}}
+						className="object-cover"
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 						onClick={() => setActualImageIndex(index)}
 					/>
 				</div>

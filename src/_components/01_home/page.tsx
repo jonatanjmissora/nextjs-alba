@@ -39,7 +39,8 @@ const HomeImg1 = () => {
 				alt="Avatar Alba"
 				quality={100}
 				fill
-				style={{ objectFit: "cover" }}
+				className="object-cover"
+				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 			/>
 		</div>
 	)
@@ -54,7 +55,8 @@ const HomeImg2 = () => {
 				alt="Alba Alpha Logo"
 				quality={100}
 				fill
-				style={{ objectFit: "cover" }}
+				className="object-cover"
+				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 			/>
 		</div>
 	)

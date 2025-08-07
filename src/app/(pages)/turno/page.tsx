@@ -43,7 +43,7 @@ const TurnoBody = ({ isMovil }: { isMovil: boolean }) => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className="w-full sm:w-[60%] my-12 p-4 sm:p-16 mx-auto flex-1 flex flex-col justify-center sm:justify-start items-center gap-12 bg-[var(--primary-pink)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] border border-[#d685922a] relative overflow-hidden"
+			className="w-full sm:w-[60%] 2xl:my-12 my-12 sm:my-6 p-4 sm:p-16 mx-auto flex-1 flex flex-col justify-center sm:justify-start items-center gap-12 bg-[var(--primary-pink)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] border border-[#d685922a] relative overflow-hidden"
 		>
 			<ServicesComponent services={services} setServices={setServices} />
 
@@ -57,7 +57,7 @@ const TurnoBody = ({ isMovil }: { isMovil: boolean }) => {
 				<TimeComponent time={time} setTime={setTime} isMovil={isMovil} />
 			</div>
 
-			<div className="w-full flex flex-col gap-2 justify-center items-center relative z-10 my-10">
+			<div className="w-full flex flex-col gap-2 justify-center items-center relative z-10 my-10 sm:my-5 2xl:my-10">
 				<button
 					type="submit"
 					className={`cta-button w-full px-12 py-4 relative z-10 ${!services || !date || !time ? "opacity-50 cursor-not-allowed" : ""}`}

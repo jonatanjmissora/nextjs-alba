@@ -37,9 +37,8 @@ export default function Tips() {
 								alt={tips[0].title}
 								quality={100}
 								fill
-								style={{
-									objectFit: "cover",
-								}}
+								className="object-cover"
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 							/>
 						</div>
 					</div>
@@ -50,9 +49,8 @@ export default function Tips() {
 								alt={tips[1].title}
 								quality={100}
 								fill
-								style={{
-									objectFit: "cover",
-								}}
+								className="object-cover"
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 							/>
 						</div>
 						<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">
