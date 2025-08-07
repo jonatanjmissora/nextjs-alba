@@ -49,19 +49,11 @@ export default function HeaderFixed({
 
 const Logo = ({ scrolled }: { scrolled: boolean }) => {
 	return (
-		<>
-			<a
-				href="#home"
-				className={`fixed top-[3.3%] sm:top-[4.1%] 2xl:top-[4%] 2xl:left-[12.2%] left-[11.5%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "-translate-x-37"} duration-500`}
-			>
-				ALBA
-			</a>
-			<a
-				href="#home"
-				className={`absolute top-[3.3%] 2xl:-top-[22.5%] left-[5%] 2xl:left-[4.75%] z-100 header font-semibold text-[var(--primary-green)]`}
-			>
-				GARCIA
-			</a>
-		</>
+		<div
+			className={`fixed top-[3.3%] sm:top-[4.1%] 2xl:top-[4.55dvh] 2xl:left-[13dvw] left-[11.5%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "sm:-translate-x-26 2xl:-translate-x-37"} duration-500`}
+		>
+			<a href="#home">ALBA </a>
+			<span className={`${scrolled && "opacity-0"} duration-500`}>GARCIA</span>
+		</div>
 	)
 }
