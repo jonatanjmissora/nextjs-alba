@@ -7,7 +7,7 @@ export default function MovilServices() {
 	return (
 		<>
 			<LeafImgs />
-			<div className="absolute -z-10 -top-[21dvh] left-0 w-full h-[15dvh] bg-[var(--primary-pink)]"></div>
+			<div className="absolute -z-10 -top-[150px] left-0 w-full h-[110px] bg-[var(--primary-pink)]"></div>
 			<section id="services" className="w-full relative px-6 pt-12">
 				<SectionHeader
 					title="Nuestros servicios en gabinete"
@@ -23,7 +23,7 @@ export default function MovilServices() {
 					</button>
 				</div>
 			</section>
-			<div className="absolute -z-10 -bottom-[21dvh] left-0 w-full h-[15dvh] bg-[var(--primary-pink)]"></div>
+			<div className="absolute -z-10 -bottom-[150px] left-0 w-full h-[110px] bg-[var(--primary-pink)]"></div>
 		</>
 	)
 }

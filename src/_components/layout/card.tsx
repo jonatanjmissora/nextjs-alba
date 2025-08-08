@@ -36,7 +36,7 @@ export default function Card({
 				/>
 			</div>
 
-			<h3 className="font-semibold text-[var(--primary-green)] subtitle pt-2">
+			<h3 className="font-semibold text-[var(--primary-green)] text-2xl sm:text-xl pt-2">
 				{element.title}
 			</h3>
 			<div className="flex justify-between items-center">

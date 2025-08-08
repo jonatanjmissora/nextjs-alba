@@ -19,7 +19,7 @@ export default function ServicePage({
 	from: "services" | "shop" | "favorites" | "cart"
 }) {
 	return (
-		<div className="w-full min-h-[100dvh] px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
+		<div className="w-full min-h-[100svh] sm:min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
 			<SinglePageHeader text="Servicio" href={from} />
 
 			<ServiceBody service={service} />
@@ -58,7 +58,7 @@ const ServiceImage = ({ service }: { service: Service }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
 
 	return (
-		<div className="w-full sm:w-[45%] h-[70dvh] flex flex-col gap-4">
+		<div className="w-full sm:w-[45%] sm:h-[70dvh] h-[500px] flex flex-col gap-4">
 			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
 				<Image
 					src={service.carousel[actualImageIndex]}

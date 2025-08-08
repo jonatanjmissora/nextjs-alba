@@ -25,27 +25,27 @@ export default function HomePage() {
 				<section className="w-full flex justify-center items-start relative px-6">
 					<MovilHome />
 				</section>
-				<section className="w-full min-h-[90dvh] bg-[var(--primary-pink)] flex justify-center items-start relative mt-[15dvh]">
+				<section className="w-full bg-[var(--primary-pink)] flex justify-center items-start relative mt-[110px]">
 					<MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]">
 						<MovilServices />
 					</MovilWaveContainer>
 				</section>
 
-				<section className="w-full min-h-[90dvh] flex justify-center items-start relative mt-[25dvh] px-6">
+				<section className="w-full flex justify-center items-start relative mt-[180px] px-6">
 					<MovilProducts />
 				</section>
 
-				<section className="w-full min-h-[90dvh] flex justify-center items-start relative mt-[25dvh]">
+				<section className="w-full flex justify-center items-start relative mt-[180px]">
 					<MovilWaveContainer top="-top-[57.7%]" bottom="-bottom-[57.7%]">
 						<MovilAbout />
 					</MovilWaveContainer>
 				</section>
 
-				<section className="w-full min-h-[90dvh] flex justify-center items-start relative mt-[25dvh] px-6">
+				<section className="w-full flex justify-center items-start relative mt-[180px] px-6">
 					<MovilTips />
 				</section>
 
-				<div className="w-full bg-[var(--primary-pink)] relative mt-[25dvh] px-6">
+				<div className="w-full bg-[var(--primary-pink)] relative mt-[180px] px-6">
 					<MovilFooter />
 				</div>
 			</div>

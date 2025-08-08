@@ -9,7 +9,7 @@ export default function ServicesSection() {
 	return (
 		<section
 			id="services"
-			className="w-full min-h-screen 2xl:min-h-[50dvh] my-32 relative border border-transparent"
+			className="w-full my-32 relative border border-transparent"
 		>
 			<LeafImgs />
 
