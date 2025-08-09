@@ -25,7 +25,7 @@ export default function MovilTips() {
 							{tips[0].description}
 						</span>
 					</div>
-					<div className="relative overflow-hidden w-full h-[80dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+					<div className="relative overflow-hidden w-full h-[500px] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 						<Image
 							src={tips[0].img}
 							alt={tips[0].title}
@@ -44,7 +44,7 @@ export default function MovilTips() {
 							{tips[1].description}
 						</span>
 					</div>
-					<div className="relative overflow-hidden w-full h-[80dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+					<div className="relative overflow-hidden w-full h-[500px] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 						<Image
 							src={tips[1].img}
 							alt={tips[1].title}

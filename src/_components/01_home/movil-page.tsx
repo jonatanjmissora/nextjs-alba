@@ -10,9 +10,9 @@ export default function MovilHome() {
 			<LeafImgs />
 			<div
 				id="home"
-				className="w-full h-[850px] flex flex-col gap-3 pt-[110px]"
+				className="w-full h-[850px] flex flex-col items-center gap-3 pt-[110px]"
 			>
-				<span className="title text-[var(--primary-green)]">
+				<span className="title text-[var(--primary-green)] text-center">
 					SKIN AND BEAUTY CENTER
 				</span>
 				<span className="subtitle">in Bahia Blanca</span>

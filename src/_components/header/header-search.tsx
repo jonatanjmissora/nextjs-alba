@@ -16,7 +16,7 @@ export default function HeaderSearch() {
 	}, [])
 
 	return (
-		<div className="relative">
+		<div className="relative border border-cyan-500">
 			<input
 				type="search"
 				name="search"
