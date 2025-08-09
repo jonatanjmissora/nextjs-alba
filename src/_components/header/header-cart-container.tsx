@@ -14,7 +14,7 @@ export default function HeaderCartContainer() {
 
 const InitialCart = () => {
 	return (
-		<div className="relative border border-orange-500">
+		<div className="relative">
 			<ShoppingCart
 				color="var(--primary-green)"
 				className="icon size-5 2xl:size-7 "

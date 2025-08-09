@@ -32,7 +32,7 @@ export default function MovilHeader() {
 				ALBA
 			</a>
 
-			<div className="flex items-center gap-6 border border-green-500">
+			<div className="flex items-center gap-6">
 				<HeaderSearch />
 				<HeaderHeartContainer />
 				<HeaderCartContainer />

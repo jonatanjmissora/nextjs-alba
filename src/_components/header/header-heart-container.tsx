@@ -14,7 +14,7 @@ export default function HeaderHeartContainer() {
 
 const InitialHeart = () => {
 	return (
-		<div className="relative border border-blue-500">
+		<div className="relative">
 			<Heart color="var(--primary-green)" className="icon size-5 2xl:size-7 " />
 			<span className="absolute top-[-5px] 2xl:right-[-12px] right-[-8px] w-4 h-4 rounded-full text-transparent font-semibold">
 				0
