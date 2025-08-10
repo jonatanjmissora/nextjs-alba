@@ -9,7 +9,7 @@ export default function Header() {
 				<a href="#services">Servicios</a>
 				<a href="#shop">Tienda</a>
 				<a href="#about">Acerca de</a>
-				<a href="#faqs">Tips</a>
+				<a href="#tips">Tips</a>
 				<a href="#contact">Contacto</a>
 			</nav>
 

@@ -12,7 +12,7 @@ export default function Tips() {
 		<>
 			<div className="w-full h-[20dvh] bg-transparent"></div>
 			<div
-				id="faqs"
+				id="tips"
 				className="w-full my-32 relative border border-transparent"
 			>
 				<LeafImgs />

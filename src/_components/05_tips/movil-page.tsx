@@ -8,7 +8,7 @@ export default function MovilTips() {
 	const tips = tipsData
 
 	return (
-		<div id="faqs" className="w-full relative pt-12">
+		<div id="tips" className="w-full relative pt-12">
 			<LeafImgs />
 			<SectionHeader
 				title="Nuestros tips del centro de belleza"
