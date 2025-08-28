@@ -1,5 +1,6 @@
 import { servicesData } from "@/_lib/services"
 import ServicePage from "./service"
+import NotFound from "@/_components/layout/not-found"
 
 type Params = Promise<{ id: string }>
 type SearchParams = Promise<{
@@ -23,7 +24,7 @@ export default async function ServerServicePage({
 	const service = servicesData.find(service => service.id === id)
 
 	if (!service) {
-		return <span>Service not found</span>
+		return <NotFound />
 	}
 
 	return <ServicePage service={service} from={from} />

@@ -1,5 +1,6 @@
 import { productsData } from "@/_lib/products"
 import ProductPage from "./product"
+import NotFound from "@/_components/layout/not-found"
 
 type Params = Promise<{ id: string }>
 type SearchParams = Promise<{
@@ -23,7 +24,7 @@ export default async function ServerProductPage({
 	const product = productsData.find(product => product.id === id)
 
 	if (!product) {
-		return <span>Product not found</span>
+		return <NotFound />
 	}
 
 	return <ProductPage product={product} from={from} />

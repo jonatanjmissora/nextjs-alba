@@ -1,9 +1,9 @@
-import { servicesData } from "@/_lib/services"
+import { serviceCategories, ServiceHeader, servicesData } from "@/_lib/services"
 import { SectionHeader } from "../section-header"
-import Card from "../layout/card"
 import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2 from "../../../public/leaf/leaf2"
+import CardCategories from "../layout/card-categories"
 
 export default function ServicesSection() {
 	return (
@@ -16,10 +16,10 @@ export default function ServicesSection() {
 			<SectionHeader
 				title="Nuestros servicios en gabinete"
 				subtitle="Servicios"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				description={ServiceHeader}
 			/>
 
-			<ServicesCard />
+			<ServiceCategoriesComponent />
 
 			<div className="w-full border-t-2 border-[var(--secondary-green)] text-right mt-12">
 				<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
@@ -30,14 +30,14 @@ export default function ServicesSection() {
 	)
 }
 
-const ServicesCard = () => {
-	const services = servicesData
+const ServiceCategoriesComponent = () => {
+	const services = serviceCategories
 
 	return (
 		<div className="w-full  2xl:h-[75dvh] flex justify-between">
 			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap gap-y-12">
 				{services.map(service => (
-					<Card
+					<CardCategories
 						key={service.id}
 						type="service"
 						element={service}
