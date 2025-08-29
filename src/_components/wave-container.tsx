@@ -5,11 +5,11 @@ export default function WaveContainer({
 }) {
 	return (
 		<div className="relative w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-20 border border-transparent">
-			<WaveSVG className="absolute bottom-[63%] left-0 -z-10" />
+			<WaveSVG className="absolute bottom-[62.5%] left-0 -z-10" />
 
 			{children}
 
-			<WaveSVG className="absolute top-[63%] left-0 rotate-180 -z-10" />
+			<WaveSVG className="absolute top-[62.5%] left-0 rotate-180 -z-10" />
 		</div>
 	)
 }

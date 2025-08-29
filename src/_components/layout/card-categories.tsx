@@ -1,9 +1,8 @@
 "use client"
 
-import { MoveRight } from "lucide-react"
+import { ServicesCategory } from "@/_lib/services"
 import Image from "next/image"
 import Link from "next/link"
-import { ServiceCategory } from "@/_lib/services"
 
 export default function Card({
 	type,
@@ -11,9 +10,12 @@ export default function Card({
 	from,
 }: {
 	type: "shop" | "service" | "favorites" | "cart"
-	element: ServiceCategory
+	element: ServicesCategory
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
+
+	const pinnedCategories = element.subCategories.filter(subCategory => subCategory.pinned)
+
 	return (
 		<li
 			key={element.id}
@@ -37,25 +39,36 @@ export default function Card({
 				{element.title}
 			</h3>
 			<div className="flex flex-col gap-2 px-4">
-				<ul>
-					{element.subCategories.map(subCategory => (
-						<li key={subCategory} className="list-disc list-inside">
+				<ul className="flex flex-col gap-2">
+					{pinnedCategories.map(subCategory => (
+						<li key={subCategory.id} className="list-disc list-inside">
 							<Link
-								href={`/${type}/${subCategory}?from=${from}`}
+								href={`/${type}s/${element.id}/?scrollTo=${subCategory.id}&from=${from}`}
 								className="text w-[180px] 2xl:w-[250px] cursor-pointer hover:text-[var(--primary-green)] hover:underline"
 							>
-								{subCategory}
+								{subCategory.title}
 							</Link>
 						</li>
 					))}
 				</ul>
 				<Link
-					href={`/${type}/${element.id}?from=${from}`}
+					href={`/${type}/${setLink(element)}?from=${from}`}
 					className="mr-2 ml-auto cursor-pointer mt-2"
 				>
-					<MoveRight size={30} color="var(--primary-green)" className="icon" />
+					<span className="text-[var(--primary-green)] hover:font-semibold">
+						ver mas +
+					</span>
 				</Link>
 			</div>
 		</li>
 	)
+}
+
+function setLink(element: ServicesCategory) {
+	let prefix = ""
+	if (element.title.includes("corporal")) prefix = "tratamientos-corporales"
+	if (element.title.includes("facial")) prefix = "tratamientos-faciales"
+	if (element.title.includes("depilacion")) prefix = "depilacion"
+
+	return prefix
 }

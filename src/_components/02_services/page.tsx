@@ -1,4 +1,4 @@
-import { serviceCategories, serviceHeader } from "@/_lib/services"
+import { servicesCategories, servicesHeader } from "@/_lib/services"
 import { SectionHeader } from "../section-header"
 import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
@@ -16,14 +16,14 @@ export default function ServicesSection() {
 			<SectionHeader
 				title="Nuestros servicios en gabinete"
 				subtitle="Servicios"
-				description={serviceHeader}
+				description={servicesHeader}
 			/>
 
 			<ServiceCategoriesComponent />
 
 			<div className="w-full border-t-2 border-[var(--secondary-green)] text-right mt-12">
 				<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
-					ver mas +
+					ver todas
 				</button>
 			</div>
 		</section>
@@ -31,11 +31,11 @@ export default function ServicesSection() {
 }
 
 const ServiceCategoriesComponent = () => {
-	const services = serviceCategories
+	const services = servicesCategories
 
 	return (
 		<div className="w-full  2xl:h-[75dvh] flex justify-between">
-			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap gap-y-12">
+			<ul className="w-full flex justify-center items-center gap-11 2xl:gap-18 flex-wrap gap-y-12">
 				{services.map(service => (
 					<CardCategories
 						key={service.id}

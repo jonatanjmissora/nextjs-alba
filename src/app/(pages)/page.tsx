@@ -36,7 +36,7 @@ export default function HomePage() {
 				</section>
 
 				<section className="w-full flex justify-center items-start relative mt-[180px]">
-					<MovilWaveContainer top="-top-[57.7%]" bottom="-bottom-[57.7%]">
+					<MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]">
 						<MovilAbout />
 					</MovilWaveContainer>
 				</section>
