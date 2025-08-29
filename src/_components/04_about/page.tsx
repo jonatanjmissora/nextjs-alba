@@ -4,6 +4,7 @@ import Leaf2 from "../../../public/leaf/leaf2"
 import { SectionHeader } from "../section-header"
 import Testimonials from "./testimonials"
 import Certificates from "./certificates"
+import { aboutHeader } from "@/_lib/about"
 
 export default function About() {
 	return (
@@ -12,7 +13,7 @@ export default function About() {
 			<SectionHeader
 				title="Mi historia"
 				subtitle="Acerca de"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+				description={aboutHeader}
 			/>
 
 			<Certificates />

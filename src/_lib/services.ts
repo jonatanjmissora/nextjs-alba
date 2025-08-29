@@ -15,7 +15,7 @@ export type ServiceCategory = {
 	subCategories: string[]
 }
 
-export const ServiceHeader =
+export const serviceHeader =
 	"En mi gabinete cada sesión está pensada para vos, con cuidado, con respeto y con resultados reales. Acá te presento mis servicios."
 
 export const serviceCategories: ServiceCategory[] = [

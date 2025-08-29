@@ -1,3 +1,4 @@
+import { serviceHeader } from "@/_lib/services"
 import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
 import Leaf2Movil from "../../../public/leaf/leaf2-movil"
 import { MovilServicesCard } from "../layout/movil/movil-services-card"
@@ -12,7 +13,7 @@ export default function MovilServices() {
 				<SectionHeader
 					title="Nuestros servicios en gabinete"
 					subtitle="Servicios"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+					description={serviceHeader}
 				/>
 
 				<MovilServicesCard />

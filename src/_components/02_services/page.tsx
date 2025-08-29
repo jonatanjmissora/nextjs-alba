@@ -1,4 +1,4 @@
-import { serviceCategories, ServiceHeader, servicesData } from "@/_lib/services"
+import { serviceCategories, serviceHeader } from "@/_lib/services"
 import { SectionHeader } from "../section-header"
 import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
@@ -16,7 +16,7 @@ export default function ServicesSection() {
 			<SectionHeader
 				title="Nuestros servicios en gabinete"
 				subtitle="Servicios"
-				description={ServiceHeader}
+				description={serviceHeader}
 			/>
 
 			<ServiceCategoriesComponent />

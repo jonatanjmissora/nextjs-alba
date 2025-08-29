@@ -3,6 +3,7 @@ import { SectionHeader } from "../section-header"
 import Certificates from "./certificates"
 import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
 import Leaf2Movil from "../../../public/leaf/leaf2-movil"
+import { aboutHeader } from "@/_lib/about"
 
 export default function MovilAbout() {
 	return (
@@ -16,7 +17,7 @@ export default function MovilAbout() {
 				<SectionHeader
 					title="Mi historia"
 					subtitle="Acerca de"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+					description={aboutHeader}
 				/>
 
 				<Certificates />
