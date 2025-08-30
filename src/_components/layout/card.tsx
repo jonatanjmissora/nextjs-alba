@@ -50,7 +50,6 @@ export default function Card({
 				</div>
 			</div>
 			<div className="flex flex-col gap-2">
-				<span className="text w-[180px] 2xl:w-[250px]">{element.subtitle}</span>
 				<Link
 					href={`/${type}/${element.id}?from=${from}`}
 					className="mr-2 ml-auto cursor-pointer mt-2"

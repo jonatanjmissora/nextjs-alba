@@ -65,7 +65,7 @@ export default function HomePage() {
 				</section>
 
 				<section className="w-full bg-[var(--primary-pink)] relative">
-					<WaveContainer delta="63">
+					<WaveContainer>
 						<ServicesSection />
 					</WaveContainer>
 				</section>
@@ -75,7 +75,7 @@ export default function HomePage() {
 				</section>
 
 				<section className="w-full bg-[var(--primary-pink)] relative">
-					<WaveContainer delta="62.1">
+					<WaveContainer>
 						<About />
 					</WaveContainer>
 				</section>
