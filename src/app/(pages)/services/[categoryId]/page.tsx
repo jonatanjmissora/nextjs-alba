@@ -3,7 +3,6 @@ import ServicePage from "./service"
 import SinglePageFooter from "@/_components/layout/single-page-footer"
 import SinglePageLeaf from "@/_components/layout/single-page-leaf"
 import SinglePageHeader from "@/_components/layout/single-page-header"
-import service from "./service"
 
 type Params = Promise<{
 	categoryId: string
@@ -14,7 +13,11 @@ type SearchParams = Promise<{
 	from: "services" | "shop" | "favorites" | "cart"
 }>
 
-export default async function TratamientosFacialesPage({
+export async function generateStaticParams() {
+	return servicesCategories.map(category => ({ categoryId: category.id }))
+}
+
+export default async function ServerServiciosPage({
 	params,
 	searchParams,
 }: {
@@ -28,8 +31,6 @@ export default async function TratamientosFacialesPage({
 	const serviceCategories = servicesCategories.find(
 		category => category.id === categoryId
 	)?.subCategories
-
-	console.log(categoryId, serviceCategories)
 
 	return (
 		<section className="w-full min-h-[100svh] sm:min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">

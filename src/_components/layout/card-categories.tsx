@@ -13,8 +13,9 @@ export default function Card({
 	element: ServicesCategory
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
-
-	const pinnedCategories = element.subCategories.filter(subCategory => subCategory.pinned)
+	const pinnedCategories = element.subCategories.filter(
+		subCategory => subCategory.pinned
+	)
 
 	return (
 		<li
@@ -52,7 +53,7 @@ export default function Card({
 					))}
 				</ul>
 				<Link
-					href={`/${type}/${setLink(element)}?from=${from}`}
+					href={`/${type}s/${setLink(element)}?from=${from}`}
 					className="mr-2 ml-auto cursor-pointer mt-2"
 				>
 					<span className="text-[var(--primary-green)] hover:font-semibold">

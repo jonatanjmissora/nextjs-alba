@@ -18,6 +18,7 @@ import WaveContainer from "@/_components/wave-container"
 export default function HomePage() {
 	return (
 		<main className="w-full relative">
+			{/* 						MOVIL					 */}
 			<div className="block sm:hidden">
 				<div className="">
 					<MovilHeader />
@@ -50,6 +51,7 @@ export default function HomePage() {
 				</div>
 			</div>
 
+			{/*							DESKTOP 							*/}
 			<div className="hidden sm:block w-full">
 				<div className="absolute top-0 left-0 z-50 w-full p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]">
 					<Header />
