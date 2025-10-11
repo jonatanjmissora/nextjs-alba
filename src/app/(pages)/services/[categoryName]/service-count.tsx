@@ -1,15 +1,20 @@
 "use client"
 
-import { Service } from "@/_lib/services"
+import type { ServiceTreeType } from "@/_lib/types"
 import { MinusCircle, PlusCircle, ShoppingCart } from "lucide-react"
 import { useState } from "react"
 import { useStore } from "@/_lib/store"
 import { redirect } from "next/navigation"
 
-export const ServiceCountAndCart = ({ service }: { service: Service }) => {
+export const ServiceCountAndCart = ({
+	service,
+}: {
+	service: ServiceTreeType
+}) => {
 	const { cartStore, setCartStore } = useStore()
 	const [count, setCount] = useState<number>(
-		cartStore.find(cart => cart.id === service.id)?.quantity || 1
+		cartStore.find(cart => cart.id.toString() === service.id.toString())
+			?.quantity || 1
 	)
 
 	const handlePlus = () => {
@@ -23,7 +28,9 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 	}
 
 	const handleAddToCart = () => {
-		const cartItemIndex = cartStore.findIndex(cart => cart.id === service.id)
+		const cartItemIndex = cartStore.findIndex(
+			cart => cart.id.toString() === service.id.toString()
+		)
 		if (cartItemIndex !== -1) {
 			setCartStore(
 				cartStore.map((cart, index) =>
@@ -31,7 +38,10 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 				)
 			)
 		} else {
-			setCartStore([...cartStore, { id: service.id, quantity: count }])
+			setCartStore([
+				...cartStore,
+				{ id: service.id.toString(), quantity: count },
+			])
 		}
 		redirect("/cart")
 	}
@@ -40,7 +50,8 @@ export const ServiceCountAndCart = ({ service }: { service: Service }) => {
 		<>
 			<div className="flex justify-between items-center">
 				<p className="subtitle font-semibold">
-					${new Intl.NumberFormat("es-ES", {
+					$
+					{new Intl.NumberFormat("es-ES", {
 						minimumFractionDigits: 0,
 						maximumFractionDigits: 0,
 					}).format(Number(service.price))}

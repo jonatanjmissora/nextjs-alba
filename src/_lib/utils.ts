@@ -32,3 +32,19 @@ export function convertToServicesTree(
 
 	return Object.values(groupedServices)
 }
+
+export function setUrlCategoryName(categoryName: string) {
+	return categoryName
+		.toLowerCase()
+		.replace(/ /g, "-")
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "")
+}
+
+export function setCleanCategoryName(categoryName: string) {
+	console.log("categoryName", categoryName)
+	const r = categoryName
+		.replace(/-/g, " ")
+		.replace(/^([a-z])/i, match => match.toUpperCase())
+	return r
+}

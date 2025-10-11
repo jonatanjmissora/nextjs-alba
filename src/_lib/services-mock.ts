@@ -187,9 +187,9 @@ export const servicesTree: ServicesTreeType[] = [
 					"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
 				description_admin: "Limpieza facial profunda",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"Tratamiento ideal para afinar, hidratar e iluminar la piel. Extracción de puntos negros y quistes de millium. Preparamos la piel con doble limpieza ( aceite y agua). Exfoliación enzimática y queratolitica. Microdermoabrasion con punta de diamante. Extracciones. Máscara peel off negra. Descongestion con Alta Frecuencia y máscaras. Productos para finalizar. Protección solar.",
 				images:
-					"/facial/higiene-facial-profunda01.webp*/facial/higiene-facial-profunda02.webp*/facial/higiene-facial-profunda03.webp",
+					"/facial/higiene-facial-profunda01.webp*/facial/higiene-facial-profunda02.webp*/facial/higiene-facial-profunda03.webp*/facial/higiene-facial-profunda04.webp*/facial/higiene-facial-profunda05.webp",
 			},
 			{
 				id: 22,
@@ -199,9 +199,9 @@ export const servicesTree: ServicesTreeType[] = [
 					"Lucí una piel radiante con mucho Glow. Aporte de activos y vitaminas según cada tipo de piel.",
 				description_admin: "Glow Up",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"Lucí una piel radiante con mucho Glow. Aporte de activos y vitaminas según cada tipo de piel. Tratamiento anti age que combina Radiofrecuencia, Ems y electroporación. Incorpora activos en profundidad y con el calor de a radiofrecuencia estimulamos la producción de colágeno. Resultado una piel con mucha luminosidad y un efecto tensor que namora.",
 				images:
-					"/maderoterapia/maderoterapia01.webp*/maderoterapia/maderoterapia02.webp*/maderoterapia/maderoterapia03.webp",
+					"/facial/higiene-facial-profunda-glowup01.webp*/facial/higiene-facial-profunda-glowup02.webp*/facial/higiene-facial-profunda-glowup03.webp*/facial/higiene-facial-profunda-glowup04.webp*/facial/higiene-facial-profunda-glowup05.webp",
 			},
 			{
 				id: 23,
@@ -210,10 +210,91 @@ export const servicesTree: ServicesTreeType[] = [
 				description:
 					"Tratamiento de higiene profunda con Radiofrecuencia. Con aporte de activos tensores. Ideal para pieles desvitalizadas y con flacidez.",
 				description_admin: "Tratamiento tensor",
-				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+				description_long: "BLA BLA BLA",
 				images:
-					"/maderoterapia/maderoterapia01.webp*/maderoterapia/maderoterapia02.webp*/maderoterapia/maderoterapia03.webp",
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 24,
+				subtitle: "Higiene facial profunda con electroporación",
+				price: 58000,
+				description:
+					"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual.",
+				description_admin: "Facial electroporación",
+				description_long:
+					"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual. Sin dolor y sin agujas. Higiene profunda. Luego de las extracciones se procede a realizar un shock de activos penetrados con electroporación. Finalizando con productos y protección solar.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 25,
+				subtitle: "Higiene facial profunda con radiofrecuencia",
+				price: 62000,
+				description:
+					"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. ",
+				description_admin: "Facial radiofrecuencia",
+				description_long:
+					"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. Higiene profunda con extracciónes. Sesión de radiofrecuencia. Aproximadamente entre 25 y 30 minutos, según tolerancia del paciente. Descongestión y productos de finalización. Protección solar.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 26,
+				subtitle: "Tratamiento con Alquimias",
+				price: 60000,
+				description: "Es un tratamiento de microdermoabrasion y dermoinfusion.",
+				description_admin: "Facial Alquimias",
+				description_long:
+					"Es un tratamiento de microdermoabrasion y dermoinfusion. Esto quiere decir que mientras exfolia, introduce activos en profundidad ( seleccionados según necesidad) dejando un piel muy limpia. Ideal para pieles engrosadas, con poros dilatados. Aporta mucha luminosidad e hidratación. Se procede a realizar una higiene profunda y la aparatologia en cuestión. Luego se realizan extracciones, descongestión y productos de finalización. Protección solar.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 27,
+				subtitle: "Higiene facial profunda con dermaplaning",
+				price: 65000,
+				description:
+					"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa.",
+				description_admin: "Facial dermaplaning",
+				description_long:
+					"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa. El vello no crece más duro ni oscuro. Eso lo determinan factores hormonales y genéticos. Con esta técnica, retiramos células muerta y todo el vello fino del rostro. Higiene facial profunda. Dermaplaning. Extracciones. Descongestión. Productos de finalización. Protección solar.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 28,
+				subtitle: "Dermapen o microneedling",
+				price: 65000,
+				description:
+					"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo.",
+				description_admin: "Facial dermapen",
+				description_long:
+					"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo. Se combina luego con electroporación para potenciar los resultados. Higiene facial profunda. Dermapen. Extracciones. Descongestión. Productos de finalización. Protección solar.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 29,
+				subtitle: "Peeling químico",
+				price: 69000,
+				description: "Este Peelings es cosmiatrico. No médico.",
+				description_admin: "Facial químico",
+				description_long:
+					"Este Peelings es cosmiatrico. No médico. Trabajo con diferente técnicas y métodos de profundización que llegan a tener muy buenos resultados, pero siempre trabajo sobre mi campo. Lo epidérmico. Logramos hacer muy buenas descamaciones siemore acompañando al paciente. Los peeling descamativos, no son para todas las personas. Por lo que al evaluar la piel, si no considero necesario realizarlo, buscamos otro tratamiento que se adecué a esa piel.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+			},
+			{
+				id: 30,
+				subtitle: "Hollywood peel",
+				price: 67000,
+				description:
+					"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices.",
+				description_admin: "Facial Hollywood",
+				description_long:
+					"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices. Luego de la higiene profunda se pincela una fina capa de carbon vegetal activado, se deja secar y se procede al tratamiento. Con este tratamiento conseguimos una Regeneración celular, mediante pulsos de láser muy cortos extraemos el carbón vegetal adherido a la capa más superficial de la piel. Luego se descongestiona y se termina el tratamiento con productos acordes y protección solar.",
+				images:
+					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
 			},
 		],
 	},
@@ -333,124 +414,6 @@ export const servicesTree: ServicesTreeType[] = [
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
-			},
-		],
-	},
-]
-
-export const servicesMockFaciales: ServicesTreeType[] = [
-	{
-		title: "Tratamientos faciales",
-		services: [
-			{
-				id: 1,
-				subtitle: "Higiene facial profunda",
-				price: 55000,
-				description:
-					"Tratamiento ideal para afinar, hidratar e iluminar la piel. Extracción de puntos negros y quistes de millium. Preparamos la piel con doble limpieza ( aceite y agua). Exfoliación enzimática y queratolitica. Microdermoabrasion con punta de diamante. Extracciones. Máscara peel off negra. Descongestion con Alta Frecuencia y máscaras. Productos para finalizar. Protección solar.",
-				description_admin: "Facial profunda",
-				description_long:
-					"Tratamiento ideal para afinar, hidratar e iluminar la piel. Extracción de puntos negros y quistes de millium. Preparamos la piel con doble limpieza ( aceite y agua). Exfoliación enzimática y queratolitica. Microdermoabrasion con punta de diamante. Extracciones. Máscara peel off negra. Descongestion con Alta Frecuencia y máscaras. Productos para finalizar. Protección solar.",
-				images: "",
-			},
-			{
-				id: 2,
-				subtitle: "Higiene facial profunda con electroporación",
-				price: 58000,
-				description:
-					"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual. Sin dolor y sin agujas. Higiene profunda. Luego de las extracciones se procede a realizar un shock de activos penetrados con electroporación. Finalizando con productos y protección solar.",
-				description_admin: "Facial electroporación",
-				description_long:
-					"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual. Sin dolor y sin agujas. Higiene profunda. Luego de las extracciones se procede a realizar un shock de activos penetrados con electroporación. Finalizando con productos y protección solar.",
-				images: "",
-			},
-			{
-				id: 3,
-				subtitle: "Higiene facial profunda con radiofrecuencia",
-				price: 62000,
-				description:
-					"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. Higiene profunda con extracciónes. Sesión de radiofrecuencia. Aproximadamente entre 25 y 30 minutos, según tolerancia del paciente. Descongestión y productos de finalización. Protección solar.",
-				description_admin: "Facial radiofrecuencia",
-				description_long:
-					"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. Higiene profunda con extracciónes. Sesión de radiofrecuencia. Aproximadamente entre 25 y 30 minutos, según tolerancia del paciente. Descongestión y productos de finalización. Protección solar.",
-				images: "",
-			},
-			{
-				id: 4,
-				subtitle: "Tratamiento con Alquimias",
-				price: 60000,
-				description:
-					"Es un tratamiento de microdermoabrasion y dermoinfusion. Esto quiere decir que mientras exfolia, introduce activos en profundidad ( seleccionados según necesidad) dejando un piel muy limpia. Ideal para pieles engrosadas, con poros dilatados. Aporta mucha luminosidad e hidratación. Se procede a realizar una higiene profunda y la aparatologia en cuestión. Luego se realizan extracciones, descongestión y productos de finalización. Protección solar.",
-				description_admin: "Facial Alquimias",
-				description_long:
-					"Es un tratamiento de microdermoabrasion y dermoinfusion. Esto quiere decir que mientras exfolia, introduce activos en profundidad ( seleccionados según necesidad) dejando un piel muy limpia. Ideal para pieles engrosadas, con poros dilatados. Aporta mucha luminosidad e hidratación. Se procede a realizar una higiene profunda y la aparatologia en cuestión. Luego se realizan extracciones, descongestión y productos de finalización. Protección solar.",
-				images: "",
-			},
-			{
-				id: 5,
-				subtitle: "Higiene facial profunda con dermaplaning",
-				price: 65000,
-				description:
-					"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa. El vello no crece más duro ni oscuro. Eso lo determinan factores hormonales y genéticos. Con esta técnica, retiramos células muerta y todo el vello fino del rostro. Higiene facial profunda. Dermaplaning. Extracciones. Descongestión. Productos de finalización. Protección solar ",
-				description_admin: "Facial dermaplaning",
-				description_long:
-					"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa. El vello no crece más duro ni oscuro. Eso lo determinan factores hormonales y genéticos. Con esta técnica, retiramos células muerta y todo el vello fino del rostro. Higiene facial profunda. Dermaplaning. Extracciones. Descongestión. Productos de finalización. Protección solar ",
-				images: "",
-			},
-			{
-				id: 6,
-				subtitle: "Dermapen o microneedling",
-				price: 65000,
-				description:
-					"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo. Se combina luego con electroporación para potenciar los resultados. Higiene facial profunda. Dermapen. Extracciones. Descongestión. Productos de finalización. Protección solar ",
-				description_admin: "Facial dermapen",
-				description_long:
-					"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo. Se combina luego con electroporación para potenciar los resultados. Higiene facial profunda. Dermapen. Extracciones. Descongestión. Productos de finalización. Protección solar ",
-				images: "",
-			},
-			{
-				id: 7,
-				subtitle: "Peeling químico",
-				price: 69000,
-				description:
-					"Este Peelings es cosmiatrico. No médico. Trabajo con diferente técnicas y métodos de profundización que llegan a tener muy buenos resultados, pero siempre trabajo sobre mi campo. Lo epidérmico. Logramos hacer muy buenas descamaciones siemore acompañando al paciente. Los peeling descamativos, no son para todas las personas. Por lo que al evaluar la piel, si no considero necesario realizarlo, buscamos otro tratamiento que se adecué a esa piel.",
-				description_admin: "Facial químico",
-				description_long:
-					"Este Peelings es cosmiatrico. No médico. Trabajo con diferente técnicas y métodos de profundización que llegan a tener muy buenos resultados, pero siempre trabajo sobre mi campo. Lo epidérmico. Logramos hacer muy buenas descamaciones siemore acompañando al paciente. Los peeling descamativos, no son para todas las personas. Por lo que al evaluar la piel, si no considero necesario realizarlo, buscamos otro tratamiento que se adecué a esa piel.",
-				images: "",
-			},
-			{
-				id: 8,
-				subtitle: "Hollywood peel",
-				price: 67000,
-				description:
-					"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices. Luego de la higiene profunda se pincela una fina capa de carbon vegetal activado, se deja secar y se procede al tratamiento. Con este tratamiento conseguimos una Regeneración celular, mediante pulsos de láser muy cortos extraemos el carbón vegetal adherido a la capa más superficial de la piel. Luego se descongestiona y se termina el tratamiento con productos acordes y protección solar.",
-				description_admin: "Facial hollywood",
-				description_long:
-					"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices. Luego de la higiene profunda se pincela una fina capa de carbon vegetal activado, se deja secar y se procede al tratamiento. Con este tratamiento conseguimos una Regeneración celular, mediante pulsos de láser muy cortos extraemos el carbón vegetal adherido a la capa más superficial de la piel. Luego se descongestiona y se termina el tratamiento con productos acordes y protección solar.",
-				images: "",
-			},
-			{
-				id: 9,
-				subtitle: "Glow up",
-				price: 67000,
-				description:
-					"Tratamiento anti age que combina Radiofrecuencia, Ems y electroporación. Incorpora activos en profundidad y con el calor de la radiofrecuencia stimulamos la producción de colágeno. Resultado una piel con mucha luminosidad y un efecto tensor que enamora.",
-				description_admin: "Facial glow up",
-				description_long:
-					"Tratamiento anti age que combina Radiofrecuencia, Ems y electroporación. Incorpora activos en profundidad y con el calor de la radiofrecuencia stimulamos la producción de colágeno. Resultado una piel con mucha luminosidad y un efecto tensor que enamora.",
-				images: "",
-			},
-			{
-				id: 10,
-				subtitle: "Hifu facial",
-				price: 67000,
-				description:
-					"Tratamiento facial No invasivo que utiliza ultrasonido focalizado de alta intensidad para estimular la producción de colágeno en las capas más profundas de la piel. Sirve principalmente para mejorar la firmeza, reducir las arrugas y levantar áreas del rostro, como las mejillas, la mandíbula y el cuello. Es una alternativa al Lifting facial quirúrgico, con la ventaja que no requiere tiempo de recuperación y ofrece resultados duraderos.",
-				description_admin: "Facial hifu",
-				description_long:
-					"Tratamiento facial No invasivo que utiliza ultrasonido focalizado de alta intensidad para estimular la producción de colágeno en las capas más profundas de la piel. Sirve principalmente para mejorar la firmeza, reducir las arrugas y levantar áreas del rostro, como las mejillas, la mandíbula y el cuello. Es una alternativa al Lifting facial quirúrgico, con la ventaja que no requiere tiempo de recuperación y ofrece resultados duraderos.",
-				images: "",
 			},
 		],
 	},

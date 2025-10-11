@@ -1,14 +1,16 @@
+export type ServiceTreeType = {
+	id: number
+	subtitle: string
+	price: number
+	description: string
+	description_admin: string
+	description_long: string
+	images: string
+}
+
 export type ServicesTreeType = {
 	title: string
-	services: {
-		id: number
-		subtitle: string
-		price: number
-		description: string
-		description_admin: string
-		description_long: string
-		images: string
-	}[]
+	services: ServiceTreeType[]
 }
 
 export type ServiceMockType = {

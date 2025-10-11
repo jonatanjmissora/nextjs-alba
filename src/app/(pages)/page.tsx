@@ -64,10 +64,10 @@ export default function HomePage() {
 					<Home />
 				</section>
 
-				<section className="w-full bg-[var(--primary-pink)] relative">
-					<WaveContainer>
-						<ServicesSection />
-					</WaveContainer>
+				<section className="w-full bg-[var(--primary-pink)] relative py-40  px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
+					{/* <WaveContainer> */}
+					<ServicesSection />
+					{/* </WaveContainer> */}
 				</section>
 
 				<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative">
