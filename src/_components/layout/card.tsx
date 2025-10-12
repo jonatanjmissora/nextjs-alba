@@ -1,62 +1,43 @@
-"use client"
-
-import { MoveRight } from "lucide-react"
+import { ElementsTreeType } from "@/_lib/types"
+import { setUrlCategoryName } from "@/_lib/utils"
 import Image from "next/image"
 import Link from "next/link"
-import HeartIconContainer from "../layout/heart-icon-container"
-import { Product } from "@/_lib/products"
-import { Service } from "@/_lib/services"
-import CartIconContainer from "./cart-icon-container"
 
-export default function Card({
-	type,
-	element,
-	from,
+export const Card = ({
+	category,
+	children,
 }: {
-	type: "shop" | "service" | "favorites" | "cart"
-	element: Product | Service
-	from: "shop" | "services" | "favorites" | "cart"
-}) {
+	category: ElementsTreeType
+	children: React.ReactNode
+}) => {
+	const urlCategoryName = setUrlCategoryName(category.title)
+
 	return (
-		<li
-			key={element.id}
-			className={`w-full sm:w-[220px] 2xl:w-[295px] flex flex-col gap-5 p-4 2xl:p-6 ${type === "shop" ? "bg-[var(--primary-pink)]" : "bg-[var(--background-one)]"} rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
-		>
-			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full h-[280px] 2xl:h-[480px]">
+		<div className="min-w-[30%] flex-1 flex flex-wrap justify-start items-start bg-pink-100 shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] border border-[#444]/20 rounded-lg overflow-hidden relative">
+			<div className="w-[100%] max-w-[37dvw] h-[300px] bg-slate-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] relative overflow-hidden">
 				<Image
-					src={element.image}
-					alt={element.title}
-					quality={100}
+					src={category.elements[0].images.split("*")[0]}
+					alt={category.title}
+					priority
 					fill
+					className="object-cover hover:scale-110 duration-300"
 					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-					style={{
-						objectFit: "cover",
-					}}
-					className={`group-hover:scale-120 transition-all duration-800`}
 				/>
 			</div>
-
-			<h3 className="font-semibold text-[var(--primary-green)] text-2xl sm:text-xl pt-2">
-				{element.title}
-			</h3>
-			<div className="flex justify-between items-center">
-				<span className="text-balance text-xl sm:text-lg 2xl:text-xl font-bold text-black">
-					${element.price}
-				</span>
-
-				<div className="flex gap-4">
-					<HeartIconContainer id={element.id} />
-					<CartIconContainer id={element.id} />
+			<div className="flex flex-col justify-between gap-2 p-3 pt-5 w-full flex-1">
+				<h2 className="tracking-wider font-semibold text-lg w-full text-left">
+					{category.title}
+				</h2>
+				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
+					{children}
+					<Link
+						href={`/services/${urlCategoryName}`}
+						className="text-[#444]/70 cursor-pointer text-xs w-full text-right absolute bottom-3 right-3"
+					>
+						leer mas +
+					</Link>
 				</div>
 			</div>
-			<div className="flex flex-col gap-2">
-				<Link
-					href={`/${type}/${element.id}?from=${from}`}
-					className="mr-2 ml-auto cursor-pointer mt-2"
-				>
-					<MoveRight size={30} color="var(--primary-green)" className="icon" />
-				</Link>
-			</div>
-		</li>
+		</div>
 	)
 }

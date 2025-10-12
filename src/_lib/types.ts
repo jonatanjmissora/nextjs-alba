@@ -49,3 +49,29 @@ export type ProductMockType = {
 	description_long: string
 	images: string
 }
+
+export type ElementTreeType = {
+	id: number
+	subtitle: string
+	price: number
+	description: string
+	description_admin: string
+	description_long: string
+	images: string
+}
+
+export type ElementsTreeType = {
+	title: string
+	elements: ElementTreeType[]
+}
+
+export type ElementMockType = {
+	id: number
+	title: string
+	subtitle: string
+	price: number
+	description: string
+	description_admin: string
+	description_long: string
+	images: string
+}

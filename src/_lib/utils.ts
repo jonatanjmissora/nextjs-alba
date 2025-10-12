@@ -1,4 +1,4 @@
-import type { ServiceMockType, ServicesTreeType } from "./types"
+import type { ServiceMockType, ElementsTreeType } from "./types"
 
 export const setShortDate = (date: string) => {
 	const newDate = new Date(date)
@@ -12,19 +12,19 @@ export const setShortDate = (date: string) => {
 
 export function convertToServicesTree(
 	services: ServiceMockType[]
-): ServicesTreeType[] {
-	const groupedServices = services.reduce<Record<string, ServicesTreeType>>(
+): ElementsTreeType[] {
+	const groupedServices = services.reduce<Record<string, ElementsTreeType>>(
 		(acc, service) => {
 			const { title, ...serviceData } = service
 
 			if (!acc[title]) {
 				acc[title] = {
 					title,
-					services: [],
+					elements: [],
 				}
 			}
 
-			acc[title].services.push(serviceData)
+			acc[title].elements.push(serviceData)
 			return acc
 		},
 		{}

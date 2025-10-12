@@ -1,4 +1,4 @@
-import type { ServiceMockType, ServicesTreeType } from "./types"
+import type { ElementsTreeType, ServiceMockType } from "./types"
 
 export const servicesMock: ServiceMockType[] = [
 	{
@@ -158,10 +158,10 @@ export const servicesMock: ServiceMockType[] = [
 	},
 ]
 
-export const servicesTree: ServicesTreeType[] = [
+export const servicesTree: ElementsTreeType[] = [
 	{
 		title: "Maderoterapia",
-		services: [
+		elements: [
 			{
 				id: 11,
 				subtitle: "Cuerpo entero",
@@ -178,7 +178,7 @@ export const servicesTree: ServicesTreeType[] = [
 	},
 	{
 		title: "Limpieza facial",
-		services: [
+		elements: [
 			{
 				id: 21,
 				subtitle: "Limpieza facial profunda con extracciónes",
@@ -300,7 +300,7 @@ export const servicesTree: ServicesTreeType[] = [
 	},
 	{
 		title: "Tratamientos corporales",
-		services: [
+		elements: [
 			{
 				id: 31,
 				subtitle: "Higiene corporal profunda",
@@ -338,7 +338,7 @@ export const servicesTree: ServicesTreeType[] = [
 	},
 	{
 		title: "Bronceado sin sol",
-		services: [
+		elements: [
 			{
 				id: 41,
 				subtitle: "Bronceado sin sol",
@@ -355,7 +355,7 @@ export const servicesTree: ServicesTreeType[] = [
 	},
 	{
 		title: "Hifu y liposonix",
-		services: [
+		elements: [
 			{
 				id: 51,
 				subtitle: "Hifu",
@@ -384,7 +384,7 @@ export const servicesTree: ServicesTreeType[] = [
 	},
 	{
 		title: "Depilacion laser",
-		services: [
+		elements: [
 			{
 				id: 61,
 				subtitle: "Promo: axilas, cavado con tiro y bozo",
@@ -401,7 +401,7 @@ export const servicesTree: ServicesTreeType[] = [
 	},
 	{
 		title: "Pestanias y cejas",
-		services: [
+		elements: [
 			{
 				id: 71,
 				subtitle: "Pestañas",

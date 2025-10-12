@@ -4,11 +4,9 @@ import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2 from "../../../public/leaf/leaf2"
 import { servicesTree } from "@/_lib/services-mock"
-import { ServicesTreeType } from "@/_lib/types"
-import Image from "next/image"
+import { ElementsTreeType } from "@/_lib/types"
+import { Card } from "../layout/card"
 import { Dot } from "lucide-react"
-import Link from "next/link"
-import { setUrlCategoryName } from "@/_lib/utils"
 
 export default function ServicesSection() {
 	return (
@@ -32,58 +30,26 @@ export default function ServicesSection() {
 const ServiceCategoriesComponent = () => {
 	return (
 		<div className="flex flex-wrap gap-6 w-full">
-			{servicesTree.map((category: ServicesTreeType) => (
-				<CategoryCard key={category.title} category={category} />
-			))}
-		</div>
-	)
-}
-
-const CategoryCard = ({ category }: { category: ServicesTreeType }) => {
-	const dummyIndex = 3 - category.services.length
-	const urlCategoryName = setUrlCategoryName(category.title)
-
-	return (
-		<div className="min-w-[30%] flex-1 flex flex-wrap justify-start items-start bg-pink-100 shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] border border-[#444]/20 rounded-lg overflow-hidden relative">
-			<div className="w-[100%] max-w-[37dvw] h-[300px] bg-slate-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] relative overflow-hidden">
-				<Image
-					src={category.services[0].images.split("*")[0]}
-					alt={category.title}
-					priority
-					fill
-					className="object-cover hover:scale-110 duration-300"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-				/>
-			</div>
-			<div className="flex flex-col justify-between gap-2 p-3 pt-5 w-full flex-1">
-				<h2 className="tracking-wider font-semibold text-lg w-full text-left">
-					{category.title}
-				</h2>
-				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
-					{category.services.slice(0, 3).map(service => (
-						<div key={service.id} className="flex items-center gap-1">
+			{servicesTree.map((category: ElementsTreeType) => (
+				<Card key={category.title} category={category}>
+					{category.elements.slice(0, 3).map(element => (
+						<div key={element.id} className="flex items-center gap-1">
 							<span>
 								<Dot size={26} />
 							</span>
 							<span className="w-full text-left text-base sm:text-xs 2xl:text-base">
-								{service.subtitle}
+								{element.subtitle}
 							</span>
 						</div>
 					))}
-					{Array.from({ length: dummyIndex }, (_, index) => (
+					{Array.from({ length: 3 - category.elements.length }, (_, index) => (
 						// biome-ignore lint/suspicious/noArrayIndexKey: <no puedo hacerlo de otra forma>
 						<div key={index} className="w-full text-transparent">
 							.
 						</div>
 					))}
-					<Link
-						href={`/services/${urlCategoryName}`}
-						className="text-[#444]/70 cursor-pointer text-xs w-full text-right absolute bottom-3 right-3"
-					>
-						leer mas +
-					</Link>
-				</div>
-			</div>
+				</Card>
+			))}
 		</div>
 	)
 }

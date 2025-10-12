@@ -1,5 +1,5 @@
 import { productsData } from "@/_lib/products"
-import Card from "../card"
+import Card from "../movil-card"
 
 export const MovilProductsCard = () => {
 	const products = productsData

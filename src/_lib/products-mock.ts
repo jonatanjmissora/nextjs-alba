@@ -1,14 +1,4 @@
-import { ProductsTreeType } from "./types"
-
-export type Product = {
-	id: string
-	title: string
-	subtitle: string
-	description: string
-	image: string
-	carousel: string[]
-	price: number
-}
+import type { ElementsTreeType } from "./types"
 
 export const productsHeader =
 	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
@@ -76,10 +66,10 @@ export const productsData = [
 	},
 ]
 
-export const productsTree: ProductsTreeType[] = [
+export const productsTree: ElementsTreeType[] = [
 	{
 		title: "Productos 1",
-		categories: [
+		elements: [
 			{
 				id: 11,
 				subtitle: "Categoria 1",
@@ -95,7 +85,7 @@ export const productsTree: ProductsTreeType[] = [
 	},
 	{
 		title: "Productos 2",
-		categories: [
+		elements: [
 			{
 				id: 11,
 				subtitle: "Categoria 1",
@@ -111,7 +101,7 @@ export const productsTree: ProductsTreeType[] = [
 	},
 	{
 		title: "Productos 3",
-		categories: [
+		elements: [
 			{
 				id: 11,
 				subtitle: "Categoria 1",
@@ -127,7 +117,7 @@ export const productsTree: ProductsTreeType[] = [
 	},
 	{
 		title: "Productos 4",
-		categories: [
+		elements: [
 			{
 				id: 11,
 				subtitle: "Categoria 1",
@@ -143,7 +133,7 @@ export const productsTree: ProductsTreeType[] = [
 	},
 	{
 		title: "Productos 5",
-		categories: [
+		elements: [
 			{
 				id: 11,
 				subtitle: "Categoria 1",
