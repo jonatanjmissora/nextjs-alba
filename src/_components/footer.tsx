@@ -81,7 +81,7 @@ export default function Footer() {
 				</div>
 
 				<div className="w-full border-t border-[var(--primary-green)] mt-12">
-					<p className="py-2 text-sm text-[var(--primary-green)]">
+					<p className="py-2 w-full text-right text-sm text-[var(--primary-green)]">
 						© {new Date().getFullYear()} ALBA
 					</p>
 				</div>

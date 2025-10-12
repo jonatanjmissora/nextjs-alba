@@ -11,24 +11,30 @@ export const SectionHeader = ({
 	description: string
 }) => {
 	return (
-		<div className="flex flex-col items-start sm:flex-row gap-3 header-border pb-10 mb-20 mt-14 min-h-[16dvh] relative">
-			<RoundLeafMovil className="sm:hidden block absolute top-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<Leaf1 className="hidden sm:block absolute bottom-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[10rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<div className="flex flex-col gap-2">
-				<h3 className="w-full header text-[var(--primary-green)]">
-					{subtitle}
-				</h3>
-				<h2 className="w-full text-3xl font-bold text-balance leading-12 sm:min-w-[370px]">
+		<div className="flex flex-col items-start gap-3 header-border pb-10 mb-20 mt-14 min-h-[16dvh] relative">
+			<LeafImages />
+			<h3 className="w-full header text-[var(--primary-green)]">{subtitle}</h3>
+			<div className="w-full flex flex-col sm:flex-row gap-2">
+				<h2 className="text-3xl font-bold text-balance leading-12 sm:min-w-[370px]">
 					{title}
 				</h2>
-			</div>
-			<div className="text text-balance">
-				{description.split('\n\n').map((paragraph) => (
-					<p key={paragraph.substring(0, 30)} className="mb-4 last:mb-0">
-						{paragraph}
-					</p>
-				))}
+				<div className="text text-balance pt-4">
+					{description.split("\n\n").map(paragraph => (
+						<p key={paragraph.substring(0, 30)} className="mb-4 last:mb-0">
+							{paragraph}
+						</p>
+					))}
+				</div>
 			</div>
 		</div>
+	)
+}
+
+const LeafImages = () => {
+	return (
+		<>
+			<RoundLeafMovil className="sm:hidden block absolute top-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
+			<Leaf1 className="hidden sm:block absolute bottom-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[10rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
+		</>
 	)
 }

@@ -308,8 +308,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description:
 					"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
 				description_admin: "Higiene corporal profunda",
-				description_long:
-					"BLA BLA BLA",
+				description_long: "BLA BLA BLA",
 				images:
 					"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
 			},
@@ -320,8 +319,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description:
 					"Pulido corporal con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
 				description_admin: "Pulido corporal",
-				description_long:
-					"BLA BLA BLA",
+				description_long: "BLA BLA BLA",
 				images:
 					"/corporal/tratamiento-corporal-pulido01.webp*/corporal/tratamiento-corporal-pulido02.webp*/corporal/tratamiento-corporal-pulido03.webp",
 			},
@@ -332,8 +330,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description:
 					"Liposonix con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
 				description_admin: "Corporal Liposonix",
-				description_long:
-					"BLA BLA BLA",
+				description_long: "BLA BLA BLA",
 				images:
 					"/corporal/tratamiento-corporal-liposonix01.webp*/corporal/tratamiento-corporal-liposonix02.webp*/corporal/tratamiento-corporal-liposonix03.webp*/corporal/tratamiento-corporal-liposonix04.webp",
 			},
@@ -367,8 +364,9 @@ export const servicesTree: ServicesTreeType[] = [
 					"Lifting sin cirugía, tratamiento rejuvenecedor sin dolor. Reduce arrugas y líneas de expresión. Mejora la firmeza del rostro. El valor incluye Higiene facial. Rostro, cuello y escote.",
 				description_admin: "Hifu",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
-				images: "/hifu-liposonix/hifu01.webp*/hifu-liposonix/hifu02.webp*/hifu-liposonix/hifu03.webp*/hifu-liposonix/hifu04.webp*/hifu-liposonix/hifu05.webp",
+					"Tratamiento facial No invasivo que utiliza ultrasonido focalizado de alta intensidad para estimular la producción de colágeno en las capas más profundas de la piel. Sirve principalmente para mejorar la firmeza, reducir las arrugas y levantar áreas del rostro, como las mejillas, la mandíbula y el cuello. Es una alternativa al Lifting facial quirúrgico, con la ventaja que no requiere tiempo de recuperación y ofrece resultados duraderos.",
+				images:
+					"/hifu-liposonix/hifu01.webp*/hifu-liposonix/hifu02.webp*/hifu-liposonix/hifu03.webp*/hifu-liposonix/hifu04.webp*/hifu-liposonix/hifu05.webp",
 			},
 			{
 				id: 52,
@@ -378,7 +376,7 @@ export const servicesTree: ServicesTreeType[] = [
 					"Deshace permanentemente la grasa localizada, mejora la firmeza y la elasticidad de la piel. Reduce cm, mejora piel con celulitis, sin dolor y sin tiempo de recuperación. Zonas a tratar: abdomen, brazos, pantalón de montar, muslos, espalda, entrepierna. Valor por zona. Y con drenaje en cuerpo completo.",
 				description_admin: "Liposonix",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"Deshace permanentemente la grasa localizada, mejora la firmeza y la elasticidad de la piel. Reduce cm, mejora piel con celulitis, sin dolor y sin tiempo de recuperación. Zonas a tratar: abdomen, brazos, pantalón de montar, muslos, espalda, entrepierna. Valor por zona. Y con drenaje en cuerpo completo.",
 				images:
 					"/hifu-liposonix/liposonix01.webp*/hifu-liposonix/liposonix02.webp*/hifu-liposonix/liposonix03.webp*/hifu-liposonix/liposonix04.webp*/hifu-liposonix/liposonix05.webp",
 			},
@@ -411,8 +409,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description:
 					"Lifting. Técnica de arqueado en pestañas naturales. técnica tradicional y coreana",
 				description_admin: "Pestañas",
-				description_long:
-					"BLA BLA BLA",
+				description_long: "BLA BLA BLA",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},
@@ -422,8 +419,7 @@ export const servicesTree: ServicesTreeType[] = [
 				price: 45000,
 				description: "Promos laminado de cejas y Lifting tradicional.",
 				description_admin: "Laminado + lifting",
-				description_long:
-					"BLA BLA BLA",
+				description_long: "BLA BLA BLA",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},
