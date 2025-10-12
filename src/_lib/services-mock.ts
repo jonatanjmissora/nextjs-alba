@@ -172,7 +172,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
 				images:
-					"/maderoterapia/maderoterapia01.webp*/maderoterapia/maderoterapia02.webp*/maderoterapia/maderoterapia03.webp",
+					"/maderoterapia/maderoterapia01.webp*/maderoterapia/maderoterapia02.webp*/maderoterapia/maderoterapia03.webp*/maderoterapia/maderoterapia04.webp*/maderoterapia/maderoterapia05.webp",
 			},
 		],
 	},
@@ -299,7 +299,7 @@ export const servicesTree: ServicesTreeType[] = [
 		],
 	},
 	{
-		title: "Tratamientos Corporales",
+		title: "Tratamientos corporales",
 		services: [
 			{
 				id: 31,
@@ -309,9 +309,9 @@ export const servicesTree: ServicesTreeType[] = [
 					"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
 				description_admin: "Higiene corporal profunda",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"BLA BLA BLA",
 				images:
-					"/corporal/tratamiento-corporal04-pelling.webp*/corporal/tratamiento-corporal05-pelling.webp*/corporal/tratamiento-corporal06-pelling.webp",
+					"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
 			},
 			{
 				id: 32,
@@ -321,9 +321,21 @@ export const servicesTree: ServicesTreeType[] = [
 					"Pulido corporal con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
 				description_admin: "Pulido corporal",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"BLA BLA BLA",
 				images:
-					"/corporal/tratamiento-corporal01-pulido.webp*/corporal/tratamiento-corporal02-pulido.webp*/corporal/tratamiento-corporal03-pulido.webp",
+					"/corporal/tratamiento-corporal-pulido01.webp*/corporal/tratamiento-corporal-pulido02.webp*/corporal/tratamiento-corporal-pulido03.webp",
+			},
+			{
+				id: 33,
+				subtitle: "Corporal Liposonix",
+				price: 58000,
+				description:
+					"Liposonix con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
+				description_admin: "Corporal Liposonix",
+				description_long:
+					"BLA BLA BLA",
+				images:
+					"/corporal/tratamiento-corporal-liposonix01.webp*/corporal/tratamiento-corporal-liposonix02.webp*/corporal/tratamiento-corporal-liposonix03.webp*/corporal/tratamiento-corporal-liposonix04.webp",
 			},
 		],
 	},
@@ -345,7 +357,7 @@ export const servicesTree: ServicesTreeType[] = [
 		],
 	},
 	{
-		title: "Hifu y Liposonix",
+		title: "Hifu y liposonix",
 		services: [
 			{
 				id: 51,
@@ -356,7 +368,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_admin: "Hifu",
 				description_long:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
-				images: "/hifu-liposonix/hifu01.webp*/hifu-liposonix/hifu02.webp",
+				images: "/hifu-liposonix/hifu01.webp*/hifu-liposonix/hifu02.webp*/hifu-liposonix/hifu03.webp*/hifu-liposonix/hifu04.webp*/hifu-liposonix/hifu05.webp",
 			},
 			{
 				id: 52,
@@ -368,12 +380,12 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
 				images:
-					"/hifu-liposonix/liposonix01.webp*/hifu-liposonix/liposonix02.webp",
+					"/hifu-liposonix/liposonix01.webp*/hifu-liposonix/liposonix02.webp*/hifu-liposonix/liposonix03.webp*/hifu-liposonix/liposonix04.webp*/hifu-liposonix/liposonix05.webp",
 			},
 		],
 	},
 	{
-		title: "Depilación láser",
+		title: "Depilacion laser",
 		services: [
 			{
 				id: 61,
@@ -390,7 +402,7 @@ export const servicesTree: ServicesTreeType[] = [
 		],
 	},
 	{
-		title: "Pestañas y cejas",
+		title: "Pestanias y cejas",
 		services: [
 			{
 				id: 71,
@@ -400,7 +412,7 @@ export const servicesTree: ServicesTreeType[] = [
 					"Lifting. Técnica de arqueado en pestañas naturales. técnica tradicional y coreana",
 				description_admin: "Pestañas",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"BLA BLA BLA",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},
@@ -411,7 +423,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description: "Promos laminado de cejas y Lifting tradicional.",
 				description_admin: "Laminado + lifting",
 				description_long:
-					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+					"BLA BLA BLA",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},
