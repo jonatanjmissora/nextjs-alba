@@ -60,12 +60,14 @@ const CategoryCard = ({ category }: { category: ServicesTreeType }) => {
 					{category.title}
 				</h2>
 				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
-					{category.services.map(service => (
+					{category.services.slice(0, 3).map(service => (
 						<div key={service.id} className="flex items-center gap-1">
 							<span>
 								<Dot size={26} />
 							</span>
-							<span className="w-full text-left">{service.subtitle}</span>
+							<span className="w-full text-left text-base sm:text-xs 2xl:text-base">
+								{service.subtitle}
+							</span>
 						</div>
 					))}
 					{Array.from({ length: dummyIndex }, (_, index) => (

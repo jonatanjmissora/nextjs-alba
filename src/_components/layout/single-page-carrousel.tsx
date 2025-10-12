@@ -16,7 +16,7 @@ export default function SinglePageCarrousel({
 			{array.map((image, index) => (
 				<div
 					key={image}
-					className={`w-[70px] h-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] cursor-pointer ${index === actualImageIndex && "shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]"}`}
+					className={`size-[70px] sm:size-[50px] 2xl:size-[70px] overflow-hidden relative rounded-tl-[1rem] rounded-br-[1rem] cursor-pointer ${index === actualImageIndex && "shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]"}`}
 				>
 					<Image
 						src={image}

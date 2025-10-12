@@ -24,12 +24,12 @@ export default function ServicePage({
 		<div className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-10 2xl:py-20">
 			<ServiceImage service={service} />
 
-			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
+			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-3 2xl:gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
 				<div className="flex flex-col">
 					<span className="title font-bold text-pretty">
 						{service.subtitle}
 					</span>
-					<span className="text-sm font-semibold  text-[var(--primary-green)]">
+					<span className="text-sm font-semibold text-[var(--primary-green)]">
 						{categoryName}
 					</span>
 				</div>
@@ -51,7 +51,7 @@ const ServiceImage = ({ service }: { service: ServiceTreeType }) => {
 	const imagesArray = service.images.split("*")
 
 	return (
-		<div className="w-full sm:w-[40%] sm:h-[60dvh] h-[400px] flex flex-col gap-4">
+		<div className="w-full sm:w-[40%] sm:h-[65dvh] h-[400px] flex flex-col gap-4">
 			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
 				<Image
 					src={imagesArray[actualImageIndex]}

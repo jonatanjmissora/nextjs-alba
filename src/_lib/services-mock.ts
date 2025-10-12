@@ -224,7 +224,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual. Sin dolor y sin agujas. Higiene profunda. Luego de las extracciones se procede a realizar un shock de activos penetrados con electroporación. Finalizando con productos y protección solar.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-electroporacion01.webp*/facial/higiene-facial-electroporacion02.webp*/facial/higiene-facial-electroporacion03.webp*/facial/higiene-facial-electroporacion04.webp*/facial/higiene-facial-electroporacion05.webp",
 			},
 			{
 				id: 25,
@@ -236,7 +236,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. Higiene profunda con extracciónes. Sesión de radiofrecuencia. Aproximadamente entre 25 y 30 minutos, según tolerancia del paciente. Descongestión y productos de finalización. Protección solar.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-radiofrecuencia01.webp*/facial/higiene-facial-radiofrecuencia02.webp*/facial/higiene-facial-radiofrecuencia03.webp*/facial/higiene-facial-radiofrecuencia04.webp*/facial/higiene-facial-radiofrecuencia05.webp",
 			},
 			{
 				id: 26,
@@ -247,7 +247,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Es un tratamiento de microdermoabrasion y dermoinfusion. Esto quiere decir que mientras exfolia, introduce activos en profundidad ( seleccionados según necesidad) dejando un piel muy limpia. Ideal para pieles engrosadas, con poros dilatados. Aporta mucha luminosidad e hidratación. Se procede a realizar una higiene profunda y la aparatologia en cuestión. Luego se realizan extracciones, descongestión y productos de finalización. Protección solar.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-alquimia01.webp*/facial/higiene-facial-alquimia02.webp*/facial/higiene-facial-alquimia03.webp*/facial/higiene-facial-alquimia04.webp*/facial/higiene-facial-alquimia05.webp",
 			},
 			{
 				id: 27,
@@ -259,7 +259,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa. El vello no crece más duro ni oscuro. Eso lo determinan factores hormonales y genéticos. Con esta técnica, retiramos células muerta y todo el vello fino del rostro. Higiene facial profunda. Dermaplaning. Extracciones. Descongestión. Productos de finalización. Protección solar.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-dermaplaning01.webp*/facial/higiene-facial-dermaplaning02.webp*/facial/higiene-facial-dermaplaning03.webp*/facial/higiene-facial-dermaplaning04.webp*/facial/higiene-facial-dermaplaning05.webp",
 			},
 			{
 				id: 28,
@@ -271,7 +271,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo. Se combina luego con electroporación para potenciar los resultados. Higiene facial profunda. Dermapen. Extracciones. Descongestión. Productos de finalización. Protección solar.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-microneedling01.webp*/facial/higiene-facial-microneedling02.webp*/facial/higiene-facial-microneedling03.webp*/facial/higiene-facial-microneedling04.webp*/facial/higiene-facial-microneedling05.webp",
 			},
 			{
 				id: 29,
@@ -282,7 +282,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Este Peelings es cosmiatrico. No médico. Trabajo con diferente técnicas y métodos de profundización que llegan a tener muy buenos resultados, pero siempre trabajo sobre mi campo. Lo epidérmico. Logramos hacer muy buenas descamaciones siemore acompañando al paciente. Los peeling descamativos, no son para todas las personas. Por lo que al evaluar la piel, si no considero necesario realizarlo, buscamos otro tratamiento que se adecué a esa piel.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-quimico01.webp*/facial/higiene-facial-quimico02.webp*/facial/higiene-facial-quimico03.webp*/facial/higiene-facial-quimico04.webp*/facial/higiene-facial-quimico05.webp",
 			},
 			{
 				id: 30,
@@ -294,7 +294,7 @@ export const servicesTree: ServicesTreeType[] = [
 				description_long:
 					"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices. Luego de la higiene profunda se pincela una fina capa de carbon vegetal activado, se deja secar y se procede al tratamiento. Con este tratamiento conseguimos una Regeneración celular, mediante pulsos de láser muy cortos extraemos el carbón vegetal adherido a la capa más superficial de la piel. Luego se descongestiona y se termina el tratamiento con productos acordes y protección solar.",
 				images:
-					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
+					"/facial/higiene-facial-hollywood01.webp*/facial/higiene-facial-hollywood02.webp*/facial/higiene-facial-hollywood03.webp*/facial/higiene-facial-hollywood04.webp*/facial/higiene-facial-hollywood05.webp",
 			},
 		],
 	},
