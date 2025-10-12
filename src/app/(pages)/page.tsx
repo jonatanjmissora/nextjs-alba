@@ -13,6 +13,7 @@ import Header from "@/_components/header/header"
 import MovilFooter from "@/_components/layout/movil/movil-footer"
 import MovilHeader from "@/_components/layout/movil/movil-header"
 import MovilWaveContainer from "@/_components/layout/movil/movil-wave-container"
+import { LeafImgs } from "@/_components/leaf-section"
 
 export default function HomePage() {
 	return (
@@ -58,29 +59,33 @@ export default function HomePage() {
 
 				<section
 					id="home"
-					className="w-full min-h-[85dvh] 2xl:min-h-[90dvh] flex justify-center items-center relative mb-[12rem]"
+					className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative"
 				>
 					<Home />
 				</section>
 
-				<section className="w-full bg-[var(--primary-pink)] relative py-40  px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
+				<section className="w-full bg-[var(--primary-pink)] relative pt-20 pb-80 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
 					{/* <WaveContainer> */}
 					<ServicesSection />
+					<LeafImgs />
 					{/* </WaveContainer> */}
 				</section>
 
-				<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] relative">
+				<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] pt-20 pb-80 relative">
 					<ProductsSection />
+					<LeafImgs />
 				</section>
 
-				<section className="w-full bg-[var(--primary-pink)] relative py-40  px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
+				<section className="w-full bg-[var(--primary-pink)] relative pt-20 pb-80 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
 					{/* <WaveContainer> */}
 					<About />
+					<LeafImgs />
 					{/* </WaveContainer> */}
 				</section>
 
-				<section className="w-full min-h-[280dvh] 2xl:min-h-[250dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] mb-[10dvh] relative">
+				<section className="w-full min-h-[280dvh] 2xl:min-h-[250dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] pt-20 pb-20 mb-[10dvh] relative">
 					<Tips />
+					<LeafImgs />
 				</section>
 
 				<div className="w-full bg-[var(--primary-pink)] relative pb-6">

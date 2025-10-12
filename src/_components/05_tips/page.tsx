@@ -1,6 +1,3 @@
-import BranchLeaf from "../../../public/leaf/branch-leaf"
-import Leaf1 from "../../../public/leaf/leaf1"
-import Leaf2 from "../../../public/leaf/leaf2"
 import { SectionHeader } from "../section-header"
 import Image from "next/image"
 import { tipsData } from "@/_lib/tips"
@@ -11,11 +8,7 @@ export default function Tips() {
 	return (
 		<>
 			<div className="w-full h-[20dvh] bg-transparent"></div>
-			<div
-				id="tips"
-				className="w-full my-32 relative border border-transparent"
-			>
-				<LeafImgs />
+			<div id="tips" className="w-full my-32 border border-transparent">
 				<SectionHeader
 					title="Nuestros tips del centro de belleza"
 					subtitle="Tips"
@@ -70,16 +63,6 @@ export default function Tips() {
 				</div>
 			</div>
 			<div className="w-full h-[40dvh] 2xl:h-[20dvh] bg-transparent"></div>
-		</>
-	)
-}
-
-const LeafImgs = () => {
-	return (
-		<>
-			<BranchLeaf className="absolute -z-10 -bottom-[25%] 2xl:-bottom-[40%] -left-40 2xl:-left-[18%] size-[20rem] 2xl:size-[25rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<Leaf1 className="absolute -z-10 -bottom-[10%] left-[47%] size-[4rem] 2xl:size-[6rem] text-[var(--leaf-color)]" />
-			<Leaf2 className="absolute -z-10 -bottom-[20%] 2xl:-bottom-[30%] -right-[5%] size-[7rem] 2xl:size-[10rem] text-[var(--leaf-color)]" />
 		</>
 	)
 }
