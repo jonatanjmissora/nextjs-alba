@@ -23,3 +23,29 @@ export type ServiceMockType = {
 	description_long: string
 	images: string
 }
+
+export type ProductTreeType = {
+	id: number
+	subtitle: string
+	price: number
+	description: string
+	description_admin: string
+	description_long: string
+	images: string
+}
+
+export type ProductsTreeType = {
+	title: string
+	categories: ProductTreeType[]
+}
+
+export type ProductMockType = {
+	id: number
+	title: string
+	subtitle: string
+	price: number
+	description: string
+	description_admin: string
+	description_long: string
+	images: string
+}

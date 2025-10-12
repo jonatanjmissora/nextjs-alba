@@ -13,7 +13,6 @@ import Header from "@/_components/header/header"
 import MovilFooter from "@/_components/layout/movil/movil-footer"
 import MovilHeader from "@/_components/layout/movil/movil-header"
 import MovilWaveContainer from "@/_components/layout/movil/movil-wave-container"
-import WaveContainer from "@/_components/wave-container"
 
 export default function HomePage() {
 	return (
@@ -74,10 +73,10 @@ export default function HomePage() {
 					<ProductsSection />
 				</section>
 
-				<section className="w-full bg-[var(--primary-pink)] relative">
-					<WaveContainer>
-						<About />
-					</WaveContainer>
+				<section className="w-full bg-[var(--primary-pink)] relative py-40  px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
+					{/* <WaveContainer> */}
+					<About />
+					{/* </WaveContainer> */}
 				</section>
 
 				<section className="w-full min-h-[280dvh] 2xl:min-h-[250dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] my-[20dvh] mb-[10dvh] relative">

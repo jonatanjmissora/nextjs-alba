@@ -8,6 +8,9 @@ export type Product = {
 	price: number
 }
 
+export const productsHeader =
+	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+
 export const productsData = [
 	{
 		id: "product-titulo-del-producto-1",
