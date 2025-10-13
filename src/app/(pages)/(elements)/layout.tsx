@@ -5,8 +5,8 @@ import SinglePageFooter from "@/_components/elements/single-page-footer"
 import SinglePageLeaf from "@/_components/elements/single-page-leaf"
 
 export const metadata: Metadata = {
-	title: "Elements",
-	description: "Listado de distintos tipos de elementos",
+	title: "Alba Garcia",
+	description: "Estetica Integral",
 }
 
 export default function ElementosLayout({

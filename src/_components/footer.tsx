@@ -2,6 +2,17 @@ import Link from "next/link"
 import RoundLeaf from "../../public/leaf/round-leaf"
 
 export default function Footer() {
+	const whatsappLink = `https://wa.me/5492914742802`
+	const instagramLink = "https://www.instagram.com/albagarcia_estetica"
+	const facebookLink = "https://www.facebook.com/albana.garcia.56"
+	const mailLink =
+		"https://mail.google.com/mail/u/0/?view=cm&fs=1&to=albanagarciapaillan@gmail.com"
+
+	const mensajeSuscripcion = `Hola! Alba Garcia Estetica Integral
+Quisiera suscribirme a las ultimas novedades y ofertas!!
+Agendá mi telefono! Saludos 🖐
+`
+
 	return (
 		<footer id="contact" className="w-full flex flex-col relative">
 			<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
@@ -53,26 +64,27 @@ export default function Footer() {
 								consectetur, adipisicing elit. Quisquam, reprehenderit.
 							</p>
 							<div>
-								<div className="flex gap-2">
-									<input
-										type="email"
-										placeholder="Correo electrónico"
-										className="p-2 px-6 bg-[var(--background-one)] rounded-lg w-64 2xl:w-96 text-base 2xl:text-xl rounded-tl-lg rounded-br-lg shadow-[2px_2px_3px_rgba(138,184,168,0.75)]"
-									/>
-									<button className="cta-button px-6 py-3">Enviar</button>
+								<div className="">
+									<Link
+										href={`${whatsappLink}?text=${encodeURIComponent(mensajeSuscripcion)}`}
+										target="_blank"
+										className="cta-button px-6 py-3"
+									>
+										Quiero suscribirme
+									</Link>
 								</div>
 							</div>
 							<nav className="flex gap-6">
-								<Link href="/social01">
+								<Link href={whatsappLink} target="_blank">
 									<WhatsApp className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
 								</Link>
-								<Link href="/social02">
+								<Link href={instagramLink} target="_blank">
 									<Instagram className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
 								</Link>
-								<Link href="/social03">
+								<Link href={facebookLink} target="_blank">
 									<Facebook className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
 								</Link>
-								<Link href="/social04">
+								<Link href={mailLink} target="_blank">
 									<Mail className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
 								</Link>
 							</nav>

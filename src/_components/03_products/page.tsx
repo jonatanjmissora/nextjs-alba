@@ -23,7 +23,7 @@ const ProductCategoriesComponent = () => {
 		<div className="flex flex-wrap gap-6 w-full">
 			{productsTree.map((category: ElementsTreeType) => (
 				<Card key={category.title} type="shop" category={category}>
-					<span className="text-xs pb-4 text-pretty tracking-wider">
+					<span className="text-sm p-4 pb-8 text-pretty tracking-wider">
 						{category.elements[0].description}
 					</span>
 				</Card>

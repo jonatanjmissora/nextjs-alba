@@ -4,37 +4,30 @@ export const aboutHeader =
 export const aboutDiplomas = [
 	{
 		title: "diploma01",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756474369/diploma01.jpg",
+		image: "/testimonials/diploma01.webp",
 	},
 	{
 		title: "certificado01",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756479466/certificado01.jpg",
+		image: "/testimonials/certificado01.webp",
 	},
 	{
 		title: "certificado02",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756474366/certificado02.jpg",
+		image: "/testimonials/certificado02.webp",
 	},
 	{
 		title: "certificado03",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756474363/certificado03.jpg",
+		image: "/testimonials/certificado03.webp",
 	},
 	{
 		title: "certificado04",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756474363/certificado04.jpg",
+		image: "/testimonials/certificado04.webp",
 	},
 	{
 		title: "certificado05",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756474360/certificado05.jpg",
+		image: "/testimonials/certificado05.webp",
 	},
 	{
 		title: "certificado06",
-		image:
-			"https://res.cloudinary.com/dfvzvdpfa/image/upload/v1756474360/certificado06.jpg",
+		image: "/testimonials/certificado06.webp",
 	},
 ]

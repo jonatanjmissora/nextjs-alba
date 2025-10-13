@@ -2,6 +2,7 @@ import { servicesMock } from "@/_lib/services-mock"
 import { productsMock } from "@/_lib/products-mock"
 import { useStore } from "@/_lib/store"
 import { formatPrice } from "@/_lib/utils"
+import Link from "next/link"
 
 export default function CartCheckout() {
 	const { cartStore } = useStore()
@@ -34,13 +35,43 @@ export default function CartCheckout() {
 					$ {formatPrice(total)}
 				</span>
 			</div>
-			<button className="w-full mt-12 cta-button header font-semibold py-3">
-				Confirmar
-			</button>
+			<CartCheckoutButton total={total} />
 			<span className="text-sm text-[#444]/75 font-semibold tracking-wider text-pretty">
 				Se generá un mensaje de whatsapp 📱 con el detalle del pedido, con el
 				fin de coordinar el turno o entrega. Desde ya muchas gracias! 🖐
 			</span>
 		</div>
+	)
+}
+
+const CartCheckoutButton = ({ total }: { total: number }) => {
+	const { cartStore } = useStore()
+	const services = servicesMock
+	const products = productsMock
+	const phone = "5492914742802"
+	const mensaje = `
+Hola! Alba Garcia Estetica Integral\n
+Detalles de la orden:
+${cartStore.map(cart => {
+	if (Number(cart.id) < 100) {
+		const service = services.find(service => service.id === Number(cart.id))
+		if (service) return `${service?.subtitle} x${cart.quantity} \n`
+	}
+	if (Number(cart.id) >= 100) {
+		const product = products.find(product => product.id === Number(cart.id))
+		if (product) return `${product?.subtitle} x${cart.quantity} \n`
+	}
+	return ""
+})}
+Total: $ ${formatPrice(total)}
+`
+	return (
+		<Link
+			href={`https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`}
+			target="_blank"
+			className="w-full text-center mt-12 cta-button header font-semibold py-3"
+		>
+			Confirmar
+		</Link>
 	)
 }
