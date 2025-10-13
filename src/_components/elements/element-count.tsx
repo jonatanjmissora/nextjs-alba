@@ -6,14 +6,14 @@ import { useState } from "react"
 import { useStore } from "@/_lib/store"
 import { redirect } from "next/navigation"
 
-export const ServiceCountAndCart = ({
-	service,
+export const ElementCountAndCart = ({
+	element,
 }: {
-	service: ServiceTreeType
+	element: ServiceTreeType
 }) => {
 	const { cartStore, setCartStore } = useStore()
 	const [count, setCount] = useState<number>(
-		cartStore.find(cart => cart.id.toString() === service.id.toString())
+		cartStore.find(cart => cart.id.toString() === element.id.toString())
 			?.quantity || 1
 	)
 
@@ -29,7 +29,7 @@ export const ServiceCountAndCart = ({
 
 	const handleAddToCart = () => {
 		const cartItemIndex = cartStore.findIndex(
-			cart => cart.id.toString() === service.id.toString()
+			cart => cart.id.toString() === element.id.toString()
 		)
 		if (cartItemIndex !== -1) {
 			setCartStore(
@@ -40,7 +40,7 @@ export const ServiceCountAndCart = ({
 		} else {
 			setCartStore([
 				...cartStore,
-				{ id: service.id.toString(), quantity: count },
+				{ id: element.id.toString(), quantity: count },
 			])
 		}
 		redirect("/cart")
@@ -54,7 +54,7 @@ export const ServiceCountAndCart = ({
 					{new Intl.NumberFormat("es-ES", {
 						minimumFractionDigits: 0,
 						maximumFractionDigits: 0,
-					}).format(Number(service.price))}
+					}).format(Number(element.price))}
 				</p>
 				<div className="flex gap-4">
 					<button onClick={handleMinus} type="button">

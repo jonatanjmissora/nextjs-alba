@@ -2,14 +2,14 @@
 
 import { Product } from "@/_lib/products"
 import Image from "next/image"
-import { ProductCountAndCart } from "./product-count"
 import { useState } from "react"
-import SinglePageHeader from "@/_components/layout/single-page-header"
-import SinglePageFooter from "@/_components/layout/single-page-footer"
-import SinglePageLeaf from "@/_components/layout/single-page-leaf"
-import SinglePageCarrousel from "@/_components/layout/single-page-carrousel"
+import SinglePageHeader from "@/_components/elements/single-page-header"
+import SinglePageFooter from "@/_components/elements/single-page-footer"
+import SinglePageLeaf from "@/_components/elements/single-page-leaf"
+import SinglePageCarrousel from "@/_components/elements/single-page-carrousel"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import CartIconContainer from "@/_components/layout/cart-icon-container"
+import { ProductCountAndCart } from "./product-count"
 
 export default function ProductPage({
 	product,
@@ -71,7 +71,8 @@ const ProductImage = ({ product }: { product: Product }) => {
 			</div>
 			<div className="flex gap-2">
 				<SinglePageCarrousel
-					element={product}
+					array={product.carousel}
+					subtitle={product.title}
 					actualImageIndex={actualImageIndex}
 					setActualImageIndex={setActualImageIndex}
 				/>

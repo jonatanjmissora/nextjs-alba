@@ -2,7 +2,7 @@ import { SectionHeader } from "../section-header"
 import { productsHeader } from "@/_lib/products"
 import type { ElementsTreeType } from "@/_lib/types"
 import { productsTree } from "@/_lib/products-mock"
-import { Card } from "../layout/card"
+import { Card } from "../elements/card"
 
 export default function ProductsSection() {
 	return (
@@ -22,7 +22,7 @@ const ProductCategoriesComponent = () => {
 	return (
 		<div className="flex flex-wrap gap-6 w-full">
 			{productsTree.map((category: ElementsTreeType) => (
-				<Card key={category.title} category={category}>
+				<Card key={category.title} type="shop" category={category}>
 					<span className="text-xs pb-4 text-pretty tracking-wider">
 						{category.elements[0].description}
 					</span>

@@ -4,9 +4,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const Card = ({
+	type,
 	category,
 	children,
 }: {
+	type: "services" | "shop"
 	category: ElementsTreeType
 	children: React.ReactNode
 }) => {
@@ -31,7 +33,7 @@ export const Card = ({
 				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
 					{children}
 					<Link
-						href={`/services/${urlCategoryName}`}
+						href={`/${type}/${urlCategoryName}`}
 						className="text-[#444]/70 cursor-pointer text-xs w-full text-right absolute bottom-3 right-3"
 					>
 						leer mas +

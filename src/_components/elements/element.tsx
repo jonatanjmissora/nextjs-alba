@@ -2,56 +2,51 @@
 
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import SinglePageCarrousel from "@/_components/layout/single-page-carrousel"
+import SinglePageCarrousel from "@/_components/elements/single-page-carrousel"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import CartIconContainer from "@/_components/layout/cart-icon-container"
-import NotFound from "@/_components/layout/not-found"
-import { ServiceCountAndCart } from "./service-count"
+import { ElementCountAndCart } from "./element-count"
 import { ElementTreeType } from "@/_lib/types"
 import { cn } from "@/lib/utils"
 
-export default function ServicePage({
+export default function ElementPage({
 	categoryName,
-	service,
+	element,
 }: {
 	categoryName: string
-	service: ElementTreeType
+	element: ElementTreeType
 }) {
-	if (!service) {
-		return <NotFound />
-	}
-
 	return (
 		<div className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-10 2xl:py-20">
-			<ServiceImage service={service} />
+			<ElementImage element={element} />
 
 			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-3 2xl:gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
 				<div className="flex flex-col">
 					<span className="title font-bold text-pretty">
-						{service.subtitle}
+						{element.subtitle}
 					</span>
 					<span className="text-sm font-semibold text-[var(--primary-green)]">
 						{categoryName}
 					</span>
 				</div>
 				<div className="flex w-full items-center gap-6">
-					<HeartIconContainer id={service.id.toString()} />
-					<CartIconContainer id={service.id.toString()} />
+					<HeartIconContainer id={element.id.toString()} />
+					<CartIconContainer id={element.id.toString()} />
 				</div>
 
-				<p className="text ">{service.description_long}</p>
+				<p className="text ">{element.description_long}</p>
 
-				<ServiceCountAndCart service={service} />
+				<ElementCountAndCart element={element} />
 			</div>
 		</div>
 	)
 }
 
-const ServiceImage = ({ service }: { service: ElementTreeType }) => {
+const ElementImage = ({ element }: { element: ElementTreeType }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
 	const [previousImageIndex, setPreviousImageIndex] = useState(0)
 	const [isTransitioning, setIsTransitioning] = useState(false)
-	const imagesArray = service.images.split("*")
+	const imagesArray = element.images.split("*")
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -79,7 +74,7 @@ const ServiceImage = ({ service }: { service: ElementTreeType }) => {
 				>
 					<Image
 						src={imagesArray[previousImageIndex]}
-						alt={service.subtitle}
+						alt={element.subtitle}
 						quality={100}
 						fill
 						className="object-cover hover:scale-110 duration-300"
@@ -95,7 +90,7 @@ const ServiceImage = ({ service }: { service: ElementTreeType }) => {
 				>
 					<Image
 						src={imagesArray[actualImageIndex]}
-						alt={service.subtitle}
+						alt={element.subtitle}
 						quality={100}
 						fill
 						className="object-cover hover:scale-110 duration-300"
@@ -106,7 +101,7 @@ const ServiceImage = ({ service }: { service: ElementTreeType }) => {
 			<div className="flex gap-2">
 				<SinglePageCarrousel
 					array={imagesArray}
-					subtitle={service.subtitle}
+					subtitle={element.subtitle}
 					actualImageIndex={actualImageIndex}
 					setActualImageIndex={setActualImageIndex}
 				/>

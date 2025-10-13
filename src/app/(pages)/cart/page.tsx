@@ -1,8 +1,8 @@
 "use client"
 
-import SinglePageFooter from "@/_components/layout/single-page-footer"
-import SinglePageHeader from "@/_components/layout/single-page-header"
-import SinglePageLeaf from "@/_components/layout/single-page-leaf"
+import SinglePageFooter from "@/_components/elements/single-page-footer"
+import SinglePageHeader from "@/_components/elements/single-page-header"
+import SinglePageLeaf from "@/_components/elements/single-page-leaf"
 import { useStore } from "@/_lib/store"
 import { servicesData } from "@/_lib/services"
 import { productsData } from "@/_lib/products"
