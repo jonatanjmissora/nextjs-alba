@@ -1,20 +1,21 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import SinglePageCarrousel from "@/_components/layout/single-page-carrousel"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import CartIconContainer from "@/_components/layout/cart-icon-container"
 import NotFound from "@/_components/layout/not-found"
 import { ServiceCountAndCart } from "./service-count"
-import { ServiceTreeType } from "@/_lib/types"
+import { ElementTreeType } from "@/_lib/types"
+import { cn } from "@/lib/utils"
 
 export default function ServicePage({
 	categoryName,
 	service,
 }: {
 	categoryName: string
-	service: ServiceTreeType
+	service: ElementTreeType
 }) {
 	if (!service) {
 		return <NotFound />
@@ -46,21 +47,61 @@ export default function ServicePage({
 	)
 }
 
-const ServiceImage = ({ service }: { service: ServiceTreeType }) => {
+const ServiceImage = ({ service }: { service: ElementTreeType }) => {
 	const [actualImageIndex, setActualImageIndex] = useState(0)
+	const [previousImageIndex, setPreviousImageIndex] = useState(0)
+	const [isTransitioning, setIsTransitioning] = useState(false)
 	const imagesArray = service.images.split("*")
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setPreviousImageIndex(actualImageIndex)
+			setIsTransitioning(true)
+
+			setTimeout(() => {
+				setActualImageIndex(prev => (prev + 1) % imagesArray.length)
+				setIsTransitioning(false)
+			}, 300) // Duración de la transición
+		}, 7000)
+
+		return () => clearInterval(interval)
+	}, [actualImageIndex, imagesArray.length])
 
 	return (
 		<div className="w-full sm:w-[40%] sm:h-[65dvh] h-[400px] flex flex-col gap-4">
 			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
-				<Image
-					src={imagesArray[actualImageIndex]}
-					alt={service.subtitle}
-					quality={100}
-					fill
-					className="object-cover hover:scale-110 duration-300"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-				/>
+				{/* Imagen anterior con fade out */}
+				<div
+					className={cn(
+						"absolute inset-0 transition-opacity duration-1000",
+						isTransitioning ? "opacity-0" : "opacity-50"
+					)}
+				>
+					<Image
+						src={imagesArray[previousImageIndex]}
+						alt={service.subtitle}
+						quality={100}
+						fill
+						className="object-cover hover:scale-110 duration-300"
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					/>
+				</div>
+				{/* Imagen actual con fade in */}
+				<div
+					className={cn(
+						"absolute inset-0 transition-opacity duration-1000",
+						isTransitioning ? "opacity-50" : "opacity-100"
+					)}
+				>
+					<Image
+						src={imagesArray[actualImageIndex]}
+						alt={service.subtitle}
+						quality={100}
+						fill
+						className="object-cover hover:scale-110 duration-300"
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					/>
+				</div>
 			</div>
 			<div className="flex gap-2">
 				<SinglePageCarrousel

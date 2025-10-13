@@ -30,7 +30,7 @@ export default async function ServerServiciosPage({
 
 	const serviceCategories = servicesTree.find(
 		category => category.title === cleanCategoryName
-	)?.services
+	)?.elements
 
 	return (
 		<section className="w-full min-h-[100svh] sm:min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
