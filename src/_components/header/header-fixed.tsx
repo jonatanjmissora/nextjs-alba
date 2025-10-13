@@ -3,11 +3,17 @@
 import { useEffect, useState } from "react"
 import HeaderCartContainer from "./header-cart-container"
 import HeaderHeartContainer from "./header-heart-container"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
 
 export default function HeaderFixed({
+	link,
 	layout,
+	text,
 }: {
+	link?: string
 	layout: "single-page" | "home"
+	text: string
 }) {
 	const [scrolled, setScrolled] = useState<boolean>(false)
 
@@ -24,27 +30,28 @@ export default function HeaderFixed({
 		return () => window.removeEventListener("scroll", handleScrolled)
 	}, [])
 
-	if (layout === "single-page") {
-		return (
-			<div className="top-[50%] -translate-y-1/2 absolute right-[1%] flex gap-4">
+	return (
+		<>
+			{layout === "single-page" ? (
+				<Link
+					href={link || "/"}
+					className={`fixed top-[1.5%] sm:top-[0.5dvh] 2xl:top-[0.5dvh] 2xl:left-[13dvw] left-[11.5%] z-100 py-4 flex items-center gap-3 cursor-pointer ${scrolled && "sm:-translate-x-30 2xl:-translate-x-50"} duration-500`}
+				>
+					<ArrowLeft size={24} color="var(--primary-green)" className="icon" />
+					<span className="header text-[var(--primary-green)]">{text}</span>
+				</Link>
+			) : (
+				<Logo scrolled={scrolled} />
+			)}
+
+			<div
+				className={`absolute sm:fixed 2xl:top-[4%] top-[3.5%] right-[15%] z-50 ${scrolled && "translate-x-37"} duration-500 flex gap-4`}
+			>
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</div>
-		)
-	} else {
-		return (
-			<>
-				<Logo scrolled={scrolled} />
-
-				<div
-					className={`absolute sm:fixed 2xl:top-[4%] top-[3.5%] right-[15%] z-50 ${scrolled && "translate-x-37"} duration-500 flex gap-4`}
-				>
-					<HeaderHeartContainer />
-					<HeaderCartContainer />
-				</div>
-			</>
-		)
-	}
+		</>
+	)
 }
 
 const Logo = ({ scrolled }: { scrolled: boolean }) => {
