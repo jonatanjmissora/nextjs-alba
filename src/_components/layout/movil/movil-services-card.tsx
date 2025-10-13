@@ -1,8 +1,8 @@
-import { servicesData } from "@/_lib/services"
-import Card from "../movil-card"
+import Card from "../../elements/fav-card"
+import { servicesMock } from "@/_lib/services-mock"
 
 export const MovilServicesCard = () => {
-	const services = servicesData
+	const services = servicesMock
 
 	return (
 		<div className="w-full flex justify-between">

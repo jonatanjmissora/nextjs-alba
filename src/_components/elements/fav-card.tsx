@@ -3,18 +3,17 @@
 import { MoveRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import HeartIconContainer from "./heart-icon-container"
-import { Product } from "@/_lib/products"
-import { Service } from "@/_lib/services"
-import CartIconContainer from "./cart-icon-container"
+import HeartIconContainer from "../layout/heart-icon-container"
+import CartIconContainer from "../layout/cart-icon-container"
+import { ElementMockType } from "@/_lib/types"
 
-export default function Card({
+export default function FavCard({
 	type,
 	element,
 	from,
 }: {
 	type: "shop" | "service" | "favorites" | "cart"
-	element: Product | Service
+	element: ElementMockType
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
 	return (
@@ -24,7 +23,7 @@ export default function Card({
 		>
 			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full h-[280px] 2xl:h-[480px]">
 				<Image
-					src={element.image}
+					src={element.images.split("*")[0]}
 					alt={element.title}
 					quality={100}
 					fill
@@ -36,19 +35,28 @@ export default function Card({
 				/>
 			</div>
 
-			<h3 className="font-semibold text-[var(--primary-green)] text-2xl sm:text-xl pt-2">
-				{element.title}
-			</h3>
+			<div className="flex flex-col">
+				<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
+					{element.title}
+				</span>
+				<h3 className="text-[var(--primary-green)] text-pretty font-semibold truncate h-12 w-full">
+					{element.subtitle}
+				</h3>
+			</div>
+
 			<div className="flex justify-between items-center">
 				<span className="text-balance text-xl sm:text-lg 2xl:text-xl font-bold text-black">
 					${element.price}
 				</span>
 
 				<div className="flex gap-4">
-					<HeartIconContainer id={element.id} />
-					<CartIconContainer id={element.id} />
+					<HeartIconContainer id={element.id.toString()} />
+					<CartIconContainer id={element.id.toString()} />
 				</div>
 			</div>
+			<span className="text-xs text-[#444]/50 tracking-wider w-full h-20 overflow-auto">
+				{element.description}
+			</span>
 			<div className="flex flex-col gap-2">
 				<Link
 					href={`/${type}/${element.id}?from=${from}`}

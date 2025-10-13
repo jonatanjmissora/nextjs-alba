@@ -1,8 +1,8 @@
-import { productsData } from "@/_lib/products"
-import Card from "../movil-card"
+import { productsMock } from "@/_lib/products-mock"
+import Card from "../../elements/fav-card"
 
 export const MovilProductsCard = () => {
-	const products = productsData
+	const products = productsMock
 
 	return (
 		<div className="w-full flex justify-between">
