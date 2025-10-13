@@ -114,6 +114,14 @@
 html {
 	overflow-x: hidden;
 	min-height: 100dvh;
+	scrollbar-gutter: stable;
+	scrollbar-width: thin;
+	scrollbar-color: #ff9bac transparent;
+}
+.scrollable {
+	scrollbar-gutter: stable;
+	scrollbar-width: thin;
+	scrollbar-color: #ff9bac transparent;
 }
 body {
 	background: linear-gradient(

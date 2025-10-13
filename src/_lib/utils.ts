@@ -48,3 +48,9 @@ export function setCleanCategoryName(categoryName: string) {
 		.replace(/^([a-z])/i, match => match.toUpperCase())
 	return r
 }
+
+export const formatPrice = (price: number) => {
+	return new Intl.NumberFormat("de-DE", { minimumFractionDigits: 0 }).format(
+		price
+	)
+}

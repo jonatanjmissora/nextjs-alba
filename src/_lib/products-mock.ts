@@ -26,8 +26,43 @@ export const productsMock: ElementMockType[] = [
 		description_admin: "Limpieza facial profunda",
 		description_long:
 			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
-		images:
-			"/maderoterapia/maderoterapia01.webp*/maderoterapia/maderoterapia02.webp*/maderoterapia/maderoterapia03.webp",
+		images: "/productos/producto02.webp",
+	},
+	{
+		id: 131,
+		title: "Titulo del producto",
+		subtitle: "Categoria 3",
+		price: 48000,
+		description:
+			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
+		description_admin: "Limpieza facial profunda",
+		description_long:
+			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+		images: "/productos/producto03.webp",
+	},
+	{
+		id: 141,
+		title: "Titulo del producto",
+		subtitle: "Categoria 4",
+		price: 48000,
+		description:
+			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
+		description_admin: "Limpieza facial profunda",
+		description_long:
+			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+		images: "/productos/producto04.webp",
+	},
+	{
+		id: 151,
+		title: "Titulo del producto",
+		subtitle: "Categoria 5",
+		price: 48000,
+		description:
+			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
+		description_admin: "Limpieza facial profunda",
+		description_long:
+			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+		images: "/productos/producto05.webp",
 	},
 ]
 

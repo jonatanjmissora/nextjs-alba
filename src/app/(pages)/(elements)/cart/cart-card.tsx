@@ -7,6 +7,7 @@ import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import { Trash2Icon } from "lucide-react"
 import { useStore } from "@/_lib/store"
 import { ElementMockType } from "@/_lib/types"
+import { formatPrice } from "@/_lib/utils"
 
 export default function CartCard({
 	element,
@@ -56,7 +57,7 @@ export default function CartCard({
 					</Link>
 					<div className="flex justify-between items-center ">
 						<span className="text-xl 2xl:text-2xl font-semibold">
-							$ {element.price}
+							$ {formatPrice(Number(element.price))}
 						</span>
 					</div>
 				</div>

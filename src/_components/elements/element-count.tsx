@@ -5,6 +5,7 @@ import { MinusCircle, PlusCircle, ShoppingCart } from "lucide-react"
 import { useState } from "react"
 import { useStore } from "@/_lib/store"
 import { redirect } from "next/navigation"
+import { formatPrice } from "@/_lib/utils"
 
 export const ElementCountAndCart = ({
 	element,
@@ -50,11 +51,7 @@ export const ElementCountAndCart = ({
 		<>
 			<div className="flex justify-between items-center">
 				<p className="subtitle font-semibold">
-					$
-					{new Intl.NumberFormat("es-ES", {
-						minimumFractionDigits: 0,
-						maximumFractionDigits: 0,
-					}).format(Number(element.price))}
+					$ {formatPrice(Number(element.price))}
 				</p>
 				<div className="flex gap-4">
 					<button onClick={handleMinus} type="button">
