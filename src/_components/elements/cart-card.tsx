@@ -1,5 +1,16 @@
 "use client"
 
+import {
+	AlertDialog,
+	AlertDialogAction,
+	AlertDialogCancel,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	AlertDialogTitle,
+	AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import Image from "next/image"
 import Link from "next/link"
 import { CartCount } from "./cart-count"
@@ -80,8 +91,26 @@ const CartDeleteButton = ({ element }: { element: ElementMockType }) => {
 	}
 
 	return (
-		<button type="button" onClick={handleClick} className="cursor-pointer">
-			<Trash2Icon color="var(--primary-green)" className={`icon size-5`} />
-		</button>
+		<AlertDialog>
+			<AlertDialogTrigger asChild>
+				<button type="button" className="cursor-pointer">
+					<Trash2Icon color="var(--primary-green)" className={`icon size-5`} />
+				</button>
+			</AlertDialogTrigger>
+			<AlertDialogContent>
+				<AlertDialogHeader>
+					<AlertDialogTitle>
+						¿Seguro deseas quitar {element.subtitle}?
+					</AlertDialogTitle>
+					<AlertDialogDescription>
+						No pierdas la oportunidad de llevartelo!!
+					</AlertDialogDescription>
+				</AlertDialogHeader>
+				<AlertDialogFooter>
+					<AlertDialogCancel>Cancelar</AlertDialogCancel>
+					<AlertDialogAction onClick={handleClick}>Confirmar</AlertDialogAction>
+				</AlertDialogFooter>
+			</AlertDialogContent>
+		</AlertDialog>
 	)
 }

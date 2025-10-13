@@ -24,7 +24,7 @@ export default function Home() {
 				</a>
 			</div>
 
-			<div className="absolute right-[0dvw] bottom-0 2xl:bottom-[5dvh] 2xl:right-[0dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12">
+			<div className="absolute right-[0dvw] bottom-0 2xl:bottom-[0dvh] 2xl:right-[0dvw] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%] pt-12">
 				<HomeImg2 />
 			</div>
 		</>

@@ -17,9 +17,6 @@ footer funcional
 los links de las redes sociales
 la adicion al grupo de wsp
 
-modal para confirmar si borro o elimino algo
-
 de favoritos o de cart al servicio o producto, ver el scroll hasta dar con el servicio o producto
 
-el total del cart no funciona
-
+chechout confirmar con whatsapp

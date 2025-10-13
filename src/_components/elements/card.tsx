@@ -27,14 +27,14 @@ export const Card = ({
 				/>
 			</div>
 			<div className="flex flex-col justify-between gap-2 p-3 pt-5 w-full flex-1">
-				<h2 className="tracking-wider font-semibold text-lg w-full text-left">
+				<h2 className="tracking-wider font-semibold text-lg w-full text-left text-[var(--primary-green)]">
 					{category.title}
 				</h2>
 				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
 					{children}
 					<Link
 						href={`/${type}/${urlCategoryName}`}
-						className="text-[#444]/70 cursor-pointer text-xs w-full text-right absolute bottom-3 right-3"
+						className="text-[#444]/70 cursor-pointer text-sm w-full text-right absolute bottom-3 right-3 hover:text-[var(--primary-green)] duration-300 hover:font-semibold"
 					>
 						leer mas +
 					</Link>

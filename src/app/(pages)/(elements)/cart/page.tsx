@@ -1,8 +1,8 @@
 "use client"
 
 import { useStore } from "@/_lib/store"
-import CartCard from "./cart-card"
-import CartCheckout from "./cart-checkout"
+import CartCard from "../../../../_components/elements/cart-card"
+import CartCheckout from "../../../../_components/elements/cart-checkout"
 import NoCard from "@/_components/layout/no-card"
 import Link from "next/link"
 import { servicesMock } from "@/_lib/services-mock"
