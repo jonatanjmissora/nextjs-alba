@@ -7,7 +7,7 @@ import { Dot } from "lucide-react"
 
 export default function ServicesSection() {
 	return (
-		<section id="services" className="w-full my-32 border border-transparent">
+		<section id="services01" className="w-full my-32 border border-transparent">
 			<SectionHeader
 				title="Nuestros servicios en gabinete"
 				subtitle="Servicios"
@@ -20,7 +20,7 @@ export default function ServicesSection() {
 
 const ServiceCategoriesComponent = () => {
 	return (
-		<div className="flex flex-wrap gap-6 w-full">
+		<div className="flex flex-wrap gap-6 gap-y-12 w-full">
 			{servicesTree.map((category: ElementsTreeType) => (
 				<Card key={category.title} type="services" category={category}>
 					{category.elements.slice(0, 3).map(element => (

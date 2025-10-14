@@ -6,7 +6,7 @@ import { Card } from "../elements/card"
 
 export default function ProductsSection() {
 	return (
-		<section id="products" className="w-full my-32 border border-transparent">
+		<section id="shop01" className="w-full my-32 border border-transparent">
 			<SectionHeader
 				title="Nuestros productos en gabinete"
 				subtitle="Productos"
@@ -20,7 +20,7 @@ export default function ProductsSection() {
 
 const ProductCategoriesComponent = () => {
 	return (
-		<div className="flex flex-wrap gap-6 w-full">
+		<div className="flex flex-wrap gap-6 gap-y-12 w-full">
 			{productsTree.map((category: ElementsTreeType) => (
 				<Card key={category.title} type="shop" category={category}>
 					<span className="text-sm p-4 pb-8 text-pretty tracking-wider">

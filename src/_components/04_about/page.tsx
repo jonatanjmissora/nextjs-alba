@@ -5,7 +5,7 @@ import { aboutHeader } from "@/_lib/about"
 
 export default function About() {
 	return (
-		<div id="about" className="w-full my-32 border border-transparent">
+		<div id="about01" className="w-full my-32 border border-transparent">
 			<SectionHeader
 				title="Mi historia"
 				subtitle="Acerca de"

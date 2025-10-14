@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function SinglePageCarrousel({
+export default function ImageCarrousel({
 	subtitle,
 	array,
 	actualImageIndex,

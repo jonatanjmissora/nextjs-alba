@@ -18,7 +18,7 @@ import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import { Trash2Icon } from "lucide-react"
 import { useStore } from "@/_lib/store"
 import { ElementMockType } from "@/_lib/types"
-import { formatPrice } from "@/_lib/utils"
+import { formatPrice, setUrlCategoryName } from "@/_lib/utils"
 
 export default function CartCard({
 	element,
@@ -26,9 +26,11 @@ export default function CartCard({
 	from,
 }: {
 	element: ElementMockType
-	type: "shop" | "service" | "favorites" | "cart"
+	type: "shop" | "services"
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
+	const urlCategoryName = setUrlCategoryName(element.title)
+
 	return (
 		<li
 			key={element.id}
@@ -61,7 +63,7 @@ export default function CartCard({
 
 				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
 					<Link
-						href={`/${type}/${element.id}?from=${from}`}
+						href={`/${type}/${urlCategoryName}?id=${element.id}&from=${from}`}
 						className="font-semibold text-xl tracking-wider text-[var(--primary-green)]"
 					>
 						{element.subtitle}

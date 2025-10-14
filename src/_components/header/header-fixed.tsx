@@ -13,7 +13,7 @@ export default function HeaderFixed({
 }: {
 	link?: string
 	layout: "single-page" | "home"
-	text: string
+	text?: string
 }) {
 	const [scrolled, setScrolled] = useState<boolean>(false)
 
@@ -59,7 +59,7 @@ const Logo = ({ scrolled }: { scrolled: boolean }) => {
 		<div
 			className={`fixed top-[3.3%] sm:top-[3.75dvh] 2xl:top-[3.75dvh] 2xl:left-[13dvw] left-[11.5%] z-100 header font-semibold text-[var(--primary-green)] ${scrolled && "sm:-translate-x-26 2xl:-translate-x-37"} duration-500`}
 		>
-			<a href="#home">ALBA </a>
+			<a href="#home01">ALBA </a>
 			<span className={`${scrolled && "opacity-0"} duration-500`}>GARCIA</span>
 		</div>
 	)

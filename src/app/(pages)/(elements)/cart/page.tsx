@@ -1,17 +1,22 @@
 "use client"
 
 import { useStore } from "@/_lib/store"
-import CartCard from "../../../../_components/elements/cart-card"
-import CartCheckout from "../../../../_components/elements/cart-checkout"
+import CartCard from "@/_components/elements/cart-card"
+import CartCheckout from "@/_components/elements/cart-checkout"
 import NoCard from "@/_components/layout/no-card"
 import Link from "next/link"
 import { servicesMock } from "@/_lib/services-mock"
 import { productsMock } from "@/_lib/products-mock"
+import SinglePageLayout from "@/_components/layout/single-page-layout"
 
 export default function CartPage() {
 	const { cartStore } = useStore()
 
-	return <CartBody cart={cartStore} />
+	return (
+		<SinglePageLayout>
+			<CartBody cart={cartStore} />
+		</SinglePageLayout>
+	)
 }
 
 const CartBody = ({ cart }: { cart: { id: string; quantity: number }[] }) => {
@@ -37,7 +42,7 @@ const CartBody = ({ cart }: { cart: { id: string; quantity: number }[] }) => {
 							<CartCard
 								key={service.id.toString()}
 								element={service}
-								type="service"
+								type="services"
 								from="cart"
 							/>
 						))}

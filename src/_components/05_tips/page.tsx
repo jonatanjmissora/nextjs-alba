@@ -1,32 +1,32 @@
 import { SectionHeader } from "../section-header"
 import Image from "next/image"
-import { tipsData } from "@/_lib/tips"
+import { tipsMock } from "@/_lib/tips-mock"
 
 export default function Tips() {
-	const tips = tipsData
+	const tips = tipsMock
 
 	return (
 		<>
 			<div className="w-full h-[20dvh] bg-transparent"></div>
-			<div id="tips" className="w-full my-32 border border-transparent">
+			<div id="tips01" className="w-full my-32 border border-transparent">
 				<SectionHeader
 					title="Nuestros tips del centro de belleza"
 					subtitle="Tips"
 					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 				/>
 				<div className="w-full flex justify-between items-center pb-6">
-					<div className="w-1/2 p-12 pl-0 flex flex-col gap-20">
+					<div id={tips[0].id} className="w-1/2 p-12 pl-0 flex flex-col gap-20">
 						<div className="flex flex-col gap-3 tip-border-up pl-8 pt-8">
 							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
 								{tips[0].title}
 							</h3>
 							<span className="w-full text text-balance">
-								{tips[0].description}
+								{tips[0].content}
 							</span>
 						</div>
 						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 							<Image
-								src={tips[0].img}
+								src={tips[0].image}
 								alt={tips[0].title}
 								quality={100}
 								fill
@@ -35,10 +35,11 @@ export default function Tips() {
 							/>
 						</div>
 					</div>
-					<div className="w-1/2 p-12 pr-0 flex flex-col gap-20">
+
+					<div id={tips[1].id} className="w-1/2 p-12 pr-0 flex flex-col gap-20">
 						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 							<Image
-								src={tips[1].img}
+								src={tips[1].image}
 								alt={tips[1].title}
 								quality={100}
 								fill
@@ -51,7 +52,7 @@ export default function Tips() {
 								{tips[1].title}
 							</h3>
 							<span className="w-full text text-balance">
-								{tips[1].description}
+								{tips[1].content}
 							</span>
 						</div>
 					</div>

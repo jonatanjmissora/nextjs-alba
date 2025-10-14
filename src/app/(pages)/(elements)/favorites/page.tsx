@@ -5,11 +5,16 @@ import { useStore } from "@/_lib/store"
 import NoCard from "@/_components/layout/no-card"
 import { servicesMock } from "@/_lib/services-mock"
 import { productsMock } from "@/_lib/products-mock"
+import SinglePageLayout from "@/_components/layout/single-page-layout"
 
 export default function FavoritesPage() {
 	const { favoritesStore } = useStore()
 
-	return <FavoritesBody favorites={favoritesStore} />
+	return (
+		<SinglePageLayout>
+			<FavoritesBody favorites={favoritesStore} />
+		</SinglePageLayout>
+	)
 }
 
 const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
@@ -34,7 +39,7 @@ const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
 					{servicesFavorites.map(service => (
 						<FavCard
 							key={service.id}
-							type={"service"}
+							type={"services"}
 							element={service}
 							from="favorites"
 						/>

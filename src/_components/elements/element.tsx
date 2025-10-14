@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import SinglePageCarrousel from "@/_components/elements/single-page-carrousel"
+import SinglePageCarrousel from "@/_components/elements/image-carrousel"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import CartIconContainer from "@/_components/layout/cart-icon-container"
 import { ElementCountAndCart } from "./element-count"
@@ -17,7 +17,10 @@ export default function ElementPage({
 	element: ElementTreeType
 }) {
 	return (
-		<div className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-10 2xl:py-20">
+		<div
+			id={element.id.toString()}
+			className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-10 2xl:py-20"
+		>
 			<ElementImage element={element} />
 
 			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-3 2xl:gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">

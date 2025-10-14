@@ -7,7 +7,7 @@ import { Service } from "@/_lib/services"
 import SinglePageHeader from "@/_components/elements/single-page-header"
 import SinglePageFooter from "@/_components/elements/single-page-footer"
 import SinglePageLeaf from "@/_components/elements/single-page-leaf"
-import SinglePageCarrousel from "@/_components/elements/single-page-carrousel"
+import SinglePageCarrousel from "@/_components/elements/image-carrousel"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import CartIconContainer from "@/_components/layout/cart-icon-container"
 

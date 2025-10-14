@@ -6,8 +6,8 @@ export const productsHeader =
 export const productsMock: ElementMockType[] = [
 	{
 		id: 111,
-		title: "Titulo del producto",
-		subtitle: "Categoria 1",
+		title: "Categoria 1",
+		subtitle: "Producto 1",
 		price: 45000,
 		description:
 			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -18,8 +18,8 @@ export const productsMock: ElementMockType[] = [
 	},
 	{
 		id: 121,
-		title: "Titulo del producto",
-		subtitle: "Categoria 2",
+		title: "Categoria 2",
+		subtitle: "Producto 2",
 		price: 48000,
 		description:
 			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
@@ -30,8 +30,8 @@ export const productsMock: ElementMockType[] = [
 	},
 	{
 		id: 131,
-		title: "Titulo del producto",
-		subtitle: "Categoria 3",
+		title: "Categoria 3",
+		subtitle: "Producto 3",
 		price: 48000,
 		description:
 			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
@@ -42,8 +42,8 @@ export const productsMock: ElementMockType[] = [
 	},
 	{
 		id: 141,
-		title: "Titulo del producto",
-		subtitle: "Categoria 4",
+		title: "Categoria 4",
+		subtitle: "Producto 4",
 		price: 48000,
 		description:
 			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
@@ -54,8 +54,8 @@ export const productsMock: ElementMockType[] = [
 	},
 	{
 		id: 151,
-		title: "Titulo del producto",
-		subtitle: "Categoria 5",
+		title: "Categoria 5",
+		subtitle: "Producto 5",
 		price: 48000,
 		description:
 			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
@@ -68,11 +68,11 @@ export const productsMock: ElementMockType[] = [
 
 export const productsTree: ElementsTreeType[] = [
 	{
-		title: "Productos 1",
+		title: "Categoria 1",
 		elements: [
 			{
 				id: 111,
-				subtitle: "Categoria 1",
+				subtitle: "Producto 1",
 				price: 45000,
 				description:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -84,11 +84,11 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
-		title: "Productos 2",
+		title: "Categoria 2",
 		elements: [
 			{
 				id: 121,
-				subtitle: "Categoria 1",
+				subtitle: "Producto 2",
 				price: 45000,
 				description:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -100,11 +100,11 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
-		title: "Productos 3",
+		title: "Categoria 3",
 		elements: [
 			{
 				id: 131,
-				subtitle: "Categoria 1",
+				subtitle: "Producto 3",
 				price: 45000,
 				description:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -116,11 +116,11 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
-		title: "Productos 4",
+		title: "Categoria 4",
 		elements: [
 			{
 				id: 141,
-				subtitle: "Categoria 1",
+				subtitle: "Producto 4",
 				price: 45000,
 				description:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -132,11 +132,11 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
-		title: "Productos 5",
+		title: "Categoria 5",
 		elements: [
 			{
 				id: 151,
-				subtitle: "Categoria 1",
+				subtitle: "Producto 5",
 				price: 45000,
 				description:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",

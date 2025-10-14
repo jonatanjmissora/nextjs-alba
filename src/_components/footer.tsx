@@ -1,5 +1,9 @@
 import Link from "next/link"
 import RoundLeaf from "../../public/leaf/round-leaf"
+import { servicesTree } from "@/_lib/services-mock"
+import { productsTree } from "@/_lib/products-mock"
+import { tipsMock } from "@/_lib/tips-mock"
+import { setUrlCategoryName } from "@/_lib/utils"
 
 export default function Footer() {
 	const whatsappLink = `https://wa.me/5492914742802`
@@ -14,51 +18,36 @@ Agendá mi telefono! Saludos 🖐
 `
 
 	return (
-		<footer id="contact" className="w-full flex flex-col relative">
+		<footer id="footer01" className="w-full flex flex-col relative">
 			<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
-			<div className="w-full px-32 relaive overflow-x-hidden">
-				<div className="flex justify-between gap-2 min-h-[30dvh]">
-					<div className="flex flex-col gap-2">
-						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
+			<div className="w-full px-32 relaive">
+				<div className="grid grid-cols-4 min-h-[30dvh] pb-10">
+					<div className="flex flex-col gap-4 w-full">
+						<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
 							Servicios
 						</h3>
-						<nav className="flex flex-col gap-2 text-[#333] text-sm 2xl:text-base px-2">
-							<Link href="/service01">Servicio 1</Link>
-							<Link href="/service02">Servicio 2</Link>
-							<Link href="/service03">Servicio 3</Link>
-							<Link href="/service04">Servicio 4</Link>
-						</nav>
+						<ServicesNavComponent />
 					</div>
 
-					<div className="flex flex-col gap-2">
-						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
+					<div className="w-full flex flex-col gap-2">
+						<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
 							Tienda
 						</h3>
-						<nav className="flex flex-col gap-2 text-[#333] text-sm 2xl:text-base px-2">
-							<Link href="/category01">Categoria 1</Link>
-							<Link href="/category02">Categoria 2</Link>
-							<Link href="/category03">Categoria 3</Link>
-							<Link href="/category04">Categoria 4</Link>
-						</nav>
+						<ProductsNavComponent />
 					</div>
 
-					<div className="flex flex-col gap-2">
-						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
+					<div className="w-full flex flex-col gap-2">
+						<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
 							Tips
 						</h3>
-						<nav className="flex flex-col gap-2 text-[#333] text-sm 2xl:text-base px-2">
-							<Link href="/faq01">Tip 1</Link>
-							<Link href="/faq02">Tip 2</Link>
-							<Link href="/faq03">Tip 3</Link>
-							<Link href="/faq04">Tip 4</Link>
-						</nav>
+						<TipsNavComponent />
 					</div>
 
-					<div className="flex flex-col gap-2 w-1/2 2xl:w-1/3">
+					<div className="w-full flex flex-col gap-4">
 						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
 							Suscripción
 						</h3>
-						<div className="flex flex-col gap-3 2xl:gap-6 text-[#333] text-sm 2xl:text-base px-2">
+						<div className="flex flex-col gap-6 2xl:gap-10 text-[#333] text-sm 2xl:text-base px-2">
 							<p>
 								Recibe las últimas novedades. Lorem ipsum dolor sit amet
 								consectetur, adipisicing elit. Quisquam, reprehenderit.
@@ -68,13 +57,13 @@ Agendá mi telefono! Saludos 🖐
 									<Link
 										href={`${whatsappLink}?text=${encodeURIComponent(mensajeSuscripcion)}`}
 										target="_blank"
-										className="cta-button px-6 py-3"
+										className="cta-button px-8 py-3"
 									>
 										Quiero suscribirme
 									</Link>
 								</div>
 							</div>
-							<nav className="flex gap-6">
+							<nav className="flex gap-10">
 								<Link href={whatsappLink} target="_blank">
 									<WhatsApp className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
 								</Link>
@@ -100,6 +89,57 @@ Agendá mi telefono! Saludos 🖐
 			</div>
 			<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 		</footer>
+	)
+}
+
+const ServicesNavComponent = () => {
+	const services = servicesTree
+	return (
+		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base px-2 overflow-hidden">
+			{services.map(service => (
+				<Link
+					key={service.title}
+					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
+					href={`/services/${setUrlCategoryName(service.title)}`}
+				>
+					{service.title}
+				</Link>
+			))}
+		</nav>
+	)
+}
+
+const ProductsNavComponent = () => {
+	const products = productsTree
+	return (
+		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base px-2 overflow-hidden">
+			{products.map(product => (
+				<Link
+					key={product.title}
+					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
+					href={`/shop/${setUrlCategoryName(product.title)}`}
+				>
+					{product.title}
+				</Link>
+			))}
+		</nav>
+	)
+}
+
+const TipsNavComponent = () => {
+	const tips = tipsMock
+	return (
+		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base px-2 overflow-hidden">
+			{tips.map(tip => (
+				<a
+					key={tip.id}
+					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
+					href={`/#${tip.id}`}
+				>
+					{tip.title}
+				</a>
+			))}
+		</nav>
 	)
 }
 
