@@ -59,13 +59,7 @@ const SinglePageLeaf = () => {
 	)
 }
 
-const SinglePageHeader = async ({
-	text,
-	from,
-}: {
-	text: string
-	from?: string
-}) => {
+const SinglePageHeader = ({ text, from }: { text: string; from?: string }) => {
 	const link =
 		from === "services"
 			? "/#services01"

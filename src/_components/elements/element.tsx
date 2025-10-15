@@ -52,6 +52,7 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 	const imagesArray = element.images.split("*")
 
 	useEffect(() => {
+		if (imagesArray.length === 1) return
 		const interval = setInterval(() => {
 			setPreviousImageIndex(actualImageIndex)
 			setIsTransitioning(true)

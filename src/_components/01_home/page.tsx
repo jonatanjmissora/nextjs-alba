@@ -19,7 +19,10 @@ export default function Home() {
 				</span>
 				<span className="subtitle">in Bahia Blanca</span>
 				<p className="text">Lorem ipsum dolor sit amet consectetur.</p>
-				<a href="/turno" className="cta-button text text-center mt-4 py-4 px-8">
+				<a
+					href="https://alba-estetica-turnos.netlify.app/"
+					className="cta-button text text-center mt-4 py-4 px-8"
+				>
 					Reserva tu turno
 				</a>
 			</div>

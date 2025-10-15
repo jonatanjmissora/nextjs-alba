@@ -30,6 +30,10 @@ export default function CartCard({
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
 	const urlCategoryName = setUrlCategoryName(element.title)
+	const { cartStore } = useStore()
+	const cartElementQuantity = cartStore.find(
+		cart => cart.id === element.id.toString()
+	)?.quantity
 
 	return (
 		<li
@@ -70,7 +74,8 @@ export default function CartCard({
 					</Link>
 					<div className="flex justify-between items-center ">
 						<span className="text-xl 2xl:text-2xl font-semibold">
-							$ {formatPrice(Number(element.price))}
+							${" "}
+							{formatPrice(Number(element.price * (cartElementQuantity ?? 1)))}
 						</span>
 					</div>
 				</div>
