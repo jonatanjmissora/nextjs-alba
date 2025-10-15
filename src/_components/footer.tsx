@@ -18,77 +18,79 @@ Agendá mi telefono! Saludos 🖐
 `
 
 	return (
-		<footer id="footer01" className="w-full flex flex-col relative">
-			<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
-			<div className="w-full px-32 relaive">
-				<div className="grid grid-cols-4 min-h-[30dvh] pb-10">
-					<div className="flex flex-col gap-4 w-full">
-						<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
-							Servicios
-						</h3>
-						<ServicesNavComponent />
-					</div>
+		<div className="w-full bg-[var(--primary-pink)] relative pb-6">
+			<footer id="footer01" className="w-full flex flex-col relative">
+				<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
+				<div className="w-full px-32 relaive">
+					<div className="grid grid-cols-4 min-h-[30dvh] pb-10">
+						<div className="flex flex-col gap-4 w-full">
+							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
+								Servicios
+							</h3>
+							<ServicesNavComponent />
+						</div>
 
-					<div className="w-full flex flex-col gap-2">
-						<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
-							Tienda
-						</h3>
-						<ProductsNavComponent />
-					</div>
+						<div className="w-full flex flex-col gap-2">
+							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
+								Tienda
+							</h3>
+							<ProductsNavComponent />
+						</div>
 
-					<div className="w-full flex flex-col gap-2">
-						<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
-							Tips
-						</h3>
-						<TipsNavComponent />
-					</div>
+						<div className="w-full flex flex-col gap-2">
+							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
+								Tips
+							</h3>
+							<TipsNavComponent />
+						</div>
 
-					<div className="w-full flex flex-col gap-4">
-						<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
-							Suscripción
-						</h3>
-						<div className="flex flex-col gap-6 2xl:gap-10 text-[#333] text-sm 2xl:text-base px-2">
-							<p>
-								Recibe las últimas novedades. Lorem ipsum dolor sit amet
-								consectetur, adipisicing elit. Quisquam, reprehenderit.
-							</p>
-							<div>
-								<div className="">
-									<Link
-										href={`${whatsappLink}?text=${encodeURIComponent(mensajeSuscripcion)}`}
-										target="_blank"
-										className="cta-button px-8 py-3"
-									>
-										Quiero suscribirme
-									</Link>
+						<div className="w-full flex flex-col gap-4">
+							<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
+								Suscripción
+							</h3>
+							<div className="flex flex-col gap-6 2xl:gap-10 text-[#333] text-sm 2xl:text-base px-2">
+								<p>
+									Recibe las últimas novedades. Lorem ipsum dolor sit amet
+									consectetur, adipisicing elit. Quisquam, reprehenderit.
+								</p>
+								<div>
+									<div className="">
+										<Link
+											href={`${whatsappLink}?text=${encodeURIComponent(mensajeSuscripcion)}`}
+											target="_blank"
+											className="cta-button px-8 py-3"
+										>
+											Quiero suscribirme
+										</Link>
+									</div>
 								</div>
+								<nav className="flex gap-10">
+									<Link href={whatsappLink} target="_blank">
+										<WhatsApp className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+									</Link>
+									<Link href={instagramLink} target="_blank">
+										<Instagram className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+									</Link>
+									<Link href={facebookLink} target="_blank">
+										<Facebook className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+									</Link>
+									<Link href={mailLink} target="_blank">
+										<Mail className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+									</Link>
+								</nav>
 							</div>
-							<nav className="flex gap-10">
-								<Link href={whatsappLink} target="_blank">
-									<WhatsApp className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
-								</Link>
-								<Link href={instagramLink} target="_blank">
-									<Instagram className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
-								</Link>
-								<Link href={facebookLink} target="_blank">
-									<Facebook className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
-								</Link>
-								<Link href={mailLink} target="_blank">
-									<Mail className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
-								</Link>
-							</nav>
 						</div>
 					</div>
-				</div>
 
-				<div className="w-full border-t border-[var(--primary-green)] mt-12">
-					<p className="py-2 w-full text-right text-sm text-[var(--primary-green)]">
-						© {new Date().getFullYear()} ALBA
-					</p>
+					<div className="w-full border-t border-[var(--primary-green)] mt-12">
+						<p className="py-2 w-full text-right text-sm text-[var(--primary-green)]">
+							© {new Date().getFullYear()} ALBA
+						</p>
+					</div>
 				</div>
-			</div>
-			<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-		</footer>
+				<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
+			</footer>
+		</div>
 	)
 }
 

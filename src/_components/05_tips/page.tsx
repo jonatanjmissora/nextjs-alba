@@ -1,12 +1,13 @@
 import { SectionHeader } from "../section-header"
 import Image from "next/image"
 import { tipsMock } from "@/_lib/tips-mock"
+import { LeafImgs } from "../leaf-section"
 
 export default function Tips() {
 	const tips = tipsMock
 
 	return (
-		<>
+		<section className="w-full min-h-[280dvh] 2xl:min-h-[250dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] pt-20 pb-20 mb-[10dvh] relative">
 			<div className="w-full h-[20dvh] bg-transparent"></div>
 			<div id="tips01" className="w-full my-32 border border-transparent">
 				<SectionHeader
@@ -64,6 +65,7 @@ export default function Tips() {
 				</div>
 			</div>
 			<div className="w-full h-[40dvh] 2xl:h-[20dvh] bg-transparent"></div>
-		</>
+			<LeafImgs />
+		</section>
 	)
 }

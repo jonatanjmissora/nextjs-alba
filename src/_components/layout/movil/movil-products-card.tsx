@@ -1,14 +1,19 @@
-import { productsMock } from "@/_lib/products-mock"
-import Card from "../../elements/fav-card"
+import { productsTree } from "@/_lib/products-mock"
+import { ElementsTreeType } from "@/_lib/types"
+import { Card } from "@/_components/elements/card"
 
 export const MovilProductsCard = () => {
-	const products = productsMock
+	const products = productsTree
 
 	return (
 		<div className="w-full flex justify-between">
-			<ul className="w-full flex justify-start items-start gap-11 2xl:gap-18 flex-wrap gap-y-12">
-				{products.map(product => (
-					<Card key={product.id} type="shop" element={product} from="shop" />
+			<ul className="w-full flex justify-start items-start flex-wrap gap-12">
+				{products.map((category: ElementsTreeType) => (
+					<Card key={category.title} type="services" category={category}>
+						<span className="text-sm p-4 pb-8 text-pretty tracking-wider">
+							{category.elements[0].description}
+						</span>
+					</Card>
 				))}
 			</ul>
 		</div>

@@ -1,14 +1,13 @@
 import { servicesHeader } from "@/_lib/services"
-import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
-import Leaf2Movil from "../../../public/leaf/leaf2-movil"
-import { MovilServicesCard } from "../layout/movil/movil-services-card"
 import { SectionHeader } from "../section-header"
+import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
+import { MovilServicesCard } from "../layout/movil/movil-services-card"
 
 export default function MovilServices() {
 	return (
-		<>
-			<LeafImgs />
-			<div className="absolute -z-10 -top-[150px] left-0 w-full h-[110px] bg-[var(--primary-pink)]"></div>
+		<section className="w-full bg-[var(--primary-pink)] flex justify-center items-start relative pb-[300px]">
+			<MovilLeafImgs />
+
 			<section id="services" className="w-full relative px-6 pt-12">
 				<SectionHeader
 					title="Nuestros servicios en gabinete"
@@ -17,23 +16,7 @@ export default function MovilServices() {
 				/>
 
 				<MovilServicesCard />
-
-				<div className="w-full border-t-2 border-[var(--secondary-green)] text-right mt-12">
-					<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
-						ver mas +
-					</button>
-				</div>
 			</section>
-			<div className="absolute -z-10 -bottom-[150px] left-0 w-full h-[110px] bg-[var(--primary-pink)]"></div>
-		</>
-	)
-}
-
-const LeafImgs = () => {
-	return (
-		<>
-			<BranchLeafMovil className="absolute -bottom-[8%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<Leaf2Movil className="absolute -bottom-[7%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
-		</>
+		</section>
 	)
 }

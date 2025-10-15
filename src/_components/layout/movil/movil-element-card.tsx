@@ -1,15 +1,16 @@
 import { ElementsTreeType } from "@/_lib/types"
-import { servicesTree } from "@/_lib/services-mock"
-import { Dot } from "lucide-react"
 import { Card } from "@/_components/elements/card"
+import { Dot } from "lucide-react"
 
-export const MovilServicesCard = () => {
-	const services = servicesTree
-
+export default function MovilElementCard({
+	elements,
+}: {
+	elements: ElementsTreeType[]
+}) {
 	return (
 		<div className="w-full flex justify-between">
 			<ul className="w-full flex justify-start items-start flex-wrap gap-12">
-				{services.map((category: ElementsTreeType) => (
+				{elements.map((category: ElementsTreeType) => (
 					<Card key={category.title} type="services" category={category}>
 						{category.elements.slice(0, 3).map(element => (
 							<div key={element.id} className="flex items-center gap-1">

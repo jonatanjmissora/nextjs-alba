@@ -3,7 +3,7 @@ import RoundLeafMovil from "../../../../public/leaf/round-leaf-movil"
 
 export default function MovilFooter() {
 	return (
-		<>
+		<section className="w-full bg-[var(--primary-pink)] relative mt-[18px] px-6">
 			<WaveSVG className="w-full absolute -top-[55%] left-0 -z-10" />
 			<footer id="contact" className="w-full flex flex-col items-center">
 				<h2 className="header font-semibold text-[var(--primary-green)] mt-12">
@@ -64,7 +64,7 @@ export default function MovilFooter() {
 				</div>
 				<RoundLeafMovil className="absolute bottom-[00%] -right-[2%] size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 			</footer>
-		</>
+		</section>
 	)
 }
 

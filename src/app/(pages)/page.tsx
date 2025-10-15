@@ -12,86 +12,67 @@ import Footer from "@/_components/footer"
 import Header from "@/_components/header/header"
 import MovilFooter from "@/_components/layout/movil/movil-footer"
 import MovilHeader from "@/_components/layout/movil/movil-header"
-import MovilWaveContainer from "@/_components/layout/movil/movil-wave-container"
-import { LeafImgs } from "@/_components/leaf-section"
 
 export default function HomePage() {
 	return (
 		<main className="w-full relative">
-			{/* 						MOVIL					 */}
-			<div className="block sm:hidden">
-				<div className="">
-					<MovilHeader />
-				</div>
-				<section className="w-full flex justify-center items-start relative px-6">
-					<MovilHome />
-				</section>
-				<section className="w-full bg-[var(--primary-pink)] flex justify-center items-start relative mt-[110px]">
-					<MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]">
-						<MovilServices />
-					</MovilWaveContainer>
-				</section>
+			<Mobil />
 
-				<section className="w-full flex justify-center items-start relative mt-[180px] px-6">
-					<MovilProducts />
-				</section>
-
-				<section className="w-full flex justify-center items-start relative mt-[180px]">
-					<MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]">
-						<MovilAbout />
-					</MovilWaveContainer>
-				</section>
-
-				<section className="w-full flex justify-center items-start relative mt-[180px] px-6">
-					<MovilTips />
-				</section>
-
-				<div className="w-full bg-[var(--primary-pink)] relative mt-[180px] px-6">
-					<MovilFooter />
-				</div>
-			</div>
-
-			{/*							DESKTOP 							*/}
-			<div className="hidden sm:block w-full">
-				<div
-					id="home01"
-					className="absolute top-0 left-0 z-50 w-full p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]"
-				>
-					<Header />
-				</div>
-
-				<section className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative">
-					<Home />
-				</section>
-
-				<section className="w-full bg-[var(--primary-pink)] relative pt-20 pb-80 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
-					{/* <WaveContainer> */}
-					<ServicesSection />
-					<LeafImgs />
-					{/* </WaveContainer> */}
-				</section>
-
-				<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] pt-20 pb-80 relative">
-					<ProductsSection />
-					<LeafImgs />
-				</section>
-
-				<section className="w-full bg-[var(--primary-pink)] relative pt-20 pb-80 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)]">
-					{/* <WaveContainer> */}
-					<About />
-					<LeafImgs />
-					{/* </WaveContainer> */}
-				</section>
-
-				<section className="w-full min-h-[280dvh] 2xl:min-h-[250dvh] px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] pt-20 pb-20 mb-[10dvh] relative">
-					<Tips />
-					<LeafImgs />
-				</section>
-
-				<div className="w-full bg-[var(--primary-pink)] relative pb-6">
-					<Footer />
-				</div>
-			</div>
+			<Desktop />
 		</main>
+	)
+}
+
+const Desktop = () => {
+	return (
+		<div className="hidden sm:block w-full">
+			<div
+				id="home01"
+				className="absolute top-0 left-0 z-50 w-full p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base shadow-[0_0_5px_0_rgba(0,0,0,0.05)]"
+			>
+				<Header />
+			</div>
+
+			<section className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative">
+				<Home />
+			</section>
+
+			{/* <WaveContainer> */}
+			<ServicesSection />
+			{/* </WaveContainer> */}
+
+			<ProductsSection />
+
+			{/* <WaveContainer> */}
+			<About />
+			{/* </WaveContainer> */}
+
+			<Tips />
+
+			<Footer />
+		</div>
+	)
+}
+const Mobil = () => {
+	return (
+		<div className="block sm:hidden">
+			<MovilHeader />
+
+			<MovilHome />
+
+			{/* <MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]"> */}
+			<MovilServices />
+			{/* </MovilWaveContainer> */}
+
+			<MovilProducts />
+
+			{/* <MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]"> */}
+			<MovilAbout />
+			{/* </MovilWaveContainer> */}
+
+			<MovilTips />
+
+			<MovilFooter />
+		</div>
 	)
 }

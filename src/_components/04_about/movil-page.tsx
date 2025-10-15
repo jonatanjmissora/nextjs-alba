@@ -1,15 +1,13 @@
 import MovilTestimonials from "../layout/movil/movil-about-testimonials"
 import { SectionHeader } from "../section-header"
 import Certificates from "./certificates"
-import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
-import Leaf2Movil from "../../../public/leaf/leaf2-movil"
 import { aboutHeader } from "@/_lib/about"
+import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 
 export default function MovilAbout() {
 	return (
-		<>
-			<LeafImgs />
-			<div className="absolute -z-10 -top-[115px] left-0 w-full h-[180px] bg-[var(--primary-pink)]"></div>
+		<section className="w-full bg-[var(--primary-pink)] flex justify-center items-start relative pb-[300px]">
+			<MovilLeafImgs />
 			<div
 				id="about"
 				className="w-full relative px-6 bg-[var(--primary-pink)] pt-12"
@@ -23,16 +21,6 @@ export default function MovilAbout() {
 				<Certificates />
 				<MovilTestimonials />
 			</div>
-			<div className="absolute -z-10 -bottom-[150px] left-0 w-full h-[180px] bg-[var(--primary-pink)]"></div>
-		</>
-	)
-}
-
-const LeafImgs = () => {
-	return (
-		<>
-			<BranchLeafMovil className="absolute -bottom-[9%] -left-[5%] size-[15rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<Leaf2Movil className="absolute -bottom-[8%] right-[5%] size-[4rem] text-[var(--leaf-color)]" />
-		</>
+		</section>
 	)
 }
