@@ -55,11 +55,6 @@ export default function MovilTips() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full border-t-2 border-[var(--secondary-green)] text-right mt-8">
-					<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
-						leer mas +
-					</button>
-				</div>
 			</div>
 		</section>
 	)

@@ -18,6 +18,8 @@ export default function MovilHome() {
 				<p className="text">Lorem ipsum dolor sit amet consectetur.</p>
 				<a
 					href="https://alba-estetica-turnos.netlify.app/"
+					target="_blank"
+					rel="noopener noreferrer"
 					className="cta-button text mt-4 py-4 px-8"
 				>
 					Reserva tu turno

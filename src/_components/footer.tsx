@@ -4,18 +4,21 @@ import { servicesTree } from "@/_lib/services-mock"
 import { productsTree } from "@/_lib/products-mock"
 import { tipsMock } from "@/_lib/tips-mock"
 import { setUrlCategoryName } from "@/_lib/utils"
+import {
+	whatsappLinkData,
+	instagramLinkData,
+	facebookLinkData,
+	mailLinkData,
+	mensajeSuscripcionData,
+} from "@/_lib/constant"
 
 export default function Footer() {
-	const whatsappLink = `https://wa.me/5492914742802`
-	const instagramLink = "https://www.instagram.com/albagarcia_estetica"
-	const facebookLink = "https://www.facebook.com/albana.garcia.56"
-	const mailLink =
-		"https://mail.google.com/mail/u/0/?view=cm&fs=1&to=albanagarciapaillan@gmail.com"
+	const whatsappLink = whatsappLinkData
+	const instagramLink = instagramLinkData
+	const facebookLink = facebookLinkData
+	const mailLink = mailLinkData
 
-	const mensajeSuscripcion = `Hola! Alba Garcia Estetica Integral
-Quisiera suscribirme a las ultimas novedades y ofertas!!
-Agendá mi telefono! Saludos 🖐
-`
+	const mensajeSuscripcion = mensajeSuscripcionData
 
 	return (
 		<div className="w-full bg-[var(--primary-pink)] relative pb-6">

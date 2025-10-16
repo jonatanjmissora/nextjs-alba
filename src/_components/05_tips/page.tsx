@@ -58,11 +58,6 @@ export default function Tips() {
 						</div>
 					</div>
 				</div>
-				<div className="w-full border-t-2 border-[var(--secondary-green)] text-right">
-					<button className="header text-[var(--primary-green)] py-2 cursor-pointer icon">
-						leer mas +
-					</button>
-				</div>
 			</div>
 			<div className="w-full h-[40dvh] 2xl:h-[20dvh] bg-transparent"></div>
 			<LeafImgs />
