@@ -1,10 +1,11 @@
 "use client"
 import { useEffect } from "react"
-import BranchLeaf from "../../../../public/leaf/branch-leaf"
-import Leaf2 from "../../../../public/leaf/leaf2"
-import Leaf1 from "../../../../public/leaf/leaf1"
-import RoundLeaf from "../../../../public/leaf/round-leaf"
 import HeaderFixed from "@/_components/header/header-fixed"
+import BranchLeaf from "../../../../public/leaf/branch-leaf"
+import Leaf1 from "../../../../public/leaf/leaf1"
+import Leaf2 from "../../../../public/leaf/leaf2"
+import RoundLeaf from "../../../../public/leaf/round-leaf"
+import MovilHeader from "./movil-header"
 
 export default function MovilSinglePageLayout({
 	from = "services",
@@ -67,9 +68,5 @@ const SinglePageHeader = ({ text, from }: { text: string; from?: string }) => {
 				? "/#shop01"
 				: `/${from}`
 
-	return (
-		<div className="w-full h-[10dvh] border-b-2 border-[var(--secondary-green)] flex group relative">
-			<HeaderFixed layout="single-page" link={link} text={text} />
-		</div>
-	)
+	return <MovilHeader />
 }

@@ -30,12 +30,14 @@ const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
 
 	return (
 		<div className="w-full flex-1 flex flex-col justify-start items-center">
-			<h2 className="text-2xl font-bold py-2">Tus Favoritos</h2>
+			<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2">
+				Tus Favoritos
+			</h2>
 			{favorites.length === 0 ? (
 				<NoCard text="a favoritos" />
 			) : (
 				// <ul className="w-full flex justify-start items-start gap-6 2xl:gap-18 flex-wrap py-5 2xl:py-10">
-				<ul className="py-6  grid grid-cols-4 gap-6 w-full">
+				<ul className="py-6  grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
 					{servicesFavorites.map(service => (
 						<FavCard
 							key={service.id}

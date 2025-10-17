@@ -19,13 +19,13 @@ export default function ElementPage({
 	return (
 		<div
 			id={element.id.toString()}
-			className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-10 2xl:py-20"
+			className="w-full flex-1 flex flex-col sm:flex-row justify-between items-center py-20 sm:py-12 2xl:py-20"
 		>
 			<ElementImage element={element} />
 
 			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-3 2xl:gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
-				<div className="flex flex-col">
-					<span className="title font-bold text-pretty">
+				<div className="flex flex-col py-4 sm:py-2">
+					<span className="subtitle sm:title font-bold text-pretty">
 						{element.subtitle}
 					</span>
 					<span className="text-sm font-semibold text-[var(--primary-green)]">

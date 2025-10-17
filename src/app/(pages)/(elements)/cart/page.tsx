@@ -32,12 +32,14 @@ const CartBody = ({ cart }: { cart: { id: string; quantity: number }[] }) => {
 
 	return (
 		<div className="w-full flex-1 flex flex-col justify-between items-center">
-			<h2 className="text-2xl font-bold py-2">Tu Carrito</h2>
+			<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2">
+				Tu Carrito
+			</h2>
 			{cart.length === 0 ? (
 				<NoCard text="al carrito" />
 			) : (
-				<div className="flex-1 w-full flex items-center gap-3 2xl:gap-4">
-					<ul className="w-full sm:w-[70%] flex flex-col justify-start gap-3 2xl:gap-4 flex-wrap py-10 2xl:py-20">
+				<div className="flex-1 w-full flex flex-col sm:flex-row items-center gap-3 2xl:gap-4">
+					<ul className="w-full sm:w-[70%] flex flex-col justify-start gap-6 sm:gap-4 flex-wrap py-6 sm:py-10 2xl:py-20">
 						{servicesCart.map(service => (
 							<CartCard
 								key={service.id.toString()}

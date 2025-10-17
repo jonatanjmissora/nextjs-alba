@@ -38,7 +38,7 @@ export default function CartCard({
 	return (
 		<li
 			key={element.id}
-			className={`w-full flex flex-col sm:flex-row gap-5 p-4 2xl:p-6 bg-[var(--background-three)] sm:bg-[var(--background-two)] rounded-tl-4xl rounded-br-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a] relative`}
+			className={`w-full flex flex-col sm:flex-row gap-5 p-4 2xl:p-6 bg-[var(--background-three)] sm:bg-[var(--background-two)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a] relative`}
 		>
 			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full sm:w-[150px] 2xl:w-[200px] h-[150px] sm:h-[100px] 2xl:h-[150px]">
 				<Image

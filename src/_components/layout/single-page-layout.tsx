@@ -5,6 +5,7 @@ import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2 from "../../../public/leaf/leaf2"
 import RoundLeaf from "../../../public/leaf/round-leaf"
 import HeaderFixed from "../header/header-fixed"
+import MovilHeader from "./movil/movil-header"
 
 export default function SinglePageLayout({
 	from = "services",
@@ -68,8 +69,13 @@ const SinglePageHeader = ({ text, from }: { text: string; from?: string }) => {
 				: `/${from}`
 
 	return (
-		<div className="w-full h-[10dvh] border-b-2 border-[var(--secondary-green)] flex group relative">
-			<HeaderFixed layout="single-page" link={link} text={text} />
-		</div>
+		<>
+			<div className="hidden sm:flex w-full h-[10dvh] border-b-2 border-[var(--secondary-green)] group relative">
+				<HeaderFixed layout="single-page" link={link} text={text} />
+			</div>
+			<div className="block sm:hidden">
+				<MovilHeader />
+			</div>
+		</>
 	)
 }
