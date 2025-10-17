@@ -13,6 +13,18 @@ import {
 	DrawerTrigger,
 } from "@/components/ui/drawer"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import {
+	whatsappLinkData,
+	instagramLinkData,
+	facebookLinkData,
+	mailLinkData,
+} from "@/_lib/constant"
+import { WhatsApp } from "../../../../public/socials/whatsapp"
+import { Instagram } from "../../../../public/socials/instagram"
+import { Facebook } from "../../../../public/socials/facebook"
+import { Mail } from "../../../../public/socials/mail"
 
 export default function MovilHeader() {
 	const [scrolled, setScrolled] = useState<boolean>(false)
@@ -56,66 +68,126 @@ const DrawerComponent = () => {
 				<Menu className="text-[var(--primary-green)]" />
 			</DrawerTrigger>
 			<DrawerContent>
-				<div className="bg-[var(--background-two)]">
+				<div
+					className={`from-[var(--background-two)] to-pink-400 bg-gradient-to-b`}
+					id="hamb"
+				>
 					<DrawerHeader>
 						<DrawerTitle></DrawerTitle>
 					</DrawerHeader>
 
-					<DrawerFooter className="flex items-center justify-start h-[100dvh] flex-col gap-2 pt-30">
-						<DrawerClose asChild className="absolute top-12 right-12">
-							<X className="text-[var(--primary-green)]" />
-						</DrawerClose>
-						<DrawerClose asChild>
-							<a
-								href="/#home"
-								className="subtitle text-[var(--primary-green)] font-semibold"
-							>
-								Inicio
-							</a>
-						</DrawerClose>
-						<DrawerClose asChild>
-							<a
-								href="/#services"
-								className="subtitle text-[var(--primary-green)] font-semibold"
-							>
-								Servicios
-							</a>
-						</DrawerClose>
-						<DrawerClose asChild>
-							<a
-								href="/#shop"
-								className="subtitle text-[var(--primary-green)] font-semibold"
-							>
-								Productos
-							</a>
-						</DrawerClose>
-						<DrawerClose asChild>
-							<a
-								href="/#about"
-								className="subtitle text-[var(--primary-green)] font-semibold"
-							>
-								Acerca de
-							</a>
-						</DrawerClose>
-						<DrawerClose asChild>
-							<a
-								href="/#tips"
-								className="subtitle text-[var(--primary-green)] font-semibold"
-							>
-								Tips
-							</a>
-						</DrawerClose>
-						<DrawerClose asChild>
-							<a
-								href="/#contact"
-								className="subtitle text-[var(--primary-green)] font-semibold"
-							>
-								Contacto
-							</a>
-						</DrawerClose>
+					<DrawerFooter className="flex items-center justify-between h-[100dvh] flex-col gap-12 px-6">
+						<div className="w-full relative">
+							<DrawerClose asChild className="absolute top-0 right-0">
+								<X className="text-[var(--primary-green)] size-8" />
+							</DrawerClose>
+							<div className="shadow-[4px_4px_4px_0_rgba(0,0,0,0.25)] rounded-full overflow-hidden size-40 relative">
+								<Image
+									src={"/logo.webp"}
+									alt={"logo"}
+									fill
+									priority
+									sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
+								/>
+							</div>
+						</div>
+
+						<MobilMenuNav />
+
+						<MobilMenuSocials />
 					</DrawerFooter>
 				</div>
 			</DrawerContent>
 		</Drawer>
+	)
+}
+
+const MobilMenuNav = () => {
+	return (
+		<ul className={`w-3/4 flex flex-col items-start gap-2 mobil-menu pl-6`}>
+			<DrawerClose asChild>
+				<li style={{ "--i": "0" } as React.CSSProperties}>
+					<a
+						href="/#home"
+						className="subtitle text-[var(--primary-green)] font-semibold"
+					>
+						Inicio
+					</a>
+				</li>
+			</DrawerClose>
+			<DrawerClose asChild>
+				<li style={{ "--i": "1" } as React.CSSProperties}>
+					<a
+						href="/#services"
+						className="subtitle text-[var(--primary-green)] font-semibold"
+					>
+						Servicios
+					</a>
+				</li>
+			</DrawerClose>
+			<DrawerClose asChild>
+				<li style={{ "--i": "2" } as React.CSSProperties}>
+					<a
+						href="/#shop"
+						className="subtitle text-[var(--primary-green)] font-semibold"
+					>
+						Productos
+					</a>
+				</li>
+			</DrawerClose>
+			<DrawerClose asChild>
+				<li style={{ "--i": "3" } as React.CSSProperties}>
+					<a
+						href="/#about"
+						className="subtitle text-[var(--primary-green)] font-semibold"
+					>
+						Acerca de
+					</a>
+				</li>
+			</DrawerClose>
+			<DrawerClose asChild>
+				<li style={{ "--i": "4" } as React.CSSProperties}>
+					<a
+						href="/#tips"
+						className="subtitle text-[var(--primary-green)] font-semibold"
+					>
+						Tips
+					</a>
+				</li>
+			</DrawerClose>
+			<DrawerClose asChild>
+				<li style={{ "--i": "5" } as React.CSSProperties}>
+					<a
+						href="/#contact"
+						className="subtitle text-[var(--primary-green)] font-semibold"
+					>
+						Contacto
+					</a>
+				</li>
+			</DrawerClose>
+		</ul>
+	)
+}
+
+const MobilMenuSocials = () => {
+	const whatsappLink = whatsappLinkData
+	const instagramLink = instagramLinkData
+	const facebookLink = facebookLinkData
+	const mailLink = mailLinkData
+	return (
+		<nav className="w-full flex justify-around items-center gap-2 relative z-10">
+			<Link href={whatsappLink} target="_blank">
+				<WhatsApp className="size-[30px] text-[var(--primary-green)] duration-300" />
+			</Link>
+			<Link href={instagramLink} target="_blank">
+				<Instagram className="size-[30px] text-[var(--primary-green)] duration-300" />
+			</Link>
+			<Link href={facebookLink} target="_blank">
+				<Facebook className="size-[30px] text-[var(--primary-green)] duration-300" />
+			</Link>
+			<Link href={mailLink} target="_blank">
+				<Mail className="size-[30px] text-[var(--primary-green)] duration-300" />
+			</Link>
+		</nav>
 	)
 }

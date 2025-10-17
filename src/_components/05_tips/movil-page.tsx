@@ -1,10 +1,10 @@
 import Image from "next/image"
-import { tipsData } from "@/_lib/tips"
+import { tipsMock } from "@/_lib/tips-mock"
 import { SectionHeader } from "../section-header"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 
 export default function MovilTips() {
-	const tips = tipsData
+	const tips = tipsMock
 
 	return (
 		<section className="w-full flex justify-center items-start relative pb-[300px]">
@@ -22,12 +22,12 @@ export default function MovilTips() {
 								{tips[0].title}
 							</h3>
 							<span className="w-full text text-balance">
-								{tips[0].description}
+								{tips[0].content}
 							</span>
 						</div>
 						<div className="relative overflow-hidden w-full h-[500px] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 							<Image
-								src={tips[0].img}
+								src={tips[0].image}
 								alt={tips[0].title}
 								quality={100}
 								fill
@@ -41,12 +41,12 @@ export default function MovilTips() {
 								{tips[1].title}
 							</h3>
 							<span className="w-full text text-balance">
-								{tips[1].description}
+								{tips[1].content}
 							</span>
 						</div>
 						<div className="relative overflow-hidden w-full h-[500px] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 							<Image
-								src={tips[1].img}
+								src={tips[1].image}
 								alt={tips[1].title}
 								quality={100}
 								fill
