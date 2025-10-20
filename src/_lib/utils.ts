@@ -42,7 +42,6 @@ export function setUrlCategoryName(categoryName: string) {
 }
 
 export function setCleanCategoryName(categoryName: string) {
-	console.log("categoryName", categoryName)
 	const r = categoryName
 		.replace(/-/g, " ")
 		.replace(/^([a-z])/i, match => match.toUpperCase())

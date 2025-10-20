@@ -33,7 +33,7 @@ export const Card = ({
 				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
 					{children}
 					<Link
-						href={`/${type}/${urlCategoryName}`}
+						href={`/${type}/${urlCategoryName}?from=${type}`}
 						className="text-[#444]/70 cursor-pointer text-sm w-full text-right absolute bottom-3 right-3 hover:text-[var(--primary-green)] duration-300 hover:font-semibold"
 					>
 						leer mas +
