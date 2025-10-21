@@ -1,4 +1,4 @@
-import { servicesHeader } from "@/_lib/services"
+import { servicesHeader } from "@/_lib/constant"
 import { SectionHeader } from "../section-header"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 import { MovilServicesCard } from "../layout/movil/movil-services-card"

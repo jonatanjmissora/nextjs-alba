@@ -1,7 +1,7 @@
 import { SectionHeader } from "../section-header"
-import { productsHeader } from "@/_lib/products-mock"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 import { MovilProductsCard } from "../layout/movil/movil-products-card"
+import { productsHeader } from "@/_lib/constant"
 
 export default function MovilProducts() {
 	return (

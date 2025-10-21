@@ -10,7 +10,7 @@ export const servicesMock: ElementMockType[] = [
 			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
 		description_admin: "Maderoterapia",
 		description_long:
-			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo. Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo. Reduce el estrés y la ansiedad. Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo. Reduce el estrés y la ansiedad.",
 		images:
 			"/maderoterapia/maderoterapia01.webp*/maderoterapia/maderoterapia02.webp*/maderoterapia/maderoterapia03.webp*/maderoterapia/maderoterapia04.webp*/maderoterapia/maderoterapia05.webp",
 	},
@@ -520,25 +520,5 @@ export const servicesTree: ElementsTreeType[] = [
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},
 		],
-	},
-]
-
-export const serviceHifu = [
-	{
-		description:
-			"Tratamiento facial No invasivo que utiliza ultrasonido focalizado de alta intensidad para estimular la producción de colágeno en las capas más profundas de la piel. Sirve principalmente para mejorar la firmeza, reducir las arrugas y levantar áreas del rostro, como las mejillas, la mandíbula y el cuello. Es una alternativa al Lifting facial quirúrgico, con la ventaja que no requiere tiempo de recuperación y ofrece resultados duraderos.",
-		faq1: "¿Cómo es el tratamiento HIFU facial antes y después?",
-		answer1:
-			"Antes del tratamiento HIFU facial, no se requiere preparación especial, aunque se recomienda tener la piel limpia y libre de maquillaje. Durante el procedimiento, se aplica un gel en el área tratada y se utilizan ondas de ultrasonido para estimular las capas profundas de la piel. Después del tratamiento, puede haber enrojecimiento o hinchazón temporal, pero la mayoría de las personas pueden reanudar sus actividades diarias de inmediato. Los resultados visibles comienzan a aparecer en unas pocas semanas y mejoran con el tiempo.",
-		faq2: "¿Cuánto dura el efecto del HIFU facial?",
-		answer2:
-			"El efecto del HIFU facial puede durar entre 12 y 18 meses, dependiendo del tipo de piel y el envejecimiento de cada persona. Los resultados no son inmediatos, ya que la producción de colágeno toma tiempo, pero suelen empezar a notarse en las primeras semanas. Después de unos 3 meses se puede observar el efecto máximo, que mejora el tono y la elasticidad de la piel.",
-		faq3: "¿Qué contraindicaciones tiene el HIFU facial?",
-		answer3:
-			"El HIFU facial tiene algunas contraindicaciones. No está recomendado para personas con infecciones en la piel, heridas abiertas, implantes metálicos en el área tratada o condiciones médicas graves como epilepsia. Además, no es aconsejable en mujeres embarazadas o lactantes. Siempre es importante consultar con un profesional antes de someterse a este tratamiento para asegurarse de que es seguro para cada caso en particular. El costo del tratamiento HIFU facial varía dependiendo la extensión de la zona tratada. Algunos pacientes pueden necesitar más de una sesión para obtener resultados óptimos, lo que puede aumentar el costo total.",
-		faq4: "¿Con que tratamientos puede combinarse el HIFU FACIAL?",
-		answer4:
-			"Se puede combinar con otros tratamientos. Dermapen, ultrasonido, radiofrecuencia. Peeling. Previo a la sesión de Hifu, se puede hacer un tratamiento de peeling tensor. Después de la sesión está indicado a los 15 días una sesión de radiofrecuencia para potenciar el estímulo de colágeno.",
-		price: 85000,
 	},
 ]

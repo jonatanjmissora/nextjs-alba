@@ -1,7 +1,8 @@
 import { SectionHeader } from "../section-header"
 import Image from "next/image"
-import { tipsMock } from "@/_lib/tips-mock"
+import { tipsMock, TipType } from "@/_lib/tips-mock"
 import { LeafImgs } from "../leaf-section"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Tips() {
 	const tips = tipsMock
@@ -15,20 +16,27 @@ export default function Tips() {
 					subtitle="Tips"
 					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 				/>
-				<div className="w-full flex justify-between items-center pb-6">
-					<div id={tips[0].id} className="w-1/2 p-12 pl-0 flex flex-col gap-20">
+				<div className="w-full flex justify-between gap-20 pb-6">
+					<TipCard1 tip={tips[0]} />
+					<TipCard2 tip={tips[1]} />
+				</div>
+			</div>
+			<div className="w-full h-[40dvh] 2xl:h-[20dvh] bg-transparent"></div>
+			<LeafImgs />
+		</section>
+	)
+}
+
+const TipCard1 = ({tip}: {tip: TipType }) => {
+	return (
+		<div id={tip.id} className="w-1/2 flex flex-col gap-10">
 						<div className="flex flex-col gap-3 tip-border-up pl-8 pt-8">
-							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
-								{tips[0].title}
-							</h3>
-							<span className="w-full text text-balance">
-								{tips[0].content}
-							</span>
+							<AccordionElement content={tip.content}/>
 						</div>
 						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 							<Image
-								src={tips[0].image}
-								alt={tips[0].title}
+								src={tip.image}
+								alt={tip.title}
 								quality={100}
 								fill
 								className="object-cover"
@@ -36,12 +44,16 @@ export default function Tips() {
 							/>
 						</div>
 					</div>
+	)
+}
 
-					<div id={tips[1].id} className="w-1/2 p-12 pr-0 flex flex-col gap-20">
+const TipCard2 = ({tip}: {tip: TipType }) => {
+	return (
+		<div id={tip.id} className="w-1/2 flex flex-col gap-10">
 						<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
 							<Image
-								src={tips[1].image}
-								alt={tips[1].title}
+								src={tip.image}
+								alt={tip.title}
 								quality={100}
 								fill
 								className="object-cover"
@@ -49,18 +61,31 @@ export default function Tips() {
 							/>
 						</div>
 						<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">
-							<h3 className="w-full header font-semibold text-[var(--primary-green)]">
-								{tips[1].title}
-							</h3>
-							<span className="w-full text text-balance">
-								{tips[1].content}
-							</span>
+							<AccordionElement content={tip.content}/>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div className="w-full h-[40dvh] 2xl:h-[20dvh] bg-transparent"></div>
-			<LeafImgs />
-		</section>
+	)
+}
+
+const AccordionElement = ({content}: {content: {faq: string, answer: string}[]}) => {
+
+	return (
+		<Accordion
+      type="single"
+      collapsible
+      className="w-full"
+      defaultValue="item-1"
+    >
+      
+	  {content.map((item, index) => (
+			<AccordionItem value={`item-${index + 1}`}>
+				<AccordionTrigger className="w-full text-xl font-bold text-[var(--primary-green)]">{item.faq}</AccordionTrigger>
+				<AccordionContent className="flex flex-col gap-4 text-balance text-[#444]/85">
+					<p>{item.answer}</p>
+				</AccordionContent>
+			</AccordionItem>
+		))}
+      
+    </Accordion>
 	)
 }

@@ -1,4 +1,4 @@
-import { servicesHeader } from "@/_lib/services"
+import { servicesHeader } from "@/_lib/constant"
 import { SectionHeader } from "../section-header"
 import { servicesTree } from "@/_lib/services-mock"
 import { ElementsTreeType } from "@/_lib/types"

@@ -43,7 +43,7 @@ export default function MovilFooter() {
 								<Link href="/#about">Acerca de</Link>
 							</li>
 							<li>
-								<Link href="/#faqs">Tips</Link>
+								<Link href="/#tips">Tips</Link>
 							</li>
 						</ul>
 					</nav>

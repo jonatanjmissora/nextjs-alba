@@ -1,5 +1,5 @@
 import { SectionHeader } from "../section-header"
-import { productsHeader } from "@/_lib/products"
+import { productsHeader } from "@/_lib/constant"
 import type { ElementsTreeType } from "@/_lib/types"
 import { productsTree } from "@/_lib/products-mock"
 import { Card } from "../elements/card"

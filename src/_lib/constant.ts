@@ -8,3 +8,9 @@ export const mensajeSuscripcionData = `Hola! Alba Garcia Estetica Integral
 Quisiera suscribirme a las ultimas novedades y ofertas!!
 Agendá mi telefono! Saludos 🖐
 `
+
+export const servicesHeader =
+	"En mi gabinete cada sesión está pensada para vos, con cuidado, con respeto y con resultados reales. Acá te presento mis servicios."
+
+export const productsHeader =
+	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "

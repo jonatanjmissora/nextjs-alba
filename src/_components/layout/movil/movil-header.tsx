@@ -47,10 +47,10 @@ export default function MovilHeader() {
 	const from = pathname.split("/")[1]
 	const link =
 		from === "services"
-			? "/#services01"
+			? "/#services"
 			: from === "shop"
-				? "/#shop01"
-				: `/${from}`
+				? "/#shop"
+				: `/#home`
 	console.log("LINK", link)
 	return (
 		<header

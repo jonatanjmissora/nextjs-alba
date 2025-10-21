@@ -15,9 +15,6 @@ export type ServicesCategory = {
 	subCategories: { id: string; title: string; pinned: boolean }[]
 }
 
-export const servicesHeader =
-	"En mi gabinete cada sesión está pensada para vos, con cuidado, con respeto y con resultados reales. Acá te presento mis servicios."
-
 export const servicesCategories: ServicesCategory[] = [
 	{
 		id: "tratamientos-faciales",
