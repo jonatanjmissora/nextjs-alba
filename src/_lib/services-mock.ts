@@ -399,17 +399,6 @@ export const servicesTree: ElementsTreeType[] = [
 		elements: [
 			{
 				id: 31,
-				subtitle: "Higiene corporal profunda",
-				price: 50000,
-				description:
-					"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
-				description_admin: "Higiene corporal profunda",
-				description_long: "BLA BLA BLA",
-				images:
-					"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
-			},
-			{
-				id: 32,
 				subtitle: "Pulido corporal",
 				price: 48000,
 				description:
@@ -418,6 +407,17 @@ export const servicesTree: ElementsTreeType[] = [
 				description_long: "BLA BLA BLA",
 				images:
 					"/corporal/tratamiento-corporal-pulido01.webp*/corporal/tratamiento-corporal-pulido02.webp*/corporal/tratamiento-corporal-pulido03.webp",
+			},
+			{
+				id: 32,
+				subtitle: "Higiene corporal profunda",
+				price: 50000,
+				description:
+					"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
+				description_admin: "Higiene corporal profunda",
+				description_long: "BLA BLA BLA",
+				images:
+					"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
 			},
 			{
 				id: 33,

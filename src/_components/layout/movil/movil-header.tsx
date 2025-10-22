@@ -46,11 +46,7 @@ export default function MovilHeader() {
 
 	const from = pathname.split("/")[1]
 	const link =
-		from === "services"
-			? "/#services"
-			: from === "shop"
-				? "/#shop"
-				: `/#home`
+		from === "services" ? "/#services" : from === "shop" ? "/#shop" : `/#home`
 	console.log("LINK", link)
 	return (
 		<header
@@ -79,14 +75,14 @@ const DrawerComponent = () => {
 			</DrawerTrigger>
 			<DrawerContent>
 				<div
-					className={`from-[var(--background-two)] to-pink-400 bg-gradient-to-b`}
+					className={`h-[100dvh] from-[var(--background-two)] to-pink-400 bg-gradient-to-b`}
 					id="hamb"
 				>
 					<DrawerHeader>
 						<DrawerTitle></DrawerTitle>
 					</DrawerHeader>
 
-					<DrawerFooter className="flex items-center justify-between h-[100dvh] flex-col gap-12 px-6">
+					<DrawerFooter className="flex justify-between h-[92dvh] flex-col px-6">
 						<div className="w-full relative">
 							<DrawerClose asChild className="absolute top-0 right-0">
 								<X className="text-[var(--primary-green)] size-8" />
@@ -114,7 +110,9 @@ const DrawerComponent = () => {
 
 const MobilMenuNav = () => {
 	return (
-		<ul className={`w-3/4 flex flex-col items-start gap-2 mobil-menu pl-6`}>
+		<ul
+			className={`w-3/4 flex flex-col justify-around gap-4 mobil-menu pl-6 pb-15 pt-6 flex-1`}
+		>
 			<DrawerClose asChild>
 				<li style={{ "--i": "0" } as React.CSSProperties}>
 					<a
