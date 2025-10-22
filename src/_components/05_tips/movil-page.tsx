@@ -32,21 +32,18 @@ export default function MovilTips() {
 
 const TipCard = ({ tip }: { tip: TipType }) => {
 	return (
-		<div className="w-full flex flex-col gap-12">
-			<div className="flex flex-col gap-3">
-				{/* <h3 className="w-full header font-semibold text-[var(--primary-green)]">
-								{tip.title}
-							</h3> */}
-				<AccordionElement content={tip.content} />
-			</div>
-			<div className="relative overflow-hidden w-full h-[500px] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
-				<Image
-					src={tip.image}
-					alt={tip.title}
-					quality={100}
-					fill
-					className="object-cover"
-				/>
+		<div className="w-full relative mt-40">
+			<AccordionElement content={tip.content} />
+			<div className="absolute -z-10 bottom-[95%] left-[12%] w-3/4 h-[200px]">
+				<div className="relative overflow-hidden  w-full h-full rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+					<Image
+						src={tip.image}
+						alt={tip.title}
+						quality={100}
+						fill
+						className="object-cover"
+					/>
+				</div>
 			</div>
 		</div>
 	)
@@ -61,15 +58,15 @@ const AccordionElement = ({
 		<Accordion
 			type="single"
 			collapsible
-			className="w-full"
+			className="w-full border border-[#444]/20 rounded-lg bg-[var(--background-one)] p-4 shadow-[3px_3px_3px_0_rgba(0,0,0,0.35)]"
 			defaultValue="item-1"
 		>
 			{content.map((item, index) => (
 				<AccordionItem key={item.faq} value={`item-${index + 1}`}>
-					<AccordionTrigger className="w-full header font-semibold text-[var(--primary-green)]">
+					<AccordionTrigger className="w-full text-base font-semibold text-[var(--primary-green)]">
 						{item.faq}
 					</AccordionTrigger>
-					<AccordionContent className="flex flex-col gap-4 text-balance text-[#444]/85">
+					<AccordionContent className="flex flex-col text-xs gap-4 text-balance text-[#444]/85">
 						<p>{item.answer}</p>
 					</AccordionContent>
 				</AccordionItem>

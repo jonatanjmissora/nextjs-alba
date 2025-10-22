@@ -18,7 +18,7 @@ export const SectionHeader = ({
 				<h2 className="text-3xl font-bold text-balance leading-12 sm:min-w-[370px]">
 					{title}
 				</h2>
-				<div className="text text-balance pt-4">
+				<div className="text-xs sm:text text-balance pt-4">
 					{description.split("\n\n").map(paragraph => (
 						<p key={paragraph.substring(0, 30)} className="mb-4 last:mb-0">
 							{paragraph}
