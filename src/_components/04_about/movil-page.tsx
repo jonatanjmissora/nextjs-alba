@@ -1,8 +1,16 @@
-import MovilTestimonials from "../layout/movil/movil-about-testimonials"
+"use client"
 import { SectionHeader } from "../section-header"
-import Certificates from "./certificates"
-import { aboutHeader } from "@/_lib/about"
+import { aboutDiplomas, aboutHeader } from "@/_lib/about"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
 export default function MovilAbout() {
 	return (
@@ -18,9 +26,108 @@ export default function MovilAbout() {
 					description={aboutHeader}
 				/>
 
-				<Certificates />
+				<MovilCertificates />
 				<MovilTestimonials />
 			</div>
 		</section>
+	)
+}
+
+const MovilCertificates = () => {
+	return (
+		<Carousel className="w-[70dvw] mx-auto relative z-10">
+			<CarouselContent className="">
+				{aboutDiplomas.map(diploma => (
+					<CarouselItem key={diploma.title}>
+						<div className="relative w-full h-[200px] shadow-[3px_3px_3px_0px_rgba(0,0,0,0.4)] rounded-lg overflow-hidden ">
+							<Image
+								src={diploma.image}
+								alt={diploma.title}
+								quality={90}
+								fill
+								className="object-cover"
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							/>
+						</div>
+					</CarouselItem>
+				))}
+			</CarouselContent>
+			<CarouselPrevious />
+			<CarouselNext />
+		</Carousel>
+	)
+}
+
+const MovilTestimonials = () => {
+	const [actual, setActual] = useState(5)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			actual === 1 ? setActual(5) : setActual(actual => actual - 1)
+		}, 5000)
+		return () => clearInterval(interval)
+	}, [actual])
+
+	return (
+		<article className="w-full h-[80vh] relative flex items-center">
+			<ImageElement
+				src="/testimonials/testimonial-photo2.jpg"
+				alt="testimonial-photo2"
+				className={`w-full h-[400px] rotate-10 rounded top-0 absolute`}
+			/>
+			<ImageElement
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
+				className={`w-[310px] h-[80px] bottom-[34%] -left-5 absolute blur-[3px] z-0 ${actual === 1 && "blur-none z-10 duration-500"}`}
+			/>
+			<ImageElement
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
+				className={`w-[310px] h-[80px] bottom-[26%] left-[0%] absolute blur-[3px] z-0 ${actual === 2 && "blur-none z-10 duration-500"}`}
+			/>
+			<ImageElement
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
+				className={`w-[310px] h-[80px] bottom-[18%] left-[5%] absolute blur-[3px] z-0 ${actual === 3 && "blur-none z-10 duration-500"}`}
+			/>
+			<ImageElement
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
+				className={`w-[310px] h-[80px] bottom-[10%] left-[10%] absolute blur-[3px] z-0 ${actual === 4 && "blur-none z-10 duration-500"}`}
+			/>
+			<ImageElement
+				src="/testimonials/testimonial04.png"
+				alt="testimonial04"
+				className={`w-[310px] h-[80px] bottom-[2%] left-[15%] absolute blur-[3px] z-0 ${actual === 5 && "blur-none z-10 duration-500"}`}
+			/>
+		</article>
+	)
+}
+
+const ImageElement = ({
+	src,
+	alt,
+	className,
+}: {
+	src: string
+	alt: string
+	className: string
+}) => {
+	return (
+		<div
+			className={`rounded-lg shadow-[3px_3px_3px_3px_rgba(0,0,0,0.35)] ${className} overflow-hidden`}
+		>
+			<div className="relative w-full h-full">
+				<Image
+					src={src}
+					alt={alt}
+					quality={100}
+					fill
+					style={{
+						objectFit: "cover",
+					}}
+				/>
+			</div>
+		</div>
 	)
 }

@@ -3,11 +3,11 @@ import Image from "next/image"
 export default function MovilTestimonials() {
 	return (
 		<div className="w-full h-screen relative flex items-center">
-			<ImageElement
+			{/* <ImageElement
 				src="/testimonials/testimonial-photo2.jpg"
 				alt="testimonial-photo2"
 				className="w-full h-[400px] rotate-10 rounded"
-			/>
+			/> */}
 			<ImageElement
 				src="/testimonials/testimonial04.png"
 				alt="testimonial04"
@@ -60,7 +60,7 @@ const ImageElement = ({
 					quality={100}
 					fill
 					style={{
-						objectFit: 'cover'
+						objectFit: "cover",
 					}}
 				/>
 			</div>
