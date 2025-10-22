@@ -2,6 +2,8 @@ import { servicesHeader } from "@/_lib/constant"
 import { SectionHeader } from "../section-header"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 import { MovilServicesCard } from "../layout/movil/movil-services-card"
+import { XXXMovilServicesCard } from "../layout/movil/XXXmovil-services-card"
+import { XXX2MovilServicesCard } from "../layout/movil/XXX2movil-services-card"
 
 export default function MovilServices() {
 	return (
@@ -14,8 +16,9 @@ export default function MovilServices() {
 					subtitle="Servicios"
 					description={servicesHeader}
 				/>
-
 				<MovilServicesCard />
+				<XXX2MovilServicesCard />
+				<XXXMovilServicesCard />
 			</section>
 		</section>
 	)

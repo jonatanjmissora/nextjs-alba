@@ -47,7 +47,7 @@ export default function MovilHeader() {
 	const from = pathname.split("/")[1]
 	const link =
 		from === "services" ? "/#services" : from === "shop" ? "/#shop" : `/#home`
-	console.log("LINK", link)
+
 	return (
 		<header
 			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "shadow-[0_0_5px_0_rgba(0,0,0,0.05)] bg-[var(--background-one)]"}`}
@@ -56,7 +56,7 @@ export default function MovilHeader() {
 				href={link}
 				className="font-semibold text-[var(--primary-green)] tracking-wider"
 			>
-				ALBA{" "}
+				{from !== "" ? "VOLVER" : "ALBA"}
 			</a>
 			<div className="flex items-center gap-6">
 				<HeaderHeartContainer />
