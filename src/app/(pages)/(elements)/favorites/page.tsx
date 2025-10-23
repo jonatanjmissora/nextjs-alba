@@ -12,7 +12,7 @@ export default function FavoritesPage() {
 	return (
 		<SinglePageLayout>
 			<div className="w-full flex-1 flex flex-col justify-start items-center">
-				<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2">
+				<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2 w-full text-left sm:text-center">
 					Tus Favoritos
 				</h2>
 
@@ -36,19 +36,24 @@ const FavoritesCard = () => {
 	)
 
 	return (
-		<ul className="py-6  grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
+		<ul className="py-6 grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
 			{servicesFavorites.map(service => (
 				<div key={service.id}>
 					<div className="hidden sm:block">
 						<FavCard
 							key={service.id}
-							type={"services"}
 							element={service}
+							type={"services"}
 							from="favorites"
 						/>
 					</div>
 					<div className="block sm:hidden">
-						<MovilFavCard key={service.id} element={service} />
+						<MovilFavCard
+							key={service.id}
+							element={service}
+							type={"services"}
+							from="favorites"
+						/>
 					</div>
 				</div>
 			))}
@@ -57,13 +62,18 @@ const FavoritesCard = () => {
 					<div className="hidden sm:block">
 						<FavCard
 							key={product.id}
-							type={"shop"}
 							element={product}
+							type={"shop"}
 							from="favorites"
 						/>
 					</div>
 					<div className="block sm:hidden">
-						<MovilFavCard key={product.id} element={product} />
+						<MovilFavCard
+							key={product.id}
+							element={product}
+							type={"shop"}
+							from="favorites"
+						/>
 					</div>
 				</div>
 			))}

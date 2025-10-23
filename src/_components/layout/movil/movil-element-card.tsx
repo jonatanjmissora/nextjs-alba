@@ -5,8 +5,10 @@ import Link from "next/link"
 import { setUrlCategoryName } from "@/_lib/utils"
 
 export const MovilElementsCard = ({
+	type,
 	elements,
 }: {
+	type: "services" | "shop"
 	elements: ElementsTreeType[]
 }) => {
 	return (
@@ -15,6 +17,7 @@ export const MovilElementsCard = ({
 				{elements.map((category: ElementsTreeType, index: number) => (
 					<MovilSectionCard
 						key={category.title}
+						type={type}
 						category={category}
 						isEven={index % 2 === 0}
 					/>
@@ -25,9 +28,11 @@ export const MovilElementsCard = ({
 }
 
 const MovilSectionCard = ({
+	type,
 	category,
 	isEven,
 }: {
+	type: "services" | "shop"
 	category: ElementsTreeType
 	isEven: boolean
 }) => {
@@ -36,7 +41,7 @@ const MovilSectionCard = ({
 	return (
 		<article className="w-full relative flex odd:justify-end">
 			<Link
-				href={`/services/${urlCategoryName}?from=services`}
+				href={`/${type}/${urlCategoryName}?from=${type}`}
 				className={`h-13 flex items-center header font-semibold tracking-wider absolute -bottom-8 z-10 rounded-lg shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] text-[var(--primary-green)] bg-[var(--background-two)] ${isEven ? "left-0" : "right-0"} overflow-hidden border border-[#444]/50`}
 			>
 				<h2 className="py-3 px-6 pr-4">{category.title}</h2>

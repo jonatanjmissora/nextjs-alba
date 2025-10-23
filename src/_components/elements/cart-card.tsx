@@ -56,7 +56,9 @@ export default function CartCard({
 			<div className="flex-1 flex flex-col justify-between">
 				<div className="flex justify-between items-center">
 					<div className="flex gap-2 items-center">
-						<HeartIconContainer id={element.id.toString()} />
+						<i className="scale-75 flex items-center">
+							<HeartIconContainer id={element.id.toString()} />
+						</i>
 						<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
 							{element.title}
 						</span>

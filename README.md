@@ -9,8 +9,7 @@ animaciones
 
 completar datos
 
-VOLVER de favoritos y cart
-
-movil cart card
+cambiar services/[categoryName] por services/[categoryId] igual que en shop
+asi puedo escribir los subtitulos con acentos
 
 

@@ -35,7 +35,7 @@ export default function MovilHeader() {
 		if (window.scrollY) setScrolled(true)
 
 		const handleScrolled = () => {
-			if (window.scrollY > 100) {
+			if (window.scrollY > 20) {
 				setScrolled(true)
 			} else setScrolled(false)
 		}
@@ -44,14 +44,22 @@ export default function MovilHeader() {
 		return () => window.removeEventListener("scroll", handleScrolled)
 	}, [])
 
-	const from = searchParams.get("from")
+	const from = searchParams.get("from") ?? ""
 
 	return (
 		<header
 			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "shadow-[0_0_5px_0_rgba(0,0,0,0.05)] bg-[var(--background-one)]"}`}
 		>
 			<a
-				href={from === "" ? "/#home" : `/${from}`}
+				href={
+					from === ""
+						? "/#home"
+						: from === "services"
+							? "/#services"
+							: from === "shop"
+								? "/#shop"
+								: `/${from}`
+				}
 				className="font-semibold text-[var(--primary-green)] tracking-wider"
 			>
 				{from !== "" ? "VOLVER" : "ALBA"}

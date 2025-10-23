@@ -16,17 +16,24 @@ import { useState } from "react"
 export function AlertDialogComponent({
 	children,
 	element,
+	from,
 }: {
 	children: React.ReactNode
 	element: ElementMockType
+	from: "favorites" | "cart"
 }) {
 	const { favoritesStore, setFavoritesStore } = useStore()
+	const { cartStore, setCartStore } = useStore()
 	const [open, setOpen] = useState(false)
 
 	const handleDelete = async () => {
-		setFavoritesStore(
-			favoritesStore.filter(favorite => favorite !== element.id.toString())
-		)
+		if (from === "favorites") {
+			setFavoritesStore(
+				favoritesStore.filter(favorite => favorite !== element.id.toString())
+			)
+		} else {
+			setCartStore(cartStore.filter(cart => cart.id !== element.id.toString()))
+		}
 		setOpen(false)
 	}
 

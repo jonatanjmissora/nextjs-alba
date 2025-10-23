@@ -17,7 +17,7 @@ export default function MovilServices() {
 					subtitle="Servicios"
 					description={servicesHeader}
 				/>
-				<MovilElementsCard elements={services} />
+				<MovilElementsCard type="services" elements={services} />
 			</section>
 		</section>
 	)

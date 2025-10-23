@@ -17,7 +17,7 @@ export default function MovilProducts() {
 					description={productsHeader}
 				/>
 
-				<MovilElementsCard elements={products} />
+				<MovilElementsCard type="shop" elements={products} />
 			</div>
 		</section>
 	)
