@@ -1,17 +1,18 @@
 import { ElementsTreeType } from "@/_lib/types"
-import { servicesTree } from "@/_lib/services-mock"
 import Image from "next/image"
 import { ChevronRightIcon } from "lucide-react"
 import Link from "next/link"
 import { setUrlCategoryName } from "@/_lib/utils"
 
-export const MovilServicesCard = () => {
-	const services = servicesTree
-
+export const MovilElementsCard = ({
+	elements,
+}: {
+	elements: ElementsTreeType[]
+}) => {
 	return (
 		<div className="w-full flex justify-between">
 			<ul className="w-full flex justify-start items-start flex-wrap gap-20">
-				{services.map((category: ElementsTreeType, index: number) => (
+				{elements.map((category: ElementsTreeType, index: number) => (
 					<MovilSectionCard
 						key={category.title}
 						category={category}

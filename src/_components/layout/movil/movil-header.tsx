@@ -25,11 +25,11 @@ import { WhatsApp } from "../../../../public/socials/whatsapp"
 import { Instagram } from "../../../../public/socials/instagram"
 import { Facebook } from "../../../../public/socials/facebook"
 import { Mail } from "../../../../public/socials/mail"
-import { usePathname } from "next/navigation"
+import { useSearchParams } from "next/navigation"
 
 export default function MovilHeader() {
 	const [scrolled, setScrolled] = useState<boolean>(false)
-	const pathname = usePathname()
+	const searchParams = useSearchParams()
 
 	useEffect(() => {
 		if (window.scrollY) setScrolled(true)
@@ -44,16 +44,14 @@ export default function MovilHeader() {
 		return () => window.removeEventListener("scroll", handleScrolled)
 	}, [])
 
-	const from = pathname.split("/")[1]
-	const link =
-		from === "services" ? "/#services" : from === "shop" ? "/#shop" : `/#home`
+	const from = searchParams.get("from")
 
 	return (
 		<header
 			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "shadow-[0_0_5px_0_rgba(0,0,0,0.05)] bg-[var(--background-one)]"}`}
 		>
 			<a
-				href={link}
+				href={from === "" ? "/#home" : `/${from}`}
 				className="font-semibold text-[var(--primary-green)] tracking-wider"
 			>
 				{from !== "" ? "VOLVER" : "ALBA"}

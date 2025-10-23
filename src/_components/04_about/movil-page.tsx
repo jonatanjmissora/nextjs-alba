@@ -71,7 +71,7 @@ const MovilTestimonials = () => {
 	return (
 		<article className="w-full h-[80vh] relative flex items-center">
 			<ImageElement
-				src="/testimonials/testimonial-photo2.jpg"
+				src="/testimonials/testimonial-photo2.webp"
 				alt="testimonial-photo2"
 				className={`w-full h-[400px] rotate-10 rounded top-0 absolute`}
 			/>

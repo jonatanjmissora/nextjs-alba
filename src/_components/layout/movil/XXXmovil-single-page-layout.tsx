@@ -1,6 +1,5 @@
 "use client"
 import { useEffect } from "react"
-import HeaderFixed from "@/_components/header/header-fixed"
 import BranchLeaf from "../../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../../public/leaf/leaf1"
 import Leaf2 from "../../../../public/leaf/leaf2"
@@ -8,11 +7,9 @@ import RoundLeaf from "../../../../public/leaf/round-leaf"
 import MovilHeader from "./movil-header"
 
 export default function MovilSinglePageLayout({
-	from = "services",
 	children,
 	id,
 }: Readonly<{
-	from?: "services" | "shop" | "favorites" | "cart"
 	children: React.ReactNode
 	id?: string
 }>) {
@@ -30,7 +27,7 @@ export default function MovilSinglePageLayout({
 
 	return (
 		<section className="w-full min-h-[100svh] sm:min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
-			<SinglePageHeader text="Volver" from={from} />
+			<SinglePageHeader />
 			{children}
 			<SinglePageFooter />
 
@@ -60,13 +57,6 @@ const SinglePageLeaf = () => {
 	)
 }
 
-const SinglePageHeader = ({ text, from }: { text: string; from?: string }) => {
-	const link =
-		from === "services"
-			? "/#services01"
-			: from === "shop"
-				? "/#shop01"
-				: `/${from}`
-
+const SinglePageHeader = () => {
 	return <MovilHeader />
 }

@@ -1,9 +1,12 @@
 import { SectionHeader } from "../section-header"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
-import { MovilProductsCard } from "../layout/movil/movil-products-card"
 import { productsHeader } from "@/_lib/constant"
+import { productsTree } from "@/_lib/products-mock"
+import { MovilElementsCard } from "../layout/movil/movil-element-card"
 
 export default function MovilProducts() {
+	const products = productsTree
+
 	return (
 		<section className="w-full flex justify-center items-start relative pb-[300px]">
 			<MovilLeafImgs />
@@ -14,7 +17,7 @@ export default function MovilProducts() {
 					description={productsHeader}
 				/>
 
-				<MovilProductsCard />
+				<MovilElementsCard elements={products} />
 			</div>
 		</section>
 	)

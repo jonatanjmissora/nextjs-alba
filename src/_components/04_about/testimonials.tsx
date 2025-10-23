@@ -4,13 +4,13 @@ export default function Testimonials() {
 	return (
 		<div className="w-full h-[80dvh] relative pb-32">
 			<ImageElement
-				src="/testimonials/testimonial-photo1.jpg"
+				src="/testimonials/testimonial-photo1.webp"
 				alt="testimonial-photo1"
 				className="w-[330px] h-[400px] 2xl:w-[400px] 2xl:h-[600px] top-[10%] left-[25%] 2xl:left-[30%] rotate-6 rounded"
 			/>
 
 			<ImageElement
-				src="/testimonials/testimonial-photo2.jpg"
+				src="/testimonials/testimonial-photo2.webp"
 				alt="testimonial-photo2"
 				className="w-[330px] h-[400px] 2xl:w-[400px] 2xl:h-[600px] top-[3%] left-[50%] -rotate-6 rounded"
 			/>

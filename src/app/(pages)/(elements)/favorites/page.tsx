@@ -6,56 +6,67 @@ import NoCard from "@/_components/layout/no-card"
 import { servicesMock } from "@/_lib/services-mock"
 import { productsMock } from "@/_lib/products-mock"
 import SinglePageLayout from "@/_components/layout/single-page-layout"
+import { MovilFavCard } from "@/_components/layout/movil/movil-fav-card"
 
 export default function FavoritesPage() {
-	const { favoritesStore } = useStore()
-
 	return (
 		<SinglePageLayout>
-			<FavoritesBody favorites={favoritesStore} />
+			<div className="w-full flex-1 flex flex-col justify-start items-center">
+				<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2">
+					Tus Favoritos
+				</h2>
+
+				<FavoritesCard />
+			</div>
 		</SinglePageLayout>
 	)
 }
 
-const FavoritesBody = ({ favorites }: { favorites: string[] }) => {
+const FavoritesCard = () => {
+	const { favoritesStore } = useStore()
+	if (favoritesStore.length === 0) return <NoCard text="a favoritos" />
+
 	const services = servicesMock
 	const products = productsMock
-
 	const servicesFavorites = services.filter(service =>
-		favorites.includes(service.id.toString())
+		favoritesStore.includes(service.id.toString())
 	)
 	const productsFavorites = products.filter(product =>
-		favorites.includes(product.id.toString())
+		favoritesStore.includes(product.id.toString())
 	)
 
 	return (
-		<div className="w-full flex-1 flex flex-col justify-start items-center">
-			<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2">
-				Tus Favoritos
-			</h2>
-			{favorites.length === 0 ? (
-				<NoCard text="a favoritos" />
-			) : (
-				// <ul className="w-full flex justify-start items-start gap-6 2xl:gap-18 flex-wrap py-5 2xl:py-10">
-				<ul className="py-6  grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
-					{servicesFavorites.map(service => (
+		<ul className="py-6  grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
+			{servicesFavorites.map(service => (
+				<div key={service.id}>
+					<div className="hidden sm:block">
 						<FavCard
 							key={service.id}
 							type={"services"}
 							element={service}
 							from="favorites"
 						/>
-					))}
-					{productsFavorites.map(product => (
+					</div>
+					<div className="block sm:hidden">
+						<MovilFavCard key={service.id} element={service} />
+					</div>
+				</div>
+			))}
+			{productsFavorites.map(product => (
+				<div key={product.id}>
+					<div className="hidden sm:block">
 						<FavCard
 							key={product.id}
 							type={"shop"}
 							element={product}
 							from="favorites"
 						/>
-					))}
-				</ul>
-			)}
-		</div>
+					</div>
+					<div className="block sm:hidden">
+						<MovilFavCard key={product.id} element={product} />
+					</div>
+				</div>
+			))}
+		</ul>
 	)
 }
