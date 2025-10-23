@@ -65,6 +65,7 @@ export const productsMock: ElementMockType[] = [
 
 export const productsTree: ElementsTreeType[] = [
 	{
+		id: 101,
 		title: "Categoria 1",
 		elements: [
 			{
@@ -81,6 +82,7 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 102,
 		title: "Categoria 2",
 		elements: [
 			{
@@ -97,6 +99,7 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 103,
 		title: "Categoria 3",
 		elements: [
 			{
@@ -113,6 +116,7 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 104,
 		title: "Categoria 4",
 		elements: [
 			{
@@ -129,6 +133,7 @@ export const productsTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 105,
 		title: "Categoria 5",
 		elements: [
 			{

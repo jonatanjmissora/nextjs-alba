@@ -61,6 +61,7 @@ export type ElementTreeType = {
 }
 
 export type ElementsTreeType = {
+	id: number
 	title: string
 	elements: ElementTreeType[]
 }

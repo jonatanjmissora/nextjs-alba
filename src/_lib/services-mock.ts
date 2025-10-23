@@ -256,6 +256,7 @@ export const servicesMock: ElementMockType[] = [
 
 export const servicesTree: ElementsTreeType[] = [
 	{
+		id: 1,
 		title: "Maderoterapia",
 		elements: [
 			{
@@ -273,6 +274,7 @@ export const servicesTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 2,
 		title: "Limpieza facial",
 		elements: [
 			{
@@ -395,6 +397,7 @@ export const servicesTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 3,
 		title: "Tratamientos corporales",
 		elements: [
 			{
@@ -433,6 +436,7 @@ export const servicesTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 4,
 		title: "Bronceado sin sol",
 		elements: [
 			{
@@ -450,6 +454,7 @@ export const servicesTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 5,
 		title: "Hifu y liposonix",
 		elements: [
 			{
@@ -479,6 +484,7 @@ export const servicesTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 6,
 		title: "Depilacion laser",
 		elements: [
 			{
@@ -496,6 +502,7 @@ export const servicesTree: ElementsTreeType[] = [
 		],
 	},
 	{
+		id: 7,
 		title: "Pestanias y cejas",
 		elements: [
 			{
