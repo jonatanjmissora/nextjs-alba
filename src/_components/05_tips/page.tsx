@@ -1,5 +1,4 @@
 import { SectionHeader } from "../section-header"
-import Image from "next/image"
 import { tipsMock, TipType } from "@/_lib/tips-mock"
 import { LeafImgs } from "../leaf-section"
 import {
@@ -8,6 +7,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion"
+import { ImageKit } from "../image-kit"
 
 export default function Tips() {
 	const tips = tipsMock
@@ -39,14 +39,7 @@ const TipCard1 = ({ tip }: { tip: TipType }) => {
 				<AccordionElement content={tip.content} />
 			</div>
 			<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
-				<Image
-					src={tip.image}
-					alt={tip.title}
-					quality={100}
-					fill
-					className="object-cover"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-				/>
+				<ImageKit imageID={tip.image} />
 			</div>
 		</div>
 	)
@@ -56,14 +49,7 @@ const TipCard2 = ({ tip }: { tip: TipType }) => {
 	return (
 		<div id={tip.id} className="w-1/2 flex flex-col gap-10">
 			<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
-				<Image
-					src={tip.image}
-					alt={tip.title}
-					quality={100}
-					fill
-					className="object-cover"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-				/>
+				<ImageKit imageID={tip.image} />
 			</div>
 			<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">
 				<AccordionElement content={tip.content} />

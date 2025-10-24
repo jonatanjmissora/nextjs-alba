@@ -13,7 +13,6 @@ import {
 	DrawerTrigger,
 } from "@/components/ui/drawer"
 import { Menu, X } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 import {
 	whatsappLinkData,
@@ -26,6 +25,7 @@ import { Instagram } from "../../../../public/socials/instagram"
 import { Facebook } from "../../../../public/socials/facebook"
 import { Mail } from "../../../../public/socials/mail"
 import { useSearchParams } from "next/navigation"
+import { ImageKit } from "@/_components/image-kit"
 
 export default function MovilHeader() {
 	const [scrolled, setScrolled] = useState<boolean>(false)
@@ -94,13 +94,7 @@ const DrawerComponent = () => {
 								<X className="text-[var(--primary-green)] size-8" />
 							</DrawerClose>
 							<div className="shadow-[4px_4px_4px_0_rgba(0,0,0,0.25)] rounded-full overflow-hidden size-40 relative">
-								<Image
-									src={"/logo.webp"}
-									alt={"logo"}
-									fill
-									priority
-									sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
-								/>
+								<ImageKit imageID={"logo.webp"} />
 							</div>
 						</div>
 

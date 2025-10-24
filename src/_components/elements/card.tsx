@@ -1,6 +1,6 @@
 import { ElementsTreeType } from "@/_lib/types"
-import Image from "next/image"
 import Link from "next/link"
+import { ImageKit } from "../image-kit"
 
 export const Card = ({
 	type,
@@ -14,13 +14,9 @@ export const Card = ({
 	return (
 		<div className="w-full flex-col sm:flex-row sm:min-w-[30%] sm:flex-1 flex sm:flex-wrap justify-start items-start bg-pink-100 shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] border border-[#444]/20 rounded-lg overflow-hidden relative">
 			<div className="w-full sm:max-w-[37dvw] h-[300px] bg-slate-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] relative overflow-hidden">
-				<Image
-					src={category.elements[0].images.split("*")[0]}
-					alt={category.title}
-					priority
-					fill
-					className="object-cover hover:scale-110 duration-300"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+				<ImageKit
+					imageID={category.elements[0].images.split("*")[0]}
+					className="hover:scale-110 duration-300"
 				/>
 			</div>
 			<div className="flex flex-col justify-between gap-2 p-3 pt-5 w-full flex-1">

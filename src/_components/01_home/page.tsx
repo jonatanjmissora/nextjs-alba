@@ -1,8 +1,9 @@
-import Image from "next/image"
 import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2 from "../../../public/leaf/leaf2"
 import RoundLeaf from "../../../public/leaf/round-leaf"
+import { ImageKit } from "../image-kit"
+// import { Image as ImageKit } from "@imagekit/next"
 
 export default function Home() {
 	return (
@@ -39,14 +40,7 @@ export default function Home() {
 const HomeImg1 = () => {
 	return (
 		<div className="w-[200px] h-[300px] 2xl:w-[250px] 2xl:h-[400px] 2xl:translate-x-24 relative">
-			<Image
-				src="/avatar-alba.png"
-				alt="Avatar Alba"
-				quality={100}
-				fill
-				className="object-cover"
-				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-			/>
+			<ImageKit imageID="avatar-alba.png" priority={true} />
 		</div>
 	)
 }
@@ -54,15 +48,7 @@ const HomeImg1 = () => {
 const HomeImg2 = () => {
 	return (
 		<div className="w-[350px] h-[450px] 2xl:w-[500px] 2xl:h-[700px] relative">
-			<Image
-				src="/alba-alpha.png"
-				priority
-				alt="Alba Alpha Logo"
-				quality={100}
-				fill
-				className="object-cover"
-				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-			/>
+			<ImageKit imageID="alba-alpha.png" priority={true} />
 		</div>
 	)
 }

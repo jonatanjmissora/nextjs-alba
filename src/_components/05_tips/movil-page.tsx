@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { tipsMock, TipType } from "@/_lib/tips-mock"
 import { SectionHeader } from "../section-header"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
@@ -8,6 +7,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion"
+import { ImageKit } from "../image-kit"
 
 export default function MovilTips() {
 	const tips = tipsMock
@@ -36,13 +36,7 @@ const TipCard = ({ tip }: { tip: TipType }) => {
 			<AccordionElement content={tip.content} />
 			<div className="absolute -z-10 bottom-[95%] left-[12%] w-3/4 h-[200px]">
 				<div className="relative overflow-hidden  w-full h-full rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
-					<Image
-						src={tip.image}
-						alt={tip.title}
-						quality={100}
-						fill
-						className="object-cover"
-					/>
+					<ImageKit imageID={tip.image} />
 				</div>
 			</div>
 		</div>

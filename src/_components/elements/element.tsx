@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useState } from "react"
 import SinglePageCarrousel from "@/_components/elements/image-carrousel"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
@@ -8,6 +7,7 @@ import CartIconContainer from "@/_components/layout/cart-icon-container"
 import { ElementCountAndCart } from "./element-count"
 import { ElementTreeType } from "@/_lib/types"
 import { cn } from "@/lib/utils"
+import { ImageKit } from "../image-kit"
 
 export default function ElementPage({
 	categoryName,
@@ -76,13 +76,9 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 						isTransitioning ? "opacity-0" : "opacity-50"
 					)}
 				>
-					<Image
-						src={imagesArray[previousImageIndex]}
-						alt={element.title}
-						quality={100}
-						fill
-						className="object-cover hover:scale-110 duration-300"
-						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					<ImageKit
+						imageID={imagesArray[previousImageIndex]}
+						className="hover:scale-110 duration-300"
 					/>
 				</div>
 				{/* Imagen actual con fade in */}
@@ -92,13 +88,9 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 						isTransitioning ? "opacity-50" : "opacity-100"
 					)}
 				>
-					<Image
-						src={imagesArray[actualImageIndex]}
-						alt={element.title}
-						quality={100}
-						fill
-						className="object-cover hover:scale-110 duration-300"
-						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					<ImageKit
+						imageID={imagesArray[actualImageIndex]}
+						className="hover:scale-110 duration-300"
 					/>
 				</div>
 			</div>

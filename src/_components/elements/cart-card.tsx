@@ -11,7 +11,6 @@ import {
 	AlertDialogTitle,
 	AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import Image from "next/image"
 import Link from "next/link"
 import { CartCount } from "./cart-count"
 import HeartIconContainer from "@/_components/layout/heart-icon-container"
@@ -19,6 +18,7 @@ import { Trash2Icon } from "lucide-react"
 import { useStore } from "@/_lib/store"
 import { ElementMockType } from "@/_lib/types"
 import { formatPrice } from "@/_lib/utils"
+import { ImageKit } from "../image-kit"
 
 export default function CartCard({
 	element,
@@ -40,14 +40,8 @@ export default function CartCard({
 			className={`w-full flex flex-col sm:flex-row gap-5 p-4 2xl:p-6 bg-[var(--background-three)] sm:bg-[var(--background-two)] rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a] relative`}
 		>
 			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full sm:w-[150px] 2xl:w-[200px] h-[150px] sm:h-[100px] 2xl:h-[150px]">
-				<Image
-					src={element.images.split("*")[0]}
-					alt={element.title}
-					quality={100}
-					fill
-					style={{
-						objectFit: "cover",
-					}}
+				<ImageKit
+					imageID={element.images.split("*")[0]}
 					className={`group-hover:scale-120 transition-all duration-800`}
 				/>
 			</div>

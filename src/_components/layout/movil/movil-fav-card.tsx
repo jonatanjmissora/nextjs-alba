@@ -1,10 +1,10 @@
 import { ElementMockType } from "@/_lib/types"
-import Image from "next/image"
 import Link from "next/link"
 import { formatPrice } from "@/_lib/utils"
 import CartIconContainer from "../cart-icon-container"
 import { Trash2 } from "lucide-react"
 import { AlertDialogComponent } from "../alert-dialog-component"
+import { ImageKit } from "@/_components/image-kit"
 
 export const MovilFavCard = ({
 	element,
@@ -19,13 +19,9 @@ export const MovilFavCard = ({
 		<article className="w-full relative flex mb-35">
 			<DataCard element={element} type={type} from={from} />
 			<div className="w-3/4 aspect-video bg-slate-300 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.5)] rounded-lg relative overflow-hidden">
-				<Image
-					src={element.images.split("*")[0]}
-					alt={element.title}
-					priority
-					fill
-					className="object-cover hover:scale-110 duration-300"
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+				<ImageKit
+					imageID={element.images.split("*")[0]}
+					className="hover:scale-110 duration-300"
 				/>
 			</div>
 		</article>

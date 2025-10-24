@@ -1,7 +1,7 @@
 import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
-import Image from "next/image"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2Movil from "../../../public/leaf/leaf2-movil"
+import { ImageKit } from "../image-kit"
 
 export default function MovilHome() {
 	return (
@@ -36,17 +36,7 @@ export default function MovilHome() {
 const HomeImg2 = () => {
 	return (
 		<div className="w-[350px] h-[450px] relative">
-			<Image
-				src="/alba-alpha.png"
-				priority
-				alt="Alba Alpha Logo"
-				quality={100}
-				fill
-				sizes="(max-width: 640px) 100vw, 640px"
-				style={{
-					objectFit: "cover",
-				}}
-			/>
+			<ImageKit imageID="alba-alpha.png" priority={true} />
 		</div>
 	)
 }
