@@ -55,11 +55,11 @@ Detalles de la orden:
 ${cartStore.map(cart => {
 	if (Number(cart.id) < 100) {
 		const service = services.find(service => service.id === Number(cart.id))
-		if (service) return `${service?.subtitle} x${cart.quantity} \n`
+		if (service) return `${service?.title} x${cart.quantity} \n`
 	}
 	if (Number(cart.id) >= 100) {
 		const product = products.find(product => product.id === Number(cart.id))
-		if (product) return `${product?.subtitle} x${cart.quantity} \n`
+		if (product) return `${product?.title} x${cart.quantity} \n`
 	}
 	return ""
 })}
