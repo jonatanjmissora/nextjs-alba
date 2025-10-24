@@ -3,7 +3,6 @@ import RoundLeaf from "../../public/leaf/round-leaf"
 import { servicesTree } from "@/_lib/services-mock"
 import { productsTree } from "@/_lib/products-mock"
 import { tipsMock } from "@/_lib/tips-mock"
-import { setUrlCategoryName } from "@/_lib/utils"
 import {
 	whatsappLinkData,
 	instagramLinkData,
@@ -105,7 +104,7 @@ const ServicesNavComponent = () => {
 				<Link
 					key={service.title}
 					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
-					href={`/services/${setUrlCategoryName(service.title)}`}
+					href={`/services/${service.id}`}
 				>
 					{service.title}
 				</Link>
@@ -122,7 +121,7 @@ const ProductsNavComponent = () => {
 				<Link
 					key={product.title}
 					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
-					href={`/shop/${setUrlCategoryName(product.title)}`}
+					href={`/shop/${product.id}`}
 				>
 					{product.title}
 				</Link>

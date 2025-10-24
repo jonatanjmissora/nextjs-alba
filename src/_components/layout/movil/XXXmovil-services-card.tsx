@@ -3,7 +3,6 @@ import { servicesTree } from "@/_lib/services-mock"
 import Image from "next/image"
 import { ChevronRightIcon } from "lucide-react"
 import Link from "next/link"
-import { setUrlCategoryName } from "@/_lib/utils"
 
 export const MovilServicesCard = () => {
 	const services = servicesTree
@@ -30,12 +29,10 @@ const MovilSectionCard = ({
 	category: ElementsTreeType
 	isEven: boolean
 }) => {
-	const urlCategoryName = setUrlCategoryName(category.title)
-
 	return (
 		<article className="w-full relative flex odd:justify-end">
 			<Link
-				href={`/services/${urlCategoryName}?from=services`}
+				href={`/services/${category.id}?from=services`}
 				className={`h-13 flex items-center header font-semibold tracking-wider absolute -bottom-8 z-10 rounded-lg shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] text-[var(--primary-green)] bg-[var(--background-two)] ${isEven ? "left-0" : "right-0"} overflow-hidden border border-[#444]/50`}
 			>
 				<h2 className="py-3 px-6 pr-4">{category.title}</h2>

@@ -9,7 +9,5 @@ animaciones
 
 completar datos
 
-cambiar services/[categoryName] por services/[categoryId] igual que en shop
-asi puedo escribir los subtitulos con acentos
 
 

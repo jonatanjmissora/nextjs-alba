@@ -1,5 +1,4 @@
 import { ElementsTreeType } from "@/_lib/types"
-import { setUrlCategoryName } from "@/_lib/utils"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -12,8 +11,6 @@ export const Card = ({
 	category: ElementsTreeType
 	children: React.ReactNode
 }) => {
-	const urlCategoryName = setUrlCategoryName(category.title)
-
 	return (
 		<div className="w-full flex-col sm:flex-row sm:min-w-[30%] sm:flex-1 flex sm:flex-wrap justify-start items-start bg-pink-100 shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] border border-[#444]/20 rounded-lg overflow-hidden relative">
 			<div className="w-full sm:max-w-[37dvw] h-[300px] bg-slate-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] relative overflow-hidden">
@@ -33,7 +30,7 @@ export const Card = ({
 				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
 					{children}
 					<Link
-						href={`/${type}/${urlCategoryName}?from=${type}`}
+						href={`/${type}/${category.id.toString()}?from=${type}`}
 						className="text-[#444]/70 cursor-pointer text-sm w-full text-right absolute bottom-3 right-3 hover:text-[var(--primary-green)] duration-300 hover:font-semibold"
 					>
 						leer mas +

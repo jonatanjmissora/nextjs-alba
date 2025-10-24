@@ -2,10 +2,9 @@ import ElementPage from "@/_components/elements/element"
 import NotFound from "@/_components/layout/not-found"
 import SinglePageLayout from "@/_components/layout/single-page-layout"
 import { servicesTree } from "@/_lib/services-mock"
-import { setCleanCategoryName } from "@/_lib/utils"
 
 type Params = Promise<{
-	categoryName: string
+	categoryID: string
 }>
 
 type SearchParams = Promise<{
@@ -14,7 +13,7 @@ type SearchParams = Promise<{
 }>
 
 export async function generateStaticParams() {
-	return servicesTree.map(category => ({ categoryName: category.title }))
+	return servicesTree.map(category => ({ categoryID: category.id.toString() }))
 }
 
 export default async function ServerServiciosPage({
@@ -24,30 +23,29 @@ export default async function ServerServiciosPage({
 	params: Params
 	searchParams?: SearchParams
 }) {
-	const { categoryName } = await params
-	const cleanCategoryName = setCleanCategoryName(categoryName)
+	const { categoryID } = await params
+	const id = (await searchParams)?.id
 	const from = (await searchParams)?.from as
 		| "services"
 		| "shop"
 		| "favorites"
 		| "cart"
-	const id = (await searchParams)?.id as string
 
-	const serviceCategories = servicesTree.find(
-		category => category.title === cleanCategoryName
+	const categoryElements = servicesTree.find(
+		category => category.id === Number(categoryID)
 	)?.elements
 
-	if (!serviceCategories) {
+	if (!categoryElements) {
 		return <NotFound />
 	}
 
 	return (
 		<SinglePageLayout from={from} id={id}>
-			{serviceCategories?.map(service => (
+			{categoryElements.map(element => (
 				<ElementPage
-					key={service.id}
-					categoryName={categoryName}
-					element={service}
+					key={element.id}
+					categoryName={element.category_title}
+					element={element}
 				/>
 			))}
 		</SinglePageLayout>

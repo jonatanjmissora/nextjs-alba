@@ -36,7 +36,7 @@ const ServiceCategoriesComponent = () => {
 								<Dot size={26} />
 							</span>
 							<span className="w-full text-left text-base sm:text-xs 2xl:text-base">
-								{element.subtitle}
+								{element.title}
 							</span>
 						</div>
 					))}

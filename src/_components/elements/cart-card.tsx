@@ -18,7 +18,7 @@ import HeartIconContainer from "@/_components/layout/heart-icon-container"
 import { Trash2Icon } from "lucide-react"
 import { useStore } from "@/_lib/store"
 import { ElementMockType } from "@/_lib/types"
-import { formatPrice, setUrlCategoryName } from "@/_lib/utils"
+import { formatPrice } from "@/_lib/utils"
 
 export default function CartCard({
 	element,
@@ -29,7 +29,6 @@ export default function CartCard({
 	type: "shop" | "services"
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
-	const urlCategoryName = setUrlCategoryName(element.title)
 	const { cartStore } = useStore()
 	const cartElementQuantity = cartStore.find(
 		cart => cart.id === element.id.toString()
@@ -60,7 +59,7 @@ export default function CartCard({
 							<HeartIconContainer id={element.id.toString()} />
 						</i>
 						<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
-							{element.title}
+							{element.category_title}
 						</span>
 					</div>
 
@@ -69,10 +68,10 @@ export default function CartCard({
 
 				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
 					<Link
-						href={`/${type}/${urlCategoryName}?id=${element.id}&from=${from}`}
+						href={`/${type}/${element.category_id.toString()}?id=${element.id}&from=${from}`}
 						className="font-semibold text-xl tracking-wider text-[var(--primary-green)]"
 					>
-						{element.subtitle}
+						{element.title}
 					</Link>
 					<div className="flex justify-between items-center ">
 						<span className="text-xl 2xl:text-2xl font-semibold">
@@ -109,7 +108,7 @@ const CartDeleteButton = ({ element }: { element: ElementMockType }) => {
 			<AlertDialogContent>
 				<AlertDialogHeader>
 					<AlertDialogTitle>
-						¿Seguro deseas quitar {element.subtitle}?
+						¿Seguro deseas quitar {element.title}?
 					</AlertDialogTitle>
 					<AlertDialogDescription>
 						No pierdas la oportunidad de llevartelo!!

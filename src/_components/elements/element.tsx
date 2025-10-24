@@ -26,7 +26,7 @@ export default function ElementPage({
 			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-3 2xl:gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
 				<div className="flex flex-col py-4 sm:py-2">
 					<span className="subtitle sm:title font-bold text-pretty">
-						{element.subtitle}
+						{element.title}
 					</span>
 					<span className="text-sm font-semibold text-[var(--primary-green)]">
 						{categoryName}
@@ -78,7 +78,7 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 				>
 					<Image
 						src={imagesArray[previousImageIndex]}
-						alt={element.subtitle}
+						alt={element.title}
 						quality={100}
 						fill
 						className="object-cover hover:scale-110 duration-300"
@@ -94,7 +94,7 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 				>
 					<Image
 						src={imagesArray[actualImageIndex]}
-						alt={element.subtitle}
+						alt={element.title}
 						quality={100}
 						fill
 						className="object-cover hover:scale-110 duration-300"
@@ -105,7 +105,7 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 			<div className="flex gap-2">
 				<SinglePageCarrousel
 					array={imagesArray}
-					subtitle={element.subtitle}
+					subtitle={element.title}
 					actualImageIndex={actualImageIndex}
 					setActualImageIndex={setActualImageIndex}
 				/>

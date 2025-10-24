@@ -1,6 +1,6 @@
 "use client"
 
-import type { ServiceTreeType } from "@/_lib/types"
+import type { ElementTreeType } from "@/_lib/types"
 import { MinusCircle, PlusCircle, ShoppingCart } from "lucide-react"
 import { useState } from "react"
 import { useStore } from "@/_lib/store"
@@ -10,7 +10,7 @@ import { formatPrice } from "@/_lib/utils"
 export const ElementCountAndCart = ({
 	element,
 }: {
-	element: ServiceTreeType
+	element: ElementTreeType
 }) => {
 	const { cartStore, setCartStore } = useStore()
 	const [count, setCount] = useState<number>(

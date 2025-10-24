@@ -7,7 +7,6 @@ import HeartIconContainer from "../layout/heart-icon-container"
 import CartIconContainer from "../layout/cart-icon-container"
 import { ElementMockType } from "@/_lib/types"
 import { formatPrice } from "@/_lib/utils"
-import { setUrlCategoryName } from "@/_lib/utils"
 
 export default function FavCard({
 	type,
@@ -18,8 +17,6 @@ export default function FavCard({
 	element: ElementMockType
 	from: "shop" | "services" | "favorites" | "cart"
 }) {
-	const urlCategoryName = setUrlCategoryName(element.title)
-
 	return (
 		<li
 			key={element.id}
@@ -41,10 +38,10 @@ export default function FavCard({
 
 			<div className="flex flex-col justify-start items-start w-full">
 				<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
-					{element.title}
+					{element.category_title}
 				</span>
 				<h3 className="text-[var(--primary-green)] text-pretty font-semibold truncate h-12 w-full">
-					{element.subtitle}
+					{element.title}
 				</h3>
 			</div>
 
@@ -63,7 +60,7 @@ export default function FavCard({
 			</span>
 			<div className="w-full flex justify-end">
 				<Link
-					href={`/${type}/${urlCategoryName}?id=${element.id}&from=${from}`}
+					href={`/${type}/${element.category_id.toString()}?id=${element.id}&from=${from}`}
 					className="cursor-pointer"
 				>
 					<MoveRight size={30} color="var(--primary-green)" className="icon" />

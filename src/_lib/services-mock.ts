@@ -3,8 +3,9 @@ import type { ElementsTreeType, ElementMockType } from "./types"
 export const servicesMock: ElementMockType[] = [
 	{
 		id: 11,
-		title: "Maderoterapia",
-		subtitle: "Cuerpo entero",
+		category_title: "Maderoterapia",
+		category_id: 1,
+		title: "Cuerpo entero",
 		price: 45000,
 		description:
 			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -16,8 +17,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 21,
-		title: "Limpieza Facial",
-		subtitle: "Limpieza facial prof. con extracciónes",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Limpieza facial prof. con extracciónes",
 		price: 48000,
 		description:
 			"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
@@ -29,8 +31,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 22,
-		title: "Limpieza Facial",
-		subtitle: "Tratamiento Antioxidante Glow Up",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Tratamiento Antioxidante Glow Up",
 		price: 65000,
 		description:
 			"Lucí una piel radiante con mucho Glow. Aporte de activos y vitaminas según cada tipo de piel.",
@@ -42,8 +45,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 23,
-		title: "Limpieza Facial",
-		subtitle: "Tratamiento tensor",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Tratamiento tensor",
 		price: 60000,
 		description:
 			"Tratamiento de higiene profunda con Radiofrecuencia. Con aporte de activos tensores. Ideal para pieles desvitalizadas y con flacidez.",
@@ -54,8 +58,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 24,
-		title: "Limpieza Facial",
-		subtitle: "Higiene facial prof. con electroporación",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Higiene facial prof. con electroporación",
 		price: 58000,
 		description:
 			"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual.",
@@ -67,8 +72,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 25,
-		title: "Limpieza Facial",
-		subtitle: "Higiene facial prof. con radiofrecuencia",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Higiene facial prof. con radiofrecuencia",
 		price: 62000,
 		description:
 			"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. ",
@@ -80,8 +86,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 26,
-		title: "Limpieza Facial",
-		subtitle: "Tratamiento con Alquimias",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Tratamiento con Alquimias",
 		price: 60000,
 		description: "Es un tratamiento de microdermoabrasion y dermoinfusion.",
 		description_admin: "Facial Alquimias",
@@ -92,8 +99,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 27,
-		title: "Limpieza Facial",
-		subtitle: "Higiene facial prof. con dermaplaning",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Higiene facial prof. con dermaplaning",
 		price: 65000,
 		description:
 			"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa.",
@@ -105,8 +113,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 28,
-		title: "Limpieza Facial",
-		subtitle: "Dermapen o microneedling",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Dermapen o microneedling",
 		price: 65000,
 		description:
 			"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo.",
@@ -118,8 +127,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 29,
-		title: "Limpieza Facial",
-		subtitle: "Peeling químico",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Peeling químico",
 		price: 69000,
 		description: "Este Peelings es cosmiatrico. No médico.",
 		description_admin: "Facial químico",
@@ -130,8 +140,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 30,
-		title: "Limpieza Facial",
-		subtitle: "Hollywood peel",
+		category_title: "Limpieza Facial",
+		category_id: 2,
+		title: "Hollywood peel",
 		price: 67000,
 		description:
 			"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices.",
@@ -143,8 +154,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 31,
-		title: "Tratamientos corporales",
-		subtitle: "Higiene corporal profunda",
+		category_title: "Tratamientos corporales",
+		category_id: 3,
+		title: "Higiene corporal profunda",
 		price: 50000,
 		description:
 			"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
@@ -155,8 +167,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 32,
-		title: "Tratamientos corporales",
-		subtitle: "Pulido corporal",
+		category_title: "Tratamientos corporales",
+		category_id: 3,
+		title: "Pulido corporal",
 		price: 48000,
 		description:
 			"Pulido corporal con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
@@ -167,8 +180,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 33,
-		title: "Tratamientos corporales",
-		subtitle: "Corporal Liposonix",
+		category_title: "Tratamientos corporales",
+		category_id: 3,
+		title: "Corporal Liposonix",
 		price: 58000,
 		description:
 			"Liposonix con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
@@ -179,8 +193,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 41,
+		category_title: "Bronceado sin sol",
+		category_id: 4,
 		title: "Bronceado sin sol",
-		subtitle: "Bronceado sin sol",
 		price: 45000,
 		description:
 			"Es un bronceado orgánico que se aplica en forma de bruma con un compresor. En una sola sesión logras el color ideal, natural sin tonos naranjas, ni manchas ni olor.",
@@ -192,8 +207,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 51,
+		category_title: "Hifu y liposonix",
+		category_id: 5,
 		title: "Hifu y liposonix",
-		subtitle: "Hifu",
 		price: 85000,
 		description:
 			"Lifting sin cirugía, tratamiento rejuvenecedor sin dolor. Reduce arrugas y líneas de expresión. Mejora la firmeza del rostro. El valor incluye Higiene facial. Rostro, cuello y escote.",
@@ -205,8 +221,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 52,
-		title: "Hifu y liposonix",
-		subtitle: "Liposonix",
+		category_title: "Hifu y liposonix",
+		category_id: 5,
+		title: "Liposonix",
 		price: 75000,
 		description:
 			"Deshace permanentemente la grasa localizada, mejora la firmeza y la elasticidad de la piel. Reduce cm, mejora piel con celulitis, sin dolor y sin tiempo de recuperación. Zonas a tratar: abdomen, brazos, pantalón de montar, muslos, espalda, entrepierna. Valor por zona. Y con drenaje en cuerpo completo.",
@@ -218,8 +235,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 61,
-		title: "Depilacion laser",
-		subtitle: "Promo: axilas, cavado con tiro y bozo",
+		category_title: "Depilación láser",
+		category_id: 6,
+		title: "Promo: axilas, cavado con tiro y bozo",
 		price: 20000,
 		description:
 			"Amamos lo rápido que funciona el tratamiento en todo tipo de piel. Ahorra tiempo y esfuerzo, despedite de la irritación y sobre pigmentación en zonas delicadas.",
@@ -231,8 +249,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 71,
-		title: "Pestanias y cejas",
-		subtitle: "Pestañas",
+		category_title: "Pestañas y cejas",
+		category_id: 7,
+		title: "Pestañas",
 		price: 25000,
 		description:
 			"Lifting. Técnica de arqueado en pestañas naturales. técnica tradicional y coreana",
@@ -243,8 +262,9 @@ export const servicesMock: ElementMockType[] = [
 	},
 	{
 		id: 72,
-		title: "Pestanias y cejas",
-		subtitle: "Laminado de cejas + lifting",
+		category_title: "Pestañas y cejas",
+		category_id: 7,
+		title: "Laminado de cejas + lifting",
 		price: 45000,
 		description: "Promos laminado de cejas y Lifting tradicional.",
 		description_admin: "Laminado + lifting",
@@ -261,7 +281,9 @@ export const servicesTree: ElementsTreeType[] = [
 		elements: [
 			{
 				id: 11,
-				subtitle: "Cuerpo entero",
+				category_title: "Maderoterapia",
+				category_id: 1,
+				title: "Cuerpo entero",
 				price: 45000,
 				description:
 					"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
@@ -279,7 +301,9 @@ export const servicesTree: ElementsTreeType[] = [
 		elements: [
 			{
 				id: 21,
-				subtitle: "Limpieza facial profunda con extracciónes",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Limpieza facial profunda con extracciónes",
 				price: 48000,
 				description:
 					"Ideal para pieles deslucidas, con puntos negros y engrosadas.",
@@ -291,7 +315,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 22,
-				subtitle: "Tratamiento Antioxidante Glow Up",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Tratamiento Antioxidante Glow Up",
 				price: 65000,
 				description:
 					"Lucí una piel radiante con mucho Glow. Aporte de activos y vitaminas según cada tipo de piel.",
@@ -303,7 +329,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 23,
-				subtitle: "Tratamiento tensor",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Tratamiento tensor",
 				price: 60000,
 				description:
 					"Tratamiento de higiene profunda con Radiofrecuencia. Con aporte de activos tensores. Ideal para pieles desvitalizadas y con flacidez.",
@@ -314,7 +342,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 24,
-				subtitle: "Higiene facial profunda con electroporación",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Higiene facial profunda con electroporación",
 				price: 58000,
 				description:
 					"Este tratamiento facial incorpora activos a la piel de manera más profunda mediante la electroporacion o Mesoterapia virtual.",
@@ -326,7 +356,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 25,
-				subtitle: "Higiene facial profunda con radiofrecuencia",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Higiene facial profunda con radiofrecuencia",
 				price: 62000,
 				description:
 					"El principal objetivo de esta tratamiento es la estimulación de colágeno a través de la radiofrecuencia. ",
@@ -338,7 +370,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 26,
-				subtitle: "Tratamiento con Alquimias",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Tratamiento con Alquimias",
 				price: 60000,
 				description: "Es un tratamiento de microdermoabrasion y dermoinfusion.",
 				description_admin: "Facial Alquimias",
@@ -349,7 +383,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 27,
-				subtitle: "Higiene facial profunda con dermaplaning",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Higiene facial profunda con dermaplaning",
 				price: 65000,
 				description:
 					"Información importante: es una técnica de peeling con bisturí, indolora, que deja la piel suave y luminosa.",
@@ -361,7 +397,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 28,
-				subtitle: "Dermapen o microneedling",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Dermapen o microneedling",
 				price: 65000,
 				description:
 					"Sesión de micro pinturas que abre canales en la piel, para que los activos penetren mas profundo.",
@@ -373,7 +411,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 29,
-				subtitle: "Peeling químico",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Peeling químico",
 				price: 69000,
 				description: "Este Peelings es cosmiatrico. No médico.",
 				description_admin: "Facial químico",
@@ -384,7 +424,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 30,
-				subtitle: "Hollywood peel",
+				category_title: "Limpieza facial",
+				category_id: 2,
+				title: "Hollywood peel",
 				price: 67000,
 				description:
 					"Tratamiento ideal para pieles con manchas y secuelas de acné como poros dilatados y cicatrices.",
@@ -402,7 +444,9 @@ export const servicesTree: ElementsTreeType[] = [
 		elements: [
 			{
 				id: 31,
-				subtitle: "Pulido corporal",
+				category_title: "Tratamientos corporales",
+				category_id: 3,
+				title: "Pulido corporal",
 				price: 48000,
 				description:
 					"Pulido corporal con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
@@ -413,7 +457,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 32,
-				subtitle: "Higiene corporal profunda",
+				category_title: "Tratamientos corporales",
+				category_id: 3,
+				title: "Higiene corporal profunda",
 				price: 50000,
 				description:
 					"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
@@ -424,7 +470,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 33,
-				subtitle: "Corporal Liposonix",
+				category_title: "Tratamientos corporales",
+				category_id: 3,
+				title: "Corporal Liposonix",
 				price: 58000,
 				description:
 					"Liposonix con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
@@ -441,7 +489,9 @@ export const servicesTree: ElementsTreeType[] = [
 		elements: [
 			{
 				id: 41,
-				subtitle: "Bronceado sin sol",
+				category_title: "Bronceado sin sol",
+				category_id: 4,
+				title: "Bronceado sin sol",
 				price: 45000,
 				description:
 					"Es un bronceado orgánico que se aplica en forma de bruma con un compresor. En una sola sesión logras el color ideal, natural sin tonos naranjas, ni manchas ni olor.",
@@ -459,7 +509,9 @@ export const servicesTree: ElementsTreeType[] = [
 		elements: [
 			{
 				id: 51,
-				subtitle: "Hifu",
+				category_title: "Hifu y liposonix",
+				category_id: 5,
+				title: "Hifu",
 				price: 85000,
 				description:
 					"Lifting sin cirugía, tratamiento rejuvenecedor sin dolor. Reduce arrugas y líneas de expresión. Mejora la firmeza del rostro. El valor incluye Higiene facial. Rostro, cuello y escote.",
@@ -471,7 +523,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 52,
-				subtitle: "Liposonix",
+				category_title: "Hifu y liposonix",
+				category_id: 5,
+				title: "Liposonix",
 				price: 75000,
 				description:
 					"Deshace permanentemente la grasa localizada, mejora la firmeza y la elasticidad de la piel. Reduce cm, mejora piel con celulitis, sin dolor y sin tiempo de recuperación. Zonas a tratar: abdomen, brazos, pantalón de montar, muslos, espalda, entrepierna. Valor por zona. Y con drenaje en cuerpo completo.",
@@ -485,11 +539,13 @@ export const servicesTree: ElementsTreeType[] = [
 	},
 	{
 		id: 6,
-		title: "Depilacion laser",
+		title: "Depilación láser",
 		elements: [
 			{
 				id: 61,
-				subtitle: "Promo: axilas, cavado con tiro y bozo",
+				category_title: "Depilación láser",
+				category_id: 6,
+				title: "Promo: axilas, cavado con tiro y bozo",
 				price: 20000,
 				description:
 					"Amamos lo rápido que funciona el tratamiento en todo tipo de piel. Ahorra tiempo y esfuerzo, despedite de la irritación y sobre pigmentación en zonas delicadas.",
@@ -503,11 +559,13 @@ export const servicesTree: ElementsTreeType[] = [
 	},
 	{
 		id: 7,
-		title: "Pestanias y cejas",
+		title: "Pestañas y cejas",
 		elements: [
 			{
 				id: 71,
-				subtitle: "Pestañas",
+				category_title: "Pestañas y cejas",
+				category_id: 7,
+				title: "Pestañas",
 				price: 25000,
 				description:
 					"Lifting. Técnica de arqueado en pestañas naturales. técnica tradicional y coreana",
@@ -518,7 +576,9 @@ export const servicesTree: ElementsTreeType[] = [
 			},
 			{
 				id: 72,
-				subtitle: "Laminado de cejas + lifting",
+				category_title: "Pestañas y cejas",
+				category_id: 7,
+				title: "Laminado de cejas + lifting",
 				price: 45000,
 				description: "Promos laminado de cejas y Lifting tradicional.",
 				description_admin: "Laminado + lifting",

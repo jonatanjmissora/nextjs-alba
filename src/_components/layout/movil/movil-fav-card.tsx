@@ -1,7 +1,7 @@
 import { ElementMockType } from "@/_lib/types"
 import Image from "next/image"
 import Link from "next/link"
-import { formatPrice, setUrlCategoryName } from "@/_lib/utils"
+import { formatPrice } from "@/_lib/utils"
 import CartIconContainer from "../cart-icon-container"
 import { Trash2 } from "lucide-react"
 import { AlertDialogComponent } from "../alert-dialog-component"
@@ -15,15 +15,9 @@ export const MovilFavCard = ({
 	type: "services" | "shop"
 	from: "favorites" | "cart"
 }) => {
-	const urlCategoryName = setUrlCategoryName(element.title)
 	return (
 		<article className="w-full relative flex mb-35">
-			<DataCard
-				element={element}
-				urlCategoryName={urlCategoryName}
-				type={type}
-				from={from}
-			/>
+			<DataCard element={element} type={type} from={from} />
 			<div className="w-3/4 aspect-video bg-slate-300 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.5)] rounded-lg relative overflow-hidden">
 				<Image
 					src={element.images.split("*")[0]}
@@ -40,12 +34,10 @@ export const MovilFavCard = ({
 
 const DataCard = ({
 	element,
-	urlCategoryName,
 	type,
 	from,
 }: {
 	element: ElementMockType
-	urlCategoryName: string
 	type: "services" | "shop"
 	from: "favorites" | "cart"
 }) => {
@@ -65,10 +57,10 @@ const DataCard = ({
 			</div>
 			<div className="flex flex-col gap-0 w-full">
 				<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
-					{element.title}
+					{element.category_title}
 				</span>
 				<h3 className="text-[var(--primary-green)] text-pretty font-semibold whitespace-nowrap truncate w-full">
-					{element.subtitle}
+					{element.title}
 				</h3>
 			</div>
 
@@ -77,7 +69,7 @@ const DataCard = ({
 					$ {formatPrice(Number(element.price))}
 				</span>
 				<Link
-					href={`/${type}/${urlCategoryName}?from=${from}`}
+					href={`/${type}/${element.category_id.toString()}?id=${element.id}&from=${from}`}
 					className="cursor-pointer text-xs text-[#444]/50"
 				>
 					<span className="border-b border-[#444]/50 py-[2px]">leer +</span>

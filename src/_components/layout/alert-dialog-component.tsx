@@ -47,10 +47,10 @@ export function AlertDialogComponent({
 			</AlertDialogTrigger>
 			<AlertDialogContent>
 				<AlertDialogHeader>
-					<AlertDialogTitle className="text-[#333] text-balance text-center">
+					<AlertDialogTitle className="text-[#333] text-balance text-center text-sm">
 						¿ Desea quitar{" "}
 						<span className="text-[var(--primary-green)]">
-							"{element.subtitle}"
+							"{element.title}"
 						</span>{" "}
 						de favoritos ?
 					</AlertDialogTitle>
