@@ -64,27 +64,27 @@ const MovilTestimonials = () => {
 	return (
 		<article className="w-full h-[80vh] relative flex items-center">
 			<ImageElement
-				src="/testimonials/testimonial-photo2.webp"
+				src="/about/testimonial-photo2.webp"
 				className={`w-full h-[400px] rotate-10 rounded top-0 absolute`}
 			/>
 			<ImageElement
-				src="/testimonials/testimonial04.png"
+				src="/about/testimonial04.png"
 				className={`w-[310px] h-[80px] bottom-[34%] -left-5 absolute blur-[3px] z-0 ${actual === 1 && "blur-none z-10 duration-500"}`}
 			/>
 			<ImageElement
-				src="/testimonials/testimonial04.png"
+				src="/about/testimonial04.png"
 				className={`w-[310px] h-[80px] bottom-[26%] left-[0%] absolute blur-[3px] z-0 ${actual === 2 && "blur-none z-10 duration-500"}`}
 			/>
 			<ImageElement
-				src="/testimonials/testimonial04.png"
+				src="/about/testimonial04.png"
 				className={`w-[310px] h-[80px] bottom-[18%] left-[5%] absolute blur-[3px] z-0 ${actual === 3 && "blur-none z-10 duration-500"}`}
 			/>
 			<ImageElement
-				src="/testimonials/testimonial04.png"
+				src="/about/testimonial04.png"
 				className={`w-[310px] h-[80px] bottom-[10%] left-[10%] absolute blur-[3px] z-0 ${actual === 4 && "blur-none z-10 duration-500"}`}
 			/>
 			<ImageElement
-				src="/testimonials/testimonial04.png"
+				src="/about/testimonial04.png"
 				className={`w-[310px] h-[80px] bottom-[2%] left-[15%] absolute blur-[3px] z-0 ${actual === 5 && "blur-none z-10 duration-500"}`}
 			/>
 		</article>

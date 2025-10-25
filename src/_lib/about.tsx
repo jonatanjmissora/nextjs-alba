@@ -4,30 +4,30 @@ export const aboutHeader =
 export const aboutDiplomas = [
 	{
 		title: "diploma01",
-		image: "/testimonials/diploma01.webp",
+		image: "/about/diploma01.webp",
 	},
 	{
 		title: "certificado01",
-		image: "/testimonials/certificado01.webp",
+		image: "/about/certificado01.webp",
 	},
 	{
 		title: "certificado02",
-		image: "/testimonials/certificado02.webp",
+		image: "/about/certificado02.webp",
 	},
 	{
 		title: "certificado03",
-		image: "/testimonials/certificado03.webp",
+		image: "/about/certificado03.webp",
 	},
 	{
 		title: "certificado04",
-		image: "/testimonials/certificado04.webp",
+		image: "/about/certificado04.webp",
 	},
 	{
 		title: "certificado05",
-		image: "/testimonials/certificado05.webp",
+		image: "/about/certificado05.webp",
 	},
 	{
 		title: "certificado06",
-		image: "/testimonials/certificado06.webp",
+		image: "/about/certificado06.webp",
 	},
 ]
