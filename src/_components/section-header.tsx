@@ -11,20 +11,15 @@ export const SectionHeader = ({
 	description: string
 }) => {
 	return (
-		<div className="flex flex-col items-start gap-3 header-border pb-10 mb-20 mt-14 min-h-[16dvh] relative">
+		<div className="flex flex-col items-center justify-center gap-3 pb-10 mb-32 mt-14 min-h-[16dvh] relative">
 			<LeafImages />
-			<h3 className="w-full header text-[var(--primary-green)]">{subtitle}</h3>
-			<div className="w-full flex flex-col sm:flex-row gap-2">
-				<h2 className="text-3xl font-bold text-balance leading-12 sm:min-w-[370px]">
-					{title}
-				</h2>
-				<div className="text-xs sm:text-base text-balance pt-4">
-					{description.split("\n\n").map(paragraph => (
-						<p key={paragraph.substring(0, 30)} className="mb-4 last:mb-0">
-							{paragraph}
-						</p>
-					))}
-				</div>
+			<h2 className="subtitle text-pretty text-[var(--foreground-green)]">
+				{title}
+			</h2>
+			<div className="text text-balance pt-4 text-center">
+				{description.split("\n\n").map(paragraph => (
+					<p key={paragraph.substring(0, 30)}>{paragraph}</p>
+				))}
 			</div>
 		</div>
 	)

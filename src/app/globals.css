@@ -5,6 +5,7 @@
 
 :root {
 	--font-cormorant: "Cormorant Garamond", serif;
+	--font-jost: Jost, sans-serif;
 	--background: #ffffff;
 	--foreground: #444;
 	--background-one: #fffdfd;
@@ -23,17 +24,21 @@
 	--sm-layout-padding: 10rem;
 	--2xl-layout-padding: 15rem;
 
-	--2xl-title-size: 3rem;
+	--2xl-title-size: 4rem;
 	--sm-title-size: 1.75rem;
 
-	--2xl-subtitle-size: 2rem;
+	--2xl-subtitle-size: 2.75rem;
 	--sm-subtitle-size: 1.5rem;
 
-	--2xl-header-size: 1.5rem;
+	--2xl-header-size: 2.15rem;
 	--sm-header-size: 1.1rem;
 
-	--2xl-text-size: 1.1rem;
+	--2xl-text-size: 1.125rem;
 	--sm-text-size: 0.9rem;
+
+	--2xl-btn-size: 1.15rem;
+	--sm-btn-size: 1.125rem;
+
 	--radius: 0.625rem;
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.145 0 0);
@@ -132,30 +137,41 @@ body {
 		var(--background-three)
 	);
 	background-attachment: fixed;
-	letter-spacing: 1px;
 	overflow-x: hidden;
 	min-height: 100dvh;
-	font-family: var(--font-cormorant), serif;
+	font-family: var(--font-jost), serif;
+	letter-spacing: 1px;
 }
 
 .title {
+	font-family: var(--font-cormorant);
 	font-size: var(--sm-title-size);
-	font-weight: semibold;
+	line-height: 5rem;
+	font-weight: 600;
 }
 
 .subtitle {
+	font-family: var(--font-cormorant);
 	font-size: var(--sm-subtitle-size);
-	font-weight: semibold;
+	font-weight: 600;
 }
 
 .header {
+	font-family: var(--font-cormorant);
 	font-size: var(--sm-header-size);
-	font-weight: medium;
+	font-weight: 500;
 }
 
 .text {
+	font-family: var(--font-jost);
 	font-size: var(--sm-text-size);
-	font-weight: normal;
+	line-height: 2rem;
+	font-weight: 400;
+}
+.btn-text {
+	font-family: var(--font-jost);
+	font-size: var(--sm-btn-size);
+	font-weight: 400;
 }
 
 @media screen and (min-width: 1440px) {
@@ -171,6 +187,9 @@ body {
 	.text {
 		font-size: var(--2xl-text-size);
 	}
+	.btn-text {
+		font-size: var(--2xl-btn-size);
+	}
 }
 
 .header-nav a:hover {
@@ -180,7 +199,6 @@ body {
 .cta-button {
 	background-color: var(--primary-green);
 	color: var(--background-two);
-	font-weight: bold;
 	border-radius: 1rem 0;
 	letter-spacing: 2px;
 	cursor: pointer;
