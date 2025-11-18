@@ -10,7 +10,7 @@ Agendá mi telefono! Saludos 🖐
 `
 
 export const servicesHeader =
-	"En mi gabinete cada sesión está pensada para vos, con cuidado, con respeto y con resultados reales. Acá te presento mis servicios."
+	"En mi gabinete cada sesión está pensada para vos, con cuidado, con respeto y con resultados reales. Alta capacitacion en tecnologias y tecnicas de vanguardia. Ambiente relajado, atencion unica y personalizada. Acá te presento mis servicios"
 
 export const productsHeader =
-	"Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+	"En Alba Garcia Estetica entendemos que cada piel es unica y tiene sus propias necesidades. Por eso, ofrecemos una amplia gama de productos de skincare de alta calidad para que puedas cuidar tu piel de la mejor manera posible. Hemos seleccionado productos de marcas lideres en el mercado, formulados con ingredientes naturales y avanzados para abordar diferentes tipos de piel y patologias."

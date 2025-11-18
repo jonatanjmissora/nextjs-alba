@@ -1,5 +1,5 @@
 import { SectionHeader } from "../section-header"
-import { tipsMock, TipType } from "@/_lib/tips-mock"
+import { tipsHeader, tipsMock, TipType } from "@/_lib/tips-mock"
 import { LeafImgs } from "../leaf-section"
 import {
 	Accordion,
@@ -19,7 +19,7 @@ export default function Tips() {
 				<SectionHeader
 					title="Nuestros tips del centro de belleza"
 					subtitle="Tips"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+					description={tipsHeader}
 				/>
 				<div className="w-full flex justify-between gap-20 pb-6">
 					<TipCard1 tip={tips[0]} />

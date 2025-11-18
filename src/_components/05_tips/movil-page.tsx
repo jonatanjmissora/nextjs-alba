@@ -1,4 +1,4 @@
-import { tipsMock, TipType } from "@/_lib/tips-mock"
+import { tipsHeader, tipsMock, TipType } from "@/_lib/tips-mock"
 import { SectionHeader } from "../section-header"
 import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 import {
@@ -19,7 +19,7 @@ export default function MovilTips() {
 				<SectionHeader
 					title="Nuestros tips del centro de belleza"
 					subtitle="Tips"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+					description={tipsHeader}
 				/>
 				<div className="w-full flex flex-col gap-20 justify-between items-center pb-6">
 					<TipCard tip={tips[0]} />

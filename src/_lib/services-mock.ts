@@ -50,9 +50,10 @@ export const servicesMock: ElementMockType[] = [
 		title: "Tratamiento tensor",
 		price: 60000,
 		description:
-			"Tratamiento de higiene profunda con Radiofrecuencia. Con aporte de activos tensores. Ideal para pieles desvitalizadas y con flacidez.",
+			"Tratamiento que combina los mejores activos y tecnologías para devolverle a tu piel su elasticidad y juventud",
 		description_admin: "Tratamiento tensor",
-		description_long: "BLA BLA BLA",
+		description_long:
+			"Nuestro tratamiento es personalizado y se adapta a las necesidades específicas de tu piel. Comienza con la limpieza profunda, seguida de la aplicación de nuestros activos y la utilización de nuestras tecnologías avanzadas. El tratamiento es rápido, indoloro y requiere mínimo tiempo de recuperación.",
 		images:
 			"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
 	},
@@ -156,27 +157,29 @@ export const servicesMock: ElementMockType[] = [
 		id: 31,
 		category_title: "Tratamientos corporales",
 		category_id: 3,
-		title: "Higiene corporal profunda",
-		price: 50000,
+		title: "Pulido corporal",
+		price: 45000,
 		description:
-			"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
-		description_admin: "Higiene corporal profunda",
-		description_long: "BLA BLA BLA",
+			"Exfoliación suave, seguida de la aplicación de productos hidratantes y un masaje relajante.",
+		description_admin: "Pulido corporal",
+		description_long:
+			"Nuestro tratamiento de Pulido Corporal es personalizado y se adapta a las necesidades específicas de tu piel. Comienza con una exfoliación suave, seguida de la aplicación de productos hidratantes y un masaje relajante. El tratamiento es relajante y requiere minímo tiempo de recuperación.",
 		images:
-			"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
+			"/corporal/tratamiento-corporal-pulido01.webp*/corporal/tratamiento-corporal-pulido02.webp*/corporal/tratamiento-corporal-pulido03.webp",
 	},
 	{
 		id: 32,
 		category_title: "Tratamientos corporales",
 		category_id: 3,
-		title: "Pulido corporal",
-		price: 48000,
+		title: "Pulido corporal mas peeling",
+		price: 50000,
 		description:
-			"Pulido corporal con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
-		description_admin: "Pulido corporal",
-		description_long: "BLA BLA BLA",
+			"Peeling corporal con renovacion celular. Ideal para pieles con acne",
+		description_admin: "Pulido corporal mas peeling",
+		description_long:
+			"Peeling corporal con renovacion celular. Este tratamiento es ideal para pieles con foliculitis o acne. Combinamos tecnicas avanzadas de exfoliacion quimica con productos innovadores para estimular la renovacion celular y renovar una piel saludable y radiante.",
 		images:
-			"/corporal/tratamiento-corporal-pulido01.webp*/corporal/tratamiento-corporal-pulido02.webp*/corporal/tratamiento-corporal-pulido03.webp",
+			"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
 	},
 	{
 		id: 33,
@@ -185,9 +188,10 @@ export const servicesMock: ElementMockType[] = [
 		title: "Corporal Liposonix",
 		price: 58000,
 		description:
-			"Liposonix con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
+			"Adios a la grasa localizada! Tratamiento reductor con liposonix",
 		description_admin: "Corporal Liposonix",
-		description_long: "BLA BLA BLA",
+		description_long:
+			"Liposonix es una tecnologia de ultrasonido focalizado de alta intensidad que destruye las celulas grasas de manera no invasiva. El procedimiento es rapido, seguro y efectivo para reducir la grasa localizada en areas como: abdomen, flancos, muslos y brazos. Redefiniendo el contorno corporal.",
 		images:
 			"/corporal/tratamiento-corporal-liposonix01.webp*/corporal/tratamiento-corporal-liposonix02.webp*/corporal/tratamiento-corporal-liposonix03.webp*/corporal/tratamiento-corporal-liposonix04.webp",
 	},
@@ -256,7 +260,8 @@ export const servicesMock: ElementMockType[] = [
 		description:
 			"Lifting. Técnica de arqueado en pestañas naturales. técnica tradicional y coreana",
 		description_admin: "Pestañas",
-		description_long: "BLA BLA BLA",
+		description_long:
+			"Con tecnicas innovadoras y productos de alta calidad, lograremos que tus pestaas luzcas mas largas, curvadas y voluminosas sin necesidad de extensiones.",
 		images:
 			"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 	},
@@ -268,7 +273,8 @@ export const servicesMock: ElementMockType[] = [
 		price: 45000,
 		description: "Promos laminado de cejas y Lifting tradicional.",
 		description_admin: "Laminado + lifting",
-		description_long: "BLA BLA BLA",
+		description_long:
+			"Nuestro tratamiento de laminado y perfilado de cejas es la solucion perfecta para ti, combinando tecnicas avanzadas para darle a tus cejas una forma y volumen que deseas, realzando la belleza natural de tu rostro. Laminado de cejas: tratamiento que aliza y da forma a las cejas definiendolas.",
 		images:
 			"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 	},
@@ -334,9 +340,10 @@ export const servicesTree: ElementsTreeType[] = [
 				title: "Tratamiento tensor",
 				price: 60000,
 				description:
-					"Tratamiento de higiene profunda con Radiofrecuencia. Con aporte de activos tensores. Ideal para pieles desvitalizadas y con flacidez.",
+					"Tratamiento que combina los mejores activos y tecnologías para devolverle a tu piel su elasticidad y juventud",
 				description_admin: "Tratamiento tensor",
-				description_long: "BLA BLA BLA",
+				description_long:
+					"Nuestro tratamiento es personalizado y se adapta a las necesidades específicas de tu piel. Comienza con la limpieza profunda, seguida de la aplicación de nuestros activos y la utilización de nuestras tecnologías avanzadas. El tratamiento es rápido, indoloro y requiere mínimo tiempo de recuperación.",
 				images:
 					"/facial/higiene-facial-tratamiento-tensor01.webp*/facial/higiene-facial-tratamiento-tensor02.webp*/facial/higiene-facial-tratamiento-tensor03.webp*/facial/higiene-facial-tratamiento-tensor04.webp*/facial/higiene-facial-tratamiento-tensor05.webp",
 			},
@@ -449,9 +456,10 @@ export const servicesTree: ElementsTreeType[] = [
 				title: "Pulido corporal",
 				price: 48000,
 				description:
-					"Pulido corporal con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
+					"Exfoliación suave, seguida de la aplicación de productos hidratantes y un masaje relajante.",
 				description_admin: "Pulido corporal",
-				description_long: "BLA BLA BLA",
+				description_long:
+					"Nuestro tratamiento de Pulido Corporal es personalizado y se adapta a las necesidades específicas de tu piel. Comienza con una exfoliación suave, seguida de la aplicación de productos hidratantes y un masaje relajante. El tratamiento es relajante y requiere minímo tiempo de recuperación.",
 				images:
 					"/corporal/tratamiento-corporal-pulido01.webp*/corporal/tratamiento-corporal-pulido02.webp*/corporal/tratamiento-corporal-pulido03.webp",
 			},
@@ -459,12 +467,13 @@ export const servicesTree: ElementsTreeType[] = [
 				id: 32,
 				category_title: "Tratamientos corporales",
 				category_id: 3,
-				title: "Higiene corporal profunda",
+				title: "Pulido corporal mas peeling",
 				price: 50000,
 				description:
-					"Higiene profunda en espalda, glúteos, brazos o piernas. Se realizan extracciones y se tratan manchas o foliculitis. El valor es por zona.",
-				description_admin: "Higiene corporal profunda",
-				description_long: "BLA BLA BLA",
+					"Peeling corporal con renovacion celular. Ideal para pieles con acne",
+				description_admin: "Pulido corporal mas peeling",
+				description_long:
+					"Peeling corporal con renovacion celular. Este tratamiento es ideal para pieles con foliculitis o acne. Combinamos tecnicas avanzadas de exfoliacion quimica con productos innovadores para estimular la renovacion celular y renovar una piel saludable y radiante.",
 				images:
 					"/corporal/tratamiento-corporal-pelling01.webp*/corporal/tratamiento-corporal-pelling02.webp*/corporal/tratamiento-corporal-pelling03.webp",
 			},
@@ -475,9 +484,10 @@ export const servicesTree: ElementsTreeType[] = [
 				title: "Corporal Liposonix",
 				price: 58000,
 				description:
-					"Liposonix con exfoliante. Se hace un prepeeling y un masaje circulatorio en todo el cuerpo.",
+					"Adios a la grasa localizada! Tratamiento reductor con liposonix",
 				description_admin: "Corporal Liposonix",
-				description_long: "BLA BLA BLA",
+				description_long:
+					"Liposonix es una tecnologia de ultrasonido focalizado de alta intensidad que destruye las celulas grasas de manera no invasiva. El procedimiento es rapido, seguro y efectivo para reducir la grasa localizada en areas como: abdomen, flancos, muslos y brazos. Redefiniendo el contorno corporal.",
 				images:
 					"/corporal/tratamiento-corporal-liposonix01.webp*/corporal/tratamiento-corporal-liposonix02.webp*/corporal/tratamiento-corporal-liposonix03.webp*/corporal/tratamiento-corporal-liposonix04.webp",
 			},
@@ -570,7 +580,8 @@ export const servicesTree: ElementsTreeType[] = [
 				description:
 					"Lifting. Técnica de arqueado en pestañas naturales. técnica tradicional y coreana",
 				description_admin: "Pestañas",
-				description_long: "BLA BLA BLA",
+				description_long:
+					"Con tecnicas innovadoras y productos de alta calidad, lograremos que tus pestaas luzcas mas largas, curvadas y voluminosas sin necesidad de extensiones.",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},
@@ -582,7 +593,8 @@ export const servicesTree: ElementsTreeType[] = [
 				price: 45000,
 				description: "Promos laminado de cejas y Lifting tradicional.",
 				description_admin: "Laminado + lifting",
-				description_long: "BLA BLA BLA",
+				description_long:
+					"Nuestro tratamiento de laminado y perfilado de cejas es la solucion perfecta para ti, combinando tecnicas avanzadas para darle a tus cejas una forma y volumen que deseas, realzando la belleza natural de tu rostro. Laminado de cejas: tratamiento que aliza y da forma a las cejas definiendolas.",
 				images:
 					"/pestanias-cejas/pestanias-cejas01.webp*/pestanias-cejas/pestanias-cejas02.webp",
 			},

@@ -50,10 +50,10 @@ export default function Footer() {
 							<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
 								Suscripción
 							</h3>
-							<div className="flex flex-col gap-6 2xl:gap-10 text-[#333] text-sm 2xl:text-base px-2">
+							<div className="flex flex-col gap-12 2xl:gap-16 text-[#333] text-sm 2xl:text-base px-2">
 								<p>
-									Recibe las últimas novedades. Lorem ipsum dolor sit amet
-									consectetur, adipisicing elit. Quisquam, reprehenderit.
+									Recibe las últimas novedades y suscribete para mas informacion
+									y promociones.
 								</p>
 								<div>
 									<div className="">
