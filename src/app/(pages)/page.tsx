@@ -33,7 +33,7 @@ const Desktop = () => {
 				<Header />
 			</div>
 
-			<section className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative">
+			<section className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative bg-(--background-one)">
 				<Home />
 			</section>
 
