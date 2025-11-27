@@ -7,7 +7,7 @@ import RoundLeaf from "../../../public/leaf/round-leaf"
 
 export default function Home() {
 	return (
-		<>
+		<section className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative bg-(--background-one)">
 			<LeafImgs />
 
 			<div className="absolute bottom-0 -right-80 z-0 overflow-hidden hero-bg">
@@ -17,7 +17,7 @@ export default function Home() {
 			<Hero />
 
 			<Skills />
-		</>
+		</section>
 	)
 }
 
