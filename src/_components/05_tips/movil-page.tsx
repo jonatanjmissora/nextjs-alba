@@ -35,7 +35,7 @@ const TipCard = ({ tip }: { tip: TipType }) => {
 		<div className="w-full relative mt-40">
 			<AccordionElement content={tip.content} />
 			<div className="absolute -z-10 bottom-[95%] left-[12%] w-3/4 h-[200px]">
-				<div className="relative overflow-hidden  w-full h-full rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+				<div className="relative overflow-hidden  w-full h-full rounded-lg custom-shadow">
 					<ImageKit imageID={tip.image} />
 				</div>
 			</div>
@@ -52,7 +52,7 @@ const AccordionElement = ({
 		<Accordion
 			type="single"
 			collapsible
-			className="w-full border border-[#444]/20 rounded-lg bg-[var(--background-one)] p-4 shadow-[3px_3px_3px_0_rgba(0,0,0,0.35)]"
+			className="w-full border border-[#444]/20 rounded-lg bg-[var(--background-one)] p-4 custom-shadow"
 			defaultValue="item-1"
 		>
 			{content.map((item, index) => (

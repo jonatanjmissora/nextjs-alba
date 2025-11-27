@@ -20,7 +20,7 @@ export const MovilCartCard = ({
 	return (
 		<article className="w-full relative flex mb-70">
 			<DataCard element={element} type={type} from={from} />
-			<div className="w-3/4 aspect-video bg-slate-300 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.5)] rounded-lg relative overflow-hidden">
+			<div className="w-3/4 aspect-video bg-slate-300 custom-shadow rounded-lg relative overflow-hidden">
 				<ImageKit
 					imageID={element.images.split("*")[0]}
 					className="hover:scale-110 duration-300"
@@ -46,7 +46,7 @@ const DataCard = ({
 
 	return (
 		<div
-			className={`p-3 flex flex-col gap-2 items-center header font-semibold tracking-wider absolute top-[90%] z-10 rounded-lg shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] text-[var(--primary-green)] bg-[var(--background-two)] left-[5%] right-0 overflow-hidden border border-[#444]/50`}
+			className={`p-3 flex flex-col gap-2 items-center header font-semibold tracking-wider absolute top-[90%] z-10 rounded-lg custom-shadow text-[var(--primary-green)] bg-[var(--background-two)] left-[5%] right-0 overflow-hidden border border-[#444]/50`}
 		>
 			<div className="w-full flex justify-between items-center">
 				<i className="scale-75 flex items-center">

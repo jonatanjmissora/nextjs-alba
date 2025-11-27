@@ -33,12 +33,12 @@ const MovilSectionCard = ({
 		<article className="w-full relative flex odd:justify-end">
 			<Link
 				href={`/services/${category.id}?from=services`}
-				className={`h-13 flex items-center header font-semibold tracking-wider absolute -bottom-8 z-10 rounded-lg shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] text-[var(--primary-green)] bg-[var(--background-two)] ${isEven ? "left-0" : "right-0"} overflow-hidden border border-[#444]/50`}
+				className={`h-13 flex items-center header font-semibold tracking-wider absolute -bottom-8 z-10 rounded-lg custom-shadow text-[var(--primary-green)] bg-[var(--background-two)] ${isEven ? "left-0" : "right-0"} overflow-hidden border border-[#444]/50`}
 			>
 				<h2 className="py-3 px-6 pr-4">{category.title}</h2>
 				<ChevronRightIcon className="w-7 h-full p-0 bg-[var(--primary-green)]/50 text-[var(--background-one)]" />
 			</Link>
-			<div className="w-3/4 aspect-video bg-slate-300 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.5)] rounded-lg relative overflow-hidden">
+			<div className="w-3/4 aspect-video bg-slate-300 custom-shadow rounded-lg relative overflow-hidden">
 				<ImageKit
 					imageID={category.elements[0].images.split("*")[0]}
 					className="hover:scale-110 duration-300"

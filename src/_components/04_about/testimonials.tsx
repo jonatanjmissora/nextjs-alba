@@ -56,9 +56,7 @@ const ImageElement = ({
 	className: string
 }) => {
 	return (
-		<div
-			className={`overflow-hidden shadow-[8px_8px_10px_rgba(0,0,0,0.5)]  absolute ${className}`}
-		>
+		<div className={`overflow-hidden custom-shadow  absolute ${className}`}>
 			<ImageKit imageID={src} />
 		</div>
 	)

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Cormorant_Garamond, Jost } from "next/font/google"
+import { Cormorant_Garamond, Jost, Bonheur_Royale } from "next/font/google"
 import "./globals.css"
 import LenisProvider from "@/_lib/lenis-provider"
 
@@ -27,6 +27,18 @@ const jost = Jost({
 	adjustFontFallback: true,
 })
 
+// Configuración de Bonheur Royale
+const bonheurRoyale = Bonheur_Royale({
+	weight: ["400"],
+	style: ["normal"],
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-bonheur-royale",
+	fallback: ["cursive"],
+	preload: true,
+	adjustFontFallback: true,
+})
+
 export const metadata: Metadata = {
 	title: "Alba Garcia",
 	description: "Estetica Integral",
@@ -38,7 +50,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="es" className={`${cormorant.variable} ${jost.variable}`}>
+		<html
+			lang="es"
+			className={`${cormorant.variable} ${jost.variable} ${bonheurRoyale.variable}`}
+		>
 			<body className="antialiased font-sans">
 				<LenisProvider>{children}</LenisProvider>
 			</body>

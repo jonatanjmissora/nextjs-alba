@@ -20,9 +20,9 @@ export default function FavCard({
 	return (
 		<li
 			key={element.id}
-			className={`w-full flex-1 min-w-[280px] flex flex-col justify-between items-center gap-2 sm:gap-4 p-6 ${type === "shop" ? "bg-[var(--primary-pink)]" : "bg-[var(--background-one)]"} rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] group border border-[#d685922a]`}
+			className={`w-full flex-1 min-w-[280px] flex flex-col justify-between items-center gap-2 sm:gap-4 p-6 ${type === "shop" ? "bg-[var(--primary-pink)]" : "bg-[var(--background-one)]"} rounded-tr-4xl rounded-bl-4xl custom-shadow group border border-[#d685922a]`}
 		>
-			<div className="relative shadow-[5px_5px_5px_0_rgba(0,0,0,0.25)] overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full h-[200px] sm:h-[280px] 2xl:h-[350px]">
+			<div className="relative custom-shadow overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full h-[200px] sm:h-[280px] 2xl:h-[350px]">
 				<ImageKit
 					imageID={element.images.split("*")[0]}
 					className={`group-hover:scale-120 transition-all duration-800`}

@@ -39,7 +39,7 @@ const MovilCertificates = () => {
 			<CarouselContent className="">
 				{aboutDiplomas.map(diploma => (
 					<CarouselItem key={diploma.title}>
-						<div className="relative w-full h-[200px] shadow-[3px_3px_3px_0px_rgba(0,0,0,0.4)] rounded-lg overflow-hidden ">
+						<div className="relative w-full h-[200px] custom-shadow rounded-lg overflow-hidden ">
 							<ImageKit imageID={diploma.image} />
 						</div>
 					</CarouselItem>
@@ -99,9 +99,7 @@ const ImageElement = ({
 	className: string
 }) => {
 	return (
-		<div
-			className={`rounded-lg shadow-[3px_3px_3px_3px_rgba(0,0,0,0.35)] ${className} overflow-hidden`}
-		>
+		<div className={`rounded-lg custom-shadow ${className} overflow-hidden`}>
 			<div className="relative w-full h-full">
 				<ImageKit imageID={src} />
 			</div>

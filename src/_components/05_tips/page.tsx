@@ -38,7 +38,7 @@ const TipCard1 = ({ tip }: { tip: TipType }) => {
 			<div className="flex flex-col gap-3 tip-border-up pl-8 pt-8">
 				<AccordionElement content={tip.content} />
 			</div>
-			<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+			<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg custom-shadow">
 				<ImageKit imageID={tip.image} />
 			</div>
 		</div>
@@ -48,7 +48,7 @@ const TipCard1 = ({ tip }: { tip: TipType }) => {
 const TipCard2 = ({ tip }: { tip: TipType }) => {
 	return (
 		<div id={tip.id} className="w-1/2 flex flex-col gap-10">
-			<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg shadow-[5px_5px_7px_0_rgba(0,0,0,0.35)]">
+			<div className="relative overflow-hidden w-full h-[80dvh] 2xl:h-[70dvh] rounded-lg custom-shadow">
 				<ImageKit imageID={tip.image} />
 			</div>
 			<div className="flex flex-col gap-3 tip-border-down pr-8 pb-8">

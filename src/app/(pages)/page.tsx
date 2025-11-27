@@ -28,7 +28,7 @@ const Desktop = () => {
 		<div className="hidden sm:block w-full">
 			<div
 				id="home01"
-				className="absolute top-0 left-0 z-50 w-full p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:pb-8 2xl:pt-12 text-sm 2xl:text-base"
+				className="absolute top-0 left-0 z-50 w-full p-6 px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] 2xl:py-14 text-sm 2xl:text-base"
 			>
 				<Header />
 			</div>
@@ -39,7 +39,7 @@ const Desktop = () => {
 
 			<div className="  px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] w-full py-80 pb-20 bg-[var(--primary-pink)]">
 				<div className="grid grid-cols-3 gap-10">
-					<div className="flex flex-col gap-3 justify-center items-center w-full shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] bg-[var(--background-two)] p-12 rounded-lg">
+					<div className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-[var(--background-two)] p-12 rounded-lg">
 						<span className="rounded-full size-24 bg-[var(--primary-pink)]"></span>
 						<span className="header text-[var(--foreground-green)]">
 							Profesionalismo
@@ -49,7 +49,7 @@ const Desktop = () => {
 							Voluptates veniam sunt ratione quas?
 						</p>
 					</div>
-					<div className="flex flex-col gap-3 justify-center items-center w-full shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] bg-[var(--background-two)] p-12 rounded-lg">
+					<div className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-[var(--background-two)] p-12 rounded-lg">
 						<span className="rounded-full size-24 bg-[var(--primary-pink)]"></span>
 						<span className="header text-[var(--foreground-green)]">
 							Personalizada
@@ -59,7 +59,7 @@ const Desktop = () => {
 							Voluptates veniam sunt ratione quas?
 						</p>
 					</div>
-					<div className="flex flex-col gap-3 justify-center items-center w-full shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] bg-[var(--background-two)] p-12 rounded-lg">
+					<div className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-[var(--background-two)] p-12 rounded-lg">
 						<span className="rounded-full size-24 bg-[var(--primary-pink)]"></span>
 						<span className="header text-[var(--foreground-green)]">
 							Responsabilidad

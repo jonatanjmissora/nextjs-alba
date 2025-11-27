@@ -31,15 +31,15 @@ export default function Home() {
 			</div>
 
 			<div className="flex gap-10 absolute bottom-12 left-1/2 -translate-x-[60%]">
-				<div className="text-lg px-4 py-2 pt-1 rounded-tl-[1rem] rounded-br-[1rem] border border-[var(--primary-pink)] shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] bg-[var(--primary-pink)]">
+				<div className="text-lg px-4 py-2 pt-1 rounded-tl-[1rem] rounded-br-[1rem] border border-[var(--primary-pink)] custom-shadow bg-[var(--primary-pink)]">
 					<span className="text-2xl text-[var(--primary-green)]">+4</span> años
 					de experiencia
 				</div>
-				<div className="text-lg px-4 py-2 pt-1 rounded-tl-[1rem] rounded-br-[1rem] border border-[var(--primary-pink)] shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] bg-[var(--primary-pink)]">
+				<div className="text-lg px-4 py-2 pt-1 rounded-tl-[1rem] rounded-br-[1rem] border border-[var(--primary-pink)] custom-shadow bg-[var(--primary-pink)]">
 					<span className="text-2xl text-[var(--primary-green)]">+100</span>{" "}
 					clientas atendidas
 				</div>
-				<div className="text-lg px-4 py-2 pt-1 rounded-tl-[1rem] rounded-br-[1rem] border border-[var(--primary-pink)] shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] bg-[var(--primary-pink)]">
+				<div className="text-lg px-4 py-2 pt-1 rounded-tl-[1rem] rounded-br-[1rem] border border-[var(--primary-pink)] custom-shadow bg-[var(--primary-pink)]">
 					<span className="text-2xl text-[var(--primary-green)]">99.9%</span>{" "}
 					clientas satisfechas
 				</div>

@@ -68,7 +68,7 @@ const ElementImage = ({ element }: { element: ElementTreeType }) => {
 
 	return (
 		<div className="w-full sm:w-[40%] sm:h-[65dvh] 2xl:h-[55dvh] h-[400px] flex flex-col gap-4">
-			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] shadow-[5px_5px_5px_0_rgba(0,0,0,0.5)]">
+			<div className="w-full h-full overflow-hidden relative rounded-tl-[2.5rem] rounded-br-[2.5rem] custom-shadow">
 				{/* Imagen anterior con fade out */}
 				<div
 					className={cn(

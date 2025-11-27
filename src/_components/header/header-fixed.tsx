@@ -45,7 +45,7 @@ export default function HeaderFixed({
 			)}
 
 			<div
-				className={`absolute sm:fixed 2xl:top-[4%] top-[3.5%] right-[15%] z-50 ${scrolled && "translate-x-37"} duration-500 flex gap-4`}
+				className={`absolute sm:fixed 2xl:top-[5%] top-[3.5%] right-[15%] z-50 ${scrolled && "translate-x-37"} duration-500 flex gap-4`}
 			>
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
@@ -57,10 +57,10 @@ export default function HeaderFixed({
 const Logo = ({ scrolled }: { scrolled: boolean }) => {
 	return (
 		<div
-			className={`fixed top-[3.3%] sm:top-[3.75dvh] 2xl:top-[4.5dvh] 2xl:left-[13dvw] left-[11.5%] z-100 text-xl font-semibold text-[var(--primary-green)] ${scrolled && "sm:-translate-x-26 2xl:-translate-x-37"} duration-500`}
+			className={`fixed top-[3.3%] sm:top-[3.75dvh] 2xl:top-[4dvh] 2xl:left-[13dvw] left-[11.5%] z-100 text-5xl text-(--primary-green) bonheur ${scrolled && "sm:-translate-x-26 2xl:-translate-x-37"} duration-500`}
 		>
-			<a href="#home01">ALBA </a>
-			<span className={`${scrolled && "opacity-0"} duration-500`}>GARCIA</span>
+			<a href="#home01">Alba </a>
+			<span className={`${scrolled && "opacity-0"} duration-500`}>Garcia</span>
 		</div>
 	)
 }

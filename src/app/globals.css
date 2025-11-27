@@ -6,6 +6,7 @@
 :root {
 	--font-cormorant: "Cormorant Garamond", serif;
 	--font-jost: Jost, sans-serif;
+	--font-bonheur: Bonheur Royale, cursive;
 	--background: #ffffff;
 	--foreground: #444;
 	--background-one: #fffdfd;
@@ -143,6 +144,14 @@ body {
 	letter-spacing: 1px;
 }
 
+.bonheur {
+	font-family: var(--font-bonheur);
+}
+
+.custom-shadow {
+	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+}
+
 .hero-bg::after {
 	position: absolute;
 	content: "";
@@ -174,6 +183,7 @@ body {
 	font-size: var(--sm-title-size);
 	line-height: 5rem;
 	font-weight: 600;
+	color: var(--primary-green);
 }
 
 .subtitle {

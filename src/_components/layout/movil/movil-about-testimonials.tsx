@@ -39,7 +39,7 @@ const ImageElement = ({
 	className: string
 }) => {
 	return (
-		<div className={`shadow-[8px_8px_10px_rgba(0,0,0,0.5)] ${className}`}>
+		<div className={`custom-shadow ${className}`}>
 			<div className="relative w-full h-full">
 				<ImageKit imageID={src} />
 			</div>

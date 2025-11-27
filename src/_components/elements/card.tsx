@@ -12,8 +12,8 @@ export const Card = ({
 	children: React.ReactNode
 }) => {
 	return (
-		<div className="w-full flex-col sm:flex-row sm:min-w-[30%] sm:flex-1 flex sm:flex-wrap justify-start items-start bg-pink-100 shadow-[3px_3px_5px_0px_rgba(0,0,0,0.25)] border border-[#444]/20 rounded-lg overflow-hidden relative">
-			<div className="w-full sm:max-w-[37dvw] h-[300px] bg-slate-300 shadow-[0px_3px_5px_0px_rgba(0,0,0,0.25)] relative overflow-hidden">
+		<div className="w-full flex-col sm:flex-row sm:min-w-[30%] sm:flex-1 flex sm:flex-wrap justify-start items-start bg-pink-100 custom-shadow border border-[#444]/20 rounded-lg overflow-hidden relative">
+			<div className="w-full sm:max-w-[37dvw] h-[300px] bg-slate-300 custom-shadow relative overflow-hidden">
 				<ImageKit
 					imageID={category.elements[0].images.split("*")[0]}
 					className="hover:scale-110 duration-300"

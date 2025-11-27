@@ -48,7 +48,7 @@ export default function MovilHeader() {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "shadow-[0_0_5px_0_rgba(0,0,0,0.05)] bg-[var(--background-one)]"}`}
+			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "custom-shadow bg-[var(--background-one)]"}`}
 		>
 			<a
 				href={
@@ -93,7 +93,7 @@ const DrawerComponent = () => {
 							<DrawerClose asChild className="absolute top-0 right-0">
 								<X className="text-[var(--primary-green)] size-8" />
 							</DrawerClose>
-							<div className="shadow-[4px_4px_4px_0_rgba(0,0,0,0.25)] rounded-full overflow-hidden size-40 relative">
+							<div className="custom-shadow rounded-full overflow-hidden size-40 relative">
 								<ImageKit imageID={"logo.webp"} />
 							</div>
 						</div>

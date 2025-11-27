@@ -22,7 +22,7 @@ export default function CartCheckout() {
 	const total = cartTotalArray.reduce((total, element) => total + element, 0)
 
 	return (
-		<div className="flex-1 max-h-[80dvh] 2xl:max-h-[75dvh] flex flex-col justify-center items-center gap-6 flex-wrap p-4 py-8 2xl:p-6 my-10 2xl:my-20 border rounded-tr-4xl rounded-bl-4xl shadow-[5px_5px_5px_0_rgba(0,0,0,0.15)] bg-[var(--background-three)] border-[#d685922a]">
+		<div className="flex-1 max-h-[80dvh] 2xl:max-h-[75dvh] flex flex-col justify-center items-center gap-6 flex-wrap p-4 py-8 2xl:p-6 my-10 2xl:my-20 border rounded-tr-4xl rounded-bl-4xl custom-shadow bg-[var(--background-three)] border-[#d685922a]">
 			<h2 className="subtitle font-semibold text-[var(--primary-green)] text-center w-full">
 				Resumen de compra
 			</h2>
