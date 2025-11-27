@@ -195,7 +195,7 @@ body {
 .header {
 	font-family: var(--font-cormorant);
 	font-size: var(--sm-header-size);
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .text {

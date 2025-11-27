@@ -1,5 +1,6 @@
 import MovilHome from "@/_components/01_home/movil-page"
 import Home from "@/_components/01_home/page"
+import HomeBisPage from "@/_components/01bis_home/page"
 import MovilServices from "@/_components/02_services/movil-page"
 import ServicesSection from "@/_components/02_services/page"
 import MovilProducts from "@/_components/03_products/movil-page"
@@ -33,44 +34,9 @@ const Desktop = () => {
 				<Header />
 			</div>
 
-			<section className="w-full min-h-[100dvh] 2xl:min-h-[100dvh] flex justify-center items-center relative bg-(--background-one)">
-				<Home />
-			</section>
+			<Home />
 
-			<div className="  px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] w-full py-80 pb-20 bg-[var(--primary-pink)]">
-				<div className="grid grid-cols-3 gap-10">
-					<div className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-[var(--background-two)] p-12 rounded-lg">
-						<span className="rounded-full size-24 bg-[var(--primary-pink)]"></span>
-						<span className="header text-[var(--foreground-green)]">
-							Profesionalismo
-						</span>
-						<p className="text">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-							Voluptates veniam sunt ratione quas?
-						</p>
-					</div>
-					<div className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-[var(--background-two)] p-12 rounded-lg">
-						<span className="rounded-full size-24 bg-[var(--primary-pink)]"></span>
-						<span className="header text-[var(--foreground-green)]">
-							Personalizada
-						</span>
-						<p className="text">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-							Voluptates veniam sunt ratione quas?
-						</p>
-					</div>
-					<div className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-[var(--background-two)] p-12 rounded-lg">
-						<span className="rounded-full size-24 bg-[var(--primary-pink)]"></span>
-						<span className="header text-[var(--foreground-green)]">
-							Responsabilidad
-						</span>
-						<p className="text">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-							Voluptates veniam sunt ratione quas?
-						</p>
-					</div>
-				</div>
-			</div>
+			<HomeBisPage />
 
 			{/* <WaveContainer> */}
 			<ServicesSection />
