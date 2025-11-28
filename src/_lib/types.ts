@@ -13,6 +13,8 @@ export type ElementTreeType = {
 export type ElementsTreeType = {
 	id: number
 	title: string
+	description: string
+	image: string
 	elements: ElementTreeType[]
 }
 

@@ -7,7 +7,7 @@ import { LeafImgs } from "../leaf-section"
 
 export default function ProductsSection() {
 	return (
-		<section className="w-full px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] pt-20 pb-80 relative">
+		<section className="w-full px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding) pt-20 pb-80 relative">
 			<article id="shop01" className="w-full my-32 border border-transparent">
 				<SectionHeader
 					title="Nuestros productos en gabinete"
@@ -26,11 +26,7 @@ const ProductCategoriesComponent = () => {
 	return (
 		<div className="flex flex-wrap gap-6 gap-y-12 w-full">
 			{productsTree.map((category: ElementsTreeType) => (
-				<Card key={category.title} type="shop" category={category}>
-					<span className="text-sm p-4 pb-8 text-pretty tracking-wider">
-						{category.elements[0].description}
-					</span>
-				</Card>
+				<Card key={category.title} type="shop" category={category} />
 			))}
 		</div>
 	)

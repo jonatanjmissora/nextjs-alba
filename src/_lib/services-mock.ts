@@ -284,6 +284,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 1,
 		title: "Maderoterapia",
+		description:
+			"Masaje modelador y reductor. Trata celulitis y grasa localizada. Desintoxica el cuerpo.Reduce el estrés y la ansiedad.",
+		image: "/maderoterapia/maderoterapia01.webp",
 		elements: [
 			{
 				id: 11,
@@ -304,6 +307,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 2,
 		title: "Limpieza facial",
+		description:
+			"Técnicas y procedimientos diseñados para abordar flacidez, celulitis, retención de líquidos o tensión muscular.",
+		image: "/facial/higiene-facial-profunda01.webp",
 		elements: [
 			{
 				id: 21,
@@ -448,6 +454,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 3,
 		title: "Tratamientos corporales",
+		description:
+			"Técnicas y procedimientos diseñados para abordar flacidez, celulitis, retención de líquidos o tensión muscular.",
+		image: "/corporal/tratamiento-corporal-pulido01.webp",
 		elements: [
 			{
 				id: 31,
@@ -496,6 +505,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 4,
 		title: "Bronceado sin sol",
+		description:
+			"Obtén un tono dorado mediante la pigmentación de la piel, sin usar los nocivos rayos UV del rey Sol.",
+		image: "/bronceado/bronceado-sin-sol01.webp",
 		elements: [
 			{
 				id: 41,
@@ -516,6 +528,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 5,
 		title: "Hifu y liposonix",
+		description:
+			"Ideales para mejorar contornos y lograr un aspecto más firme y definido sin tiempos de recuperación.",
+		image: "/hifu-liposonix/hifu01.webp",
 		elements: [
 			{
 				id: 51,
@@ -550,6 +565,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 6,
 		title: "Depilación láser",
+		description:
+			"Reducir el crecimiento del vello, actuando directamente en la raíz, dejando la piel más suave.",
+		image: "/depilacion/depilacion-laser01.webp",
 		elements: [
 			{
 				id: 61,
@@ -570,6 +588,9 @@ export const servicesTree: ElementsTreeType[] = [
 	{
 		id: 7,
 		title: "Pestañas y cejas",
+		description:
+			"Realzamos tu mirada. Lifting, perfilado, laminado y diseño pensado para resaltar tu belleza natural con resultados duraderos.",
+		image: "/pestanias-cejas/pestanias-cejas01.webp",
 		elements: [
 			{
 				id: 71,

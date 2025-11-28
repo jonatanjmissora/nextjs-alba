@@ -1,37 +1,45 @@
 import { ElementsTreeType } from "@/_lib/types"
 import Link from "next/link"
-import { ImageKit } from "../image-kit"
+import { Image as ImageKit } from "@imagekit/next"
 
 export const Card = ({
 	type,
 	category,
-	children,
 }: {
-	type: "services" | "shop"
+	type: string
 	category: ElementsTreeType
-	children: React.ReactNode
 }) => {
+	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="w-full flex-col sm:flex-row sm:min-w-[30%] sm:flex-1 flex sm:flex-wrap justify-start items-start bg-pink-100 custom-shadow border border-[#444]/20 rounded-lg overflow-hidden relative">
-			<div className="w-full sm:max-w-[37dvw] h-[300px] bg-slate-300 custom-shadow relative overflow-hidden">
-				<ImageKit
-					imageID={category.elements[0].images.split("*")[0]}
-					className="hover:scale-110 duration-300"
-				/>
-			</div>
-			<div className="flex flex-col justify-between gap-2 p-3 pt-5 w-full flex-1">
-				<h2 className="tracking-wider font-semibold text-lg w-full text-left text-[var(--primary-green)]">
+		<div className="h-[310px] min-w-[calc(50%-24px)] flex-1 flex custom-shadow rounded-tl-xl rounded-br-xl overflow-hidden">
+			<div className="h-full w-full flex flex-col">
+				<div className="bg-(--background-one) h-[150px] flex justify-end items-center text-right header text-(--primary-green) leading-none font-normal px-8">
 					{category.title}
-				</h2>
-				<div className="flex flex-col justify-between flex-1 gap-2 p-2 w-full">
-					{children}
+				</div>
+				<div className="text bg-(--background-green) h-full p-8 flex flex-col gap-6 justify-between items-end">
+					<p className="w-full text-right text-[16px] leading-relaxed">
+						{category.description}
+					</p>
 					<Link
 						href={`/${type}/${category.id.toString()}?from=${type}`}
-						className="text-[#444]/70 cursor-pointer text-sm w-full text-right absolute bottom-3 right-3 hover:text-[var(--primary-green)] duration-300 hover:font-semibold"
+						className="cta-button text-center py-2 px-4 text-xs w-max"
 					>
-						leer mas +
+						seguir leyendo
 					</Link>
 				</div>
+			</div>
+
+			<div className="h-full w-full relative">
+				<ImageKit
+					urlEndpoint={`${urlEndp}`}
+					src={category.image}
+					priority={false}
+					alt={category.image}
+					fill
+					loading="eager"
+					className={`object-cover`}
+					sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
+				/>
 			</div>
 		</div>
 	)
