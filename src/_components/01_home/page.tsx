@@ -78,7 +78,7 @@ const Skills = () => {
 	return (
 		<article className="absolute bottom-24 left-(--2xl-layout-padding) z-1 flex gap-12 items-center justify-center">
 			<div className="flex items-center justify-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow">
-				<span className="text-xl text-(--primary-green)">+4</span>
+				<span className="text-xl text-(--primary-green)">+5</span>
 				<span className="">años de experiencia</span>
 			</div>
 
