@@ -98,6 +98,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 101,
 		title: "Higiene",
+		image: "/productos/producto01.webp",
+		description:
+			"Diseñados para limpiar profundamente la piel, eliminar impurezas, manteniendo frescura, suavidad y equilibrio diario.",
 		elements: [
 			{
 				id: 111,
@@ -117,6 +120,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 102,
 		title: "Tonificación",
+		image: "/productos/producto02.webp",
+		description:
+			"Revitalizan la piel y aportan frescura inmediata. Dejando el rostro más firme y luminoso.",
 		elements: [
 			{
 				id: 121,
@@ -136,6 +142,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 103,
 		title: "Serum",
+		image: "/productos/producto03.webp",
+		description:
+			"Aportan hidratación, luminosidad y cuidado específico según cada necesidad, para un rostro más saludable y radiante.",
 		elements: [
 			{
 				id: 131,
@@ -155,6 +164,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 104,
 		title: "Hidratante de día",
+		image: "/productos/producto04.webp",
+		description:
+			"Nutren y protegen la piel durante el día, manteniendo hidratación, suavidad y frescura, evitando signos de expresión.",
 		elements: [
 			{
 				id: 141,
@@ -174,6 +186,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 105,
 		title: "Renovación celular",
+		image: "/productos/producto05.webp",
+		description:
+			"Ideales para mejorar contornos y lograr un aspecto más firme y definido sin tiempos de recuperación.",
 		elements: [
 			{
 				id: 151,
@@ -193,6 +208,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 106,
 		title: "Contorno de ojos",
+		image: "/productos/producto06.webp",
+		description:
+			"Hidratan, protegen y revitalizan la delicada zona de los ojos, para lograr una mirada descansada y luminosa.",
 		elements: [
 			{
 				id: 161,
@@ -212,6 +230,9 @@ export const productsTree: ElementsTreeType[] = [
 	{
 		id: 107,
 		title: "Protección solar",
+		image: "/productos/producto07.webp",
+		description:
+			"Protegen la piel de los daños del sol, previniendo envejecimiento y manchas, mientras mantienen la hidratación",
 		elements: [
 			{
 				id: 171,

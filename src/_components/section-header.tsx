@@ -29,7 +29,7 @@ const LeafImages = () => {
 	return (
 		<>
 			<RoundLeafMovil className="sm:hidden block absolute top-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[10rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<Leaf1 className="hidden sm:block absolute bottom-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[10rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
+			<Leaf1 className="hidden sm:block absolute bottom-[0%] -right-[2%] sm:-right-[1%] size-[6rem] sm:size-[8rem] 2xl:size-[7rem] rotate-90 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
 		</>
 	)
 }

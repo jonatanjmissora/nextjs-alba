@@ -11,7 +11,7 @@ export const Card = ({
 }) => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="h-[310px] min-w-[calc(50%-24px)] flex-1 flex custom-shadow rounded-tl-xl rounded-br-xl overflow-hidden">
+		<div className="h-[310px] min-w-[calc(50%-24px)] flex-1 flex custom-shadow rounded-tl-xl rounded-br-xl overflow-hidden border border-[#444]/10">
 			<div className="h-full w-full flex flex-col">
 				<div className="bg-(--background-one) h-[150px] flex justify-end items-center text-right header text-(--primary-green) leading-none font-normal px-8">
 					{category.title}
