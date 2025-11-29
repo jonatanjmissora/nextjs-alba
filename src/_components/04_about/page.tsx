@@ -35,6 +35,15 @@ const Signature = () => {
 
 const Testimonials = () => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
+	const testimonials = [
+		"about/testimonial01.webp",
+		"about/testimonial02.webp",
+		"about/testimonial03.webp",
+		"about/testimonial04.webp",
+		"about/testimonial06.webp",
+		"about/testimonial07.webp",
+		"about/testimonial08.webp",
+	]
 	return (
 		<article className="">
 			<div className="flex w-full justify-center">
@@ -63,18 +72,44 @@ const Testimonials = () => {
 					/>
 				</div>
 			</div>
-			<div className="w-full mt-10">
-				<div className="mx-auto w-[400px] h-[100px] relative">
-					<ImageKit
-						urlEndpoint={`${urlEndp}`}
-						src="/about/testimonial06w.jpg"
-						priority={true}
-						alt={"/about/testimonial06w.jpg"}
-						fill
-						loading="eager"
-						className={`object-cover`}
-						sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 20vw"
-					/>
+			<div className="w-[450px] mx-auto mt-10 h-[124px] relative overflow-hidden testimonial-container opacity-70">
+				<div className="absolute top-full left-1/2 -translate-x-1/2 flex flex-col gap-6 testimonials1 w-full">
+					{testimonials.map(testimonial => (
+						<div
+							key={testimonial}
+							className={`mx-auto ${testimonial === "about/testimonial08.webp" ? "w-[300px]" : "w-[400px]"} h-[100px] relative`}
+						>
+							<ImageKit
+								urlEndpoint={`${urlEndp}`}
+								src={testimonial}
+								priority={true}
+								alt={testimonial}
+								fill
+								loading="eager"
+								className={`object-cover`}
+								sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 20vw"
+							/>
+						</div>
+					))}
+				</div>
+				<div className="absolute top-full left-1/2 -translate-x-1/2 flex flex-col gap-6 testimonials2">
+					{testimonials.map(testimonial => (
+						<div
+							key={testimonial}
+							className={`mx-auto ${testimonial === "about/testimonial08.webp" ? "w-[300px]" : "w-[400px]"} h-[100px] relative`}
+						>
+							<ImageKit
+								urlEndpoint={`${urlEndp}`}
+								src={testimonial}
+								priority={true}
+								alt={testimonial}
+								fill
+								loading="eager"
+								className={`object-cover`}
+								sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 20vw"
+							/>
+						</div>
+					))}
 				</div>
 			</div>
 		</article>

@@ -379,3 +379,43 @@ body {
 	opacity: 1;
 	transition-delay: calc(0.15s * var(--i));
 }
+
+.testimonials1 {
+	animation: slideUp 60s linear infinite;
+}
+
+@keyframes slideUp {
+	from {
+		top: 100%;
+	}
+	to {
+		top: -1620px;
+	}
+}
+
+.testimonials2 {
+	animation: slideUp2 60s linear infinite;
+	animation-delay: 30s;
+}
+
+@keyframes slideUp2 {
+	from {
+		top: 100%;
+	}
+	to {
+		top: -1620px;
+	}
+}
+
+.testimonial-container::after {
+	position: absolute;
+	content: "";
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		var(--background-two),
+		transparent 15%,
+		transparent 85%,
+		var(--background-two)
+	);
+}
