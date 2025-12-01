@@ -1,6 +1,6 @@
 import { SectionHeader } from "../section-header"
 // import Testimonials from "./testimonials"
-import Certificates from "./certificates"
+// import Certificates from "./certificates"
 import { aboutHeader } from "@/_lib/about"
 import { LeafImgs } from "../leaf-section"
 import { Image as ImageKit } from "@imagekit/next"
@@ -16,7 +16,7 @@ export default function About() {
 				/>
 				<Signature />
 				<Testimonials />
-				{/* <Certificates /> */}
+				<Certificates />
 			</article>
 			<LeafImgs />
 		</section>
@@ -111,6 +111,52 @@ const Testimonials = () => {
 						</div>
 					))}
 				</div>
+			</div>
+		</article>
+	)
+}
+
+const Certificates = () => {
+	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
+	const certificados = [
+		"/about/certificado00.webp",
+		"/about/certificado01.webp",
+		"/about/certificado02.webp",
+		"/about/certificado03.webp",
+		"/about/certificado04.webp",
+		"/about/certificado05.webp",
+		"/about/certificado06.webp",
+	]
+	return (
+		<article className="flex gap-12 items-center justify-center w-full py-20">
+			<div className="w-[200px] h-[400px] relative">
+				<ImageKit
+					urlEndpoint={`${urlEndp}`}
+					src="/about/avatar-alba.webp"
+					priority={true}
+					alt={"/about/avatar-alba.webp"}
+					fill
+					loading="eager"
+					className={`object-cover`}
+					sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
+				/>
+			</div>
+
+			<div className="grid grid-cols-4 items-center justify-center gap-4">
+				{certificados.map(certificado => (
+					<div key={certificado} className="w-[200px] h-[150px] relative">
+						<ImageKit
+							urlEndpoint={`${urlEndp}`}
+							src={certificado}
+							priority={true}
+							alt={certificado}
+							fill
+							loading="eager"
+							className={`object-cover`}
+							sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
+						/>
+					</div>
+				))}
 			</div>
 		</article>
 	)

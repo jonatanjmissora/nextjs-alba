@@ -18,7 +18,6 @@ export default function ServicesSection() {
 					subtitle="Servicios"
 					description={servicesHeader}
 				/>
-				s
 				<ServiceCategoriesComponent />
 			</article>
 			<LeafImgs />
