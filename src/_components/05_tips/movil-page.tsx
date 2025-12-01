@@ -5,7 +5,7 @@ import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
-	AccordionTrigger,
+	AccordionTriggerLeft,
 } from "@/components/ui/accordion"
 import { ImageKit } from "../image-kit"
 
@@ -52,14 +52,14 @@ const AccordionElement = ({
 		<Accordion
 			type="single"
 			collapsible
-			className="w-full border border-[#444]/20 rounded-lg bg-[var(--background-one)] p-4 custom-shadow"
+			className="w-full border border-[#444]/20 rounded-lg bg-(--background-one) p-4 custom-shadow"
 			defaultValue="item-1"
 		>
 			{content.map((item, index) => (
 				<AccordionItem key={item.faq} value={`item-${index + 1}`}>
-					<AccordionTrigger className="w-full text-base font-semibold text-[var(--primary-green)]">
+					<AccordionTriggerLeft className="w-full text-base font-semibold text-(--primary-green)">
 						{item.faq}
-					</AccordionTrigger>
+					</AccordionTriggerLeft>
 					<AccordionContent className="flex flex-col text-xs gap-4 text-balance text-[#444]/85">
 						<p>{item.answer}</p>
 					</AccordionContent>
