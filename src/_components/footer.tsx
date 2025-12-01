@@ -20,34 +20,33 @@ export default function Footer() {
 	const mensajeSuscripcion = mensajeSuscripcionData
 
 	return (
-		<div className="w-full bg-[var(--primary-pink)] relative pb-6">
+		<div className="w-full relative pb-6 overflow-hidden">
 			<footer id="footer01" className="w-full flex flex-col relative">
-				<WaveSVG className="w-full h-[140%] absolute -top-[110%] left-0 -z-10" />
-				<div className="w-full px-32 relaive">
+				<div className="w-full px-32 relative z-2">
 					<div className="grid grid-cols-4 min-h-[30dvh] pb-10">
 						<div className="flex flex-col gap-4 w-full">
-							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
+							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-(--primary-green)">
 								Servicios
 							</h3>
 							<ServicesNavComponent />
 						</div>
 
 						<div className="w-full flex flex-col gap-2">
-							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
+							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-(--primary-green)">
 								Tienda
 							</h3>
 							<ProductsNavComponent />
 						</div>
 
 						<div className="w-full flex flex-col gap-2">
-							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-[var(--primary-green)]">
+							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-(--primary-green)">
 								Tips
 							</h3>
 							<TipsNavComponent />
 						</div>
 
 						<div className="w-full flex flex-col gap-4">
-							<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-[var(--primary-green)]">
+							<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-(--primary-green)">
 								Suscripción
 							</h3>
 							<div className="flex flex-col gap-12 2xl:gap-16 text-[#333] text-sm 2xl:text-base px-2">
@@ -68,29 +67,31 @@ export default function Footer() {
 								</div>
 								<nav className="flex gap-10">
 									<Link href={whatsappLink} target="_blank">
-										<WhatsApp className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+										<WhatsApp className="size-[24px] 2xl:size-[32px] text-(--primary-green) duration-300" />
 									</Link>
 									<Link href={instagramLink} target="_blank">
-										<Instagram className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+										<Instagram className="size-[24px] 2xl:size-[32px] text-(--primary-green) duration-300" />
 									</Link>
 									<Link href={facebookLink} target="_blank">
-										<Facebook className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+										<Facebook className="size-[24px] 2xl:size-[32px] text-(--primary-green) duration-300" />
 									</Link>
 									<Link href={mailLink} target="_blank">
-										<Mail className="size-[24px] 2xl:size-[32px] text-[var(--primary-green)] duration-300" />
+										<Mail className="size-[24px] 2xl:size-[32px] text-(--primary-green) duration-300" />
 									</Link>
 								</nav>
 							</div>
 						</div>
 					</div>
 
-					<div className="w-full border-t border-[var(--primary-green)] mt-12">
-						<p className="py-2 w-full text-right text-sm text-[var(--primary-green)]">
+					<div className="w-full border-t border-(--primary-green) mt-12">
+						<p className="py-2 w-full text-right text-sm text-(--primary-green)">
 							© {new Date().getFullYear()} ALBA
 						</p>
 					</div>
 				</div>
-				<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
+
+				<Signature />
+				<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-(--leaf-color) opacity-(--opacity-leaf)" />
 			</footer>
 		</div>
 	)
@@ -103,7 +104,7 @@ const ServicesNavComponent = () => {
 			{services.map(service => (
 				<Link
 					key={service.title}
-					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
+					className="hover:text-(--primary-green) hover:font-semibold tracking-widest"
 					href={`/services/${service.id}`}
 				>
 					{service.title}
@@ -120,7 +121,7 @@ const ProductsNavComponent = () => {
 			{products.map(product => (
 				<Link
 					key={product.title}
-					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
+					className="hover:text-(--primary-green) hover:font-semibold tracking-widest"
 					href={`/shop/${product.id}`}
 				>
 					{product.title}
@@ -137,7 +138,7 @@ const TipsNavComponent = () => {
 			{tips.map(tip => (
 				<a
 					key={tip.id}
-					className="hover:text-[var(--primary-green)] hover:font-semibold tracking-widest"
+					className="hover:text-(--primary-green) hover:font-semibold tracking-widest"
 					href={`/#${tip.id}`}
 				>
 					{tip.title}
@@ -229,23 +230,12 @@ const Mail = ({ className }: { className: string }) => {
 	)
 }
 
-const WaveSVG = ({ className }: { className: string }) => {
+const Signature = () => {
 	return (
-		// biome-ignore lint/a11y/noSvgWithoutTitle: no quiero poner un titulo
-		<svg
-			width="100%"
-			height="100%"
-			id="svg"
-			viewBox="0 0 1440 390"
-			className={className}
-		>
-			<path
-				d="M 0,400 L 0,150 C 127.67857142857142,180.07142857142856 255.35714285714283,210.14285714285714 368,224 C 480.64285714285717,237.85714285714286 578.2500000000001,235.49999999999997 707,215 C 835.7499999999999,194.50000000000003 995.6428571428571,155.85714285714286 1123,142 C 1250.357142857143,128.14285714285714 1345.1785714285716,139.07142857142856 1440,150 L 1440,400 L 0,400 Z"
-				stroke="none"
-				strokeWidth="0"
-				fill="var(--primary-pink)"
-				fillOpacity="1"
-			></path>
-		</svg>
+		<div className="w-full h-1 relative">
+			<p className="bonheur text-(--primary-green) text-[280px] text-center opacity-10 leading-[280px] absolute z-0 -top-[250px] left-0 w-full">
+				Albana Garcia
+			</p>
+		</div>
 	)
 }

@@ -128,7 +128,7 @@ const Certificates = () => {
 		"/about/certificado06.webp",
 	]
 	return (
-		<article className="flex gap-12 items-center justify-center w-full py-20">
+		<article className="flex gap-12 items-end justify-center w-full py-20">
 			<div className="w-[200px] h-[400px] relative">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
@@ -142,7 +142,7 @@ const Certificates = () => {
 				/>
 			</div>
 
-			<div className="grid grid-cols-4 items-center justify-center gap-4">
+			<div className="grid grid-cols-4 gap-4">
 				{certificados.map(certificado => (
 					<div key={certificado} className="w-[200px] h-[150px] relative">
 						<ImageKit
