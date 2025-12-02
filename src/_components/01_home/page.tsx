@@ -4,18 +4,14 @@ import BranchLeaf from "../../../public/leaf/branch-leaf"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2 from "../../../public/leaf/leaf2"
 import RoundLeaf from "../../../public/leaf/round-leaf"
+import "./home.css"
 
 export default function Home() {
 	return (
-		<section className="w-full min-h-dvh 2xl:min-h-dvh flex justify-center items-center relative bg-(--background-one)">
+		<section className="w-full min-h-dvh flex justify-center items-center relative bg-(--background-one)">
+			<HomeImg1 />
 			<LeafImgs />
-
-			<div className="absolute bottom-0 -right-80 z-0 overflow-hidden hero-bg">
-				<HomeImg1 />
-			</div>
-
 			<Hero />
-
 			<Skills />
 		</section>
 	)
@@ -25,17 +21,19 @@ const HomeImg1 = () => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 
 	return (
-		<div className="w-screen h-screen relative">
-			<ImageKit
-				urlEndpoint={`${urlEndp}`}
-				src="/Layout/hero-bg.webp"
-				priority={true}
-				alt={"/Layout/hero-bg.webp"}
-				fill
-				loading="eager"
-				className={`object-cover`}
-				sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 120vw"
-			/>
+		<div className="absolute bottom-0 z-0 overflow-hidden hero-bg home-img-container">
+			<div className="relative home-img">
+				<ImageKit
+					urlEndpoint={`${urlEndp}`}
+					src="/Layout/hero-bg.webp"
+					priority={true}
+					alt={"/Layout/hero-bg.webp"}
+					fill
+					loading="eager"
+					className={`object-cover`}
+					sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 100vw"
+				/>
+			</div>
 		</div>
 	)
 }
@@ -53,14 +51,14 @@ const LeafImgs = () => {
 
 const Hero = () => {
 	return (
-		<article className="absolute top-[45dvh] left-(--2xl-layout-padding) -translate-y-1/2 z-1 flex flex-col gap-8 justify-center items-center">
-			<div>
-				<p className="title text-center leading-none">Centro cosmiátrico</p>
-				<p className="title text-center leading-none">de belleza</p>
+		<article className="absolute z-1 flex flex-col justify-center items-center hero-container border border-black">
+			<div className="hero-title">
+				<p>Centro cosmiátrico</p>
+				<p>de belleza</p>
 			</div>
 			<div>
-				<p className="text-xl">Al cuidado de tu piel.</p>
-				<p className="text-xl">Donde tu belleza se revela.</p>
+				<p className="hero-subtitle">Al cuidado de tu piel.</p>
+				<p className="hero-subtitle">Donde tu belleza se revela.</p>
 			</div>
 			<Link
 				href="https://alba-estetica-turnos.netlify.app/"

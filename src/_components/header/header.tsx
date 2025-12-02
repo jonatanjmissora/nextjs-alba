@@ -1,18 +1,24 @@
 import Link from "next/link"
 import HeaderFixed from "./header-fixed"
+import "./header.css"
 
 export default function Header() {
 	return (
-		<header className="w-full h-full flex justify-center items-center relative">
-			<nav className="flex items-center gap-12 header-nav font-normal text-(--primary-green)">
-				<Link href={`/#services01`}>SERVICIOS</Link>
-				<Link href="/#shop01">TIENDA</Link>
-				<Link href="/#about01">ACERCA DE</Link>
-				<Link href="/#tips01">TIPS</Link>
-				<Link href="/#footer01">CONTACTO</Link>
-			</nav>
+		<header
+			id="home01"
+			className="absolute top-0 left-0 z-50 w-full header-container"
+		>
+			<div className="w-full h-full flex justify-center items-center relative">
+				<nav className="flex items-center gap-12 font-normal text-(--primary-green) header-nav">
+					<Link href={`/#services01`}>SERVICIOS</Link>
+					<Link href="/#shop01">TIENDA</Link>
+					<Link href="/#about01">ACERCA DE</Link>
+					<Link href="/#tips01">TIPS</Link>
+					<Link href="/#footer01">CONTACTO</Link>
+				</nav>
 
-			<HeaderFixed layout="home" />
+				<HeaderFixed layout="home" />
+			</div>
 		</header>
 	)
 }

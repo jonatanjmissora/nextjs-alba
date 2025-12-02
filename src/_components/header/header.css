@@ -1,0 +1,66 @@
+/* mobil */
+@media (max-width: 767px) {
+	.header-container {
+		padding-block: 3.5rem;
+		padding-inline: var(--2xl-layout-padding);
+	}
+	.header-logo {
+		top: 3.5dvh;
+		left: var(--2xl-layout-padding);
+		font-size: 2rem;
+	}
+	.header-nav {
+		font-size: 1rem;
+	}
+	.header-icons {
+		top: 5dvh;
+		right: var(--2xl-layout-padding);
+	}
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.header-nav {
+		font-size: 1rem;
+	}
+}
+
+/*  notebook */
+@media (min-width: 1024px) and (max-width: 1439px) {
+	.header-container {
+		padding-block: 2.5rem;
+		padding-inline: var(--sm-layout-padding);
+	}
+	.header-logo {
+		top: 3.5dvh;
+		left: var(--sm-layout-padding);
+		font-size: 2rem;
+	}
+	.header-nav {
+		font-size: 0.75rem;
+	}
+	.header-icons {
+		top: 5dvh;
+		right: var(--sm-layout-padding);
+	}
+}
+
+/*  monitor  */
+@media (min-width: 1440px) {
+	.header-container {
+		padding-block: 3.5rem;
+		padding-inline: var(--2xl-layout-padding);
+	}
+	.header-logo {
+		top: 3.5dvh;
+		left: var(--2xl-layout-padding);
+		font-size: 3rem;
+	}
+	.header-nav {
+		font-size: 1rem;
+	}
+	.header-icons {
+		top: 5dvh;
+		right: var(--2xl-layout-padding);
+	}
+}

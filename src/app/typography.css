@@ -1,0 +1,35 @@
+.hero-title {
+	--primary-green: #537d6a;
+	text-align: center;
+	font-family: "Cormorant Garamond", serif;
+	font-weight: 600;
+	color: var(--primary-green);
+}
+
+/* mobil */
+@media (max-width: 767px) {
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*  notebook */
+@media (min-width: 1024px) and (max-width: 1439px) {
+	.hero-title {
+		font-size: 3.25rem;
+	}
+	.hero-subtitle {
+		font-size: 1rem;
+	}
+}
+
+/*  monitor  */
+@media (min-width: 1440px) {
+	.hero-title {
+		font-size: 5rem;
+	}
+	.hero-subtitle {
+		font-size: 1.25rem;
+	}
+}

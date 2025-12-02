@@ -27,12 +27,7 @@ export default function HomePage() {
 const Desktop = () => {
 	return (
 		<div className="hidden sm:block w-full">
-			<div
-				id="home01"
-				className="absolute top-0 left-0 z-50 w-full p-6 px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding) 2xl:py-14 text-sm 2xl:text-base"
-			>
-				<Header />
-			</div>
+			<Header />
 
 			<Home />
 
