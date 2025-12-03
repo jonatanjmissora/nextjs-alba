@@ -1,5 +1,6 @@
 import { Gem, Sprout, UserStar } from "lucide-react"
 import { Image as ImageKit } from "@imagekit/next"
+import "./homebis.css"
 
 export default function HomeBisPage() {
 	const skillData = [
@@ -29,20 +30,20 @@ export default function HomeBisPage() {
 	]
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className=" px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding) w-full h-screen bg-(--background-one) relative flex justify-center items-center">
-			<div className="grid grid-cols-3 gap-10 relative z-2">
+		<div className="homebis-container w-full h-screen bg-(--background-one) relative flex justify-center items-center">
+			<div className="grid grid-cols-3 sm:gap-6 2xl:gap-10 relative z-2">
 				{skillData.map(skill => (
 					<div
 						key={skill.id}
-						className="flex flex-col gap-3 justify-center items-center w-full custom-shadow bg-(--background-two) p-12 py-14 pt-16 rounded-lg relative"
+						className="flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) homebis-card rounded-lg relative"
 					>
-						<span className="absolute -top-24 left-1/2 -translate-x-1/2 rounded-full size-36 bg-(--secondary-green) flex justify-center items-center custom-shadow">
+						<i className="absolute sm:-top-18 2xl:-top-24 left-1/2 -translate-x-1/2 rounded-full sm:size-26 2xl:size-36 bg-(--secondary-green) flex justify-center items-center custom-shadow">
 							{skill.icon}
-						</span>
+						</i>
 						<span className="header text-(--foreground-green) font-bold">
 							{skill.title}
 						</span>
-						<p className="text">{skill.description}</p>
+						<p className="text text-center">{skill.description}</p>
 					</div>
 				))}
 			</div>

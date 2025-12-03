@@ -29,13 +29,6 @@
 	--2xl-subtitle-size: 2.75rem;
 	--sm-subtitle-size: 1.5rem;
 
-	--2xl-header-size: 2.15rem;
-	--2xl-header2-size: 1.5rem;
-	--sm-header-size: 1.1rem;
-
-	--2xl-text-size: 1.125rem;
-	--sm-text-size: 0.9rem;
-
 	--2xl-btn-size: 1.25rem;
 	--sm-btn-size: 0.85rem;
 
@@ -157,38 +150,18 @@ body {
 	font-weight: 600;
 }
 
-.header {
-	font-family: var(--font-cormorant);
-	font-size: var(--sm-header-size);
-	font-weight: 500;
-}
-
 .header2 {
 	font-family: var(--font-cormorant);
 	font-size: var(--sm-header2-size);
 	font-weight: 700;
 }
 
-.text {
-	font-family: var(--font-jost);
-	font-size: var(--sm-text-size);
-	line-height: 2rem;
-	font-weight: 400;
-}
-
 @media screen and (min-width: 1440px) {
 	.subtitle {
 		font-size: var(--2xl-subtitle-size);
 	}
-	.header {
-		font-size: var(--2xl-header-size);
-	}
 	.header2 {
 		font-size: var(--2xl-header2-size);
-	}
-
-	.text {
-		font-size: var(--2xl-text-size);
 	}
 }
 

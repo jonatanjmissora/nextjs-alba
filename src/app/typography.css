@@ -1,10 +1,37 @@
-.hero-title {
+:root {
+	--font-cormorant: "Cormorant Garamond", serif;
+	--font-jost: Jost, sans-serif;
+	--font-bonheur: Bonheur Royale, cursive;
+
 	--primary-green: #537d6a;
+
+	--sm-header-size: 1.7rem;
+	--2xl-header-size: 2.15rem;
+	--2xl-header2-size: 1.5rem;
+
+	--2xl-text-size: 1.125rem;
+	--sm-text-size: 0.9rem;
+}
+
+.hero-title {
 	text-align: center;
-	font-family: "Cormorant Garamond", serif;
+	font-family: var(--font-cormorant);
 	font-weight: 600;
 	line-height: 1.35;
 	color: var(--primary-green);
+}
+
+.header {
+	font-family: var(--font-cormorant);
+	font-size: var(--sm-header-size);
+	font-weight: 500;
+}
+
+.text {
+	font-family: var(--font-jost);
+	font-size: var(--sm-text-size);
+	line-height: 1.5rem;
+	font-weight: 400;
 }
 
 /* mobil */
@@ -32,5 +59,12 @@
 	}
 	.hero-subtitle {
 		font-size: 1.25rem;
+	}
+	.header {
+		font-size: var(--2xl-header-size);
+	}
+	.text {
+		font-size: var(--2xl-text-size);
+		line-height: 2rem;
 	}
 }

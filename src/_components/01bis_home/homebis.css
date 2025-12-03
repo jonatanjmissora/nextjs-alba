@@ -1,0 +1,32 @@
+.homebis-container {
+	padding-inline: var(--sm-layout-padding);
+}
+.homebis-card {
+	padding: 2rem;
+	padding-block: 2.5rem;
+	padding-top: 3rem;
+}
+
+/* mobil */
+@media (max-width: 767px) {
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*  notebook */
+@media (min-width: 1024px) and (max-width: 1439px) {
+}
+
+/*  monitor  */
+@media (min-width: 1440px) {
+	.homebis-container {
+		padding-inline: var(--2xl-layout-padding);
+	}
+	.homebis-card {
+		padding: 3rem;
+		padding-block: 3.5rem;
+		padding-top: 4rem;
+	}
+}
