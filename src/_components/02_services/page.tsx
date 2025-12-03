@@ -8,14 +8,13 @@ import { Image as ImageKit } from "@imagekit/next"
 
 export default function ServicesSection() {
 	return (
-		<section className="w-full bg-(--background-two) relative z-0 pt-20 pb-150 px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
+		<section className="w-full bg-(--background-two) relative z-0 sm:pt-10 2xl:pt-20 sm:pb-100 2xl:pb-150 sm:px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
 			<article
 				id="services01"
 				className="w-full my-32 border border-transparent"
 			>
 				<SectionHeader
 					title="Nuestros servicios en gabinete"
-					subtitle="Servicios"
 					description={servicesHeader}
 				/>
 				<ServiceCategoriesComponent />
@@ -28,7 +27,7 @@ export default function ServicesSection() {
 
 const ServiceCategoriesComponent = () => {
 	return (
-		<div className="flex flex-wrap gap-12 w-full">
+		<div className="flex flex-wrap sm:gap-8 2xl:gap-12 w-full">
 			{servicesTree.map((category: ElementsTreeType) => (
 				<Card key={category.title} type="services" category={category} />
 			))}

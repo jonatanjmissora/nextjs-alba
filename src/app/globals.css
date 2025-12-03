@@ -26,12 +26,6 @@
 	--sm-layout-padding: 10rem;
 	--2xl-layout-padding: 15rem;
 
-	--2xl-subtitle-size: 2.75rem;
-	--sm-subtitle-size: 1.5rem;
-
-	--2xl-btn-size: 1.25rem;
-	--sm-btn-size: 0.85rem;
-
 	--radius: 0.625rem;
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.145 0 0);
@@ -144,12 +138,6 @@ body {
 	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
 }
 
-.subtitle {
-	font-family: var(--font-cormorant);
-	font-size: var(--sm-subtitle-size);
-	font-weight: 600;
-}
-
 .header2 {
 	font-family: var(--font-cormorant);
 	font-size: var(--sm-header2-size);
@@ -157,9 +145,6 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
-	.subtitle {
-		font-size: var(--2xl-subtitle-size);
-	}
 	.header2 {
 		font-size: var(--2xl-header2-size);
 	}

@@ -64,7 +64,7 @@ const Hero = () => {
 				href="https://alba-estetica-turnos.netlify.app/"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="cta-button btn-text text-center mt-4"
+				className="cta-button text-center mt-4"
 			>
 				RESERVA TU TURNO
 			</Link>

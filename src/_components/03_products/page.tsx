@@ -8,11 +8,10 @@ import { Image as ImageKit } from "@imagekit/next"
 
 export default function ProductsSection() {
 	return (
-		<section className="w-full px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding) pt-20 pb-160 relative bg-(--background-one)">
+		<section className="w-full px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding) sm:pt-10 2xl:pt-20 sm:pb-110 2xl:pb-160 relative bg-(--background-one)">
 			<article id="shop01" className="w-full my-32 border border-transparent">
 				<SectionHeader
 					title="Nuestros productos en gabinete"
-					subtitle="Productos"
 					description={productsHeader}
 				/>
 

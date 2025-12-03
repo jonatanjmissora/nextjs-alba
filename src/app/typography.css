@@ -5,12 +5,17 @@
 
 	--primary-green: #537d6a;
 
-	--sm-header-size: 1.7rem;
-	--2xl-header-size: 2.15rem;
-	--2xl-header2-size: 1.5rem;
+	--2xl-header-size: 3rem;
+	--sm-header-size: 2.15rem;
+
+	--2xl-header-card: 2rem;
+	--sm-header-card: 1.25rem;
+
+	--2xl-subtitle-size: 1.7rem;
+	--sm-subtitle-size: 1.15rem;
 
 	--2xl-text-size: 1.125rem;
-	--sm-text-size: 0.9rem;
+	--sm-text-size: 0.7rem;
 }
 
 .hero-title {
@@ -25,6 +30,17 @@
 	font-family: var(--font-cormorant);
 	font-size: var(--sm-header-size);
 	font-weight: 500;
+}
+.header-card {
+	font-family: var(--font-cormorant);
+	font-size: var(--sm-header-card);
+	font-weight: 500;
+}
+
+.subtitle {
+	font-family: var(--font-cormorant);
+	font-size: var(--sm-subtitle-size);
+	font-weight: 600;
 }
 
 .text {
@@ -62,6 +78,12 @@
 	}
 	.header {
 		font-size: var(--2xl-header-size);
+	}
+	.header-card {
+		font-size: var(--2xl-header-card);
+	}
+	.subtitle {
+		font-size: var(--2xl-subtitle-size);
 	}
 	.text {
 		font-size: var(--2xl-text-size);

@@ -233,7 +233,7 @@ const Mail = ({ className }: { className: string }) => {
 const Signature = () => {
 	return (
 		<div className="w-full h-1 relative">
-			<p className="bonheur text-(--primary-green) text-[280px] text-center opacity-10 leading-[280px] absolute z-0 -top-[250px] left-0 w-full">
+			<p className="bonheur text-(--primary-green) sm:text-[12rem] 2xl:text-[17rem] text-center opacity-10 leading-[280px] absolute z-0 -top-[250px] left-0 w-full">
 				Albana Garcia
 			</p>
 		</div>

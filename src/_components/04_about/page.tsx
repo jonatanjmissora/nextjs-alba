@@ -7,13 +7,9 @@ import { Image as ImageKit } from "@imagekit/next"
 
 export default function About() {
 	return (
-		<section className="w-full bg-(--background-two) relative pt-20 pb-80 px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
+		<section className="w-full bg-(--background-two) relative sm:pt-10 2xl:pt-20 sm:pb-50 2xl:pb-80 px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
 			<article id="about01" className="w-full my-32 border border-transparent">
-				<SectionHeader
-					title="Mi historia"
-					subtitle="Acerca de"
-					description={aboutHeader}
-				/>
+				<SectionHeader title="Mi historia" description={aboutHeader} />
 				<Signature />
 				<Testimonials />
 				<Certificates />
@@ -26,7 +22,7 @@ export default function About() {
 const Signature = () => {
 	return (
 		<div className="w-full h-40 relative">
-			<p className="bonheur text-(--primary-green) text-[280px] text-center opacity-10 leading-[280px] absolute -top-[250px] left-0 w-full">
+			<p className="bonheur text-(--primary-green) sm:text-[12rem] 2xl:text-[17rem] text-center opacity-10 leading-68 absolute sm:-top-48 2xl:-top-64 left-0 w-full">
 				Albana Garcia
 			</p>
 		</div>
@@ -45,9 +41,9 @@ const Testimonials = () => {
 		"about/testimonial08.webp",
 	]
 	return (
-		<article className="">
+		<article className="w-full px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
 			<div className="flex w-full justify-center">
-				<div className="w-[400px] h-[600px] relative">
+				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/about/testimonial-photo1.webp"
@@ -59,7 +55,7 @@ const Testimonials = () => {
 						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 					/>
 				</div>
-				<div className="w-[400px] h-[600px] relative">
+				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/about/testimonial-photo2.webp"
@@ -77,7 +73,7 @@ const Testimonials = () => {
 					{testimonials.map(testimonial => (
 						<div
 							key={testimonial}
-							className={`mx-auto ${testimonial === "about/testimonial08.webp" ? "w-[300px]" : "w-[400px]"} h-[100px] relative`}
+							className={`mx-auto ${testimonial === "about/testimonial08.webp" ? "sm:w-[250px] 2xl:w-[300px]" : "sm:w-[300] 2xl:w-[400px]"} sm:h-[80px] 2xl:h-[100px] relative`}
 						>
 							<ImageKit
 								urlEndpoint={`${urlEndp}`}
@@ -129,7 +125,7 @@ const Certificates = () => {
 	]
 	return (
 		<article className="flex gap-12 items-end justify-center w-full py-20">
-			<div className="w-[200px] h-[400px] relative">
+			<div className="sm:w-[170px] sm:h-[350px] 2xl:w-[200px] 2xl:h-[400px] relative">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
 					src="/about/avatar-alba.webp"
@@ -144,7 +140,10 @@ const Certificates = () => {
 
 			<div className="grid grid-cols-4 gap-4">
 				{certificados.map(certificado => (
-					<div key={certificado} className="w-[200px] h-[150px] relative">
+					<div
+						key={certificado}
+						className="sm:w-[180px] sm:h-[120px] 2xl:w-[200px] 2xl:h-[150px] relative"
+					>
 						<ImageKit
 							urlEndpoint={`${urlEndp}`}
 							src={certificado}

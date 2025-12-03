@@ -1,0 +1,47 @@
+:root {
+	--2xl-btn-size: 1.25rem;
+	--sm-btn-size: 0.85rem;
+	--font-jost: Jost, sans-serif;
+}
+
+.element-card {
+	height: 250px;
+	min-width: calc(50% - 16px);
+}
+
+.seguir-btn {
+	text-align: center;
+	padding: 0 1rem;
+	font-size: 0.5rem;
+	background-color: var(--primary-green);
+	color: var(--background-two);
+	border-radius: 1rem 0;
+	letter-spacing: 2px;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+	font-family: var(--font-jost);
+}
+
+/* mobil */
+@media (max-width: 767px) {
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/*  notebook */
+@media (min-width: 1024px) and (max-width: 1439px) {
+}
+
+/*  monitor  */
+@media (min-width: 1440px) {
+	.element-card {
+		height: 340px;
+		min-width: calc(50% - 24px);
+	}
+	.seguir-btn {
+		font-size: 0.75rem;
+	}
+}
