@@ -35,6 +35,8 @@
 	font-family: Jost, sans-serif;
 	font-size: var(--sm-btn-size);
 	font-weight: 400;
+	padding-block: 0.8rem;
+	padding-inline: 2.5rem;
 }
 
 .cta-button:hover {
@@ -58,6 +60,19 @@
 	border: 2px solid var(--secondary-green);
 	color: var(--secondary-green);
 	transform: translate(5px, -5px);
+}
+
+.hero-skill {
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+}
+.hero-skill i {
+	font-size: 0.875rem;
+	color: var(--primary-green);
+}
+
+.hero-skill span {
+	font-size: 0.75rem;
 }
 
 /* mobil */
@@ -104,5 +119,17 @@
 	}
 	.cta-button {
 		font-size: var(--2xl-btn-size);
+		padding-block: 1rem;
+		padding-inline: 3.5rem;
+	}
+	.hero-skill {
+		padding-inline: 1.5rem;
+		padding-block: 0.75rem;
+	}
+	.hero-skill i {
+		font-size: 1.125rem;
+	}
+	.hero-skill span {
+		font-size: 1rem;
 	}
 }

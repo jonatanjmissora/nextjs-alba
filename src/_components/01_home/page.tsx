@@ -51,7 +51,7 @@ const LeafImgs = () => {
 
 const Hero = () => {
 	return (
-		<article className="absolute z-1 flex flex-col justify-center items-center hero-container border border-black">
+		<article className="absolute z-1 flex flex-col justify-center items-center hero-container">
 			<div className="hero-title">
 				<p>Centro cosmiátrico</p>
 				<p>de belleza</p>
@@ -64,7 +64,7 @@ const Hero = () => {
 				href="https://alba-estetica-turnos.netlify.app/"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="cta-button btn-text text-center mt-4 py-4 px-14"
+				className="cta-button btn-text text-center mt-4"
 			>
 				RESERVA TU TURNO
 			</Link>
@@ -74,20 +74,20 @@ const Hero = () => {
 
 const Skills = () => {
 	return (
-		<article className="absolute bottom-24 left-(--2xl-layout-padding) z-1 flex gap-12 items-center justify-center">
-			<div className="flex items-center justify-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow">
-				<span className="text-xl text-(--primary-green)">+5</span>
-				<span className="">años de experiencia</span>
+		<article className="absolute bottom-24 left-(--sm-layout-padding) 2xl:left-(--2xl-layout-padding) z-1 flex sm:gap-6 2xl:gap-10 items-center justify-center">
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>+5</i>
+				<span>años de experiencia</span>
 			</div>
 
-			<div className="flex items-center justify-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow">
-				<span className="text-xl text-(--primary-green)">+120</span>
-				<span className="">clientas atendidas</span>
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>+120</i>
+				<span>clientas atendidas</span>
 			</div>
 
-			<div className="flex items-center justify-center gap-2 px-6 py-3 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow">
-				<span className="text-xl text-(--primary-green)">99.9%</span>
-				<span className="">clientas satisfechas</span>
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>99.9%</i>
+				<span>clientas satisfechas</span>
 			</div>
 		</article>
 	)
