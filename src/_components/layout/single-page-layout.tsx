@@ -52,10 +52,10 @@ const SinglePageFooter = () => {
 const SinglePageLeaf = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute -z-10 top-0 right-[15%] size-56 2xl:size-80 rotate-x-180 text-(--leaf-color) opacity-(--opacity-leaf)" />
-			<Leaf1 className="absolute -z-10 top-[50%] left-[50%] size-16 2xl:size-20 text-(--leaf-color)" />
-			<Leaf2 className="absolute -z-10 bottom-[5%] right-[5%] size-24 2xl:size-40 rotate-180 text-(--leaf-color)" />
-			<RoundLeaf className="absolute -z-10 bottom-[25%] 2xl:bottom-[17%] -left-[2%] size-28 2xl:size-40 rotate-180 text-(--leaf-color) opacity-(--opacity-leaf)" />
+			<BranchLeaf className="absolute top-0 right-0 z-1 size-60 2xl:size-80 rotate-x-180 text-(--primary-green)" />
+			<Leaf1 className="absolute top-[60%] 2xl:top-[65%] left-[10%] z-1 size-16 2xl:size-24 text-(--primary-green) opacity-95" />
+			<Leaf2 className="absolute top-[43%] 2xl:top-[20%] left-[40%] z-1 size-20 2xl:size-32 rotate-180 text-(--primary-green) opacity-95" />
+			<RoundLeaf className="absolute top-0 -left-[2%] z-1 size-28 2xl:size-40 rotate-180 text-(--primary-green) opacity-95" />
 		</>
 	)
 }
