@@ -1,6 +1,6 @@
 :root {
-	--2xl-cta-size: 1.25rem;
-	--sm-cta-size: 0.85rem;
+	--2xl-cta-size: 1rem;
+	--sm-cta-size: 0.75rem;
 }
 
 .hero-bg::after {

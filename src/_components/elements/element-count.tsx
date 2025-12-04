@@ -50,10 +50,10 @@ export const ElementCountAndCart = ({
 	return (
 		<>
 			<div className="flex justify-between items-center">
-				<p className="subtitle font-semibold">
+				<p className="header font-semibold">
 					$ {formatPrice(Number(element.price))}
 				</p>
-				<div className="flex gap-4">
+				<div className="flex gap-4 items-center justify-center">
 					<button onClick={handleMinus} type="button">
 						<MinusCircle
 							color="var(--primary-green)"
@@ -61,7 +61,7 @@ export const ElementCountAndCart = ({
 						/>
 					</button>
 
-					<span className="header">{count}</span>
+					<span className="header leading-none pb-2 m-0">{count}</span>
 
 					<button onClick={handlePlus} type="button">
 						<PlusCircle

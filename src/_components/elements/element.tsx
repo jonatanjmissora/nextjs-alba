@@ -25,10 +25,10 @@ export default function ElementPage({
 
 			<div className="w-full sm:w-2/3 h-max sm:h-full flex flex-col gap-3 2xl:gap-6 justify-center pl-0 sm:pl-20 2xl:pl-40">
 				<div className="flex flex-col py-4 sm:py-2">
-					<span className="subtitle sm:title font-bold text-pretty">
+					<span className="header leading-none sm:title font-bold text-pretty text-(--primary-green)">
 						{element.title}
 					</span>
-					<span className="text-sm font-semibold text-[var(--primary-green)]">
+					<span className="text font-semibold text-[#444]/50">
 						{categoryName}
 					</span>
 				</div>

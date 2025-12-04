@@ -23,7 +23,7 @@ export const Card = ({
 					</p>
 					<Link
 						href={`/${type}/${category.id.toString()}?from=${type}`}
-						className="seguir-btn"
+						className="seguir-btn cta-button"
 					>
 						seguir leyendo
 					</Link>

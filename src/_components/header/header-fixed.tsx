@@ -31,14 +31,14 @@ export default function HeaderFixed({
 	}, [])
 
 	return (
-		<>
+		<article>
 			{layout === "single-page" ? (
 				<Link
 					href={link || "/"}
-					className={`fixed top-[1.5%] sm:top-[0.5dvh] 2xl:top-[2dvh] 2xl:left-[13dvw] left-[11.5%] z-100 py-4 flex items-center gap-3 cursor-pointer ${scrolled && "sm:-translate-x-30 2xl:-translate-x-50"} duration-500`}
+					className={`fixed top-[1.5%] sm:top-[2dvh] 2xl:top-[3.5dvh] 2xl:left-[13dvw] left-[11.5%] z-100 py-4 flex items-center gap-3 cursor-pointer ${scrolled && "sm:-translate-x-30 2xl:-translate-x-50"} duration-500`}
 				>
 					<ArrowLeft size={24} color="var(--primary-green)" className="icon" />
-					<span className="header text-(--primary-green)">{text}</span>
+					<span className="subtitle text-(--primary-green)">{text}</span>
 				</Link>
 			) : (
 				<Logo scrolled={scrolled} />
@@ -50,7 +50,7 @@ export default function HeaderFixed({
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
 			</div>
-		</>
+		</article>
 	)
 }
 

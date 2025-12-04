@@ -50,7 +50,7 @@ export default function Footer() {
 
 						<div className="w-full flex flex-col gap-2">
 							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-(--primary-green)">
-								Tienda
+								Productos
 							</h3>
 							<ProductsNavComponent />
 						</div>
@@ -66,7 +66,7 @@ export default function Footer() {
 							<h3 className="py-2 font-semibold text-base 2xl:text-2xl text-(--primary-green)">
 								Suscripción
 							</h3>
-							<div className="flex flex-col gap-12 2xl:gap-16 text-[#333] text-sm 2xl:text-base px-2">
+							<div className="flex flex-col gap-12 2xl:gap-16 text-[#333] text-sm 2xl:text-base">
 								<p>
 									Recibe las últimas novedades y suscribete para mas informacion
 									y promociones.
@@ -118,15 +118,15 @@ export default function Footer() {
 const ServicesNavComponent = () => {
 	const services = servicesTree
 	return (
-		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base px-2 overflow-hidden">
+		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base overflow-hidden">
 			{services.map(service => (
-				<Link
+				<a
 					key={service.title}
-					className="hover:text-(--primary-green) hover:font-semibold tracking-widest"
+					className="hover:text-(--primary-green) hover:font-semibold tracking-widest w-max"
 					href={`/services/${service.id}`}
 				>
 					{service.title}
-				</Link>
+				</a>
 			))}
 		</nav>
 	)
@@ -135,15 +135,15 @@ const ServicesNavComponent = () => {
 const ProductsNavComponent = () => {
 	const products = productsTree
 	return (
-		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base px-2 overflow-hidden">
+		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base overflow-hidden">
 			{products.map(product => (
-				<Link
+				<a
 					key={product.title}
-					className="hover:text-(--primary-green) hover:font-semibold tracking-widest"
+					className="hover:text-(--primary-green) hover:font-semibold tracking-widest w-max"
 					href={`/shop/${product.id}`}
 				>
 					{product.title}
-				</Link>
+				</a>
 			))}
 		</nav>
 	)
@@ -152,11 +152,11 @@ const ProductsNavComponent = () => {
 const TipsNavComponent = () => {
 	const tips = tipsMock
 	return (
-		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base px-2 overflow-hidden">
+		<nav className="flex flex-col gap-4 text-[#333] text-sm 2xl:text-base overflow-hidden">
 			{tips.map(tip => (
 				<a
 					key={tip.id}
-					className="hover:text-(--primary-green) hover:font-semibold tracking-widest"
+					className="hover:text-(--primary-green) hover:font-semibold tracking-widest w-max"
 					href={`/#${tip.id}`}
 				>
 					{tip.title}
