@@ -10,6 +10,8 @@ import {
 	mailLinkData,
 	mensajeSuscripcionData,
 } from "@/_lib/constant"
+import { Image as ImageKit2 } from "@imagekit/next"
+import Leaf1 from "../../public/leaf/leaf1"
 
 export default function Footer() {
 	const whatsappLink = whatsappLinkData
@@ -18,12 +20,27 @@ export default function Footer() {
 	const mailLink = mailLinkData
 
 	const mensajeSuscripcion = mensajeSuscripcionData
+	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 
 	return (
 		<div className="w-full relative pb-6 overflow-hidden">
-			<footer id="footer01" className="w-full flex flex-col relative">
+			<div>
+				<div className="relative ml-auto right-0 w-[50dvw] h-[50dvh]">
+					<ImageKit2
+						urlEndpoint={`${urlEndp}`}
+						src="Layout/footer-bg.webp"
+						priority={false}
+						alt={"Layout/footer-bg.webp"}
+						fill
+						loading="lazy"
+						className={`object-cover`}
+						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 60vw"
+					/>
+				</div>
+			</div>
+			<footer id="footer01" className="w-full flex flex-col relative pt-40">
 				<div className="w-full px-32 relative z-2">
-					<div className="grid grid-cols-4 min-h-[30dvh] pb-10">
+					<div className="grid grid-cols-4 min-h-[30dvh] pb-40">
 						<div className="flex flex-col gap-4 w-full">
 							<h3 className="py-2 font-semibold tracking-widest text-base 2xl:text-2xl text-(--primary-green)">
 								Servicios
@@ -91,7 +108,8 @@ export default function Footer() {
 				</div>
 
 				<Signature />
-				<RoundLeaf className="narnia absolute bottom-[0%] -right-[0%] size-[15rem] rotate-0 text-(--leaf-color) opacity-(--opacity-leaf)" />
+				<Leaf1 className="absolute top-0 left-[15dvw] size-24 sm:size-20 2xl:size-28 text-(--leaf-color) opacity-(--opacity-leaf)" />
+				<RoundLeaf className="narnia absolute bottom-0 right-0 sm:size-40 2xl:size-60 rotate-0 text-(--leaf-color) opacity-(--opacity-leaf)" />
 			</footer>
 		</div>
 	)

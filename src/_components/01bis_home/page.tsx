@@ -1,6 +1,8 @@
 import { Gem, Sprout, UserStar } from "lucide-react"
 import { Image as ImageKit } from "@imagekit/next"
 import "./homebis.css"
+import Leaf1 from "../../../public/leaf/leaf1"
+import Leaf2 from "../../../public/leaf/leaf2"
 
 export default function HomeBisPage() {
 	const skillData = [
@@ -30,7 +32,7 @@ export default function HomeBisPage() {
 	]
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="homebis-container w-full h-screen bg-(--background-one) relative flex justify-center items-center">
+		<div className="homebis-container w-full h-screen bg-(--background-one) flex justify-center items-center relative">
 			<div className="grid grid-cols-3 sm:gap-6 2xl:gap-10 relative z-2">
 				{skillData.map(skill => (
 					<div
@@ -61,6 +63,16 @@ export default function HomeBisPage() {
 					/>
 				</div>
 			</div>
+			<LeafImgs />
 		</div>
+	)
+}
+
+const LeafImgs = () => {
+	return (
+		<>
+			<Leaf1 className="absolute top-[75dvh] left-[10dvw] z-1 size-16 2xl:size-24 text-(--primary-green) opacity-95" />
+			<Leaf2 className="absolute top-[10dvh] right-[10dvw] z-1 size-20 2xl:size-32 rotate-180 text-(--primary-green) opacity-95" />
+		</>
 	)
 }

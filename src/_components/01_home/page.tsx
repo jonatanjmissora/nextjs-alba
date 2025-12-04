@@ -41,10 +41,10 @@ const HomeImg1 = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeaf className="absolute top-0 right-0 z-1 size-[16rem] 2xl:size-[20rem] rotate-x-180 text-(--primary-green)" />
-			<Leaf1 className="absolute top-[60%] 2xl:top-[65%] left-[10%] z-1 size-[4rem] 2xl:size-[6rem] text-(--primary-green) opacity-95" />
-			<Leaf2 className="absolute top-[43%] 2xl:top-[20%] left-[40%] z-1 size-[5rem] 2xl:size-[8rem] rotate-180 text-(--primary-green) opacity-95" />
-			<RoundLeaf className="absolute top-0 -left-[2%] z-1 size-[7rem] 2xl:size-[10rem] rotate-180 text-(--primary-green) opacity-95" />
+			<BranchLeaf className="absolute top-0 right-0 z-1 size-60 2xl:size-80 rotate-x-180 text-(--primary-green)" />
+			<Leaf1 className="absolute top-[60%] 2xl:top-[65%] left-[10%] z-1 size-16 2xl:size-24 text-(--primary-green) opacity-95" />
+			<Leaf2 className="absolute top-[43%] 2xl:top-[20%] left-[40%] z-1 size-20 2xl:size-32 rotate-180 text-(--primary-green) opacity-95" />
+			<RoundLeaf className="absolute top-0 -left-[2%] z-1 size-28 2xl:size-40 rotate-180 text-(--primary-green) opacity-95" />
 		</>
 	)
 }
