@@ -29,7 +29,7 @@ export default function SinglePageLayout({
 	}, [id])
 
 	return (
-		<section className="w-full min-h-[100svh] sm:min-h-screen px-6 sm:px-[var(--sm-layout-padding)] 2xl:px-[var(--2xl-layout-padding)] flex flex-col relative">
+		<section className="w-full min-h-svh sm:min-h-screen px-6 sm:px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding) flex flex-col relative">
 			<SinglePageHeader text="Volver" from={from} />
 			{children}
 			<SinglePageFooter />
@@ -70,7 +70,7 @@ const SinglePageHeader = ({ text, from }: { text: string; from?: string }) => {
 
 	return (
 		<>
-			<div className="hidden sm:flex w-full h-[10dvh] border-b-2 border-[var(--secondary-green)] group relative">
+			<div className="hidden sm:flex w-full h-[10dvh] border-b-2 border-(--secondary-green) group relative">
 				<HeaderFixed layout="single-page" link={link} text={text} />
 			</div>
 			<div className="block sm:hidden">
