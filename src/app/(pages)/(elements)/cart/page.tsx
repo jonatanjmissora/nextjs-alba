@@ -14,7 +14,7 @@ export default function CartPage() {
 	return (
 		<SinglePageLayout>
 			<div className="w-full flex-1 flex flex-col justify-start items-center">
-				<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2 w-full text-left sm:text-center">
+				<h2 className="subtitle py-0 sm:py-2 pt-20 sm:pt-2 w-full text-left sm:text-center text-(--primary-green)">
 					Tu Carrito
 				</h2>
 				<CartBody />
@@ -83,7 +83,7 @@ const CartBody = () => {
 					))}
 					<Link
 						href="/#services"
-						className="text text-[var(--primary-green)] cursor-pointer ml-auto"
+						className="text text-(--primary-green) cursor-pointer ml-auto"
 					>
 						agregar mas +
 					</Link>

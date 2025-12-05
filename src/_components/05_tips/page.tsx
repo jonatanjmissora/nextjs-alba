@@ -20,7 +20,7 @@ export default function Tips() {
 					title="Nuestros tips del centro de belleza"
 					description={tipsHeader}
 				/>
-				<div className="w-full flex justify-between gap-20 pb-6">
+				<div className="w-full flex justify-between pb-6">
 					<TipCard1 tip={tips[0]} />
 					<TipCard2 tip={tips[1]} />
 				</div>
@@ -32,7 +32,10 @@ export default function Tips() {
 
 const TipCard1 = ({ tip }: { tip: TipType }) => {
 	return (
-		<div id={tip.id} className="w-1/2 flex flex-col gap-10">
+		<div
+			id={tip.id}
+			className="w-1/2 flex flex-col gap-10 pr-10 border-r border-(--primary-green)/50"
+		>
 			<div className="flex flex-col gap-3 pl-8 pt-8">
 				<AccordionElementRight content={tip.content} />
 			</div>
@@ -45,7 +48,7 @@ const TipCard1 = ({ tip }: { tip: TipType }) => {
 
 const TipCard2 = ({ tip }: { tip: TipType }) => {
 	return (
-		<div id={tip.id} className="w-1/2 flex flex-col gap-10">
+		<div id={tip.id} className="w-1/2 flex flex-col gap-10 pl-10">
 			<div className="relative overflow-hidden w-full h-[60dvh] rounded-lg custom-shadow">
 				<ImageKit imageID={tip.image} />
 			</div>

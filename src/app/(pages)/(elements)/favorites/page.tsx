@@ -12,7 +12,7 @@ export default function FavoritesPage() {
 	return (
 		<SinglePageLayout>
 			<div className="w-full flex-1 flex flex-col justify-start items-center">
-				<h2 className="text-2xl font-bold py-0 sm:py-2 pt-20 sm:pt-2 w-full text-left sm:text-center">
+				<h2 className="subtitle py-0 sm:py-2 pt-20 sm:pt-2 w-full text-left sm:text-center text-(--primary-green)">
 					Tus Favoritos
 				</h2>
 

@@ -45,7 +45,7 @@ export const CartCount = ({ element }: { element: ElementMockType }) => {
 	}
 
 	return (
-		<div className="flex justify-end gap-2 mr-2">
+		<div className="flex justify-end gap-2">
 			<button onClick={handleMinus} type="button">
 				<MinusCircle
 					color="var(--primary-green)"

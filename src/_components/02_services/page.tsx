@@ -44,10 +44,10 @@ const BgImage = () => {
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
 					src="/Layout/services-bg.webp"
-					priority={true}
+					priority={false}
 					alt={"/Layout/services-bg.webp"}
 					fill
-					loading="eager"
+					loading="lazy"
 					className={`object-cover opacity-75`}
 					sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 100vw"
 				/>

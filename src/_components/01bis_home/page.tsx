@@ -57,7 +57,7 @@ export default function HomeBisPage() {
 						priority={false}
 						alt={"/Layout/subhero-bg.webp"}
 						fill
-						loading="eager"
+						loading="lazy"
 						className={`object-cover opacity-45`}
 						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 100vw"
 					/>

@@ -22,11 +22,11 @@ export default function CartCheckout() {
 	const total = cartTotalArray.reduce((total, element) => total + element, 0)
 
 	return (
-		<div className="flex-1 max-h-[80dvh] 2xl:max-h-[75dvh] flex flex-col justify-center items-center gap-6 flex-wrap p-4 py-8 2xl:p-6 my-10 2xl:my-20 border rounded-tr-4xl rounded-bl-4xl custom-shadow bg-[var(--background-three)] border-[#d685922a]">
-			<h2 className="subtitle font-semibold text-[var(--primary-green)] text-center w-full">
+		<div className="flex-1 max-h-[80dvh] 2xl:max-h-[75dvh] flex flex-col justify-center items-center gap-6 flex-wrap p-4 py-8 2xl:p-6 my-10 2xl:my-20 border rounded-tr-4xl rounded-bl-4xl custom-shadow bg-(--background-three) border-[#d685922a]">
+			<h2 className="subtitle font-semibold text-(--primary-green) text-center w-full">
 				Resumen de compra
 			</h2>
-			<p className="text-center w-full header font-semibold">
+			<p className="text-center w-full subtitle font-semibold">
 				{cartStore.length} item(s)
 			</p>
 			<div className="flex justify-center gap-4 items-center">
@@ -69,9 +69,9 @@ Total: $ ${formatPrice(total)}
 		<Link
 			href={`https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`}
 			target="_blank"
-			className="w-full text-center mt-12 cta-button header font-semibold py-3"
+			className="w-full text-center mt-6 font-(----font-jost) text-xl tracking-wider py-4 px-4 bg-(--primary-green) text-(--background-one) rounded-tl-2xl rounded-br-2xl custom-shadow hover:bg-(--secondary-green)"
 		>
-			Confirmar
+			CONFIRMAR
 		</Link>
 	)
 }

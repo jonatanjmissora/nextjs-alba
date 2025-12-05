@@ -47,10 +47,10 @@ const Testimonials = () => {
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/about/testimonial-photo1.webp"
-						priority={true}
+						priority={false}
 						alt={"/about/testimonial-photo1.webp"}
 						fill
-						loading="eager"
+						loading="lazy"
 						className={`object-cover -rotate-12`}
 						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 					/>
@@ -59,10 +59,10 @@ const Testimonials = () => {
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/about/testimonial-photo2.webp"
-						priority={true}
+						priority={false}
 						alt={"/about/testimonial-photo2.webp"}
 						fill
-						loading="eager"
+						loading="lazy"
 						className={`object-cover rotate-12`}
 						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 					/>
@@ -78,10 +78,10 @@ const Testimonials = () => {
 							<ImageKit
 								urlEndpoint={`${urlEndp}`}
 								src={testimonial}
-								priority={true}
+								priority={false}
 								alt={testimonial}
 								fill
-								loading="eager"
+								loading="lazy"
 								className={`object-cover`}
 								sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 20vw"
 							/>
@@ -97,10 +97,10 @@ const Testimonials = () => {
 							<ImageKit
 								urlEndpoint={`${urlEndp}`}
 								src={testimonial}
-								priority={true}
+								priority={false}
 								alt={testimonial}
 								fill
-								loading="eager"
+								loading="lazy"
 								className={`object-cover`}
 								sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 20vw"
 							/>
@@ -129,10 +129,10 @@ const Certificates = () => {
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
 					src="/about/avatar-alba.webp"
-					priority={true}
+					priority={false}
 					alt={"/about/avatar-alba.webp"}
 					fill
-					loading="eager"
+					loading="lazy"
 					className={`object-cover`}
 					sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 				/>
@@ -147,10 +147,10 @@ const Certificates = () => {
 						<ImageKit
 							urlEndpoint={`${urlEndp}`}
 							src={certificado}
-							priority={true}
+							priority={false}
 							alt={certificado}
 							fill
-							loading="eager"
+							loading="lazy"
 							className={`object-cover`}
 							sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 						/>

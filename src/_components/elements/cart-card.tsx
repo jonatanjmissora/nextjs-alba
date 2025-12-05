@@ -37,22 +37,22 @@ export default function CartCard({
 	return (
 		<li
 			key={element.id}
-			className={`w-full flex flex-col sm:flex-row gap-5 p-4 2xl:p-6 bg-[var(--background-three)] sm:bg-[var(--background-two)] rounded-tr-4xl rounded-bl-4xl custom-shadow group border border-[#d685922a] relative`}
+			className={`w-full flex flex-col sm:flex-row gap-5 rounded-tr-2xl rounded-bl-2xl custom-shadow group border border-[#d685922a] relative overflow-hidden ${type === "shop" ? "bg-(--primary-pink)" : "bg-(--background-one)"}`}
 		>
-			<div className="relative custom-shadow overflow-hidden rounded-tr-4xl rounded-bl-4xl w-full sm:w-[150px] 2xl:w-[200px] h-[150px] sm:h-[100px] 2xl:h-[150px]">
+			<div className="relative custom-shadow overflow-hidden w-full sm:w-[150px] 2xl:w-[200px] h-[150px] sm:h-[100px] 2xl:h-[150px]">
 				<ImageKit
 					imageID={element.images.split("*")[0]}
 					className={`group-hover:scale-120 transition-all duration-800`}
 				/>
 			</div>
 
-			<div className="flex-1 flex flex-col justify-between">
+			<div className="flex-1 flex flex-col justify-between p-4 2xl:p-6">
 				<div className="flex justify-between items-center">
 					<div className="flex gap-2 items-center">
 						<i className="scale-75 flex items-center">
 							<HeartIconContainer id={element.id.toString()} />
 						</i>
-						<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
+						<span className="text-xs font-bold text-[#444]/50 tracking-wider">
 							{element.category_title}
 						</span>
 					</div>
@@ -63,12 +63,12 @@ export default function CartCard({
 				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
 					<Link
 						href={`/${type}/${element.category_id.toString()}?id=${element.id}&from=${from}`}
-						className="font-semibold text-xl tracking-wider text-[var(--primary-green)]"
+						className="subtitle tracking-wider text-(--primary-green)"
 					>
 						{element.title}
 					</Link>
 					<div className="flex justify-between items-center ">
-						<span className="text-xl 2xl:text-2xl font-semibold">
+						<span className="subtitle">
 							${" "}
 							{formatPrice(Number(element.price * (cartElementQuantity ?? 1)))}
 						</span>
