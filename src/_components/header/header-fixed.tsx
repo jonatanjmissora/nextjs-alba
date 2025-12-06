@@ -30,22 +30,24 @@ export default function HeaderFixed({
 		return () => window.removeEventListener("scroll", handleScrolled)
 	}, [])
 
+	console.log("LINK", link)
+
 	return (
 		<article>
 			{layout === "single-page" ? (
-				<Link
+				<a
 					href={link || "/"}
 					className={`fixed top-[1.5%] sm:top-[2dvh] 2xl:top-[3.5dvh] 2xl:left-[13dvw] left-[11.5%] z-100 py-4 flex items-center gap-3 cursor-pointer ${scrolled && "sm:-translate-x-30 2xl:-translate-x-50"} duration-500`}
 				>
 					<ArrowLeft size={24} color="var(--primary-green)" className="icon" />
 					<span className="subtitle text-(--primary-green)">{text}</span>
-				</Link>
+				</a>
 			) : (
 				<Logo scrolled={scrolled} />
 			)}
 
 			<div
-				className={`absolute sm:fixed z-50 ${scrolled && "translate-x-37"} duration-500 flex gap-4 header-icons`}
+				className={`absolute sm:fixed z-50 ${scrolled && "sm:translate-x-26 2xl:translate-x-37"} duration-500 flex gap-4 header-icons`}
 			>
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
