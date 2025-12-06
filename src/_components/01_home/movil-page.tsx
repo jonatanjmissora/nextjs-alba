@@ -6,36 +6,36 @@ import { Image as ImageKit } from "@imagekit/next"
 
 export default function MovilHome() {
 	return (
-		<section className="w-full flex justify-center items-start relative px-6 bg-(--background-one)">
+		<section className="w-full min-h-[950px] flex justify-center items-start relative px-(--xs-layout-padding) bg-(--background-one) pb-40">
 			<LeafImgs />
-			<div className="absolute z-0 -right-[30dvw] bottom-0 movil-bg">
+			<div className="absolute z-0 -right-[30dvw] bottom-40 movil-bg">
 				<HomeImg2 />
 			</div>
-			<div
-				id="home"
-				className="w-full h-[800px] flex flex-col items-center gap-6 pt-40 relative z-1"
-			>
-				<div className="hero-title">
-					<p>Centro cosmiátrico</p>
-					<p>de belleza</p>
-				</div>
-				<div>
-					<p className="hero-subtitle w-full text-center">
-						Al cuidado de tu piel.
-					</p>
-					<p className="hero-subtitle w-full text-center">
-						Donde tu belleza se revela.
-					</p>
-				</div>
-				<Link
-					href="https://alba-estetica-turnos.netlify.app/"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="cta-button text-center mt-4"
-				>
-					RESERVA TU TURNO
-				</Link>
+			<div id="home" className="w-full pt-40 relative z-1">
+				<article className="flex flex-col items-center gap-6">
+					<div className="hero-title">
+						<p>Centro cosmiátrico</p>
+						<p>de belleza</p>
+					</div>
+					<div>
+						<p className="hero-subtitle w-full text-center">
+							Al cuidado de tu piel.
+						</p>
+						<p className="hero-subtitle w-full text-center">
+							Donde tu belleza se revela.
+						</p>
+					</div>
+					<Link
+						href="https://alba-estetica-turnos.netlify.app/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="cta-button text-center mt-4"
+					>
+						RESERVA TU TURNO
+					</Link>
+				</article>
 			</div>
+			<Skills />
 		</section>
 	)
 }
@@ -61,9 +61,30 @@ const HomeImg2 = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeafMovil className="absolute top-0 right-[19%] size-52 rotate-x-180 text-(--primary-green) opacity-50" />
+			<BranchLeafMovil className="absolute top-0 -right-[5dvw] size-52 rotate-x-180 text-(--primary-green) opacity-50" />
 			<Leaf1 className="absolute top-[30%] left-[65%] size-12 text-(--primary-green)" />
-			<Leaf2Movil className="absolute bottom-[5%] -left-[5%] size-32 text-(--primary-green) opacity-(--opacity-leaf)" />
+			<Leaf2Movil className="absolute z-1 bottom-[5%] -left-[5%] size-32 text-(--primary-green) opacity-(--opacity-leaf)" />
 		</>
+	)
+}
+
+const Skills = () => {
+	return (
+		<article className="absolute z-2 bottom-0 left-0 w-full flex flex-col items-center justify-center gap-2">
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill place-self-start mx-6">
+				<i>+5</i>
+				<span>años de experiencia</span>
+			</div>
+
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>+120</i>
+				<span>clientas atendidas</span>
+			</div>
+
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill place-self-end mx-6">
+				<i>99.9%</i>
+				<span>clientas satisfechas</span>
+			</div>
+		</article>
 	)
 }

@@ -25,6 +25,7 @@
 	/* layout */
 	--sm-layout-padding: 10rem;
 	--2xl-layout-padding: 15rem;
+	--xs-layout-padding: 1.5rem;
 
 	--radius: 0.625rem;
 	--card: oklch(1 0 0);

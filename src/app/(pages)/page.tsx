@@ -1,5 +1,6 @@
 import MovilHome from "@/_components/01_home/movil-page"
 import Home from "@/_components/01_home/page"
+import MovilHomeBis from "@/_components/01bis_home/movil-page"
 import HomeBisPage from "@/_components/01bis_home/page"
 import MovilServices from "@/_components/02_services/movil-page"
 import ServicesSection from "@/_components/02_services/page"
@@ -18,7 +19,6 @@ export default function HomePage() {
 	return (
 		<main className="w-full relative">
 			<Mobil />
-
 			<Desktop />
 		</main>
 	)
@@ -33,15 +33,11 @@ const Desktop = () => {
 
 			<HomeBisPage />
 
-			{/* <WaveContainer> */}
 			<ServicesSection />
-			{/* </WaveContainer> */}
 
 			<ProductsSection />
 
-			{/* <WaveContainer> */}
 			<About />
-			{/* </WaveContainer> */}
 
 			<Tips />
 
@@ -56,15 +52,13 @@ const Mobil = () => {
 
 			<MovilHome />
 
-			{/* <MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]"> */}
+			<MovilHomeBis />
+
 			<MovilServices />
-			{/* </MovilWaveContainer> */}
 
 			<MovilProducts />
 
-			{/* <MovilWaveContainer top="-top-[57%]" bottom="-bottom-[57%]"> */}
 			<MovilAbout />
-			{/* </MovilWaveContainer> */}
 
 			<MovilTips />
 

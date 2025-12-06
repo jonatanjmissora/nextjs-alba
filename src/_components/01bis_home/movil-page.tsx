@@ -1,10 +1,7 @@
 import { Gem, Sprout, UserStar } from "lucide-react"
 import { Image as ImageKit } from "@imagekit/next"
-import "./homebis.css"
-import Leaf1 from "../../../public/leaf/leaf1"
-import Leaf2 from "../../../public/leaf/leaf2"
 
-export default function HomeBisPage() {
+export default function MovilHomeBis() {
 	const skillData = [
 		{
 			id: 1,
@@ -32,14 +29,14 @@ export default function HomeBisPage() {
 	]
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<section className="homebis-container w-full h-screen bg-(--background-one) flex justify-center items-center relative">
-			<div className="grid grid-cols-3 sm:gap-6 2xl:gap-10 relative z-2">
+		<section className="w-full py-60 px-(--xs-layout-padding) bg-(--background-one) flex justify-center items-center relative">
+			<div className="flex flex-col gap-16 relative z-2">
 				{skillData.map(skill => (
 					<div
 						key={skill.id}
-						className="flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) homebis-card rounded-lg relative"
+						className="flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) p-6 pt-10 rounded-lg relative"
 					>
-						<i className="absolute sm:-top-18 2xl:-top-24 left-1/2 -translate-x-1/2 rounded-full sm:size-26 2xl:size-36 bg-(--background-green) flex justify-center items-center custom-shadow">
+						<i className="absolute -top-12 left-1/2 -translate-x-1/2 rounded-full size-20 bg-(--background-green) flex justify-center items-center custom-shadow">
 							{skill.icon}
 						</i>
 						<span className="header text-(--foreground-green) font-bold">
@@ -49,8 +46,8 @@ export default function HomeBisPage() {
 					</div>
 				))}
 			</div>
-			<div className="absolute z-0 -bottom-20 -right-20">
-				<div className="w-[65dvw] h-[80dvh] relative">
+			<div className="absolute z-0 -bottom-8 right-0">
+				<div className="w-dvw h-[40dvh] relative">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/Layout/subhero-bg.webp"
@@ -58,21 +55,11 @@ export default function HomeBisPage() {
 						alt={"/Layout/subhero-bg.webp"}
 						fill
 						loading="lazy"
-						className={`object-cover opacity-45`}
-						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 100vw"
+						className={`object-cover opacity-65`}
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 100vw"
 					/>
 				</div>
 			</div>
-			<LeafImgs />
 		</section>
-	)
-}
-
-const LeafImgs = () => {
-	return (
-		<>
-			<Leaf1 className="absolute top-[75dvh] left-[10dvw] z-1 size-16 2xl:size-24 text-(--primary-green) opacity-95" />
-			<Leaf2 className="absolute top-[10dvh] right-[10dvw] z-1 size-20 2xl:size-32 rotate-180 text-(--primary-green) opacity-95" />
-		</>
 	)
 }

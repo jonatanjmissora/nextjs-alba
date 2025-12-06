@@ -7,6 +7,7 @@
 
 	--2xl-header-size: 3rem;
 	--sm-header-size: 2.15rem;
+	--xs-header-size: 1.5rem;
 
 	--2xl-header-card: 2rem;
 	--sm-header-card: 1.25rem;
@@ -29,7 +30,7 @@
 
 .header {
 	font-family: var(--font-cormorant);
-	font-size: var(--sm-header-size);
+	font-size: var(--xs-header-size);
 	font-weight: 500;
 }
 .header-card {
@@ -47,7 +48,7 @@
 .text {
 	font-family: var(--font-jost);
 	font-size: var(--sm-text-size);
-	line-height: 1.5rem;
+	line-height: 1rem;
 	font-weight: 400;
 }
 
@@ -61,6 +62,12 @@
 
 /*  notebook */
 @media (min-width: 1024px) and (max-width: 1439px) {
+	.header {
+		font-size: var(--sm-header-size);
+	}
+	.text {
+		line-height: 1.5rem;
+	}
 	.hero-title {
 		font-size: 3.25rem;
 	}
