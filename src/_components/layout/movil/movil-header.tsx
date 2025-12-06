@@ -48,7 +48,7 @@ export default function MovilHeader() {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "custom-shadow bg-[var(--background-one)]"}`}
+			className={`fixed top-0 left-0 right-0 py-4 px-6 z-50 flex items-center justify-between ${scrolled && "custom-shadow bg-(--background-one)"}`}
 		>
 			<a
 				href={
@@ -60,15 +60,15 @@ export default function MovilHeader() {
 								? "/#shop"
 								: `/${from}`
 				}
-				className="font-semibold text-[var(--primary-green)] tracking-wider"
+				className="font-medium text-(--primary-green) tracking-wider bonheur text-3xl leading-1.5"
 			>
-				{from !== "" ? "VOLVER" : "ALBA"}
+				{from !== "" ? "Volver" : "Alba Garcia"}
 			</a>
-			<div className="flex items-center gap-6">
+			<div className="flex items-center gap-10">
 				<HeaderHeartContainer />
 				<HeaderCartContainer />
+				<DrawerComponent />
 			</div>
-			<DrawerComponent />
 		</header>
 	)
 }
@@ -77,11 +77,11 @@ const DrawerComponent = () => {
 	return (
 		<Drawer direction="left">
 			<DrawerTrigger asChild>
-				<Menu className="text-[var(--primary-green)]" />
+				<Menu className="text-(--primary-green)" />
 			</DrawerTrigger>
 			<DrawerContent>
 				<div
-					className={`h-[100dvh] from-[var(--background-two)] to-pink-400 bg-gradient-to-b`}
+					className={`h-dvh from-(--background-two) to-pink-300 bg-linear-to-b`}
 					id="hamb"
 				>
 					<DrawerHeader>
@@ -91,7 +91,7 @@ const DrawerComponent = () => {
 					<DrawerFooter className="flex justify-between h-[92dvh] flex-col px-6">
 						<div className="w-full relative">
 							<DrawerClose asChild className="absolute top-0 right-0">
-								<X className="text-[var(--primary-green)] size-8" />
+								<X className="text-(--primary-green) size-8" />
 							</DrawerClose>
 							<div className="custom-shadow rounded-full overflow-hidden size-40 relative">
 								<ImageKit imageID={"logo.webp"} />
@@ -117,9 +117,9 @@ const MobilMenuNav = () => {
 				<li style={{ "--i": "0" } as React.CSSProperties}>
 					<a
 						href="/#home"
-						className="subtitle text-[var(--primary-green)] font-semibold"
+						className="text-2xl text-(--primary-green) tracking-widest"
 					>
-						Inicio
+						INICIO
 					</a>
 				</li>
 			</DrawerClose>
@@ -127,9 +127,9 @@ const MobilMenuNav = () => {
 				<li style={{ "--i": "1" } as React.CSSProperties}>
 					<a
 						href="/#services"
-						className="subtitle text-[var(--primary-green)] font-semibold"
+						className="text-2xl text-(--primary-green) tracking-widest"
 					>
-						Servicios
+						SERVICIOS
 					</a>
 				</li>
 			</DrawerClose>
@@ -137,9 +137,9 @@ const MobilMenuNav = () => {
 				<li style={{ "--i": "2" } as React.CSSProperties}>
 					<a
 						href="/#shop"
-						className="subtitle text-[var(--primary-green)] font-semibold"
+						className="text-2xl text-(--primary-green) tracking-widest"
 					>
-						Productos
+						PRODUCTOS
 					</a>
 				</li>
 			</DrawerClose>
@@ -147,9 +147,9 @@ const MobilMenuNav = () => {
 				<li style={{ "--i": "3" } as React.CSSProperties}>
 					<a
 						href="/#about"
-						className="subtitle text-[var(--primary-green)] font-semibold"
+						className="text-2xl text-(--primary-green) tracking-widest"
 					>
-						Acerca de
+						ACERCA DE
 					</a>
 				</li>
 			</DrawerClose>
@@ -157,9 +157,9 @@ const MobilMenuNav = () => {
 				<li style={{ "--i": "4" } as React.CSSProperties}>
 					<a
 						href="/#tips"
-						className="subtitle text-[var(--primary-green)] font-semibold"
+						className="text-2xl text-(--primary-green) tracking-widest"
 					>
-						Tips
+						TIPS
 					</a>
 				</li>
 			</DrawerClose>
@@ -167,9 +167,9 @@ const MobilMenuNav = () => {
 				<li style={{ "--i": "5" } as React.CSSProperties}>
 					<a
 						href="/#contact"
-						className="subtitle text-[var(--primary-green)] font-semibold"
+						className="text-2xl text-(--primary-green) tracking-widest"
 					>
-						Contacto
+						CONTACTO
 					</a>
 				</li>
 			</DrawerClose>
@@ -185,16 +185,16 @@ const MobilMenuSocials = () => {
 	return (
 		<nav className="w-full flex justify-around items-center gap-2 relative z-10">
 			<Link href={whatsappLink} target="_blank">
-				<WhatsApp className="size-[30px] text-[var(--primary-green)] duration-300" />
+				<WhatsApp className="size-[30px] text-(--primary-green) duration-300" />
 			</Link>
 			<Link href={instagramLink} target="_blank">
-				<Instagram className="size-[30px] text-[var(--primary-green)] duration-300" />
+				<Instagram className="size-[30px] text-(--primary-green) duration-300" />
 			</Link>
 			<Link href={facebookLink} target="_blank">
-				<Facebook className="size-[30px] text-[var(--primary-green)] duration-300" />
+				<Facebook className="size-[30px] text-(--primary-green) duration-300" />
 			</Link>
 			<Link href={mailLink} target="_blank">
-				<Mail className="size-[30px] text-[var(--primary-green)] duration-300" />
+				<Mail className="size-[30px] text-(--primary-green) duration-300" />
 			</Link>
 		</nav>
 	)

@@ -29,6 +29,28 @@
 	background: linear-gradient(to bottom, var(--background-one), transparent);
 }
 
+.movil-bg::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 30%;
+	background: linear-gradient(to bottom, var(--background-one), transparent);
+}
+
+.movil-bg::before {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 30%;
+	background: linear-gradient(to top, var(--background-one), transparent);
+}
+
 .cta-button {
 	background-color: var(--primary-green);
 	color: var(--background-two);
@@ -38,7 +60,7 @@
 	transition: all 0.15s ease-in-out;
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 	font-family: var(--font-jost);
-	font-size: var(--sm-cta-size);
+	font-size: 1rem;
 	font-weight: 400;
 	padding-block: 0.8rem;
 	padding-inline: 2.5rem;
@@ -104,6 +126,9 @@
 		left: var(--sm-layout-padding);
 		transform: translateY(-50%);
 		gap: 1rem;
+	}
+	.cta-button {
+		font-size: var(--sm-cta-size);
 	}
 }
 

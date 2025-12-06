@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react"
 import HeaderCartContainer from "./header-cart-container"
 import HeaderHeartContainer from "./header-heart-container"
-import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
 export default function HeaderFixed({
@@ -29,8 +28,6 @@ export default function HeaderFixed({
 		window.addEventListener("scroll", handleScrolled)
 		return () => window.removeEventListener("scroll", handleScrolled)
 	}, [])
-
-	console.log("LINK", link)
 
 	return (
 		<article>

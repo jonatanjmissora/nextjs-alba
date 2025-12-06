@@ -1,42 +1,59 @@
+import Link from "next/link"
 import BranchLeafMovil from "../../../public/leaf/branch-leaf-movil"
 import Leaf1 from "../../../public/leaf/leaf1"
 import Leaf2Movil from "../../../public/leaf/leaf2-movil"
-import { ImageKit } from "../image-kit"
+import { Image as ImageKit } from "@imagekit/next"
 
 export default function MovilHome() {
 	return (
-		<section className="w-full flex justify-center items-start relative px-6">
+		<section className="w-full flex justify-center items-start relative px-6 bg-(--background-one)">
 			<LeafImgs />
+			<div className="absolute z-0 -right-[30dvw] bottom-0 movil-bg">
+				<HomeImg2 />
+			</div>
 			<div
 				id="home"
-				className="w-full h-[1100px] flex flex-col items-center gap-3 pt-[180px]"
+				className="w-full h-[800px] flex flex-col items-center gap-6 pt-40 relative z-1"
 			>
-				<span className="title text-[var(--primary-green)] text-center">
-					SKIN AND BEAUTY CENTER
-				</span>
-				<span className="subtitle">in Bahia Blanca</span>
-				<p className="text">Lorem ipsum dolor sit amet consectetur.</p>
-				<a
+				<div className="hero-title">
+					<p>Centro cosmiátrico</p>
+					<p>de belleza</p>
+				</div>
+				<div>
+					<p className="hero-subtitle w-full text-center">
+						Al cuidado de tu piel.
+					</p>
+					<p className="hero-subtitle w-full text-center">
+						Donde tu belleza se revela.
+					</p>
+				</div>
+				<Link
 					href="https://alba-estetica-turnos.netlify.app/"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="cta-button text mt-4 py-4 px-8"
+					className="cta-button text-center mt-4"
 				>
-					Reserva tu turno
-				</a>
+					RESERVA TU TURNO
+				</Link>
 			</div>
-			<div className="absolute right-0 bottom-[200px] -z-10 bg-[var(--primary-pink)] rounded-tl-[45%]">
-				<HomeImg2 />
-			</div>
-			<div className="absolute -z-5 bottom-[0] left-0 w-full h-[230px] bg-[var(--primary-pink)]"></div>
 		</section>
 	)
 }
 
 const HomeImg2 = () => {
+	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="w-[350px] h-[450px] relative">
-			<ImageKit imageID="alba-alpha.png" priority={true} />
+		<div className="w-[180dvw] aspect-video relative">
+			<ImageKit
+				urlEndpoint={`${urlEndp}`}
+				src="/Layout/hero-bg.webp"
+				priority={true}
+				alt={"/Layout/hero-bg.webp"}
+				fill
+				loading="eager"
+				className={`object-cover`}
+				sizes="(max-width: 768px) 100vw"
+			/>
 		</div>
 	)
 }
@@ -44,9 +61,9 @@ const HomeImg2 = () => {
 const LeafImgs = () => {
 	return (
 		<>
-			<BranchLeafMovil className="absolute top-0 right-[19%] size-[13rem] rotate-x-180 text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
-			<Leaf1 className="absolute top-[30%] left-[65%] size-[3rem] text-[var(--leaf-color)]" />
-			<Leaf2Movil className="absolute bottom-[5%] -left-[5%] size-[8rem] text-[var(--leaf-color)] opacity-[var(--opacity-leaf)]" />
+			<BranchLeafMovil className="absolute top-0 right-[19%] size-52 rotate-x-180 text-(--primary-green) opacity-50" />
+			<Leaf1 className="absolute top-[30%] left-[65%] size-12 text-(--primary-green)" />
+			<Leaf2Movil className="absolute bottom-[5%] -left-[5%] size-32 text-(--primary-green) opacity-(--opacity-leaf)" />
 		</>
 	)
 }
