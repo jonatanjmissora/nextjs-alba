@@ -25,7 +25,7 @@ export default function Footer() {
 	return (
 		<div className="w-full relative pb-6 overflow-hidden">
 			<div>
-				<div className="relative ml-auto right-0 w-[50dvw] h-[50dvh]">
+				<div className="relative ml-auto right-0 sm:w-[70dvw] sm:h-[70dvh] 2xl:w-[50dvw] 2xl:h-[50dvh]">
 					<ImageKit2
 						urlEndpoint={`${urlEndp}`}
 						src="Layout/footer-bg.webp"

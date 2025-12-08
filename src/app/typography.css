@@ -13,7 +13,7 @@
 	--sm-header-card: 1.25rem;
 
 	--2xl-subtitle-size: 1.7rem;
-	--sm-subtitle-size: 1.15rem;
+	--sm-subtitle-size: 1.7rem;
 
 	--2xl-text-size: 1.125rem;
 	--sm-text-size: 0.7rem;
@@ -64,6 +64,10 @@
 @media (min-width: 1024px) and (max-width: 1439px) {
 	.header {
 		font-size: var(--sm-header-size);
+	}
+	.subtitle {
+		font-size: var(--sm-subtitle-size);
+		line-height: 2.5rem;
 	}
 	.text {
 		line-height: 1.5rem;

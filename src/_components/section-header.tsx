@@ -12,7 +12,7 @@ export const SectionHeader = ({
 		<div className="flex flex-col items-center justify-center gap-3 pb-10 sm:mb-16 2xl:mb-32 mt-14 relative">
 			<LeafImages />
 			<h2 className="header text-pretty text-(--foreground-green)">{title}</h2>
-			<div className=" subtitle text-balance pt-4 text-center">
+			<div className=" 2xl:text-[1.35rem] sm:text-[1rem] text-balance pt-4 text-center">
 				{description.split("\n\n").map(paragraph => (
 					<p key={paragraph.substring(0, 30)}>{paragraph}</p>
 				))}

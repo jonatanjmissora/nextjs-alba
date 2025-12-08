@@ -36,10 +36,10 @@ const FavoritesCard = () => {
 	)
 
 	return (
-		<ul className="py-6 grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
+		<ul className="flex-1 py-4 grid grid-cols-1 sm:grid-cols-4 2xl:grid-cols-4 gap-4 w-full">
 			{servicesFavorites.map(service => (
 				<div key={service.id}>
-					<div className="hidden sm:block">
+					<div className="hidden sm:block 2xl:h-max sm:h-full">
 						<FavCard
 							key={service.id}
 							element={service}

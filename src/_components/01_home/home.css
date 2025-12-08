@@ -115,11 +115,11 @@
 /*  notebook */
 @media (min-width: 1024px) and (max-width: 1439px) {
 	.home-img-container {
-		right: -15rem;
+		right: -10rem;
 	}
 	.home-img {
-		width: 95dvw;
-		height: 95dvh;
+		width: 87dvw;
+		height: 87dvh;
 	}
 	.hero-container {
 		top: 50%;

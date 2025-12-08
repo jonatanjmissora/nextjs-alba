@@ -49,8 +49,8 @@ export default function HomeBisPage() {
 					</div>
 				))}
 			</div>
-			<div className="absolute z-0 -bottom-20 -right-20">
-				<div className="w-[65dvw] h-[80dvh] relative">
+			<div className="absolute z-0 sm:bottom-0 sm:-right-10 2xl:-bottom-20 2xl:-right-20">
+				<div className="sm:w-[55dvw] sm:h-[70dvh] 2xl:w-[65dvw] 2xl:h-[80dvh] relative">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/Layout/subhero-bg.webp"

@@ -77,9 +77,9 @@ export const ElementCountAndCart = ({
 					className="cta-button flex justify-center items-center gap-4 py-3 px-6 w-full sm:w-1/2"
 					onClick={handleAddToCart}
 				>
-					<ShoppingCart className="size-4 2xl:size-8 icon cursor-pointer" />
-					<span className="text 2xl:text-normal">
-						Agregar {count > 1 ? `(x${count})` : ""}
+					<ShoppingCart className="size-5 2xl:size-8 icon cursor-pointer" />
+					<span className="text-sm 2xl:text-normal">
+						AGREGAR {count > 1 ? `(x${count})` : ""}
 					</span>
 				</button>
 

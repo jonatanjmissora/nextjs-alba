@@ -20,16 +20,16 @@ export default function FavCard({
 	return (
 		<li
 			key={element.id}
-			className={`w-full flex-1 min-w-[280px] flex flex-col justify-between items-center gap-2 sm:gap-4 ${type === "shop" ? "bg-(--primary-pink)" : "bg-(--background-one)"} rounded-tr-2xl rounded-bl-2xl custom-shadow group border border-[#d685922a] overflow-hidden`}
+			className={`w-full h-full flex-1 flex flex-col justify-between items-center gap-2 2xl:gap-4 ${type === "shop" ? "bg-(--primary-pink)" : "bg-(--background-one)"} rounded-tr-2xl rounded-bl-2xl custom-shadow group border border-[#d685922a] overflow-hidden`}
 		>
-			<div className="relative custom-shadow  w-full h-[200px] sm:h-[280px] 2xl:h-[350px] overflow-hidden">
+			<div className="relative custom-shadow w-full sm:h-[180px] 2xl:h-[250px] overflow-hidden">
 				<ImageKit
 					imageID={element.images.split("*")[0]}
 					className={`group-hover:scale-120 transition-all duration-800`}
 				/>
 			</div>
 
-			<div className="w-full h-full p-8 pt-0 flex flex-col gap-4">
+			<div className="w-full sm:h-[225px] 2xl:h-[250px] p-8 pt-0 flex flex-col sm:gap-2 2xl:gap-4 relative">
 				<div className="flex flex-col w-full">
 					<h3 className="text-(--primary-green) subtitle leading-8 truncate w-full">
 						{element.title}
@@ -49,10 +49,10 @@ export default function FavCard({
 						<CartIconContainer id={element.id.toString()} />
 					</div>
 				</div>
-				<span className="text-xs 2xl:text-sm text-[#444]/75 tracking-wider w-full h-20 2xl:h-16 scrollable overflow-y-auto">
+				<span className="text-xs 2xl:text-sm text-[#444]/75 tracking-wider w-full">
 					{element.description}
 				</span>
-				<div className="w-full flex justify-end">
+				<div className="absolute bottom-2 right-6 z-10 w-full flex justify-end">
 					<Link
 						href={`/${type}/${element.category_id.toString()}?id=${element.id}&from=${from}`}
 						className="cursor-pointer"

@@ -39,7 +39,7 @@ export default function CartCard({
 			key={element.id}
 			className={`w-full flex flex-col sm:flex-row gap-5 rounded-tr-2xl rounded-bl-2xl custom-shadow group border border-[#d685922a] relative overflow-hidden ${type === "shop" ? "bg-(--primary-pink)" : "bg-(--background-one)"}`}
 		>
-			<div className="relative custom-shadow overflow-hidden w-full sm:w-[150px] 2xl:w-[200px] h-[150px] sm:h-[100px] 2xl:h-[150px]">
+			<div className="relative custom-shadow overflow-hidden w-full h-[150px] sm:w-[150px] 2xl:w-[200px] sm:h-[120px] 2xl:h-[150px]">
 				<ImageKit
 					imageID={element.images.split("*")[0]}
 					className={`group-hover:scale-120 transition-all duration-800`}

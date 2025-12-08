@@ -39,7 +39,7 @@ const BgImage = () => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 
 	return (
-		<div className="absolute -bottom-24 right-0 z-1">
+		<div className="absolute sm:-bottom-12 2xl:-bottom-24 right-0 z-1">
 			<div className="w-[70dvw] h-[50dvh] relative">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
