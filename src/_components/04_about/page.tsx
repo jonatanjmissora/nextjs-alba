@@ -126,9 +126,9 @@ const Certificates = () => {
 			<div className="sm:w-[170px] sm:h-[350px] 2xl:w-[200px] 2xl:h-[400px] relative">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
-					src="/about/avatar-alba.webp"
+					src="/about/about-alba2.webp"
 					priority={false}
-					alt={"/about/avatar-alba.webp"}
+					alt={"/about/about-alba2.webp"}
 					fill
 					loading="lazy"
 					className={`object-cover`}
