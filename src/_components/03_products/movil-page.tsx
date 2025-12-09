@@ -13,7 +13,6 @@ export default function MovilProducts() {
 			<div id="shop" className="w-full relative px-6 pt-12">
 				<SectionHeader
 					title="Nuestros productos en gabinete"
-					subtitle="Productos"
 					description={productsHeader}
 				/>
 

@@ -18,10 +18,9 @@ export default function MovilTips() {
 			<div id="tips" className="w-full relative px-6 pt-12">
 				<SectionHeader
 					title="Nuestros tips del centro de belleza"
-					subtitle="Tips"
 					description={tipsHeader}
 				/>
-				<div className="w-full flex flex-col gap-20 justify-between items-center pb-6">
+				<div className="w-full flex flex-col gap-10 justify-between items-center pb-6">
 					<TipCard tip={tips[0]} />
 					<TipCard tip={tips[1]} />
 				</div>
@@ -32,13 +31,11 @@ export default function MovilTips() {
 
 const TipCard = ({ tip }: { tip: TipType }) => {
 	return (
-		<div className="w-full relative mt-40">
-			<AccordionElement content={tip.content} />
-			<div className="absolute -z-10 bottom-[95%] left-[12%] w-3/4 h-[200px]">
-				<div className="relative overflow-hidden  w-full h-full rounded-lg custom-shadow">
-					<ImageKit imageID={tip.image} />
-				</div>
+		<div className="w-full relative mt-20">
+			<div className="relative overflow-hidden  w-full h-[200px] rounded-t-lg custom-shadow">
+				<ImageKit imageID={tip.image} />
 			</div>
+			<AccordionElement content={tip.content} />
 		</div>
 	)
 }
@@ -52,7 +49,7 @@ const AccordionElement = ({
 		<Accordion
 			type="single"
 			collapsible
-			className="w-full border border-[#444]/20 rounded-lg bg-(--background-one) p-4 custom-shadow"
+			className="w-full border border-[#444]/20 rounded-b-lg bg-(--background-one) p-4 custom-shadow"
 			defaultValue="item-1"
 		>
 			{content.map((item, index) => (

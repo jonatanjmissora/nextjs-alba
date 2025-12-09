@@ -39,10 +39,10 @@ const MovilSectionCard = ({
 		<article className="w-full relative flex odd:justify-end">
 			<Link
 				href={`/${type}/${category.id.toString()}?from=${type}`}
-				className={`h-13 flex items-center header font-semibold tracking-wider absolute -bottom-8 z-10 rounded-lg custom-shadow text-(--primary-green) bg-(--background-two) ${isEven ? "left-0" : "right-0"} overflow-hidden border border-[#444]/50`}
+				className={`h-13 flex items-center tracking-wider absolute -bottom-8 z-10 rounded-lg custom-shadow text-(--primary-green) bg-(--background-two) ${isEven ? "left-0" : "right-0"} overflow-hidden border border-[#444]/50`}
 			>
 				<h2 className="py-3 px-6 pr-4">{category.title}</h2>
-				<ChevronRightIcon className="w-7 h-full p-0 bg-[var(--primary-green)]/50 text-[var(--background-one)]" />
+				<ChevronRightIcon className="w-7 h-full p-0 bg-(--primary-green)/50 text-(--background-one)" />
 			</Link>
 			<div className="w-3/4 aspect-video bg-slate-300 custom-shadow rounded-lg relative overflow-hidden">
 				<ImageKit

@@ -1,6 +1,4 @@
 import { SectionHeader } from "../section-header"
-// import Testimonials from "./testimonials"
-// import Certificates from "./certificates"
 import { aboutHeader } from "@/_lib/about"
 import { LeafImgs } from "../leaf-section"
 import { Image as ImageKit } from "@imagekit/next"

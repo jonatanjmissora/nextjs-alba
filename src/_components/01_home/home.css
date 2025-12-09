@@ -68,25 +68,6 @@
 
 .cta-button:hover {
 	background-color: var(--secondary-green);
-	transform: translate(5px, -5px);
-}
-
-.cta-button-inv {
-	background-color: transparent;
-	color: var(--primary-green);
-	font-weight: bold;
-	border: 2px solid var(--primary-green);
-	border-radius: 1rem 0;
-	letter-spacing: 2px;
-	cursor: pointer;
-	transition: all 0.15s ease-in-out;
-	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-}
-
-.cta-button-inv:hover {
-	border: 2px solid var(--secondary-green);
-	color: var(--secondary-green);
-	transform: translate(5px, -5px);
 }
 
 .hero-skill {

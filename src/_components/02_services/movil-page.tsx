@@ -8,13 +8,12 @@ export default function MovilServices() {
 	const services = servicesTree
 
 	return (
-		<section className="w-full bg-[var(--primary-pink)] flex justify-center items-start relative pb-[300px]">
+		<section className="w-full bg-(--primary-pink) flex justify-center items-start relative pb-[300px]">
 			<MovilLeafImgs />
 
 			<section id="services" className="w-full relative px-6 pt-12">
 				<SectionHeader
 					title="Nuestros servicios en gabinete"
-					subtitle="Servicios"
 					description={servicesHeader}
 				/>
 				<MovilElementsCard type="services" elements={services} />

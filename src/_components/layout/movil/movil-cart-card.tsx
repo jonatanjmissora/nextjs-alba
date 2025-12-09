@@ -46,7 +46,7 @@ const DataCard = ({
 
 	return (
 		<div
-			className={`p-3 flex flex-col gap-2 items-center header font-semibold tracking-wider absolute top-[90%] z-10 rounded-lg custom-shadow text-[var(--primary-green)] bg-[var(--background-two)] left-[5%] right-0 overflow-hidden border border-[#444]/50`}
+			className={`p-3 flex flex-col gap-2 items-center header font-semibold tracking-wider absolute top-[90%] z-10 rounded-lg custom-shadow text-(--primary-green) bg-(--background-two) left-[5%] right-0 overflow-hidden border border-[#444]/50`}
 		>
 			<div className="w-full flex justify-between items-center">
 				<i className="scale-75 flex items-center">
@@ -62,7 +62,7 @@ const DataCard = ({
 				<span className="text-xs font-semibold text-[#444]/50 tracking-wider">
 					{element.category_title}
 				</span>
-				<h3 className="text-[var(--primary-green)] text-pretty font-semibold whitespace-nowrap truncate w-full">
+				<h3 className="text-(--primary-green) text-pretty font-semibold whitespace-nowrap truncate w-full">
 					{element.title}
 				</h3>
 			</div>

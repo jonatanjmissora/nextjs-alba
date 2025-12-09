@@ -297,3 +297,26 @@ body {
 		var(--background-two)
 	);
 }
+
+.certificados1 {
+	left: calc(100% + 24px);
+	animation: slideLeft 40s linear infinite;
+}
+
+@keyframes slideLeft {
+	to {
+		left: -1795px;
+	}
+}
+
+.certificados2 {
+	left: calc(100% + 24px);
+	animation: slideLeft2 40s linear infinite;
+	animation-delay: 20s;
+}
+
+@keyframes slideLeft2 {
+	to {
+		left: -1795px;
+	}
+}
