@@ -44,9 +44,9 @@ const Testimonials = () => {
 				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
-						src="/about/testimonial-photo1.webp"
+						src="/about/about-alba1.webp"
 						priority={false}
-						alt={"/about/testimonial-photo1.webp"}
+						alt={"/about/about-alba1.webp"}
 						fill
 						loading="lazy"
 						className={`object-cover -rotate-12`}
@@ -56,9 +56,9 @@ const Testimonials = () => {
 				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
-						src="/about/testimonial-photo2.webp"
+						src="/about/about-alba3.webp"
 						priority={false}
-						alt={"/about/testimonial-photo2.webp"}
+						alt={"/about/about-alba3.webp"}
 						fill
 						loading="lazy"
 						className={`object-cover rotate-12`}
