@@ -41,13 +41,18 @@ export default async function ServerServiciosPage({
 
 	return (
 		<SinglePageLayout from={from} id={id}>
-			{categoryElements.map(element => (
-				<ElementPage
-					key={element.id}
-					categoryName={element.category_title}
-					element={element}
-				/>
-			))}
+			<div className="w-full flex-1 flex flex-col justify-start items-center">
+				<h2 className="subtitle py-0 sm:py-2 pt-20 sm:pt-2 w-full text-left sm:text-center text-(--primary-green)">
+					Servicios
+				</h2>
+				{categoryElements.map(element => (
+					<ElementPage
+						key={element.id}
+						categoryName={element.category_title}
+						element={element}
+					/>
+				))}
+			</div>
 		</SinglePageLayout>
 	)
 }
