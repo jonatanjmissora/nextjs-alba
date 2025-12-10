@@ -51,7 +51,7 @@
 	background: linear-gradient(to top, var(--background-one), transparent);
 }
 
-.hero-title {
+/* .hero-title {
 	position: absolute;
 	inset: 1;
 	top: 105%;
@@ -65,6 +65,10 @@
 	font-family: var(--font-cormorant);
 	font-weight: 600;
 	color: var(--primary-green);
+} */
+.revealFromDown {
+	opacity: 0;
+	animation: revealDown 0.75s ease-in-out forwards;
 }
 
 .cta-button {
@@ -116,6 +120,9 @@
 }
 .delay1330 {
 	animation-delay: 1.33s;
+}
+.delay1660 {
+	animation-delay: 1.66s;
 }
 @keyframes roll90 {
 	to {

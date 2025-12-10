@@ -134,6 +134,9 @@ body {
 .bonheur {
 	font-family: var(--font-bonheur);
 }
+.cormorant {
+	font-family: var(--font-cormorant);
+}
 
 .custom-shadow {
 	box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);

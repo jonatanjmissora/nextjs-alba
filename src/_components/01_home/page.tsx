@@ -52,17 +52,7 @@ const LeafImgs = () => {
 const Hero = () => {
 	return (
 		<article className="absolute z-1 flex flex-col justify-center items-center hero-container">
-			<div className="flex flex-col gap-6 relative">
-				<div className="relative h-14 w-100 overflow-hidden">
-					<p className="hero-title">Centro de estética</p>
-				</div>
-				<div className="absolute top-1/2 -translate-1/2 left-1/2 h-6">
-					<p className="hero-title-y delay660 text-4xl leading-[25px]">&</p>
-				</div>
-				<div className="relative h-14 w-100 overflow-hidden">
-					<p className="hero-title delay330">bienestar integral</p>
-				</div>
-			</div>
+			<HeroTitle />
 			<div>
 				<p className="hero-subtitle">Al cuidado de tu piel.</p>
 				<p className="hero-subtitle">Donde tu belleza se revela.</p>
@@ -97,5 +87,48 @@ const Skills = () => {
 				</div>
 			))}
 		</article>
+	)
+}
+
+const HeroTitle = () => {
+	return (
+		<div className="hero-title">
+			<p>Centro cosmiátrico</p>
+			<p>de belleza</p>
+		</div>
+
+		// <div className="flex flex-col gap-1 items-center justify-center relative">
+		// 	<div className="relative px-1 overflow-hidden">
+		// 		<p className="hero-title revealFromDown absolute inset-0 top-[105%]">
+		// 			<span className="revealFromDown absolute top-[105%] left-1">
+		// 				Centro
+		// 			</span>
+		// 			<span className="revealFromDown absolute top-[105%] left-57 delay330">
+		// 				de
+		// 			</span>
+		// 			<span className="revealFromDown absolute top-[105%] left-78 delay660">
+		// 				estética
+		// 			</span>
+		// 		</p>
+		// 		<p className="hero-title opacity-0">Centro de estética</p>
+		// 	</div>
+		// 	<div className="absolute top-[57%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+		// 		<p className="cormorant opacity-0 text-4xl leading-[25px]">&</p>
+		// 		<p className="cormorant font-medium text-(--primary-green) text-5xl leading-[30px] revealFromDown absolute top-[105%] left-1 delay1000">
+		// 			&
+		// 		</p>
+		// 	</div>
+		// 	<div className="relative px-1 overflow-hidden">
+		// 		<p className="hero-title revealFromDown absolute inset-0 top-[105%]">
+		// 			<span className="revealFromDown absolute top-[105%] left-1 delay1330">
+		// 				bienestar
+		// 			</span>
+		// 			<span className="revealFromDown absolute top-[105%] left-72 delay1660">
+		// 				integral
+		// 			</span>
+		// 		</p>
+		// 		<p className="hero-title opacity-0">bienestar integral</p>
+		// 	</div>
+		// </div>
 	)
 }
