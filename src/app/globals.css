@@ -258,6 +258,21 @@ body {
 	transition-delay: calc(0.15s * var(--i));
 }
 
+.delay330 {
+	animation-delay: 0.33s;
+}
+.delay500 {
+	animation-delay: 0.5s;
+}
+.delay660 {
+	animation-delay: 0.66s;
+}
+.delay1000 {
+	animation-delay: 1s;
+}
+.delay1330 {
+	animation-delay: 2.33s;
+}
 .testimonials1 {
 	animation: slideUp 60s linear infinite;
 }

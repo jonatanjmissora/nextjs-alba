@@ -1,6 +1,9 @@
 .header-container {
 	padding-block: 3.5rem;
 	padding-inline: var(--2xl-layout-padding);
+	transform: translateY(-100px);
+	opacity: 0;
+	animation: revealUp 0.5s ease-in-out forwards;
 }
 .header-logo {
 	top: 3.5dvh;
@@ -12,6 +15,15 @@
 .header-icons {
 	top: 5dvh;
 	right: var(--2xl-layout-padding);
+}
+@keyframes revealUp {
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+.delay1330 {
+	animation-delay: 1.33s;
 }
 /* mobil */
 @media (max-width: 767px) {
