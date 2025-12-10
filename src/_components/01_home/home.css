@@ -51,22 +51,6 @@
 	background: linear-gradient(to top, var(--background-one), transparent);
 }
 
-.hero-title {
-	position: absolute;
-	inset: 1;
-	top: 105%;
-	opacity: 0;
-	animation: revealDown 0.5s ease-in-out forwards;
-}
-.hero-title-y {
-	transform: rotateX(90deg);
-	animation: roll90 0.5s ease-in-out forwards;
-	text-align: center;
-	font-family: var(--font-cormorant);
-	font-weight: 600;
-	color: var(--primary-green);
-}
-
 .cta-button {
 	background-color: var(--primary-green);
 	color: var(--background-two);
@@ -80,8 +64,6 @@
 	font-weight: 400;
 	padding-block: 0.8rem;
 	padding-inline: 2.5rem;
-	transform: rotateX(90deg);
-	animation: roll90 0.5s ease-in-out forwards;
 }
 
 .cta-button:hover {
@@ -91,8 +73,6 @@
 .hero-skill {
 	padding-inline: 1rem;
 	padding-block: 0.5rem;
-	transform: rotateX(90deg);
-	animation: roll90 0.5s ease-in-out forwards;
 }
 .hero-skill i {
 	font-size: 0.875rem;
@@ -101,32 +81,6 @@
 
 .hero-skill span {
 	font-size: 0.75rem;
-}
-.delay330 {
-	animation-delay: 0.33s;
-}
-.delay500 {
-	animation-delay: 0.5s;
-}
-.delay660 {
-	animation-delay: 0.66s;
-}
-.delay1000 {
-	animation-delay: 1s;
-}
-.delay1330 {
-	animation-delay: 1.33s;
-}
-@keyframes roll90 {
-	to {
-		transform: rotateX(0);
-	}
-}
-@keyframes revealDown {
-	to {
-		top: 5%;
-		opacity: 1;
-	}
 }
 
 /* mobil */
