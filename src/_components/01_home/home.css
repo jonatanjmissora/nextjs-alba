@@ -70,10 +70,14 @@
 	opacity: 0;
 	animation: revealDown 0.75s ease-in-out forwards;
 }
-
+.revealfrom0 {
+	transform: scale(0);
+	opacity: 0;
+	animation: reveal 0.5s ease-in-out forwards;
+}
 .cta-button {
 	background-color: var(--primary-green);
-	color: var(--background-two);
+	color: var(--background-one);
 	border-radius: 1rem 0;
 	letter-spacing: 2px;
 	cursor: pointer;
@@ -95,8 +99,6 @@
 .hero-skill {
 	padding-inline: 1rem;
 	padding-block: 0.5rem;
-	transform: rotateX(90deg);
-	animation: roll90 0.5s ease-in-out forwards;
 }
 .hero-skill i {
 	font-size: 0.875rem;
@@ -106,23 +108,26 @@
 .hero-skill span {
 	font-size: 0.75rem;
 }
-.delay330 {
-	animation-delay: 0.33s;
+.delay100 {
+	animation-delay: 0.1s;
+}
+.delay200 {
+	animation-delay: 0.2s;
+}
+.delay300 {
+	animation-delay: 0.3s;
+}
+.delay400 {
+	animation-delay: 0.4s;
 }
 .delay500 {
 	animation-delay: 0.5s;
 }
-.delay660 {
-	animation-delay: 0.66s;
+.delay600 {
+	animation-delay: 0.6s;
 }
-.delay1000 {
-	animation-delay: 1s;
-}
-.delay1330 {
-	animation-delay: 1.33s;
-}
-.delay1660 {
-	animation-delay: 1.66s;
+.delay700 {
+	animation-delay: 0.7s;
 }
 @keyframes roll90 {
 	to {
@@ -135,11 +140,16 @@
 		opacity: 1;
 	}
 }
+@keyframes reveal {
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
 
 /* mobil */
 @media (max-width: 767px) {
-	.home-img {
-	}
+	
 }
 
 /* tablet */

@@ -1,9 +1,6 @@
 .header-container {
 	padding-block: 3.5rem;
 	padding-inline: var(--2xl-layout-padding);
-	top: -50px;
-	opacity: 0.5;
-	animation: revealUp 1s ease-in-out forwards;
 }
 .header-logo {
 	top: 3.5dvh;
@@ -23,12 +20,6 @@
 	}
 }
 
-.delay1330 {
-	animation-delay: 1.33s;
-}
-.delay2000 {
-	animation-delay: 2s;
-}
 /* mobil */
 @media (max-width: 767px) {
 }

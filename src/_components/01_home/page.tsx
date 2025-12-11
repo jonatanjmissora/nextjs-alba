@@ -53,7 +53,7 @@ const Hero = () => {
 	return (
 		<article className="absolute z-1 flex flex-col justify-center items-center hero-container">
 			<HeroTitle />
-			<div>
+			<div className="flex flex-col gap-0 items-center justify-center revealfrom0 delay600">
 				<p className="hero-subtitle">Al cuidado de tu piel.</p>
 				<p className="hero-subtitle">Donde tu belleza se revela.</p>
 			</div>
@@ -61,7 +61,7 @@ const Hero = () => {
 				href="https://alba-estetica-turnos.netlify.app/"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="cta-button text-center mt-4 delay660"
+				className="cta-button text-center mt-4 delay700"
 			>
 				RESERVA TU TURNO
 			</Link>
@@ -80,7 +80,7 @@ const Skills = () => {
 			{skillData.map(skill => (
 				<div
 					key={skill.icon}
-					className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill delay1330"
+					className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--background-two) border border-[#444]/10 custom-shadow hero-skill"
 				>
 					<i>{skill.icon}</i>
 					<span>{skill.content}</span>
@@ -103,10 +103,10 @@ const HeroTitle = () => {
 					<span className="revealFromDown absolute top-[105%] left-1">
 						Centro
 					</span>
-					<span className="revealFromDown absolute top-[105%] left-57 delay330">
+					<span className="revealFromDown absolute top-[105%] left-57 delay100">
 						de
 					</span>
-					<span className="revealFromDown absolute top-[105%] left-78 delay660">
+					<span className="revealFromDown absolute top-[105%] left-78 delay200">
 						estética
 					</span>
 				</p>
@@ -114,16 +114,16 @@ const HeroTitle = () => {
 			</div>
 			<div className="absolute top-[57%] left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<p className="cormorant opacity-0 text-4xl leading-[25px]">&</p>
-				<p className="cormorant font-medium text-(--primary-green) text-5xl leading-[30px] revealFromDown absolute top-[105%] left-1 delay1000">
+				<p className="cormorant font-medium text-(--primary-green) text-5xl leading-[30px] revealFromDown absolute top-[105%] left-1 delay300">
 					&
 				</p>
 			</div>
 			<div className="relative px-1 overflow-hidden">
 				<p className="hero-title revealFromDown absolute inset-0 top-[105%]">
-					<span className="revealFromDown absolute top-[105%] left-1 delay1330">
+					<span className="revealFromDown absolute top-[105%] left-1 delay400">
 						bienestar
 					</span>
-					<span className="revealFromDown absolute top-[105%] left-72 delay1660">
+					<span className="revealFromDown absolute top-[105%] left-72 delay500">
 						integral
 					</span>
 				</p>
