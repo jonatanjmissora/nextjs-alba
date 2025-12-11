@@ -5,7 +5,7 @@ export default function Header() {
 	return (
 		<header
 			id="home01"
-			className="absolute top-0 left-0 z-50 w-full header-container"
+			className="absolute top-0 left-0 z-50 w-full header-container delay2000"
 		>
 			<div className="w-full h-full flex justify-center items-center relative">
 				<nav className="flex items-center gap-12 font-normal text-(--primary-green) header-nav">

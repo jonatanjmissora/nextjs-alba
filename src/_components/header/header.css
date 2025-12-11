@@ -22,8 +22,12 @@
 		opacity: 1;
 	}
 }
+
 .delay1330 {
 	animation-delay: 1.33s;
+}
+.delay2000 {
+	animation-delay: 2s;
 }
 /* mobil */
 @media (max-width: 767px) {
