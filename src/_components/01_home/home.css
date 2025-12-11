@@ -129,6 +129,15 @@
 .delay700 {
 	animation-delay: 0.7s;
 }
+.delay800 {
+	animation-delay: 0.8s;
+}
+.delay900 {
+	animation-delay: 0.9s;
+}
+.delay1000 {
+	animation-delay: 1s;
+}
 @keyframes roll90 {
 	to {
 		transform: rotateX(0);

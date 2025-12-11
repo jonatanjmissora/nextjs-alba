@@ -53,7 +53,7 @@ const Hero = () => {
 	return (
 		<article className="absolute z-1 flex flex-col justify-center items-center hero-container">
 			<HeroTitle />
-			<div className="flex flex-col gap-0 items-center justify-center revealfrom0 delay600">
+			<div className="flex flex-col gap-0 items-center justify-center revealfrom0 delay800">
 				<p className="hero-subtitle">Al cuidado de tu piel.</p>
 				<p className="hero-subtitle">Donde tu belleza se revela.</p>
 			</div>
@@ -61,7 +61,7 @@ const Hero = () => {
 				href="https://alba-estetica-turnos.netlify.app/"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="cta-button text-center mt-4 delay700"
+				className="cta-button text-center mt-4 delay1000"
 			>
 				RESERVA TU TURNO
 			</Link>
