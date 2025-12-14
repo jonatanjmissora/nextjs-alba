@@ -145,7 +145,7 @@
 }
 @keyframes revealDown {
 	to {
-		top: 5%;
+		top: 0%;
 		opacity: 1;
 	}
 }
@@ -158,7 +158,6 @@
 
 /* mobil */
 @media (max-width: 767px) {
-	
 }
 
 /* tablet */

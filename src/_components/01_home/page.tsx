@@ -97,24 +97,24 @@ const HeroTitle = () => {
 		// 	<p>de belleza</p>
 		// </div>
 
-		<div className="flex flex-col gap-1 items-center justify-center relative">
+		<div className="flex flex-col sm:gap-3 2xl:gap-1 items-center justify-center relative">
 			<div className="relative px-1 overflow-hidden">
 				<p className="hero-title revealFromDown absolute inset-0 top-[105%]">
 					<span className="revealFromDown absolute top-[105%] left-1">
 						Centro
 					</span>
-					<span className="revealFromDown absolute top-[105%] left-57 delay100">
+					<span className="revealFromDown absolute top-[105%] sm:left-42 2xl:left-57 delay100">
 						de
 					</span>
-					<span className="revealFromDown absolute top-[105%] left-78 delay200">
+					<span className="revealFromDown absolute top-[105%] sm:left-58 2xl:left-78 delay200">
 						estética
 					</span>
 				</p>
 				<p className="hero-title opacity-0">Centro de estética</p>
 			</div>
-			<div className="absolute top-[57%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+			<div className="absolute sm:top-[50%] 2xl:top-[57%] left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<p className="cormorant opacity-0 text-4xl leading-[25px]">&</p>
-				<p className="cormorant font-medium text-(--primary-green) text-5xl leading-[30px] revealFromDown absolute top-[105%] left-1 delay300">
+				<p className="cormorant font-medium text-(--primary-green) sm:text-4xl 2xl:text-5xl leading-[30px] revealFromDown absolute top-[105%] left-0 delay300">
 					&
 				</p>
 			</div>
@@ -123,7 +123,7 @@ const HeroTitle = () => {
 					<span className="revealFromDown absolute top-[105%] left-1 delay400">
 						bienestar
 					</span>
-					<span className="revealFromDown absolute top-[105%] left-72 delay500">
+					<span className="revealFromDown absolute top-[105%] sm:left-53 2xl:left-72 delay500">
 						integral
 					</span>
 				</p>
