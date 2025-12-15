@@ -25,7 +25,7 @@ export default function ProductsSection() {
 
 const ProductCategoriesComponent = () => {
 	return (
-		<div className="flex flex-wrap gap-6 gap-y-12 w-full">
+		<div className="flex flex-wrap sm:gap-x-4 2xl:gap-x-6 sm:gap-y-8 2xl:gap-y-12 w-full">
 			{productsTree.map((category: ElementsTreeType) => (
 				<Card key={category.title} type="shop" category={category} />
 			))}
