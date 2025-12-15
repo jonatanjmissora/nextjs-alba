@@ -156,9 +156,25 @@
 	}
 }
 
+.home-img {
+	animation: hero-img-fade linear forwards;
+	animation-timeline: view();
+	animation-range: cover 50% cover 90%;
+}
+
+@keyframes hero-img-fade {
+	from {
+		opacity: 1;
+		scale: 1;
+	}
+	to {
+		opacity: 0;
+		scale: 1;
+	}
+}
+
 /* mobil */
 @media (max-width: 767px) {
-	
 }
 
 /* tablet */

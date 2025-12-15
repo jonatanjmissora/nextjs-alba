@@ -27,7 +27,7 @@ export default function ServicesSection() {
 
 const ServiceCategoriesComponent = () => {
 	return (
-		<div className="flex flex-wrap sm:gap-8 2xl:gap-12 w-full">
+		<div className="flex flex-wrap sm:gap-x-4 2xl:gap-x-6 sm:gap-y-8 2xl:gap-y-12 w-full">
 			{servicesTree.map((category: ElementsTreeType) => (
 				<Card key={category.title} type="services" category={category} />
 			))}

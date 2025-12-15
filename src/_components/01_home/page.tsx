@@ -114,7 +114,7 @@ const HeroTitle = () => {
 			</div>
 			<div className="absolute top-[57%] left-1/2 -translate-x-1/2 -translate-y-1/2">
 				<p className="cormorant opacity-0 text-4xl leading-[25px]">&</p>
-				<p className="cormorant font-medium text-(--primary-green) text-5xl leading-[30px] revealFromDown absolute top-[105%] left-1 delay300">
+				<p className="cormorant font-medium text-(--primary-green) text-5xl leading-[30px] revealfrom0 absolute top-0 left-1 delay300">
 					&
 				</p>
 			</div>
