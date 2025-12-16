@@ -37,7 +37,7 @@ export default function HomeBisPage() {
 				{skillData.map(skill => (
 					<div
 						key={skill.id}
-						className="flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) homebis-card rounded-lg relative"
+						className="skillImageReveal flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) homebis-card rounded-lg relative"
 					>
 						<i className="absolute sm:-top-18 2xl:-top-24 left-1/2 -translate-x-1/2 rounded-full sm:size-26 2xl:size-36 bg-(--background-green) flex justify-center items-center custom-shadow">
 							{skill.icon}

@@ -12,9 +12,9 @@ export const Card = ({
 }) => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="flex-1 flex custom-shadow rounded-tl-xl rounded-br-xl overflow-hidden element-card group">
+		<div className="flex-1 flex custom-shadow element-card group rounded-br-xl cardImageReveal">
 			<div className="h-full w-full flex flex-col">
-				<div className="bg-(--background-one) sm:min-h-[70px] 2xl:min-h-[100px] flex justify-end items-center text-right header-card text-(--primary-green) leading-none font-normal px-8">
+				<div className="bg-(--background-one) sm:min-h-[70px] 2xl:min-h-[100px] flex justify-end items-center text-right header-card text-(--primary-green) leading-none font-normal px-8 rounded-tl-xl">
 					{category.title}
 				</div>
 				<div className="text bg-(--background-green) h-full p-8 flex flex-col justify-between items-end">
@@ -30,7 +30,7 @@ export const Card = ({
 				</div>
 			</div>
 
-			<div className="h-full w-full relative overflow-hidden">
+			<div className="h-full w-full relative rounded-br-xl overflow-hidden">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
 					src={category.image}

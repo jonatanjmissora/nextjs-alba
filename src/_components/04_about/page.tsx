@@ -2,6 +2,7 @@ import { SectionHeader } from "../section-header"
 import { aboutHeader } from "@/_lib/about"
 import { LeafImgs } from "../leaf-section"
 import { Image as ImageKit } from "@imagekit/next"
+import "./about.css"
 
 export default function About() {
 	return (
@@ -41,7 +42,7 @@ const Testimonials = () => {
 	return (
 		<article className="w-full px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
 			<div className="flex w-full justify-center">
-				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative">
+				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative testimonialImageReveal">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/about/about-alba1.webp"
@@ -49,11 +50,11 @@ const Testimonials = () => {
 						alt={"/about/about-alba1.webp"}
 						fill
 						loading="lazy"
-						className={`object-cover -rotate-12`}
+						className={`object-cover`}
 						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 					/>
 				</div>
-				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative">
+				<div className="sm:w-[300px] sm:h-[450px] 2xl:w-[400px] 2xl:h-[600px] relative testimonialImageReveal">
 					<ImageKit
 						urlEndpoint={`${urlEndp}`}
 						src="/about/about-alba3.webp"
@@ -61,7 +62,7 @@ const Testimonials = () => {
 						alt={"/about/about-alba3.webp"}
 						fill
 						loading="lazy"
-						className={`object-cover rotate-12`}
+						className={`object-cover`}
 						sizes="(max-width: 768px) 33vw, (max-width: 1200px) 40vw, 50vw"
 					/>
 				</div>
@@ -140,7 +141,7 @@ const Certificates = () => {
 				{certificados.map(certificado => (
 					<div
 						key={certificado}
-						className="sm:w-[180px] sm:h-[120px] 2xl:w-[200px] 2xl:h-[150px] relative"
+						className="sm:w-[180px] sm:h-[120px] 2xl:w-[200px] 2xl:h-[150px] relative certificatesImageReveal"
 					>
 						<ImageKit
 							urlEndpoint={`${urlEndp}`}

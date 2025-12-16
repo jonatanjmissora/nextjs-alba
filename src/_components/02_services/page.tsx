@@ -5,6 +5,7 @@ import { ElementsTreeType } from "@/_lib/types"
 import { Card } from "../elements/card"
 import { LeafImgs } from "../leaf-section"
 import { Image as ImageKit } from "@imagekit/next"
+import "./services.css"
 
 export default function ServicesSection() {
 	return (
