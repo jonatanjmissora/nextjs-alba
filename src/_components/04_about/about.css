@@ -52,3 +52,40 @@
 		scale: 1;
 	}
 }
+
+.movil-testimonial-image1 {
+	animation: movil-testimonial-reveal1 both;
+	animation-timeline: view(60% 0%);
+}
+.movil-testimonial-image2 {
+	animation: movil-testimonial-reveal2 both;
+	animation-timeline: view(60% 0%);
+}
+@keyframes movil-testimonial-reveal1 {
+	from {
+		filter: brightness(0.8) blur(5px);
+		opacity: 0;
+		scale: 0.5;
+		transform: rotateX(0);
+	}
+	to {
+		filter: none;
+		opacity: 1;
+		scale: 1;
+		transform: rotateZ(-12deg);
+	}
+}
+@keyframes movil-testimonial-reveal2 {
+	from {
+		filter: brightness(0.8) blur(5px);
+		opacity: 0;
+		scale: 0.5;
+		transform: rotateX(0);
+	}
+	to {
+		filter: none;
+		opacity: 1;
+		scale: 1;
+		transform: rotateZ(12deg);
+	}
+}

@@ -12,10 +12,11 @@ import { MovilLeafImgs } from "../layout/movil/movil-leaf-imgs"
 // import { useEffect, useState } from "react"
 // import { ImageKit } from "../image-kit"
 import { Image as ImageKit2 } from "@imagekit/next"
+import "./about.css"
 
 export default function MovilAbout() {
 	return (
-		<section className="w-full bg-(--primary-pink) flex justify-center items-start relative pb-[300px] overflow-x-clip">
+		<section className="w-full bg-(--primary-pink) flex justify-center items-start relative pb-[300px]">
 			<MovilLeafImgs />
 			<div
 				id="about"
@@ -48,9 +49,9 @@ const Signature = () => {
 const MovilImgBackground = () => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="relative w-full h-[320px] overflow-hidden">
+		<div className="relative w-full h-[320px] mt-20 mb-40">
 			<div className="absolute -top-20 -right-16">
-				<div className="w-[300px] h-[400px] relative">
+				<div className="w-[300px] h-[400px] relative movil-testimonial-image2">
 					<ImageKit2
 						urlEndpoint={`${urlEndp}`}
 						src="/about/about-alba3.webp"
@@ -64,7 +65,7 @@ const MovilImgBackground = () => {
 				</div>
 			</div>
 			<div className="absolute -bottom-20 left-0">
-				<div className="w-[250px] h-[300px] relative">
+				<div className="w-[250px] h-[300px] relative movil-testimonial-image1">
 					<ImageKit2
 						urlEndpoint={`${urlEndp}`}
 						src="/about/about-alba1.webp"

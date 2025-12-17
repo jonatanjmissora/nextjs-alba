@@ -44,7 +44,7 @@ const MovilSectionCard = ({
 				<h2 className="py-3 px-6 pr-4">{category.title}</h2>
 				<ChevronRightIcon className="w-7 h-full p-0 bg-(--primary-green)/50 text-(--background-one)" />
 			</Link>
-			<div className="w-3/4 aspect-video bg-slate-300 custom-shadow rounded-lg relative overflow-hidden">
+			<div className="w-3/4 aspect-video bg-slate-300 custom-shadow rounded-lg relative overflow-hidden cardImageReveal">
 				<ImageKit
 					imageID={category.elements[0].images.split("*")[0]}
 					className="hover:scale-110 duration-300"
