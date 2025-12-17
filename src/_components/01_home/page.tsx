@@ -21,7 +21,7 @@ const HomeImg1 = () => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 
 	return (
-		<div className="absolute bottom-0 z-0 overflow-hidden hero-bg home-img-container">
+		<div className="absolute bottom-0 z-0 overflow-hidden hero-bg home-img-container hero-img">
 			<div className="relative home-img">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}
@@ -30,7 +30,7 @@ const HomeImg1 = () => {
 					alt={"/Layout/hero-bg.webp"}
 					fill
 					loading="eager"
-					className={`object-cover`}
+					className={`object-cover hero-img`}
 					sizes="(max-width: 768px) 33vw, (max-width: 1200px) 60vw, 100vw"
 				/>
 			</div>

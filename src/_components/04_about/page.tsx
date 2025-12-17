@@ -37,7 +37,7 @@ const Testimonials = () => {
 		"about/testimonial04.webp",
 		"about/testimonial06.webp",
 		"about/testimonial07.webp",
-		"about/testimonial08.webp",
+		"about/testimonial05.webp",
 	]
 	return (
 		<article className="w-full px-(--sm-layout-padding) 2xl:px-(--2xl-layout-padding)">
@@ -72,7 +72,7 @@ const Testimonials = () => {
 					{testimonials.map(testimonial => (
 						<div
 							key={testimonial}
-							className={`mx-auto ${testimonial === "about/testimonial08.webp" ? "sm:w-[250px] 2xl:w-[300px]" : "sm:w-[300] 2xl:w-[400px]"} sm:h-[80px] 2xl:h-[100px] relative`}
+							className={`mx-auto ${testimonial === "about/testimonial05.webp" ? "sm:w-[250px] 2xl:w-[300px]" : "sm:w-[300] 2xl:w-[400px]"} sm:h-[80px] 2xl:h-[100px] relative`}
 						>
 							<ImageKit
 								urlEndpoint={`${urlEndp}`}
