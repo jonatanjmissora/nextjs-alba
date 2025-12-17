@@ -15,7 +15,7 @@ import { Image as ImageKit2 } from "@imagekit/next"
 
 export default function MovilAbout() {
 	return (
-		<section className="w-full bg-(--primary-pink) flex justify-center items-start relative pb-[300px]">
+		<section className="w-full bg-(--primary-pink) flex justify-center items-start relative pb-[300px] overflow-x-clip">
 			<MovilLeafImgs />
 			<div
 				id="about"
@@ -130,7 +130,7 @@ const MovilCertificates2 = () => {
 		"/about/certificado06.webp",
 	]
 	return (
-		<div className="w-full relative certificados-container opacity-70">
+		<div className="w-full relative">
 			<div className="flex gap-1 certificados1 w-full absolute top-0">
 				{certificados.map(testimonial => (
 					<div key={testimonial} className={`min-w-[150px] h-[100px] relative`}>

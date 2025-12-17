@@ -42,7 +42,7 @@ export default function MovilHome() {
 const HomeImg2 = () => {
 	const urlEndp = "https://ik.imagekit.io/jjmissora/Alba"
 	return (
-		<div className="absolute z-0 -right-[30dvw] bottom-40 movil-bg">
+		<div className="absolute z-0 -right-[30dvw] bottom-40 movil-bg movil-home-image">
 			<div className="w-[180dvw] aspect-video relative ">
 				<ImageKit
 					urlEndpoint={`${urlEndp}`}

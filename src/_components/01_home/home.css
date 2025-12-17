@@ -53,6 +53,25 @@
 	}
 }
 
+.movil-home-image {
+	scale: 1;
+	opacity: 1;
+	animation: changeBG linear forwards;
+	animation-timeline: view();
+	animation-range: cover 50% cover 90%;
+}
+
+@keyframes changeBG {
+	from {
+		scale: 1;
+		opacity: 1;
+	}
+	to {
+		scale: 1.5;
+		opacity: 0;
+	}
+}
+
 .movil-bg::after {
 	position: absolute;
 	content: "";

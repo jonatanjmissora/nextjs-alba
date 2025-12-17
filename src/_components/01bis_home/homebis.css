@@ -20,6 +20,11 @@
 	animation-timeline: view(60% 15%);
 }
 
+.movil-homebis-skill {
+	animation: skill-image-reveal both;
+	animation-timeline: view(40% -15%);
+}
+
 @keyframes skill-image-reveal {
 	from {
 		filter: blur(5px);
