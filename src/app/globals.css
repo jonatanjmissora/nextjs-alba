@@ -228,18 +228,6 @@ body {
 	}
 }
 
-/* .mobil-menu a {
-	transform: translateX(-20%);
-	transition: 1.3s ease;
-	opacity: 0.5;
-}
-
-.mobil-menu.open a {
-	transform: translateX(100%);
-	opacity: 1;
-	transition: 1.3s ease;
-	transition-delay: calc(0.15s * var(--i));
-} */
 .mobil-menu {
 	width: 100%;
 }

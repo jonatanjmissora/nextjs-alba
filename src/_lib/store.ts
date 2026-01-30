@@ -20,7 +20,7 @@ export const useStore = create<Store>()(
 		}),
 		{
 			name: "store",
-			storage: createJSONStorage(() => sessionStorage),
+			// storage: createJSONStorage(() => sessionStorage),
 		}
 	)
 )

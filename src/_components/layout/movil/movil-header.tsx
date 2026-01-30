@@ -89,7 +89,7 @@ const DrawerComponent = () => {
 					</DrawerHeader>
 
 					<DrawerFooter className="flex justify-between h-[92dvh] flex-col px-6">
-						<div className="w-full relative">
+						<div className="w-full relative flex justify-center">
 							<DrawerClose asChild className="absolute top-0 right-0">
 								<X className="text-(--primary-green) size-8" />
 							</DrawerClose>
@@ -111,63 +111,63 @@ const DrawerComponent = () => {
 const MobilMenuNav = () => {
 	return (
 		<ul
-			className={`w-3/4 flex flex-col justify-around gap-4 mobil-menu pl-6 pb-15 pt-6 flex-1`}
+			className={`w-3/4 flex flex-col justify-around gap-4 mobil-menu pb-15 pt-6 flex-1`}
 		>
 			<DrawerClose asChild>
-				<li style={{ "--i": "0" } as React.CSSProperties}>
+				<li>
 					<a
 						href="/#home"
-						className="text-2xl text-(--primary-green) tracking-widest"
+						className="flex justify-center text-2xl text-(--primary-green) tracking-widest"
 					>
 						INICIO
 					</a>
 				</li>
 			</DrawerClose>
 			<DrawerClose asChild>
-				<li style={{ "--i": "1" } as React.CSSProperties}>
+				<li>
 					<a
 						href="/#services"
-						className="text-2xl text-(--primary-green) tracking-widest"
+						className="flex justify-center text-2xl text-(--primary-green) tracking-widest"
 					>
 						SERVICIOS
 					</a>
 				</li>
 			</DrawerClose>
 			<DrawerClose asChild>
-				<li style={{ "--i": "2" } as React.CSSProperties}>
+				<li>
 					<a
 						href="/#shop"
-						className="text-2xl text-(--primary-green) tracking-widest"
+						className="flex justify-center text-2xl text-(--primary-green) tracking-widest"
 					>
 						PRODUCTOS
 					</a>
 				</li>
 			</DrawerClose>
 			<DrawerClose asChild>
-				<li style={{ "--i": "3" } as React.CSSProperties}>
+				<li>
 					<a
 						href="/#about"
-						className="text-2xl text-(--primary-green) tracking-widest"
+						className="flex justify-center text-2xl text-(--primary-green) tracking-widest"
 					>
 						ACERCA DE
 					</a>
 				</li>
 			</DrawerClose>
 			<DrawerClose asChild>
-				<li style={{ "--i": "4" } as React.CSSProperties}>
+				<li>
 					<a
 						href="/#tips"
-						className="text-2xl text-(--primary-green) tracking-widest"
+						className="flex justify-center text-2xl text-(--primary-green) tracking-widest"
 					>
 						TIPS
 					</a>
 				</li>
 			</DrawerClose>
 			<DrawerClose asChild>
-				<li style={{ "--i": "5" } as React.CSSProperties}>
+				<li>
 					<a
 						href="/#contact"
-						className="text-2xl text-(--primary-green) tracking-widest"
+						className="flex justify-center text-2xl text-(--primary-green) tracking-widest"
 					>
 						CONTACTO
 					</a>
