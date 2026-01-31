@@ -1,5 +1,6 @@
 import { Gem, Sprout, UserStar } from "lucide-react"
 import { Image as ImageKit } from "@imagekit/next"
+import "./homebis.css"
 
 export default function MovilHomeBis() {
 	const skillData = [
@@ -34,7 +35,7 @@ export default function MovilHomeBis() {
 				{skillData.map(skill => (
 					<div
 						key={skill.id}
-						className="flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) p-6 pt-10 rounded-lg relative"
+						className="flex flex-col gap-3 items-center w-full custom-shadow bg-(--background-two) p-6 pt-10 rounded-lg relative movil-homebis-skill"
 					>
 						<i className="absolute -top-12 left-1/2 -translate-x-1/2 rounded-full size-20 bg-(--background-green) flex justify-center items-center custom-shadow">
 							{skill.icon}

@@ -13,6 +13,13 @@
 	top: 5dvh;
 	right: var(--2xl-layout-padding);
 }
+@keyframes revealUp {
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
 /* mobil */
 @media (max-width: 767px) {
 }

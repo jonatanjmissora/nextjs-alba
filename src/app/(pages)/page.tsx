@@ -47,7 +47,7 @@ const Desktop = () => {
 }
 const Mobil = () => {
 	return (
-		<div className="block sm:hidden">
+		<div className="block sm:hidden overflow-x-clip">
 			<MovilHeader />
 
 			<MovilHome />

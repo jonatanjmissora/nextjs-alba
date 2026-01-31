@@ -8,6 +8,7 @@ import {
 	AccordionTriggerLeft,
 } from "@/components/ui/accordion"
 import { ImageKit } from "../image-kit"
+import "./tips.css"
 
 export default function MovilTips() {
 	const tips = tipsMock
@@ -32,7 +33,7 @@ export default function MovilTips() {
 const TipCard = ({ tip }: { tip: TipType }) => {
 	return (
 		<div className="w-full relative mt-20">
-			<div className="relative overflow-hidden  w-full h-[200px] rounded-t-lg custom-shadow">
+			<div className="relative overflow-hidden  w-full h-[200px] rounded-t-lg custom-shadow tipImageReveal">
 				<ImageKit imageID={tip.image} />
 			</div>
 			<AccordionElement content={tip.content} />
