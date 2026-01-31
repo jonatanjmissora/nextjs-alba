@@ -70,11 +70,6 @@ const Hero = () => {
 }
 
 const Skills = () => {
-	const skillData = [
-		{ icon: "+5", content: "años de experiencia" },
-		{ icon: "+120", content: "clientas atendidas" },
-		{ icon: "99.9%", content: "clientas satisfechas" },
-	]
 	return (
 		<article className="absolute sm:bottom-12 2xl:bottom-24 left-(--sm-layout-padding) 2xl:left-(--2xl-layout-padding) z-1 flex sm:gap-6 2xl:gap-10 items-center justify-center">
 			{skillData.map(skill => (

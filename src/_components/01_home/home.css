@@ -131,8 +131,6 @@
 	font-weight: 400;
 	padding-block: 0.8rem;
 	padding-inline: 2.5rem;
-	transform: rotateX(90deg);
-	animation: roll90 0.5s ease-in-out forwards;
 }
 
 .cta-button:hover {
