@@ -9,6 +9,7 @@ import {
 	AccordionTriggerLeft,
 } from "@/components/ui/accordion"
 import { ImageKit } from "../image-kit"
+import "./tips.css"
 
 export default function Tips() {
 	const tips = tipsMock
@@ -39,7 +40,7 @@ const TipCard1 = ({ tip }: { tip: TipType }) => {
 			<div className="flex flex-col gap-3 pl-8 pt-8">
 				<AccordionElementRight content={tip.content} />
 			</div>
-			<div className="relative overflow-hidden h-[60dvh] rounded-lg custom-shadow">
+			<div className="relative overflow-hidden h-[60dvh] rounded-lg custom-shadow tipImageReveal">
 				<ImageKit imageID={tip.image} />
 			</div>
 		</div>
@@ -49,7 +50,7 @@ const TipCard1 = ({ tip }: { tip: TipType }) => {
 const TipCard2 = ({ tip }: { tip: TipType }) => {
 	return (
 		<div id={tip.id} className="w-1/2 flex flex-col gap-10 pl-10">
-			<div className="relative overflow-hidden w-full h-[60dvh] rounded-lg custom-shadow">
+			<div className="relative overflow-hidden w-full h-[60dvh] rounded-lg custom-shadow tipImageReveal">
 				<ImageKit imageID={tip.image} />
 			</div>
 			<div className="flex flex-col gap-3 pr-8 pb-8">

@@ -74,6 +74,7 @@
 	}
 	.hero-title {
 		font-size: 3.25rem;
+		line-height: 1.15;
 	}
 	.hero-subtitle {
 		font-size: 1rem;
@@ -84,6 +85,7 @@
 @media (min-width: 1440px) {
 	.hero-title {
 		font-size: 4.5rem;
+		line-height: 1.5;
 	}
 	.hero-subtitle {
 		font-size: 1.25rem;
