@@ -72,15 +72,21 @@ const Hero = () => {
 const Skills = () => {
 	return (
 		<article className="absolute sm:bottom-12 2xl:bottom-24 left-(--sm-layout-padding) 2xl:left-(--2xl-layout-padding) z-1 flex sm:gap-6 2xl:gap-10 items-center justify-center">
-			{skillData.map(skill => (
-				<div
-					key={skill.icon}
-					className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--background-two) border border-[#444]/10 custom-shadow hero-skill"
-				>
-					<i>{skill.icon}</i>
-					<span>{skill.content}</span>
-				</div>
-			))}
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>+5</i>
+
+				<span>años de experiencia</span>
+			</div>
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>+120</i>
+
+				<span>clientas atendidas</span>
+			</div>
+			<div className="flex items-center justify-center gap-2 rounded-tl-xl rounded-br-xl bg-(--primary-pink) border border-[#444]/10 custom-shadow hero-skill">
+				<i>99.9%</i>
+
+				<span>clientas satisfechas</span>
+			</div>
 		</article>
 	)
 }
