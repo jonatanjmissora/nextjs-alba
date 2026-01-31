@@ -23,7 +23,7 @@ export default function HeartIcon({ id }: { id: string }) {
 		<button type="button" onClick={handleClick} className="cursor-pointer">
 			<Heart
 				color="var(--primary-green)"
-				className={`icon size-6 ${isInFavorites && "fill-[var(--primary-green)]"}`}
+				className={`icon size-6 ${isInFavorites && "fill-(--primary-green)"}`}
 			/>
 		</button>
 	)

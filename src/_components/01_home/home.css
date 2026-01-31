@@ -37,9 +37,14 @@
 
 .hero-img {
 	opacity: 1;
-	animation: hero-img-fade linear forwards;
-	animation-timeline: view();
-	animation-range: cover 50% cover 90%;
+}
+/* Solo navegadores compatibles */
+@supports (animation-timeline: view()) {
+	.hero-img {
+		animation: hero-img-fade linear forwards;
+		animation-timeline: view();
+		animation-range: cover 50% cover 90%;
+	}
 }
 
 @keyframes hero-img-fade {
@@ -195,14 +200,6 @@
 		transform: scale(1);
 		opacity: 1;
 	}
-}
-
-/* mobil */
-@media (max-width: 767px) {
-}
-
-/* tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
 }
 
 /*  notebook */
